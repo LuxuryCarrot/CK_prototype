@@ -8,6 +8,10 @@ public class CharacterStat : MonoBehaviour
     public float moveSpeed;
     [Range(0f, 20f)]
     public float fallSpeed;
+    [Range(0f, 20f)]
+    public float gravity;
+    [Range(0f, 20f)]
+    public float jumpForce;
 
     public float attackRange;
     public float attackRate;

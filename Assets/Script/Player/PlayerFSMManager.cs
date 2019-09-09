@@ -6,11 +6,11 @@ using UnityEngine;
 public enum PlayerState
 {
     IDLE = 0,
-    Walk,
     DASH,
     ATTACK,
     JUMP,
-    DEAD
+    DEAD,
+    DOWN
   
 }
 
@@ -23,10 +23,13 @@ public class PlayerFSMManager : MonoBehaviour
     public Animator anim;
     public SpriteRenderer mySpriteRenderer;
 
-    public bool isMoving = false;
+    public float MousePosX;
+    public float verticalVelocity;
+
     public bool isFliped = false;
 
     public Vector2 moveDirection = Vector2.zero;
+    public Vector3 lastMoveDir;
 
     Dictionary<PlayerState, PlayerFSMState> states = new Dictionary<PlayerState, PlayerFSMState>();
     // Start is called before the first frame update
@@ -36,12 +39,13 @@ public class PlayerFSMManager : MonoBehaviour
         stat = GetComponent<CharacterStat>();
         anim = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        lastMoveDir = Vector3.right;
 
         states.Add(PlayerState.IDLE, GetComponent<PlayerIDLE>());
         states.Add(PlayerState.DASH, GetComponent<PlayerDASH>());
         states.Add(PlayerState.JUMP, GetComponent<PlayerJUMP>());
         states.Add(PlayerState.DEAD, GetComponent<PlayerDEAD>());
-        states.Add(PlayerState.Walk, GetComponent<PlayerWALK>());
+        states.Add(PlayerState.DOWN, GetComponent<PlayerDOWN>());
         states.Add(PlayerState.ATTACK, GetComponent<PlayerATTACK>());
     }
     private void Start()
@@ -75,31 +79,56 @@ public class PlayerFSMManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        MousePosX = Input.mousePosition.x;
+        Debug.Log(MousePosX);
         moveDirection = new Vector2(Input.GetAxisRaw("Horizontal") * stat.moveSpeed * Time.deltaTime, 0);
 
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (Input.GetAxisRaw("Horizontal") < 0)
         {
-            isMoving = true;
+            transform.Translate(new Vector2(moveDirection.x, 0));
         }
-        else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        else if (Input.GetAxisRaw("Horizontal") > 0)
         {
-            isMoving = false;
+            transform.Translate(new Vector2(moveDirection.x, 0));
         }
-        if (isMoving == true)
+
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            if (Input.GetAxisRaw("Horizontal") < 0)
+            SetState(PlayerState.DOWN);
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            SetState(PlayerState.JUMP);
+        }
+
+        Gravity();
+    }
+
+    public void Gravity()
+    {
+        if (cc.isGrounded)
+        {
+            verticalVelocity = -stat.gravity * Time.deltaTime;
+            if (Input.GetKeyDown(KeyCode.W))
             {
-                mySpriteRenderer.flipX = true;
-                transform.Translate(new Vector2(moveDirection.x, 0));
+                verticalVelocity = stat.jumpForce;
+                SetState(PlayerState.JUMP);
             }
-            if (Input.GetAxisRaw("Horizontal") > 0)
-            {
-                mySpriteRenderer.flipX = false;
-                transform.Translate(new Vector2(moveDirection.x, 0));
-            }
-            SetState(PlayerState.Walk);
-            Debug.Log("Moving");
         }
-        
+        else
+        {
+            verticalVelocity -= stat.gravity * Time.deltaTime;
+        }
+        moveDirection = Vector2.zero;
+        moveDirection.y = verticalVelocity;
+        cc.Move(moveDirection * Time.deltaTime);
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if ((hit.gameObject.tag == "Ground") && (verticalVelocity <= -stat.gravity))
+        {
+            SetState(PlayerState.IDLE);
+        }
     }
 }
