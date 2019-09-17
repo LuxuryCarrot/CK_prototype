@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         jumpForce =1.5f;
         walkSpeed = 3f;
-        dashSpeed = 3f;
+        dashSpeed = 10f;
         fallSpeed = 4f;
         verticalVelocity = 9.8f;
         cc = GetComponent<CharacterController>();
@@ -96,7 +96,8 @@ public class PlayerController : MonoBehaviour
         if (!isKeyInput)
             SetState(PlayerState.IDLE);
 
-        Gravity();
+        if(!states[PlayerState.DASH].enabled)
+            Gravity();
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (transform.position.x > mousePos.x)
@@ -128,7 +129,7 @@ public class PlayerController : MonoBehaviour
 
         curState = newState;
         states[curState].enabled = true;
-
+        states[curState].BeginState();
         if (states[PlayerState.JUMP].enabled)
             anim.SetInteger("curState", (int)PlayerState.JUMP);
         else

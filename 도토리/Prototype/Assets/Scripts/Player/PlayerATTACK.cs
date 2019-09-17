@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerATTACK : PlayerFSMController
 {
+    public override void BeginState()
+    {
+        base.BeginState();
+    }
+
     // Update is called once per frame
     void Update()
     {
