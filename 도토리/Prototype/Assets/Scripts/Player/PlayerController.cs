@@ -16,8 +16,9 @@ public enum PlayerState
 public class PlayerController : MonoBehaviour
 {
     private bool isKeyInput = false;
-    private float gravity;
+    private float fallSpeed;
     public float verticalVelocity;
+    private float gravity;
     public float walkSpeed;
     public float dashSpeed;
     public float jumpForce;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 lastMoveDir = Vector3.zero;
     [HideInInspector]
     public Vector3 dashDir = Vector3.zero;
+    [SerializeField]
     private Vector2 moveDirection;
     public CharacterController cc;
     public Animator anim;
@@ -42,10 +44,11 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        jumpForce =10f;
+        jumpForce =1.5f;
         walkSpeed = 3f;
         dashSpeed = 3f;
-        gravity = 10f;
+        fallSpeed = 4f;
+        verticalVelocity = 9.8f;
         cc = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
@@ -60,6 +63,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(fallSpeed);
         SetState(startState);
     }
 
@@ -135,26 +139,26 @@ public class PlayerController : MonoBehaviour
     {
         if (cc.isGrounded)
         {
-            verticalVelocity = -gravity * Time.deltaTime;
+            gravity = -fallSpeed * Time.deltaTime;
             if (Input.GetKeyDown(KeyCode.W))
             {
-                verticalVelocity = jumpForce;
+                gravity = jumpForce;
                 SetState(PlayerState.JUMP);
             }
         }
         else
         {
-            verticalVelocity -= gravity * Time.deltaTime;
+            gravity -= fallSpeed * Time.deltaTime;
         }
         moveDirection = Vector2.zero;
-        moveDirection.y = verticalVelocity;
+        moveDirection.y = gravity * verticalVelocity;
         cc.Move(moveDirection * Time.deltaTime);
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if ((hit.gameObject.tag == "Ground") &&
-            (verticalVelocity <= -gravity))
+            (gravity <= fallSpeed))
         {
             states[PlayerState.JUMP].enabled = false;
         }
