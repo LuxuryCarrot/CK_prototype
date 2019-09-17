@@ -98,12 +98,10 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x > mousePos.x)
         {
             sprite.flipX = true;
-            dashDir = Vector3.left;
         }
         else
         {
             sprite.flipX = false;
-            dashDir = Vector3.right;
         }
     }
 
