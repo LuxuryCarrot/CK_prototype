@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerWALK : PlayerFSMController
 {
+    public override void BeginState()
+    {
+        base.BeginState();
+    }
     // Update is called once per frame
     void Update()
     {

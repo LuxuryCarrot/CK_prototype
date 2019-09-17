@@ -6,6 +6,11 @@ public class PlayerFSMController : MonoBehaviour
 {
     public PlayerController controller;
 
+    public virtual void BeginState()
+    {
+
+    }
+
     private void Awake()
     {
         controller = GetComponent<PlayerController>();
