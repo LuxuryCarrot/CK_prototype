@@ -4,32 +4,47 @@ using UnityEngine;
 
 public enum PlayerState
 {
-    IDLE=0,
+    IDLE = 0,
     WALK,
     JUMP,
     DOWN,
     DASH,
-    ATTACK
+    ATTACK,
+    DEAD
+}
+
+public enum ElementalProperty
+{
+    None,
+    Fire,
+    Water,
+    Grass
 }
 
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
     private bool isKeyInput = false;
-    private float fallSpeed;
-    public float verticalVelocity;
-    private float gravity;
     public float walkSpeed;
-    public float dashSpeed;
+
+    private float gravity;
+    public float verticalVelocity;
+    private float fallSpeed;
     public float jumpForce;
 
+    public float dashSpeed;
+    public float dashForce;
+
+
     [HideInInspector]
+    public Transform monster;
+
+    [SerializeField]
     public Vector3 mousePos;
     [HideInInspector]
     public Vector3 lastMoveDir = Vector3.zero;
-    [HideInInspector]
     public Vector3 dashDir = Vector3.zero;
-    [SerializeField]
     private Vector2 moveDirection;
     public CharacterController cc;
     public Animator anim;
@@ -38,32 +53,46 @@ public class PlayerController : MonoBehaviour
     public PlayerState startState;
     public PlayerState curState;
 
+    public ElementalProperty curWeaponProperty;
+
+    public float hp;
+    public float currentHP;
+    public float weaponDamage;
+    public float curElementalDurantionTime;
+    public float maxElementalDurantionTime;     //const
+
     public Dictionary<PlayerState, PlayerFSMController> states =
         new Dictionary<PlayerState, PlayerFSMController>();
 
 
     private void Awake()
     {
-        jumpForce =1.5f;
+        jumpForce = 1.5f;
         walkSpeed = 3f;
-        dashSpeed = 10f;
+        dashSpeed = 6f;
+        dashForce = 1.2f;
         fallSpeed = 4f;
         verticalVelocity = 9.8f;
+        weaponDamage = 10f;
+        hp = 100;
+
         cc = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+        monster = GameObject.FindGameObjectWithTag("Fox").transform;
         states.Add(PlayerState.IDLE, GetComponent<PlayerIDLE>());
         states.Add(PlayerState.WALK, GetComponent<PlayerWALK>());
         states.Add(PlayerState.JUMP, GetComponent<PlayerJUMP>());
         states.Add(PlayerState.DOWN, GetComponent<PlayerDOWN>());
         states.Add(PlayerState.DASH, GetComponent<PlayerDASH>());
         states.Add(PlayerState.ATTACK, GetComponent<PlayerATTACK>());
+        states.Add(PlayerState.DEAD, GetComponent<PlayerDEAD>());
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(fallSpeed);
+        currentHP = hp;
         SetState(startState);
     }
 
@@ -75,12 +104,17 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
             SetState(PlayerState.DOWN);
         if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            dashDir = mousePos - transform.position;
+            dashDir.Normalize();
             SetState(PlayerState.DASH);
+        }
         if (Input.GetMouseButtonDown(0))
             SetState(PlayerState.ATTACK);
 
+        Gravity();
 
-        for(int i=1; i<states.Count;)
+        for (int i = 1; i < states.Count;)
         {
             if (states[(PlayerState)i].enabled == false)
             {
@@ -96,10 +130,9 @@ public class PlayerController : MonoBehaviour
         if (!isKeyInput)
             SetState(PlayerState.IDLE);
 
-        if(!states[PlayerState.DASH].enabled)
-            Gravity();
-
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = Input.mousePosition;
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        mousePos.z = 0;
         if (transform.position.x > mousePos.x)
         {
             sprite.flipX = true;
@@ -108,6 +141,8 @@ public class PlayerController : MonoBehaviour
         {
             sprite.flipX = false;
         }
+
+
     }
 
 
@@ -162,6 +197,16 @@ public class PlayerController : MonoBehaviour
             (gravity <= fallSpeed))
         {
             states[PlayerState.JUMP].enabled = false;
+        }
+    }
+
+    void ApplyDamage(float damage)
+    {
+        currentHP -= damage;
+
+        if(currentHP<=0)
+        {
+
         }
     }
 }
