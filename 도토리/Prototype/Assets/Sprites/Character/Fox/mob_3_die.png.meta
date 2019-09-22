@@ -1,67 +1,67 @@
 fileFormatVersion: 2
-guid: 22e75ea494469f64eaf99c895efe9fc2
+guid: 648ffdb17345d8144a5384fdf307aece
 TextureImporter:
   fileIDToRecycleName:
-    21300000: player_1_jump_0
-    21300002: player_1_jump_1
-    21300004: player_1_jump_2
-    21300006: player_1_jump_3
-    21300008: player_1_jump_4
-    21300010: player_1_jump_5
-    21300012: player_1_jump_6
-    21300014: player_1_jump_7
-    21300016: player_1_jump_8
-    21300018: player_1_jump_9
-    21300020: player_1_jump_10
-    21300022: player_1_jump_11
-    21300024: player_1_jump_12
-    21300026: player_1_jump_13
-    21300028: player_1_jump_14
-    21300030: player_1_jump_15
-    21300032: player_1_jump_16
-    21300034: player_1_jump_17
-    21300036: player_1_jump_18
-    21300038: player_1_jump_19
-    21300040: player_1_jump_20
-    21300042: player_1_jump_21
-    21300044: player_1_jump_22
-    21300046: player_1_jump_23
-    21300048: player_1_jump_24
-    21300050: player_1_jump_25
-    21300052: player_1_jump_26
-    21300054: player_1_jump_27
-    21300056: player_1_jump_28
-    21300058: player_1_jump_29
-    21300060: player_1_jump_30
-    21300062: player_1_jump_31
-    21300064: player_1_jump_32
-    21300066: player_1_jump_33
-    21300068: player_1_jump_34
-    21300070: player_1_jump_35
-    21300072: player_1_jump_36
-    21300074: player_1_jump_37
-    21300076: player_1_jump_38
-    21300078: player_1_jump_39
-    21300080: player_1_jump_40
-    21300082: player_1_jump_41
-    21300084: player_1_jump_42
-    21300086: player_1_jump_43
-    21300088: player_1_jump_44
-    21300090: player_1_jump_45
-    21300092: player_1_jump_46
-    21300094: player_1_jump_47
-    21300096: player_1_jump_48
-    21300098: player_1_jump_49
-    21300100: player_1_jump_50
-    21300102: player_1_jump_51
-    21300104: player_1_jump_52
-    21300106: player_1_jump_53
-    21300108: player_1_jump_54
-    21300110: player_1_jump_55
-    21300112: player_1_jump_56
-    21300114: player_1_jump_57
-    21300116: player_1_jump_58
-    21300118: player_1_jump_59
+    21300000: mob_3_die_0
+    21300002: mob_3_die_1
+    21300004: mob_3_die_2
+    21300006: mob_3_die_3
+    21300008: mob_3_die_4
+    21300010: mob_3_die_5
+    21300012: mob_3_die_6
+    21300014: mob_3_die_7
+    21300016: mob_3_die_8
+    21300018: mob_3_die_9
+    21300020: mob_3_die_10
+    21300022: mob_3_die_11
+    21300024: mob_3_die_12
+    21300026: mob_3_die_13
+    21300028: mob_3_die_14
+    21300030: mob_3_die_15
+    21300032: mob_3_die_16
+    21300034: mob_3_die_17
+    21300036: mob_3_die_18
+    21300038: mob_3_die_19
+    21300040: mob_3_die_20
+    21300042: mob_3_die_21
+    21300044: mob_3_die_22
+    21300046: mob_3_die_23
+    21300048: mob_3_die_24
+    21300050: mob_3_die_25
+    21300052: mob_3_die_26
+    21300054: mob_3_die_27
+    21300056: mob_3_die_28
+    21300058: mob_3_die_29
+    21300060: mob_3_die_30
+    21300062: mob_3_die_31
+    21300064: mob_3_die_32
+    21300066: mob_3_die_33
+    21300068: mob_3_die_34
+    21300070: mob_3_die_35
+    21300072: mob_3_die_36
+    21300074: mob_3_die_37
+    21300076: mob_3_die_38
+    21300078: mob_3_die_39
+    21300080: mob_3_die_40
+    21300082: mob_3_die_41
+    21300084: mob_3_die_42
+    21300086: mob_3_die_43
+    21300088: mob_3_die_44
+    21300090: mob_3_die_45
+    21300092: mob_3_die_46
+    21300094: mob_3_die_47
+    21300096: mob_3_die_48
+    21300098: mob_3_die_49
+    21300100: mob_3_die_50
+    21300102: mob_3_die_51
+    21300104: mob_3_die_52
+    21300106: mob_3_die_53
+    21300108: mob_3_die_54
+    21300110: mob_3_die_55
+    21300112: mob_3_die_56
+    21300114: mob_3_die_57
+    21300116: mob_3_die_58
+    21300118: mob_3_die_59
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -144,7 +144,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_1_jump_0
+      name: mob_3_die_0
       rect:
         serializedVersion: 2
         x: 0
@@ -158,13 +158,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eca79ef7e80751469d7dca285a17a82
+      spriteID: fb4e75c826d7e08448e3469dce2fd1c9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_1
+      name: mob_3_die_1
       rect:
         serializedVersion: 2
         x: 128
@@ -178,13 +178,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33d314305362e2840b2bbf0e2e94ced0
+      spriteID: 1a64671d70f991145bc49d1a2dd4003a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_2
+      name: mob_3_die_2
       rect:
         serializedVersion: 2
         x: 256
@@ -198,13 +198,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 531a3f5d377860743b2042a3e29ef4c7
+      spriteID: 97be3f036db54e94b97c64a1964f8bd0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_3
+      name: mob_3_die_3
       rect:
         serializedVersion: 2
         x: 384
@@ -218,13 +218,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 672f7d076462fd84997c71aed963820a
+      spriteID: 67effa956f8ea7944ba0c1a723b671ae
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_4
+      name: mob_3_die_4
       rect:
         serializedVersion: 2
         x: 512
@@ -238,13 +238,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f042c9ad5f83b154f9e38a93f2ca91ec
+      spriteID: 51bafce1c38d5f94f88238a034519bea
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_5
+      name: mob_3_die_5
       rect:
         serializedVersion: 2
         x: 640
@@ -258,13 +258,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20a30629a335fb644b96f33e02484947
+      spriteID: a0d4ce6d2f72b9b4ea3b98071c62496f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_6
+      name: mob_3_die_6
       rect:
         serializedVersion: 2
         x: 768
@@ -278,13 +278,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c143bd1c9a902641a027e3c07468924
+      spriteID: 240b75606b81a4e439bec6d5cd36d895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_7
+      name: mob_3_die_7
       rect:
         serializedVersion: 2
         x: 896
@@ -298,13 +298,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11f9b7780e6703b40b0f8202efb4cf88
+      spriteID: 9b42c18f18d43ae4eae30cf06af5e890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_8
+      name: mob_3_die_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -318,13 +318,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e926fbcbd5349946b085ee3535ad025
+      spriteID: 288331a19c36f174fab875e290ce52c4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_9
+      name: mob_3_die_9
       rect:
         serializedVersion: 2
         x: 1152
@@ -338,13 +338,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34cb0d4ed89507942accc1718aba5c57
+      spriteID: f114f1221e17bd84aa67eff2c18947bb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_10
+      name: mob_3_die_10
       rect:
         serializedVersion: 2
         x: 1280
@@ -358,13 +358,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c9d503c6ec46d94a8edbe3401177367
+      spriteID: 557d66ad34898ca4a97f5a7af3df7a9d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_11
+      name: mob_3_die_11
       rect:
         serializedVersion: 2
         x: 1408
@@ -378,13 +378,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cab78c48e438c374db4a88cfa010a716
+      spriteID: 2df9930b077afbd47812f7270966002a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_12
+      name: mob_3_die_12
       rect:
         serializedVersion: 2
         x: 0
@@ -398,13 +398,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2495f2c464fe8b542b5b6c57acc57d02
+      spriteID: 7bf9dabfd7dbc5440badcf5703d55720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_13
+      name: mob_3_die_13
       rect:
         serializedVersion: 2
         x: 128
@@ -418,13 +418,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c478e1621363b464eaa17924f595c8da
+      spriteID: 432b5bf90e5bdbc4a9414a9f4150e7ca
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_14
+      name: mob_3_die_14
       rect:
         serializedVersion: 2
         x: 256
@@ -438,13 +438,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7debc8c120e7f5246b3792db3b9e44fb
+      spriteID: f4cf3ddcbaadda9469d429860d041e8f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_15
+      name: mob_3_die_15
       rect:
         serializedVersion: 2
         x: 384
@@ -458,13 +458,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6f7ff7d7541a9c4f91078da53f883a6
+      spriteID: ce7d5fc2ef1993448808eb98fba55b24
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_16
+      name: mob_3_die_16
       rect:
         serializedVersion: 2
         x: 512
@@ -478,13 +478,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 683f025b9b520274d9e6739744ac902d
+      spriteID: 1207d8491b773f34eaadb738254a5650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_17
+      name: mob_3_die_17
       rect:
         serializedVersion: 2
         x: 640
@@ -498,13 +498,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 884017313fd226242ba628c33d1aef4f
+      spriteID: a938289ef756e9a478fdf95c7730375a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_18
+      name: mob_3_die_18
       rect:
         serializedVersion: 2
         x: 768
@@ -518,13 +518,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f32fb31e34964b34abd98b55790ec280
+      spriteID: 67ef08d6d203930449dde58e23666903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_19
+      name: mob_3_die_19
       rect:
         serializedVersion: 2
         x: 896
@@ -538,13 +538,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cfb61bd6f86cb1468d0c9abd2361a04
+      spriteID: 493d97c9683cd5048a7614fbfc903362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_20
+      name: mob_3_die_20
       rect:
         serializedVersion: 2
         x: 1024
@@ -558,13 +558,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2643577247c2f3479772bdf40a591e4
+      spriteID: 54184f47f5ddc6e4d92225079e580850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_21
+      name: mob_3_die_21
       rect:
         serializedVersion: 2
         x: 1152
@@ -578,13 +578,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b0f20e8a45311b418e8bb35e40d4c26
+      spriteID: 3a105bc14cf75b743b2432c9c7d7f916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_22
+      name: mob_3_die_22
       rect:
         serializedVersion: 2
         x: 1280
@@ -598,13 +598,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cc92de97c1bea248a553f85b86e4adc
+      spriteID: 12858cc2387db5b4c9bb76e1d68e4e85
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_23
+      name: mob_3_die_23
       rect:
         serializedVersion: 2
         x: 1408
@@ -618,13 +618,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfbb0da60b1812e45bc8ee5498422e5b
+      spriteID: f99a954c50e902d4f849fc7cf0e970a0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_24
+      name: mob_3_die_24
       rect:
         serializedVersion: 2
         x: 0
@@ -638,13 +638,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50071347aa7efcc40aa088c283bc68b1
+      spriteID: 021dae426bea0f7419da574c99979171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_25
+      name: mob_3_die_25
       rect:
         serializedVersion: 2
         x: 128
@@ -658,13 +658,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 762d24b72b52e0a4593f1a65ad152a5b
+      spriteID: f8c8d0334f3f3d5449f038256335638d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_26
+      name: mob_3_die_26
       rect:
         serializedVersion: 2
         x: 256
@@ -678,13 +678,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b246b9d763d0c4a4bbef864a8043638b
+      spriteID: f8733eed4f36bf24ab08fb181629f195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_27
+      name: mob_3_die_27
       rect:
         serializedVersion: 2
         x: 384
@@ -698,13 +698,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 794cad4059993f147b9a28db3eb307b7
+      spriteID: 55d7a44e997bf6541a717a408dd021b3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_28
+      name: mob_3_die_28
       rect:
         serializedVersion: 2
         x: 512
@@ -718,13 +718,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16cf9fb7079536742b8b18c30c46e1f7
+      spriteID: 68bffed6e9f91f8499873edb0b0a84b1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_29
+      name: mob_3_die_29
       rect:
         serializedVersion: 2
         x: 640
@@ -738,13 +738,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad47a718e11935546a222e672a446e42
+      spriteID: 8761d0d951abcd54ba36d86f9366a4ef
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_30
+      name: mob_3_die_30
       rect:
         serializedVersion: 2
         x: 768
@@ -758,13 +758,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f52c8de873d355b46a43a0ab5a06bfe4
+      spriteID: edaf70cc70b75a64baf9407cbce70c86
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_31
+      name: mob_3_die_31
       rect:
         serializedVersion: 2
         x: 896
@@ -778,13 +778,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd365b66ce3704a48a6c677507c466ae
+      spriteID: 5def5864b1a42614a84da01a069db185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_32
+      name: mob_3_die_32
       rect:
         serializedVersion: 2
         x: 1024
@@ -798,13 +798,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68396fca8f1a6174d96430a554146a71
+      spriteID: aca44923eb7792b4b8b4c898079aa682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_33
+      name: mob_3_die_33
       rect:
         serializedVersion: 2
         x: 1152
@@ -818,13 +818,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2973fd47ca816042b5480b377de9298
+      spriteID: 4cf4b00db7bc7844fb14c76bce61946b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_34
+      name: mob_3_die_34
       rect:
         serializedVersion: 2
         x: 1280
@@ -838,13 +838,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 553f3759a0f0d4c4cbf9a6bc479ae5c8
+      spriteID: 6444a4fd627a5ec4b8b0d388736cd369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_35
+      name: mob_3_die_35
       rect:
         serializedVersion: 2
         x: 1408
@@ -858,13 +858,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a4e25ea7e81e4f40b6645f6b97ac02f
+      spriteID: 54e6282694cbbd945a9d73f462d09087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_36
+      name: mob_3_die_36
       rect:
         serializedVersion: 2
         x: 0
@@ -878,13 +878,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c2ff2bf54beb394cb00ed158453c39c
+      spriteID: fe2e14bc54715b54e8981622d777c4bf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_37
+      name: mob_3_die_37
       rect:
         serializedVersion: 2
         x: 128
@@ -898,13 +898,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bce91909177139845a3f894f9ad48aee
+      spriteID: d26d6efb252e1794aad10f75d2ec21c8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_38
+      name: mob_3_die_38
       rect:
         serializedVersion: 2
         x: 256
@@ -918,13 +918,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1255c35fee05dfa4b97d9bc5f2ff13b4
+      spriteID: 01a4cdc2b81975a4493e653eda753ce2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_39
+      name: mob_3_die_39
       rect:
         serializedVersion: 2
         x: 384
@@ -938,13 +938,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b383a0f3aaffa1548b21b38e698dd719
+      spriteID: cefad8e8f7023894d8c2a420916cd6b3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_40
+      name: mob_3_die_40
       rect:
         serializedVersion: 2
         x: 512
@@ -958,13 +958,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c58823bae9e502f43ae6d487d812011e
+      spriteID: 0f512c19e37ad854caa32617664db631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_41
+      name: mob_3_die_41
       rect:
         serializedVersion: 2
         x: 640
@@ -978,13 +978,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83d9cdb023195014bb34856a987243ca
+      spriteID: 4874dfffe803cea4aa40c3113c4b6e90
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_42
+      name: mob_3_die_42
       rect:
         serializedVersion: 2
         x: 768
@@ -998,13 +998,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 632e4829df753d446816ccee19c9749c
+      spriteID: 60831b8f9a3c06540a82132a28b75e6c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_43
+      name: mob_3_die_43
       rect:
         serializedVersion: 2
         x: 896
@@ -1018,13 +1018,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f540e580ceb4c17419eea955206e1f9f
+      spriteID: 4edd34f76752c4d4d9767e14d408840d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_44
+      name: mob_3_die_44
       rect:
         serializedVersion: 2
         x: 1024
@@ -1038,13 +1038,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 430f3f531a6b76943af360a75887298b
+      spriteID: ccc27216576b85b47bea8b98583693e1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_45
+      name: mob_3_die_45
       rect:
         serializedVersion: 2
         x: 1152
@@ -1058,13 +1058,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4189612ac4d8864c813ce4f3a31282b
+      spriteID: cd28a31c29901d842aed730b4ed78c06
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_46
+      name: mob_3_die_46
       rect:
         serializedVersion: 2
         x: 1280
@@ -1078,13 +1078,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c516179957f825043bb5994291bd7180
+      spriteID: d7a955bfc2709c24dbc8ce91c3842368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_47
+      name: mob_3_die_47
       rect:
         serializedVersion: 2
         x: 1408
@@ -1098,13 +1098,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91fdf034881808d42bc0627397a71acc
+      spriteID: a454f129421f34d469069911557ad2fa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_48
+      name: mob_3_die_48
       rect:
         serializedVersion: 2
         x: 0
@@ -1118,13 +1118,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ea222b5bd2a89643b517b85eab6f59c
+      spriteID: a75ff061dbb8616418aa8f75d273dbf1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_49
+      name: mob_3_die_49
       rect:
         serializedVersion: 2
         x: 128
@@ -1138,13 +1138,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bc6cc503e7025b4c9b27bc42dc9832b
+      spriteID: 5951fc60db4cf5c45bb0e9ceb91e8c0c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_50
+      name: mob_3_die_50
       rect:
         serializedVersion: 2
         x: 256
@@ -1158,13 +1158,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caf1cf2c0a21d8f44afb1f57298e7cce
+      spriteID: 56b82b47a9f649149b5d69570e9c3902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_51
+      name: mob_3_die_51
       rect:
         serializedVersion: 2
         x: 384
@@ -1178,13 +1178,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e898c684b6c9f5418f433425262a5e7
+      spriteID: 83c61d9e8ed85394bbec0a9cab66e4f4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_52
+      name: mob_3_die_52
       rect:
         serializedVersion: 2
         x: 512
@@ -1198,13 +1198,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5372298e7dbcd947bc29f7a4cfb7799
+      spriteID: df93991ba4955c844bad8906a0d07d20
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_53
+      name: mob_3_die_53
       rect:
         serializedVersion: 2
         x: 640
@@ -1218,13 +1218,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bcc489bb5050f442b036e817350e353
+      spriteID: a43dd102845a48344b4ed8da7acee614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_54
+      name: mob_3_die_54
       rect:
         serializedVersion: 2
         x: 768
@@ -1238,13 +1238,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fd7b02e8f4031c459a3c6a453f30cc1
+      spriteID: dd2c46f8c8580bd4789e50a80da01346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_55
+      name: mob_3_die_55
       rect:
         serializedVersion: 2
         x: 896
@@ -1258,13 +1258,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd8137d5376531140b68f6f2544424ba
+      spriteID: 4f1a4940173635147ad81913b201af2a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_56
+      name: mob_3_die_56
       rect:
         serializedVersion: 2
         x: 1024
@@ -1278,13 +1278,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 838c52f4ee18ed941a3d533a4826c419
+      spriteID: cb825436c5eeaa245af4425efc02a094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_57
+      name: mob_3_die_57
       rect:
         serializedVersion: 2
         x: 1152
@@ -1298,13 +1298,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9590a73f12f491c488ae8b30cb7ef6c6
+      spriteID: f21af8040f2eb0b439c455acf5e75bbe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_58
+      name: mob_3_die_58
       rect:
         serializedVersion: 2
         x: 1280
@@ -1318,13 +1318,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd6ffdd77368b5448b44fc50ba9d2613
+      spriteID: c2f9763bf4beb6d4f83b85d2f2b69488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_1_jump_59
+      name: mob_3_die_59
       rect:
         serializedVersion: 2
         x: 1408
@@ -1338,7 +1338,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 540f2b06be6bb3643946174231c4f351
+      spriteID: b2ad0991b9727a34aa3d637bdf22dce7
       vertices: []
       indices: 
       edges: []
@@ -1346,7 +1346,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5bed0d2a695f7a54fb5bd3c5368ebb63
+    spriteID: dccc2ebbfe45d8649b4a73bee82b363d
     vertices: []
     indices: 
     edges: []
