@@ -1,17 +1,14 @@
 fileFormatVersion: 2
-guid: 59402827426021248b2889700b3b7b10
+guid: 2cdf92c76ee2b5b48b662015ee5e1269
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mob3_effect_0
-    21300002: mob3_effect_1
-    21300004: mob3_effect_2
-    21300006: mob3_effect_3
-    21300008: mob3_effect_4
-    21300010: mob3_effect_5
-    21300012: mob3_effect_6
-    21300014: mob3_effect_7
-    21300016: mob3_effect_8
-    21300018: mob3_effect_9
+    21300000: mob_3_effect_flame_0
+    21300002: mob_3_effect_flame_1
+    21300004: mob_3_effect_flame_2
+    21300006: mob_3_effect_flame_3
+    21300008: mob_3_effect_flame_4
+    21300010: mob_3_effect_flame_5
+    21300012: mob_3_effect_flame_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -55,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,7 +91,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mob3_effect_0
+      name: mob_3_effect_flame_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,13 +105,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6b49980f9def82469c4fd5d4ff53cb6
+      spriteID: beee162d7d408a540b8490f01f3b495f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob3_effect_1
+      name: mob_3_effect_flame_1
       rect:
         serializedVersion: 2
         x: 32
@@ -128,13 +125,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 708029848c702f345b4d57d3a05a481e
+      spriteID: c4a7b1ac00c777244a0a11641919183f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob3_effect_2
+      name: mob_3_effect_flame_2
       rect:
         serializedVersion: 2
         x: 64
@@ -148,13 +145,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b401a4d70ffdd4d48a43653ab82cdb11
+      spriteID: 75844ca50832b7c4f8c2534caf2c8462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob3_effect_3
+      name: mob_3_effect_flame_3
       rect:
         serializedVersion: 2
         x: 96
@@ -168,13 +165,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9809ee7db9d68fc46901ae3e362608eb
+      spriteID: 04005a0f1f7639a46b6f90397f77892c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob3_effect_4
+      name: mob_3_effect_flame_4
       rect:
         serializedVersion: 2
         x: 128
@@ -188,13 +185,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29f671296e07d804093ce04ccef72603
+      spriteID: b60081d6ca5b14c4baa0e756b9d4799f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob3_effect_5
+      name: mob_3_effect_flame_5
       rect:
         serializedVersion: 2
         x: 160
@@ -208,13 +205,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c1cfbad0a05fb546a27e568e3988250
+      spriteID: 0e265c9e29cfaa1448cbe17f3506061a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob3_effect_6
+      name: mob_3_effect_flame_6
       rect:
         serializedVersion: 2
         x: 192
@@ -228,67 +225,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8164c733abe603a438db80b7bea43a4c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mob3_effect_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cf24594f12cce74ab421c85c30fb31d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mob3_effect_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17bad2d74d34e0f4cb29c61935091467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mob3_effect_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b69742a390eb08946a9b7931fd0f58cd
+      spriteID: bc9114140c4c86c4e832d735d68c2d25
       vertices: []
       indices: 
       edges: []
@@ -296,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0a0fc14ec82afb04d9663c9e9c51486f
+    spriteID: 70bb3aeeb9ad57b46a0f7d92894df9cb
     vertices: []
     indices: 
     edges: []
