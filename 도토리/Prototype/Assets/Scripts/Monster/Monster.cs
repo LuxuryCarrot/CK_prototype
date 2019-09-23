@@ -6,11 +6,13 @@ public class Monster : MonoBehaviour
 {
     public float movePower;
     public float Hp;
+    public float fireballspd;
     private float currentHp = 0;
+    
 
     private int movementFlag = 0;
     private bool isChasing;
-
+    GameObject FireBall;
     Animator animator;
     Vector3 movement;
 
@@ -21,15 +23,15 @@ public class Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cc = GetComponent<CharacterController>();
+        currentHp = Hp;
         
+        cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
 
-        StartCoroutine("ChangeMovement");
-
-        currentHp = Hp;
-
+        FireBall = GameObject.FindGameObjectWithTag("FireBall");
         Player = GameObject.FindGameObjectWithTag("Player");
+
+        StartCoroutine("ChangeMovement");
     }
 
     IEnumerator ChangeMovement()
@@ -49,15 +51,21 @@ public class Monster : MonoBehaviour
         StartCoroutine("ChangeMovement");
     }
 
+    void ShootFireBall()
+    {
+        FireBall.transform.position = new Vector2(transform.position.x, transform.position.y);
+        FireBall.transform.Translate(new Vector2(fireballspd * Time.deltaTime, 0));
+        Debug.Log("파이어볼");
+    }
+    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             ChaseTarget = other.gameObject;
-
             StopCoroutine("ChangeMovement");
-
-            Debug.Log("isChasing enter");
+            Debug.Log(fireballspd);
         }
     }
 
@@ -67,7 +75,10 @@ public class Monster : MonoBehaviour
         {
             isChasing = true;
             animator.SetBool("isMoving", true);
-            Debug.Log("isChasing");
+            if ()
+            {
+
+            }
         }
     }
 
@@ -77,8 +88,10 @@ public class Monster : MonoBehaviour
         {
             isChasing = false;
             StartCoroutine("ChangeMovement");
-            Debug.Log("isChasing false");
+            StopCoroutine("ShootFireBall");
+
         }
+
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -120,11 +133,13 @@ public class Monster : MonoBehaviour
         {
             moveVelocity = Vector3.left;
             transform.localScale = new Vector3(1, 1, 1);
+            fireballspd *= 1;
         }
         else if (dist == "Right")
         {
             moveVelocity = Vector3.right;
             transform.localScale = new Vector3(-1, 1, 1);
+            fireballspd *= -1;
         }
 
         transform.position += moveVelocity * movePower * Time.deltaTime;
