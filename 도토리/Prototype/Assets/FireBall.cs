@@ -17,6 +17,7 @@ public class FireBall : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         Ps = GetComponentInChildren<ParticleSystem>();
+        transform.position = Fox.transform.position;
         if (transform.position.x < Fox.transform.position.x)
         {
             rb.velocity = transform.right * speed;
