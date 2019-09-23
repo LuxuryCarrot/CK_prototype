@@ -56,16 +56,21 @@ public class Monster : MonoBehaviour
         StartCoroutine("ChangeMovement");
     }
 
+    IEnumerator Shoot()
+    {
+        yield return new WaitForSeconds(3.0f);
+        Instantiate(FireBall);
+        StartCoroutine("Shoot");
+    }
 
-    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            
             ChaseTarget = other.gameObject;
             StopCoroutine("ChangeMovement");
+            StartCoroutine("Shoot");
         }
     }
 
@@ -78,6 +83,14 @@ public class Monster : MonoBehaviour
 
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Player.SendMessage("ApplyDamage", 0.5f);
+            Debug.Log("Hit");
+        }
+    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -85,6 +98,7 @@ public class Monster : MonoBehaviour
         {
             isChasing = false;
             StartCoroutine("ChangeMovement");
+            StopCoroutine("Shoot");
         }
 
     }
@@ -131,21 +145,11 @@ public class Monster : MonoBehaviour
 
         if (dist == "Left")
         {
-            if (isFire == true)
-            {
-                Instantiate(FireBall);
-                isFire = false;
-            }
             moveVelocity = Vector3.left;
             transform.localScale = new Vector3(1, 1, 1);
         }
         else if (dist == "Right")
         {
-            if (isFire == false)
-            {
-                Instantiate(FireBall);
-                isFire = true;
-            }
             moveVelocity = Vector3.right;
             transform.localScale = new Vector3(-1, 1, 1);
         }

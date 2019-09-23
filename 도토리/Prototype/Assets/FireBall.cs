@@ -17,16 +17,7 @@ public class FireBall : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         Ps = GetComponentInChildren<ParticleSystem>();
-        transform.position = Fox.transform.position;
-        if (transform.position.x < Fox.transform.position.x)
-        {
-            rb.velocity = transform.right * speed;
-        }
-        if (transform.position.x > Fox.transform.position.x)
-        {
-            Ps.transform.localScale *= new Vector2(-1, 1);
-            rb.velocity = transform.right * -1 * speed;
-        }
+        transform.position = new Vector2(Fox.transform.position.x+2, Fox.transform.position.y + 3.0f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -36,13 +27,21 @@ public class FireBall : MonoBehaviour
             Destroy(gameObject);
             Player.SendMessage("ApplyDamage", 1.0f);
         }
+        if (collision.gameObject.tag == "Ground")
+        {
+            Destroy(gameObject);
+        }
+
     }
     private void Update()
     {
+        transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, 2 * Time.deltaTime);
+
         if (transform.position.x > 20.0f || transform.position.x < -20.0f)
     	{
             Destroy(gameObject);
 	    }
+        
         
     }
 
