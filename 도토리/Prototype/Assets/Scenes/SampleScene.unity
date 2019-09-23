@@ -800,6 +800,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   sprite: {fileID: 0}
   weapon: {fileID: 0}
+  weaponSprite: {fileID: 0}
   startAngle: {x: 0, y: 0, z: 0, w: 0}
   startState: 0
   curState: 0
@@ -1098,12 +1099,12 @@ PrefabInstance:
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0514
+      value: 0.0768
       objectReference: {fileID: 0}
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0817
+      value: -0.0618
       objectReference: {fileID: 0}
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
@@ -1149,6 +1150,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -108.582466
+      objectReference: {fileID: 0}
+    - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1983756
+      objectReference: {fileID: 0}
+    - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1983756
+      objectReference: {fileID: 0}
+    - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3225393
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72309da0d1ceb2847ae358e04a0e1054, type: 3}
