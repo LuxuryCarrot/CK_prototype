@@ -5,11 +5,18 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     public float movePower;
+    public float Hp;
+    private float currentHp = 0;
+
+    private int movementFlag = 0;
+    private bool isChasing;
+
     Animator animator;
     Vector3 movement;
-    int movementFlag = 0;
-    bool isChasing;
+
     GameObject ChaseTarget;
+    GameObject Player;
+
     CharacterController cc;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +27,9 @@ public class Monster : MonoBehaviour
 
         StartCoroutine("ChangeMovement");
 
-        
+        currentHp = Hp;
+
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     IEnumerator ChangeMovement()
@@ -119,5 +128,15 @@ public class Monster : MonoBehaviour
         }
 
         transform.position += moveVelocity * movePower * Time.deltaTime;
+    }
+
+    void ApplyDamage(float damage)
+    {
+        currentHp -= damage;
+        if (currentHp <= 0)
+        {
+
+        }
+
     }
 }
