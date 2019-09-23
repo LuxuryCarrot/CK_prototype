@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Fox
   - MonsterBlock
+  - Weapon
   layers:
   - Default
   - TransparentFX
