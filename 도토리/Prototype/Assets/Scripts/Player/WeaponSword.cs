@@ -4,54 +4,41 @@ using UnityEngine;
 
 public class WeaponSword : MonoBehaviour
 {
-    private Transform player;
-    private SpriteRenderer weaponSprite;
+    public PlayerStats stat;
+
+    private Transform playerTrans;
     private CapsuleCollider2D weaponCol;
-    private Vector3 weaponHandPos;
-    private Vector2 spriteRightOffset;
-    private Vector2 spriteLeftOffset;
+    private BoxCollider2D monsterCol;
 
-    private Vector3 mousePos;
-
-    private bool isWeaponFirstPosChanged = false;
-
+    [HideInInspector]
+    public Transform monster;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = transform.root;
-        weaponSprite = GetComponent<SpriteRenderer>();
+        playerTrans = transform.root;
         weaponCol = GetComponent<CapsuleCollider2D>();
-        weaponHandPos = transform.parent.localPosition;
-        spriteRightOffset = weaponCol.offset;
-        spriteLeftOffset = -weaponCol.offset;
+        monster = GameObject.FindGameObjectWithTag("Fox").transform;
+        monsterCol = monster.GetComponent<BoxCollider2D>();
+        stat = playerTrans.GetComponent<PlayerStats>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        mousePos = Input.mousePosition;
-        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-        mousePos.z = 0;
+    }
 
-        if (player.position.x > mousePos.x)
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if ((collision.gameObject.tag.CompareTo("Fox") == 0) &&
+            (collision == monsterCol) &&
+            (stat.curState == PlayerState.ATTACK))
         {
-            transform.parent.localPosition =
-                new Vector3(-weaponHandPos.x, transform.parent.localPosition.y, transform.parent.localPosition.z);
-
-            weaponCol.offset = spriteLeftOffset;
-            weaponSprite.flipY = true;
-            weaponSprite.flipX = true;
+            if (Input.GetMouseButtonUp(0))
+            {
+                Debug.Log("Player Damage : " + stat.finalDamage);
+                monster.SendMessage("ApplyDamage", stat.finalDamage);
+            }
         }
-        else
-        {
-            transform.parent.localPosition =
-                new Vector3(weaponHandPos.x, weaponHandPos.y, weaponHandPos.z);
-
-            weaponCol.offset = spriteRightOffset;
-            weaponSprite.flipY = false;
-            weaponSprite.flipX = false;
-        }
-
     }
 }

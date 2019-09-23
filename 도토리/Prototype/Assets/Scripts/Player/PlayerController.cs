@@ -2,17 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PlayerState
-{
-    IDLE = 0,
-    WALK,
-    JUMP,
-    DOWN,
-    DASH,
-    ATTACK,
-    DEAD
-}
-
 public enum ElementalProperty
 {
     None,
@@ -24,6 +13,8 @@ public enum ElementalProperty
 
 public class PlayerController : MonoBehaviour
 {
+    public PlayerStats stat;
+
     [SerializeField]
     private bool isKeyInputting = false;
 
@@ -31,16 +22,8 @@ public class PlayerController : MonoBehaviour
 
     public float attackDir = 0;
 
-    public float walkSpeed;
-
     private float gravity;
     public float verticalVelocity;
-    private float fallSpeed;
-    public float jumpForce;
-
-    public float dashSpeed;
-    public float dashForce;
-
 
     [HideInInspector]
     public Transform monster;
@@ -53,20 +36,13 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDirection;
     public CharacterController cc;
     public Animator anim;
-    public SpriteRenderer sprite;
+    public WeaponSword weapon;
 
-    public Quaternion startAngle;
-
-    public GameObject weapon;
-
-    public PlayerState startState;
-    public PlayerState curState;
+    public Transform spriteTrans;
+    public Vector3 flipScale;
 
     public ElementalProperty curWeaponProperty;
 
-    public float hp;
-    public float currentHP;
-    public float weaponDamage;
     public float curElementalDurantionTime;
     public float maxElementalDurantionTime;     //const
 
@@ -76,20 +52,18 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        jumpForce = 1.5f;
-        walkSpeed = 3f;
-        dashSpeed = 6f;
-        dashForce = 1.2f;
-        fallSpeed = 4f;
+        stat = GetComponent<PlayerStats>();
+
         verticalVelocity = 9.8f;
-        weaponDamage = 10f;
-        hp = 100;
 
         cc = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
-        sprite = GetComponentInChildren<SpriteRenderer>();
+
+        spriteTrans = transform.GetChild(0);
+        flipScale = spriteTrans.localScale;
+
         monster = GameObject.FindGameObjectWithTag("Fox").transform;
-        weapon = GameObject.FindGameObjectWithTag("Weapon");
+        weapon = new WeaponSword();
         states.Add(PlayerState.IDLE, GetComponent<PlayerIDLE>());
         states.Add(PlayerState.WALK, GetComponent<PlayerWALK>());
         states.Add(PlayerState.JUMP, GetComponent<PlayerJUMP>());
@@ -102,9 +76,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startAngle = weapon.transform.rotation;
-        currentHP = hp;
-        SetState(startState);
+        SetState(stat.startState);
     }
 
     // Update is called once per frame
@@ -144,14 +116,13 @@ public class PlayerController : MonoBehaviour
         //sprite flip
         if (transform.position.x > mousePos.x)
         {
-            sprite.flipX = true;
+            spriteTrans.localScale = new Vector3(-flipScale.x, flipScale.y, flipScale.z);
         }
         else
         {
-            sprite.flipX = false;
+            spriteTrans.localScale = new Vector3(flipScale.x, flipScale.y, flipScale.z);
         }
     }
-
 
     public void SetState(PlayerState newState)
     {
@@ -169,33 +140,35 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        curState = newState;
-        states[curState].enabled = true;
-        states[curState].BeginState();
+        stat.curState = newState;
+        states[stat.curState].enabled = true;
+        states[stat.curState].BeginState();
 
         if (states[PlayerState.JUMP].enabled)           //Jumping
             anim.SetInteger("curState", (int)PlayerState.JUMP);
         else
-            anim.SetInteger("curState", (int)curState);
+            anim.SetInteger("curState", (int)stat.curState);
 
         if (states[PlayerState.ATTACK].enabled)
+        {
             anim.SetFloat("attackDir", attackDir);
+        }
     }
 
     public void Gravity()
     {
         if (cc.isGrounded)
         {
-            gravity = -fallSpeed * Time.deltaTime;
+            gravity = -stat.fallSpeed * Time.deltaTime;
             if (Input.GetKeyDown(KeyCode.W))
             {
-                gravity = jumpForce;
+                gravity = stat.jumpForce;
                 SetState(PlayerState.JUMP);
             }
         }
         else
         {
-            gravity -= fallSpeed * Time.deltaTime;
+            gravity -= stat.fallSpeed * Time.deltaTime;
         }
         moveDirection = Vector2.zero;
         moveDirection.y = gravity * verticalVelocity;
@@ -205,7 +178,7 @@ public class PlayerController : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if ((hit.gameObject.tag == "Ground") &&
-            (gravity <= fallSpeed))
+            (gravity <= stat.fallSpeed))
         {
             states[PlayerState.JUMP].enabled = false;
         }
@@ -218,11 +191,11 @@ public class PlayerController : MonoBehaviour
 
     void ApplyDamage(float damage)
     {
-        currentHP -= damage;
+        stat.currentHP -= damage;
 
-        if (currentHP <= 0)
+        if (stat.currentHP <= 0)
         {
-
+            Debug.Log("PlayerDead");
         }
     }
 }

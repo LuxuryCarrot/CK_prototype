@@ -27,7 +27,7 @@ public class PlayerDASH : PlayerFSMController
     {
         if (currentDashTime < maxDashTime)
         {
-            deltaMove = deltaMove * controller.dashForce;
+            deltaMove = deltaMove * controller.stat.dashForce;
             currentDashTime += dashStoppingSpeed;
         }
         else
@@ -36,7 +36,7 @@ public class PlayerDASH : PlayerFSMController
             controller.states[PlayerState.DASH].enabled = false;
         }
 
-        if (controller.sprite.flipX)
+        if (controller.spriteTrans.localScale.x <= 0)           
         {
             if (deltaMove.x > 0)
                 deltaMove.x = -deltaMove.x;
@@ -47,6 +47,6 @@ public class PlayerDASH : PlayerFSMController
                 deltaMove.x = -deltaMove.x;
         }
 
-        controller.cc.Move(deltaMove * Time.deltaTime * controller.dashSpeed);
+        controller.cc.Move(deltaMove * Time.deltaTime * controller.stat.dashSpeed);
     }
 }

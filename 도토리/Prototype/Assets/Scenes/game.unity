@@ -456,7 +456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &519420029
 AudioListener:
   m_ObjectHideFlags: 0
@@ -488,10 +488,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 500
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -614,7 +614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000010161159088, guid: 6622b93cfd71148f88fa3b6097d487b6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
         type: 3}
@@ -950,6 +950,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1669849050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6460731404109605315, guid: 72309da0d1ceb2847ae358e04a0e1054,
+    type: 3}
+  m_PrefabInstance: {fileID: 2485088916464154308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1669849053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669849050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98b9a70e58e44348a01c905d8a03ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!1 &1736990433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,6 +1340,11 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.6508961
       objectReference: {fileID: 0}
+    - target: {fileID: 8006194236214712570, guid: 5965798181d1de64cb7061881f95032f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5965798181d1de64cb7061881f95032f, type: 3}
 --- !u!1 &1936515969
@@ -1501,6 +1526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2098263874}
   - component: {fileID: 2098263872}
+  - component: {fileID: 2098263883}
   - component: {fileID: 2098263880}
   - component: {fileID: 2098263882}
   - component: {fileID: 2098263879}
@@ -1644,29 +1670,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f4e8d61235602241afce120833adb3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stat: {fileID: 0}
   isKeyInputting: 0
   isUpAttacked: 1
   attackDir: 0
-  walkSpeed: 0
   verticalVelocity: 0
-  jumpForce: 0
-  dashSpeed: 0
-  dashForce: 0
   monster: {fileID: 0}
   mousePos: {x: 0, y: 0, z: 0}
   lastMoveDir: {x: 0, y: 0, z: 0}
   dashDir: {x: 0, y: 0, z: 0}
   cc: {fileID: 0}
   anim: {fileID: 0}
-  sprite: {fileID: 0}
-  startAngle: {x: 0, y: 0, z: 0, w: 0}
   weapon: {fileID: 0}
-  startState: 0
-  curState: 0
+  spriteTrans: {fileID: 0}
+  flipScale: {x: 0, y: 0, z: 0}
   curWeaponProperty: 0
-  hp: 0
-  currentHP: 0
-  weaponDamage: 0
   curElementalDurantionTime: 0
   maxElementalDurantionTime: 0
 --- !u!114 &2098263881
@@ -1695,6 +1713,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
+--- !u!114 &2098263883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098263871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40ff1b6cd861484f916767908c77dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 0
+  fallSpeed: 0
+  jumpForce: 0
+  dashSpeed: 0
+  dashForce: 0
+  hp: 0
+  currentHP: 0
+  weaponDamage: 0
+  finalDamage: 0
+  controller: {fileID: 0}
+  startState: 0
+  curState: 0
 --- !u!1 &2128704599
 GameObject:
   m_ObjectHideFlags: 0

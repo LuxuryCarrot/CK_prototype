@@ -24,6 +24,6 @@ public class PlayerWALK : PlayerFSMController
             controller.states[PlayerState.WALK].enabled = false;
         }
 
-        controller.cc.Move(controller.lastMoveDir * controller.walkSpeed * Time.deltaTime);
+        controller.cc.Move(controller.lastMoveDir * controller.stat.walkSpeed * Time.deltaTime);
     }
 }
