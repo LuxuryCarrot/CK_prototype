@@ -64,9 +64,6 @@ public class PlayerATTACK : PlayerFSMController
                 break;
         }
 
-
-        Debug.Log(controller.weapon.transform.rotation);
-
         //controller.monster.SendMessage("ApplyDamage", finalDamage);
 
         if (controller.attackDir < 1)                               //Anim down attack

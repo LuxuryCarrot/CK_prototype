@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     public SpriteRenderer sprite;
     public GameObject weapon;
+    public SpriteRenderer weaponSprite;
     public Quaternion startAngle;
 
 
@@ -139,6 +140,7 @@ public class PlayerController : MonoBehaviour
         mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
         mousePos.z = 0;
+        //sprite flip
         if (transform.position.x > mousePos.x)
         {
             sprite.flipX = true;
@@ -175,8 +177,8 @@ public class PlayerController : MonoBehaviour
         else
             anim.SetInteger("curState", (int)curState);
 
-        //if (states[PlayerState.ATTACK].enabled)
-        //    anim.SetFloat("attackDir", attackDir);
+        if (states[PlayerState.ATTACK].enabled)
+            anim.SetFloat("attackDir", attackDir);
     }
 
     public void Gravity()
@@ -213,13 +215,13 @@ public class PlayerController : MonoBehaviour
         attackDir = newDir ? 1 : 0;
     }
 
-    //void ApplyDamage(float damage)
-    //{
-    //    currentHP -= damage;
+    void ApplyDamage(float damage)
+    {
+        currentHP -= damage;
 
-    //    if(currentHP<=0)
-    //    {
+        if (currentHP <= 0)
+        {
 
-    //    }
-    //}
+        }
+    }
 }
