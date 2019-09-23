@@ -393,7 +393,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &493381821
 GameObject:
@@ -616,6 +616,36 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0.043080926
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.91383815
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
+        type: 3}
+      propertyPath: orthographic size
+      value: 2.734375
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013479013034, guid: 6622b93cfd71148f88fa3b6097d487b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -675,36 +705,6 @@ PrefabInstance:
     - target: {fileID: 4000010010467388, guid: 6622b93cfd71148f88fa3b6097d487b6, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0.043080926
-      objectReference: {fileID: 0}
-    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.91383815
-      objectReference: {fileID: 0}
-    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
-        type: 3}
-      propertyPath: orthographic size
-      value: 2.734375
-      objectReference: {fileID: 0}
-    - target: {fileID: 20000010728017760, guid: 6622b93cfd71148f88fa3b6097d487b6,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114000014161016204, guid: 6622b93cfd71148f88fa3b6097d487b6,
         type: 3}
@@ -1414,7 +1414,7 @@ RectTransform:
   m_Children:
   - {fileID: 338048577}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
