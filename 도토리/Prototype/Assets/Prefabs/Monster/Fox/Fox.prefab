@@ -80,7 +80,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePower: 1
-  Hp: 0
+  Hp: 10
+  nextTime: 3
+  TimeLeft: 0
   FireBall: {fileID: 624037207638910439, guid: 9b356e0068d7f4e42a72aa1e34ea9f4d, type: 3}
   firePoint: {fileID: 0}
 --- !u!212 &8006194236214712567

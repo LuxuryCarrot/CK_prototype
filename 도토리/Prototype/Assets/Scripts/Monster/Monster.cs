@@ -9,6 +9,10 @@ public class Monster : MonoBehaviour
     private float currentHp = 0;
     private int movementFlag = 0;
     private bool isChasing;
+    private bool isFire = true;
+
+    public float nextTime = 0.0f;
+    public float TimeLeft;
 
     public GameObject FireBall;
     public GameObject firePoint;
@@ -59,6 +63,7 @@ public class Monster : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            
             ChaseTarget = other.gameObject;
             StopCoroutine("ChangeMovement");
         }
@@ -80,18 +85,12 @@ public class Monster : MonoBehaviour
         {
             isChasing = false;
             StartCoroutine("ChangeMovement");
-            StopCoroutine("ShootFireBall");
-
         }
 
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            Instantiate(FireBall, firePoint.transform.position, firePoint.transform.rotation);
-        }
         Move();
     }
 
@@ -106,10 +105,13 @@ public class Monster : MonoBehaviour
 
             if (playerPos.x < transform.position.x)
             {
+
                 dist = "Left";
+                
             }
             else if (playerPos.x > transform.position.x)
             {
+
                 dist = "Right";
             }
         }
@@ -118,20 +120,32 @@ public class Monster : MonoBehaviour
             if (movementFlag == 1)
             {
                 dist = "Left";
+               
             }
             else if (movementFlag == 2)
             {
                 dist = "Right";
+              
             }
         }
 
         if (dist == "Left")
         {
+            if (isFire == true)
+            {
+                Instantiate(FireBall);
+                isFire = false;
+            }
             moveVelocity = Vector3.left;
             transform.localScale = new Vector3(1, 1, 1);
         }
         else if (dist == "Right")
         {
+            if (isFire == false)
+            {
+                Instantiate(FireBall);
+                isFire = true;
+            }
             moveVelocity = Vector3.right;
             transform.localScale = new Vector3(-1, 1, 1);
         }
@@ -144,7 +158,7 @@ public class Monster : MonoBehaviour
         currentHp -= damage;
         if (currentHp <= 0)
         {
-
+            Destroy(gameObject);
         }
 
     }

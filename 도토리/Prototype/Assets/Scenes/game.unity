@@ -611,6 +611,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4859d909e2cd5ef43ae3790f0a51295b, type: 3}
+--- !u!1 &2021698079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6522590824255154192, guid: 5965798181d1de64cb7061881f95032f,
+    type: 3}
+  m_PrefabInstance: {fileID: 8006194235613121008}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2093377540 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010161159088, guid: 6622b93cfd71148f88fa3b6097d487b6,
@@ -1303,6 +1309,11 @@ PrefabInstance:
       propertyPath: fireballspd
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8006194236214712568, guid: 5965798181d1de64cb7061881f95032f,
+        type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 2021698079}
     - target: {fileID: 8006194236214712569, guid: 5965798181d1de64cb7061881f95032f,
         type: 3}
       propertyPath: m_Constraints
@@ -1337,6 +1348,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006194236214712570, guid: 5965798181d1de64cb7061881f95032f,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006194236214712570, guid: 5965798181d1de64cb7061881f95032f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5965798181d1de64cb7061881f95032f, type: 3}
