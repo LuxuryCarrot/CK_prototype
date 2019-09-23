@@ -6,13 +6,13 @@ public class Monster : MonoBehaviour
 {
     public float movePower;
     public float Hp;
-    public float fireballspd;
     private float currentHp = 0;
-    
-
     private int movementFlag = 0;
     private bool isChasing;
-    GameObject FireBall;
+
+    public GameObject FireBall;
+    public GameObject firePoint;
+
     Animator animator;
     Vector3 movement;
 
@@ -28,7 +28,8 @@ public class Monster : MonoBehaviour
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
 
-        FireBall = GameObject.FindGameObjectWithTag("FireBall");
+        firePoint = GameObject.FindGameObjectWithTag("FirePoint");
+
         Player = GameObject.FindGameObjectWithTag("Player");
 
         StartCoroutine("ChangeMovement");
@@ -51,12 +52,7 @@ public class Monster : MonoBehaviour
         StartCoroutine("ChangeMovement");
     }
 
-    void ShootFireBall()
-    {
-        FireBall.transform.position = new Vector2(transform.position.x, transform.position.y);
-        FireBall.transform.Translate(new Vector2(fireballspd * Time.deltaTime, 0));
-        Debug.Log("파이어볼");
-    }
+
     
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -65,7 +61,6 @@ public class Monster : MonoBehaviour
         {
             ChaseTarget = other.gameObject;
             StopCoroutine("ChangeMovement");
-            Debug.Log(fireballspd);
         }
     }
 
@@ -75,10 +70,7 @@ public class Monster : MonoBehaviour
         {
             isChasing = true;
             animator.SetBool("isMoving", true);
-            if ()
-            {
 
-            }
         }
     }
 
@@ -96,6 +88,10 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            Instantiate(FireBall, firePoint.transform.position, firePoint.transform.rotation);
+        }
         Move();
     }
 
@@ -133,13 +129,11 @@ public class Monster : MonoBehaviour
         {
             moveVelocity = Vector3.left;
             transform.localScale = new Vector3(1, 1, 1);
-            fireballspd *= 1;
         }
         else if (dist == "Right")
         {
             moveVelocity = Vector3.right;
             transform.localScale = new Vector3(-1, 1, 1);
-            fireballspd *= -1;
         }
 
         transform.position += moveVelocity * movePower * Time.deltaTime;

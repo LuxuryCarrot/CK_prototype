@@ -504,53 +504,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 114342349241220822, guid: 6622b93cfd71148f88fa3b6097d487b6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6622b93cfd71148f88fa3b6097d487b6, type: 3}
---- !u!1 &1179759497
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1179759498}
-  - component: {fileID: 1179759499}
-  m_Layer: 0
-  m_Name: FireBall
-  m_TagString: FireBall
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1179759498
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179759497}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.51, y: -3.03, z: -0.09755736}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1179759499
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179759497}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.18242164
 --- !u!4 &1582890544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013479013034, guid: 6622b93cfd71148f88fa3b6097d487b6,
@@ -1354,6 +1307,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006194236214712570, guid: 5965798181d1de64cb7061881f95032f,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006194236214712570, guid: 5965798181d1de64cb7061881f95032f,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006194236214712570, guid: 5965798181d1de64cb7061881f95032f,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006194236214712570, guid: 5965798181d1de64cb7061881f95032f,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006194236214712570, guid: 5965798181d1de64cb7061881f95032f,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006194236214712570, guid: 5965798181d1de64cb7061881f95032f,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5965798181d1de64cb7061881f95032f, type: 3}
