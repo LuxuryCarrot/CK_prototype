@@ -9,6 +9,7 @@ TagManager:
   - MonsterBlock
   - Weapon
   - FireBall
+  - FirePoint
   layers:
   - Default
   - TransparentFX
