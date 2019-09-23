@@ -708,7 +708,6 @@ Transform:
   - {fileID: 2128704600}
   - {fileID: 870191334}
   - {fileID: 1582890544}
-  - {fileID: 822453414632273638}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -920,8 +919,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2128704600}
   - component: {fileID: 2128704601}
-  - component: {fileID: 2128704602}
   - component: {fileID: 2128704603}
+  - component: {fileID: 2128704602}
   m_Layer: 8
   m_Name: chipmunk
   m_TagString: Player
@@ -939,7 +938,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.1162, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 822453414632273638}
   m_Father: {fileID: 2098263874}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1116,7 +1116,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2098263874}
+    m_TransformParent: {fileID: 2128704600}
     m_Modifications:
     - target: {fileID: 6460731404109605315, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
@@ -1131,12 +1131,12 @@ PrefabInstance:
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.077
+      value: 0.385
       objectReference: {fileID: 0}
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.063
+      value: 0.266
       objectReference: {fileID: 0}
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
@@ -1166,7 +1166,7 @@ PrefabInstance:
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
@@ -1186,12 +1186,12 @@ PrefabInstance:
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.21121952
+      value: 1.056098
       objectReference: {fileID: 0}
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.21121952
+      value: 1.056098
       objectReference: {fileID: 0}
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}

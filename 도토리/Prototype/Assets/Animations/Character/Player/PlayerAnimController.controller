@@ -34,6 +34,21 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!206 &206151635522329876
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BlendTree
+  m_Childs: []
+  m_BlendParameter: attackDir
+  m_BlendParameterY: Blend
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
+  m_NormalizedBlendValues: 0
+  m_BlendType: 0
 --- !u!206 &206327185652578300
 BlendTree:
   m_ObjectHideFlags: 1
@@ -43,18 +58,18 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 1b501ecafe41d064290aa035ad9b0e00, type: 2}
+    m_Motion: {fileID: 7400000, guid: 186537a6ea6c2974494396b5a89dfb07, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 5
+    m_TimeScale: 10
     m_CycleOffset: 0
     m_DirectBlendParameter: attackDir
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: de833fc9dd732704db9551f479cab863, type: 2}
+    m_Motion: {fileID: 7400000, guid: 1b5e7032a9adc8344b496f3dce05f549, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 2
+    m_TimeScale: 10
     m_CycleOffset: 0
     m_DirectBlendParameter: attackDir
     m_Mirror: 0
@@ -62,7 +77,7 @@ BlendTree:
   m_BlendParameterY: attackDir
   m_MinThreshold: 0
   m_MaxThreshold: 1
-  m_UseAutomaticThresholds: 1
+  m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0
 --- !u!1101 &1101137060846571198
@@ -373,7 +388,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: JUMP
-  m_Speed: 7
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101281155547757386}
@@ -402,7 +417,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IDLE
-  m_Speed: 10
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101641821859842900}
@@ -460,7 +475,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WALK
-  m_Speed: 10
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101580329974390000}
@@ -501,7 +516,7 @@ AnimatorStateMachine:
     m_Position: {x: 660, y: 168, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102774397823835650}
-    m_Position: {x: 720, y: -12, z: 0}
+    m_Position: {x: 660, y: -36, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
