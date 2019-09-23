@@ -6,16 +6,14 @@ public class WaterSkill : IPassiveSkill
 {
     private const float WATER_DEMN = 0.7f;
 
-    public float DamageMUL(float weaponDamage)
+    public float DamageMUL(float x, float y)
     {
-        return weaponDamage * this.GetBuff();
+        return x * y;
     }
 
-    public float Empower(float weaponDamage, float elementalDamage, DamageCalc calc)
+    public float EmpowerInWeapon(float weaponDamage, float elementalDamage, DamageCalc calc)
     {
-        Debug.Log("무기 공격력 : " + weaponDamage);
-        Debug.Log("속성 공격력 : " + elementalDamage);
-        return calc(weaponDamage);
+        return calc(weaponDamage, elementalDamage);
     }
 
     public float GetBuff()

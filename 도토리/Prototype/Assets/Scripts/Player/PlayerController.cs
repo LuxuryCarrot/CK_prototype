@@ -25,7 +25,12 @@ public enum ElementalProperty
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private bool isKeyInput = false;
+    private bool isKeyInputting = false;
+
+    public bool isUpAttacked = true;
+
+    public float attackDir = 0;
+
     public float walkSpeed;
 
     private float gravity;
@@ -49,6 +54,9 @@ public class PlayerController : MonoBehaviour
     public CharacterController cc;
     public Animator anim;
     public SpriteRenderer sprite;
+    public GameObject weapon;
+    public Quaternion startAngle;
+
 
     public PlayerState startState;
     public PlayerState curState;
@@ -80,6 +88,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         monster = GameObject.FindGameObjectWithTag("Fox").transform;
+        weapon = GameObject.FindGameObjectWithTag("Weapon");
         states.Add(PlayerState.IDLE, GetComponent<PlayerIDLE>());
         states.Add(PlayerState.WALK, GetComponent<PlayerWALK>());
         states.Add(PlayerState.JUMP, GetComponent<PlayerJUMP>());
@@ -92,6 +101,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startAngle = weapon.transform.rotation;
         currentHP = hp;
         SetState(startState);
     }
@@ -104,11 +114,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
             SetState(PlayerState.DOWN);
         if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            dashDir = mousePos - transform.position;
-            dashDir.Normalize();
             SetState(PlayerState.DASH);
-        }
         if (Input.GetMouseButtonDown(0))
             SetState(PlayerState.ATTACK);
 
@@ -124,10 +130,10 @@ public class PlayerController : MonoBehaviour
                 break;
 
             if (i == states.Count)
-                isKeyInput = false;
+                isKeyInputting = false;
         }
 
-        if (!isKeyInput)
+        if (!isKeyInputting)
             SetState(PlayerState.IDLE);
 
         mousePos = Input.mousePosition;
@@ -141,8 +147,6 @@ public class PlayerController : MonoBehaviour
         {
             sprite.flipX = false;
         }
-
-
     }
 
 
@@ -150,11 +154,11 @@ public class PlayerController : MonoBehaviour
     {
         if (newState != PlayerState.IDLE)
         {
-            isKeyInput = true;
+            isKeyInputting = true;
             states[PlayerState.IDLE].enabled = false;
         }
 
-        if (!isKeyInput)
+        if (!isKeyInputting)
         {
             foreach (PlayerFSMController fsm in states.Values)
             {
@@ -165,10 +169,14 @@ public class PlayerController : MonoBehaviour
         curState = newState;
         states[curState].enabled = true;
         states[curState].BeginState();
-        if (states[PlayerState.JUMP].enabled)
+
+        if (states[PlayerState.JUMP].enabled)           //Jumping
             anim.SetInteger("curState", (int)PlayerState.JUMP);
         else
             anim.SetInteger("curState", (int)curState);
+
+        //if (states[PlayerState.ATTACK].enabled)
+        //    anim.SetFloat("attackDir", attackDir);
     }
 
     public void Gravity()
@@ -200,13 +208,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void ApplyDamage(float damage)
+    public void AttackDirCheck(bool newDir)
     {
-        currentHP -= damage;
-
-        if(currentHP<=0)
-        {
-
-        }
+        attackDir = newDir ? 1 : 0;
     }
+
+    //void ApplyDamage(float damage)
+    //{
+    //    currentHP -= damage;
+
+    //    if(currentHP<=0)
+    //    {
+
+    //    }
+    //}
 }
