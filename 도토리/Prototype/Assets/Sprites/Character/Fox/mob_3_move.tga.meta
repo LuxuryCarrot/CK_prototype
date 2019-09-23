@@ -1,67 +1,67 @@
 fileFormatVersion: 2
-guid: 5fff7152094cc9246a445c54ca585be7
+guid: 8e9ff795c1ee3de409a89566dbd153a4
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mob_3_att_0
-    21300002: mob_3_att_1
-    21300004: mob_3_att_2
-    21300006: mob_3_att_3
-    21300008: mob_3_att_4
-    21300010: mob_3_att_5
-    21300012: mob_3_att_6
-    21300014: mob_3_att_7
-    21300016: mob_3_att_8
-    21300018: mob_3_att_9
-    21300020: mob_3_att_10
-    21300022: mob_3_att_11
-    21300024: mob_3_att_12
-    21300026: mob_3_att_13
-    21300028: mob_3_att_14
-    21300030: mob_3_att_15
-    21300032: mob_3_att_16
-    21300034: mob_3_att_17
-    21300036: mob_3_att_18
-    21300038: mob_3_att_19
-    21300040: mob_3_att_20
-    21300042: mob_3_att_21
-    21300044: mob_3_att_22
-    21300046: mob_3_att_23
-    21300048: mob_3_att_24
-    21300050: mob_3_att_25
-    21300052: mob_3_att_26
-    21300054: mob_3_att_27
-    21300056: mob_3_att_28
-    21300058: mob_3_att_29
-    21300060: mob_3_att_30
-    21300062: mob_3_att_31
-    21300064: mob_3_att_32
-    21300066: mob_3_att_33
-    21300068: mob_3_att_34
-    21300070: mob_3_att_35
-    21300072: mob_3_att_36
-    21300074: mob_3_att_37
-    21300076: mob_3_att_38
-    21300078: mob_3_att_39
-    21300080: mob_3_att_40
-    21300082: mob_3_att_41
-    21300084: mob_3_att_42
-    21300086: mob_3_att_43
-    21300088: mob_3_att_44
-    21300090: mob_3_att_45
-    21300092: mob_3_att_46
-    21300094: mob_3_att_47
-    21300096: mob_3_att_48
-    21300098: mob_3_att_49
-    21300100: mob_3_att_50
-    21300102: mob_3_att_51
-    21300104: mob_3_att_52
-    21300106: mob_3_att_53
-    21300108: mob_3_att_54
-    21300110: mob_3_att_55
-    21300112: mob_3_att_56
-    21300114: mob_3_att_57
-    21300116: mob_3_att_58
-    21300118: mob_3_att_59
+    21300000: move_0
+    21300002: move_1
+    21300004: move_2
+    21300006: move_3
+    21300008: move_4
+    21300010: move_5
+    21300012: move_6
+    21300014: move_7
+    21300016: move_8
+    21300018: move_9
+    21300020: move_10
+    21300022: move_11
+    21300024: move_12
+    21300026: move_13
+    21300028: move_14
+    21300030: move_15
+    21300032: move_16
+    21300034: move_17
+    21300036: move_18
+    21300038: move_19
+    21300040: move_20
+    21300042: move_21
+    21300044: move_22
+    21300046: move_23
+    21300048: move_24
+    21300050: move_25
+    21300052: move_26
+    21300054: move_27
+    21300056: move_28
+    21300058: move_29
+    21300060: move_30
+    21300062: move_31
+    21300064: move_32
+    21300066: move_33
+    21300068: move_34
+    21300070: move_35
+    21300072: move_36
+    21300074: move_37
+    21300076: move_38
+    21300078: move_39
+    21300080: move_40
+    21300082: move_41
+    21300084: move_42
+    21300086: move_43
+    21300088: move_44
+    21300090: move_45
+    21300092: move_46
+    21300094: move_47
+    21300096: move_48
+    21300098: move_49
+    21300100: move_50
+    21300102: move_51
+    21300104: move_52
+    21300106: move_53
+    21300108: move_54
+    21300110: move_55
+    21300112: move_56
+    21300114: move_57
+    21300116: move_58
+    21300118: move_59
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -140,11 +140,22 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mob_3_att_0
+      name: move_0
       rect:
         serializedVersion: 2
         x: 0
@@ -158,13 +169,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b172b88c15145074ea7a0382ebb473f8
+      spriteID: 7db9b60c67eed164b8b4f9cb2819a66b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_1
+      name: move_1
       rect:
         serializedVersion: 2
         x: 128
@@ -178,13 +189,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acdb3a4aca31c6e489436ab4c41f2b3e
+      spriteID: 0311312c125f6524cacfb937739c33ba
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_2
+      name: move_2
       rect:
         serializedVersion: 2
         x: 256
@@ -198,13 +209,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72b403d38668746408c713d9fbecf547
+      spriteID: fe8427c0e3e939b4284ec794af19a3a2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_3
+      name: move_3
       rect:
         serializedVersion: 2
         x: 384
@@ -218,13 +229,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 743f9f54730e3f042a7498796c07ab03
+      spriteID: 9b98d40ee7783f24f8fdbd44d9dbf5de
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_4
+      name: move_4
       rect:
         serializedVersion: 2
         x: 512
@@ -238,13 +249,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71836d83297d5f340a72b31e67185279
+      spriteID: 2aacaa3d9f63121419f814ec1a6985a7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_5
+      name: move_5
       rect:
         serializedVersion: 2
         x: 640
@@ -258,13 +269,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37823236cb2e0bd4992a547adfe5bfb1
+      spriteID: 3e800aaeba37a4c4cb5d16f50846fb9a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_6
+      name: move_6
       rect:
         serializedVersion: 2
         x: 768
@@ -278,13 +289,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e9256bfa18feb54fa6a8039ce805a33
+      spriteID: 827c5739e4d52a849bf227ac8af6c18c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_7
+      name: move_7
       rect:
         serializedVersion: 2
         x: 896
@@ -298,13 +309,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c77a3865e1192c4ebc635b5a1084619
+      spriteID: 9219ee7c698928149a22e0c53436041b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_8
+      name: move_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -318,13 +329,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bcf2f560cfb15f4eb412941fa5ae169
+      spriteID: 2b45edd43db598541acc31d6076ce829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_9
+      name: move_9
       rect:
         serializedVersion: 2
         x: 1152
@@ -338,13 +349,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43cdc6647a466af4bb8e32511f2dbe95
+      spriteID: fffdc28c75ede4442b1005ca446d1856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_10
+      name: move_10
       rect:
         serializedVersion: 2
         x: 1280
@@ -358,13 +369,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75f63a715784bc944ac6453b48d7332a
+      spriteID: 151cceaaef1ce7f4cbe4b50c38f6a4a1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_11
+      name: move_11
       rect:
         serializedVersion: 2
         x: 1408
@@ -378,13 +389,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 387a15c2b9638a341aa282bdb8422cf0
+      spriteID: 652030fd88101124d8d1756dfc5265ee
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_12
+      name: move_12
       rect:
         serializedVersion: 2
         x: 0
@@ -398,13 +409,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e3d63d26d32f17419b870e6396f0f3c
+      spriteID: c81a884fd8bd6a4468db55c083174ba3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_13
+      name: move_13
       rect:
         serializedVersion: 2
         x: 128
@@ -418,13 +429,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3217a6165f915e409b6293cc10136ae
+      spriteID: 2ecdf9b0eddb76b49ae04294d9e30fbd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_14
+      name: move_14
       rect:
         serializedVersion: 2
         x: 256
@@ -438,13 +449,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bf037063c91a764b92b22d76e73733b
+      spriteID: 7ecbdaa03411a884bb0a9c78abc55e04
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_15
+      name: move_15
       rect:
         serializedVersion: 2
         x: 384
@@ -458,13 +469,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e076eeeeb67bc164d8e0ef1b162c4285
+      spriteID: 6446b1a7e8a78024c9ff96259de280f2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_16
+      name: move_16
       rect:
         serializedVersion: 2
         x: 512
@@ -478,13 +489,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aee1a5bda350f849887459cc4a13bf5
+      spriteID: 0b803198590e4934c948914e0cb1e036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_17
+      name: move_17
       rect:
         serializedVersion: 2
         x: 640
@@ -498,13 +509,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c7d4599f839c6142bf604e0e14a636a
+      spriteID: c8490e8d810c2f841b7b98bb1a65abad
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_18
+      name: move_18
       rect:
         serializedVersion: 2
         x: 768
@@ -518,13 +529,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af9f97a1c5525734dbb42a4ed54d12b2
+      spriteID: dc7801bfdcf87c343a33235cc7fe6d9a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_19
+      name: move_19
       rect:
         serializedVersion: 2
         x: 896
@@ -538,13 +549,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1940f302ee3149c45bb027f0c60f4fa5
+      spriteID: 07decc87effb09949a24962855f47bf9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_20
+      name: move_20
       rect:
         serializedVersion: 2
         x: 1024
@@ -558,13 +569,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6749fef792017f34a9b7d49af7322fca
+      spriteID: 175b1a6088974d74d8bc9a344edf38f1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_21
+      name: move_21
       rect:
         serializedVersion: 2
         x: 1152
@@ -578,13 +589,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20f8b69ecaebb254b94d8384ebc4701b
+      spriteID: e44264779ba7e2646852941c1a870a7d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_22
+      name: move_22
       rect:
         serializedVersion: 2
         x: 1280
@@ -598,13 +609,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 511e4a94029c9174aa0decc09389f657
+      spriteID: 0ee0d146944856d4e850e2b8fd4162f8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_23
+      name: move_23
       rect:
         serializedVersion: 2
         x: 1408
@@ -618,13 +629,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7dddd1f7c7618b4386942ad750858df
+      spriteID: e899c8ee8b86461419b18c03b2cd16e4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_24
+      name: move_24
       rect:
         serializedVersion: 2
         x: 0
@@ -638,13 +649,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5975875c545acc84ea291a71fb2c4d4f
+      spriteID: 9b362d7421286f440b628b992d92774f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_25
+      name: move_25
       rect:
         serializedVersion: 2
         x: 128
@@ -658,13 +669,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62eb16b9e136b7f4eac6d931c0ff9b57
+      spriteID: 25d349e87f9e6db409a559b64b38a4c3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_26
+      name: move_26
       rect:
         serializedVersion: 2
         x: 256
@@ -678,13 +689,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5eefff461d29d845ae48ce256bc1f18
+      spriteID: c70d645dcd08e9040a832000392fc48c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_27
+      name: move_27
       rect:
         serializedVersion: 2
         x: 384
@@ -698,13 +709,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dac348bd0a98b540b5f1f8f60ca7a0c
+      spriteID: f9fa57e35d7ba094fa6f8ce87266685e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_28
+      name: move_28
       rect:
         serializedVersion: 2
         x: 512
@@ -718,13 +729,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 386dc14459c06554795d3d06eb466e63
+      spriteID: 4b8c78c0d3b10c743971ba7df52abf2c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_29
+      name: move_29
       rect:
         serializedVersion: 2
         x: 640
@@ -738,13 +749,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f2c135980d715648a555ba0fb909a95
+      spriteID: ee587232a38beb949a8bcd4ff64ba7a4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_30
+      name: move_30
       rect:
         serializedVersion: 2
         x: 768
@@ -758,13 +769,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b3a10a67bf47e4468baa43ddb582d22
+      spriteID: 6adb1208240dab7499082d6e362fd8e0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_31
+      name: move_31
       rect:
         serializedVersion: 2
         x: 896
@@ -778,13 +789,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dfdde856b178944ba20ebdab2a5b862
+      spriteID: e8cc015787e78404fa57045c1cc2455d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_32
+      name: move_32
       rect:
         serializedVersion: 2
         x: 1024
@@ -798,13 +809,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7288db5476db6cf4aa98c803e119e610
+      spriteID: 80319d28885727745950416659c19659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_33
+      name: move_33
       rect:
         serializedVersion: 2
         x: 1152
@@ -818,13 +829,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cf3c1b6ddb7a2d4dadc0af91781bb33
+      spriteID: fffd72a7188685c469cfdf2e5a8e9ff1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_34
+      name: move_34
       rect:
         serializedVersion: 2
         x: 1280
@@ -838,13 +849,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65ebe9148fd57d5409dac8197f624d53
+      spriteID: cdf00ca0c2f1b504e9204e1cea15d5b2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_35
+      name: move_35
       rect:
         serializedVersion: 2
         x: 1408
@@ -858,13 +869,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd91b65037702ee4596c479b1a6d770c
+      spriteID: 89d8304cb02415d42a2e68f7b01cd664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_36
+      name: move_36
       rect:
         serializedVersion: 2
         x: 0
@@ -878,13 +889,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4422d8409c63fd4499c633748f21851
+      spriteID: a698edd4771b65c418dc2b0093194317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_37
+      name: move_37
       rect:
         serializedVersion: 2
         x: 128
@@ -898,13 +909,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71b52007ebbb5d245a2754632029289d
+      spriteID: bffc2442c7a15de4097790b467f2cf14
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_38
+      name: move_38
       rect:
         serializedVersion: 2
         x: 256
@@ -918,13 +929,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f878950658c6bdb4498985aa157173a3
+      spriteID: aba3d684973689f4b816413dc07af4db
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_39
+      name: move_39
       rect:
         serializedVersion: 2
         x: 384
@@ -938,13 +949,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 992f463d6e87a3e4facb5582e851442b
+      spriteID: b05130a56bd245248a69656e260ff7f3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_40
+      name: move_40
       rect:
         serializedVersion: 2
         x: 512
@@ -958,13 +969,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fe7fe7c8bdc68c49a5caab5a5e01286
+      spriteID: db269791086b08442b747d64b305c043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_41
+      name: move_41
       rect:
         serializedVersion: 2
         x: 640
@@ -978,13 +989,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0282c33de04ede4292de5551b8074e3
+      spriteID: feaddb099afc22543a1b828866881f47
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_42
+      name: move_42
       rect:
         serializedVersion: 2
         x: 768
@@ -998,13 +1009,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f2c34da0f4dde74d9b5ec18b34a5c2d
+      spriteID: 92a11fefd979c4741aa0d25612021bbf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_43
+      name: move_43
       rect:
         serializedVersion: 2
         x: 896
@@ -1018,13 +1029,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7edbc4788adcb0a4198218a9925de443
+      spriteID: 46a396e5c74631f49bd11bcf8dce5edc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_44
+      name: move_44
       rect:
         serializedVersion: 2
         x: 1024
@@ -1038,13 +1049,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1e796677f62218479c1820750e0812a
+      spriteID: eaef3b9ac83e01748b4a0a9506ee8755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_45
+      name: move_45
       rect:
         serializedVersion: 2
         x: 1152
@@ -1058,13 +1069,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcf228fab54db8d4d909205a30e7f073
+      spriteID: 667b09f69bf8c4945a889a776f3fa5e2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_46
+      name: move_46
       rect:
         serializedVersion: 2
         x: 1280
@@ -1078,13 +1089,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 156460f8708d61343a9fd817a836feaf
+      spriteID: 5dad06aef3672ae4ab7afa06c3435cb2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_47
+      name: move_47
       rect:
         serializedVersion: 2
         x: 1408
@@ -1098,13 +1109,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbee7c3445495f84798598e733ed5d6c
+      spriteID: e513aa26b822aa143a4381d8f3ab0774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_48
+      name: move_48
       rect:
         serializedVersion: 2
         x: 0
@@ -1118,13 +1129,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95d79c0b8cecd27469ddfba8ab38982c
+      spriteID: 33c11d2d77f157b438b7feeccbcea051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_49
+      name: move_49
       rect:
         serializedVersion: 2
         x: 128
@@ -1138,13 +1149,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2466d8fd9071a54ca9d9681b94a167d
+      spriteID: e34db9309d690fe4b997cb15a366d03e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_50
+      name: move_50
       rect:
         serializedVersion: 2
         x: 256
@@ -1158,13 +1169,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 577c5306d65ccff459228df68383e3a5
+      spriteID: 6c3d501a9e2ccd845898256e1d411533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_51
+      name: move_51
       rect:
         serializedVersion: 2
         x: 384
@@ -1178,13 +1189,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feb7235d300678e4685e812f05645d88
+      spriteID: 6c571a4e7db3a874692ca09506d997e7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_52
+      name: move_52
       rect:
         serializedVersion: 2
         x: 512
@@ -1198,13 +1209,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d56815ed7a520840acdac2fbd976cb9
+      spriteID: 18c0365f654f7294690c012584491ee5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_53
+      name: move_53
       rect:
         serializedVersion: 2
         x: 640
@@ -1218,13 +1229,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77966846e6884ff4ba7b380188161a64
+      spriteID: 1b2b75419f6eac343b848100d4fc5eaf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_54
+      name: move_54
       rect:
         serializedVersion: 2
         x: 768
@@ -1238,13 +1249,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5182019a0bb9eb94da5421386ef0c718
+      spriteID: af3afc9d1a2ca254592e7d48639bf6c9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_55
+      name: move_55
       rect:
         serializedVersion: 2
         x: 896
@@ -1258,13 +1269,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75b8b1582ea9b844ca8286733ad73552
+      spriteID: c4c5953f852755b468bd69b8eead6e13
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_56
+      name: move_56
       rect:
         serializedVersion: 2
         x: 1024
@@ -1278,13 +1289,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 190d1bcdea457ec418ce3badd901d033
+      spriteID: 72c43a379b1ac6a4e95ebcfb650dd6ad
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_57
+      name: move_57
       rect:
         serializedVersion: 2
         x: 1152
@@ -1298,13 +1309,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea3261826dbb62444982ec5d49b78c50
+      spriteID: d123c14a0aa6da1468371a8c1182e391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_58
+      name: move_58
       rect:
         serializedVersion: 2
         x: 1280
@@ -1318,13 +1329,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9981d2cb1d27f54fba10d26a2f3f610
+      spriteID: 95bf8860a7f063a459815e26336d76d6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_3_att_59
+      name: move_59
       rect:
         serializedVersion: 2
         x: 1408
@@ -1338,7 +1349,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 139798d8d37542e40bde3f3f18a6468c
+      spriteID: de821aec7e6c6cd48a8c37e3d7578ae1
       vertices: []
       indices: 
       edges: []
@@ -1346,7 +1357,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0083e3f9ac6712949aa32a70c6074008
+    spriteID: f0c80f08648229a4a8cbf9f35e9fed41
     vertices: []
     indices: 
     edges: []
