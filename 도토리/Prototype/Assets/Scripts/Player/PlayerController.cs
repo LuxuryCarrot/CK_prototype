@@ -54,10 +54,10 @@ public class PlayerController : MonoBehaviour
     public CharacterController cc;
     public Animator anim;
     public SpriteRenderer sprite;
-    public GameObject weapon;
-    public SpriteRenderer weaponSprite;
+
     public Quaternion startAngle;
 
+    public GameObject weapon;
 
     public PlayerState startState;
     public PlayerState curState;
@@ -140,6 +140,7 @@ public class PlayerController : MonoBehaviour
         mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
         mousePos.z = 0;
+
         //sprite flip
         if (transform.position.x > mousePos.x)
         {
