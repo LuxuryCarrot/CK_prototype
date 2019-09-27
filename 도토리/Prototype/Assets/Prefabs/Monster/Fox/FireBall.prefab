@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 624037207638910434}
   - component: {fileID: 624037207638910435}
   - component: {fileID: 4791601234756889402}
-  - component: {fileID: 2318013642093340051}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: FireBall
@@ -82,25 +81,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.0001, y: 0.59}
+  m_Offset: {x: -0.5, y: 0}
+  m_Size: {x: 1.45, y: 0.6}
   m_Direction: 1
---- !u!111 &2318013642093340051
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624037207638910439}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 77b7fdf5039875c4d9a7e424fefdfef8, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1001 &624037206834836376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108,6 +91,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 624037207638910436}
     m_Modifications:
+    - target: {fileID: 1736432286028208911, guid: 135c2cf6e71df55488e38f8e9dd65907,
+        type: 3}
+      propertyPath: m_Name
+      value: mob_3_att_effect
+      objectReference: {fileID: 0}
     - target: {fileID: 1736432286028208914, guid: 135c2cf6e71df55488e38f8e9dd65907,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -162,11 +150,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736432286028208911, guid: 135c2cf6e71df55488e38f8e9dd65907,
-        type: 3}
-      propertyPath: m_Name
-      value: mob_3_att_effect
       objectReference: {fileID: 0}
     - target: {fileID: 1736432286028208913, guid: 135c2cf6e71df55488e38f8e9dd65907,
         type: 3}
