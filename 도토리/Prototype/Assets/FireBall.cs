@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    public float speed;
-    private Rigidbody2D rb;
     GameObject Player;
     GameObject Fox;
     ParticleSystem Ps;
-
     CapsuleCollider2D m_CapsuleCollider2D;
     // Start is called before the first frame update
     void Start()
@@ -17,20 +14,14 @@ public class FireBall : MonoBehaviour
         //Debug.Log("fireball");
         Fox = GameObject.FindGameObjectWithTag("Fox");
         Player = GameObject.FindGameObjectWithTag("Player");
-        rb = GetComponent<Rigidbody2D>();
         Ps = GetComponentInChildren<ParticleSystem>();
         m_CapsuleCollider2D = GetComponent<CapsuleCollider2D>();
 
-        // shooting fireball code 
-        //if (transform.position.x > Fox.transform.position.x)
-        //{
-        //    rb.velocity = transform.right * speed;
-        //}
-        //else
-        //{
-        //    Ps.transform.localScale *= new Vector2(-1, 1);
-        //    rb.velocity = transform.right * -1 *speed;
-        //}
+        if (transform.position.x > Fox.transform.position.x)
+        {
+            Ps.transform.localScale *= new Vector2(-1, 1);
+        }
+        
 
         Invoke("FireBallColliderDestroy", 1.0f);
         Invoke("FireBallDestroy", 2.0f);
@@ -45,7 +36,11 @@ public class FireBall : MonoBehaviour
             m_CapsuleCollider2D.enabled = false;
             StartCoroutine("Flame");
         }
-        else
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
             StopCoroutine("Flame");
         }
@@ -53,7 +48,7 @@ public class FireBall : MonoBehaviour
     IEnumerator Flame()
     {
         Player.SendMessage("ApplyDamage", 1.0f);
-        Debug.Log("fireball hit");
+        Debug.Log("Flame damage 1.0f");
         yield return new WaitForSeconds(0.5f);
         StartCoroutine("Flame");
     }
