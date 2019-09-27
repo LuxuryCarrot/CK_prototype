@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public enum ElementalProperty
 {
@@ -15,16 +16,18 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerStats stat;
 
+    public int jumpCount = 0;
+
     [SerializeField]
     private bool isKeyInputting = false;
 
-    public bool isUpAttacked = true;
+    public int prevAttackDir = -1;
 
-    public float attackDir = 0;
+    public int attackDir = 0;
 
-    private float gravity;
+    public float gravity;
     public float verticalVelocity;
-
+    public float curAttackAnimSpeed;
     [HideInInspector]
     public Transform monster;
 
@@ -36,7 +39,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDirection;
     public CharacterController cc;
     public Animator anim;
-    public WeaponSword weapon;
 
     public Transform spriteTrans;
     public Vector3 flipScale;
@@ -63,7 +65,6 @@ public class PlayerController : MonoBehaviour
         flipScale = spriteTrans.localScale;
 
         monster = GameObject.FindGameObjectWithTag("Fox").transform;
-        weapon = new WeaponSword();
         states.Add(PlayerState.IDLE, GetComponent<PlayerIDLE>());
         states.Add(PlayerState.WALK, GetComponent<PlayerWALK>());
         states.Add(PlayerState.JUMP, GetComponent<PlayerJUMP>());
@@ -84,12 +85,20 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.D)))
             SetState(PlayerState.WALK);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if(jumpCount==0)
+                SetState(PlayerState.JUMP);
+        }
         if (Input.GetKey(KeyCode.S))
             SetState(PlayerState.DOWN);
         if (Input.GetKeyDown(KeyCode.LeftShift))
             SetState(PlayerState.DASH);
-        if (Input.GetMouseButtonDown(0))
-            SetState(PlayerState.ATTACK);
+        if (curAttackAnimSpeed == 0)
+        {
+            if (Input.GetMouseButtonDown(0))
+                SetState(PlayerState.ATTACK);
+        }
 
         Gravity();
 
@@ -147,29 +156,34 @@ public class PlayerController : MonoBehaviour
         if (states[PlayerState.JUMP].enabled)           //Jumping
             anim.SetInteger("curState", (int)PlayerState.JUMP);
         else
+        {
             anim.SetInteger("curState", (int)stat.curState);
 
-        if (states[PlayerState.ATTACK].enabled)
-        {
-            anim.SetFloat("attackDir", attackDir);
+            if(states[PlayerState.ATTACK].enabled)
+            {
+                attackDir = prevAttackDir;
+
+                if (attackDir < 1)                               //Prev Anim down attack
+                {
+                    Debug.Log("Up Attack!");
+                    AttackDirCheck(1);
+                }
+                else                                            // Prev Anim up attack 
+                {
+                    Debug.Log("Down Attack!");
+                    AttackDirCheck(-1);
+                } 
+
+            }
+
         }
+
     }
 
     public void Gravity()
     {
-        if (cc.isGrounded)
-        {
-            gravity = -stat.fallSpeed * Time.deltaTime;
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                gravity = stat.jumpForce;
-                SetState(PlayerState.JUMP);
-            }
-        }
-        else
-        {
-            gravity -= stat.fallSpeed * Time.deltaTime;
-        }
+        gravity -= stat.fallSpeed * Time.deltaTime;
+
         moveDirection = Vector2.zero;
         moveDirection.y = gravity * verticalVelocity;
         cc.Move(moveDirection * Time.deltaTime);
@@ -180,13 +194,22 @@ public class PlayerController : MonoBehaviour
         if ((hit.gameObject.tag == "Ground") &&
             (gravity <= stat.fallSpeed))
         {
+            jumpCount = 0;
             states[PlayerState.JUMP].enabled = false;
         }
     }
 
-    public void AttackDirCheck(bool newDir)
+    public void AttackDirCheck(int newDir)
     {
-        attackDir = newDir ? 1 : 0;
+        if (newDir != 0)                               //attackDir Change
+            attackDir = prevAttackDir = newDir;
+        else                                          // attaked finish
+            attackDir = newDir;
+
+        if (states[PlayerState.ATTACK].enabled)
+        {
+            anim.SetInteger("attackDir", attackDir);
+        }
     }
 
     void ApplyDamage(float damage)

@@ -13,17 +13,13 @@ public class PlayerATTACK : PlayerFSMController
     IPassiveSkill waterPassive = new WaterSkill();
     IPassiveSkill grassPassive = new GrassSkill();
 
-    const float maxAttackAnimTime = 0.3f;
-    float curAnimSpeed;
+    const float maxAttackAnimTime = 0.5f;
 
     public override void BeginState()
     {
         base.BeginState();
 
-        if (controller.attackDir < 1)                               //Prev Anim down attack
-            controller.AttackDirCheck(controller.isUpAttacked);
-        else                                                        // Prev Anim up attack 
-            controller.attackDir = 0;
+        controller.curAttackAnimSpeed = 0;
     }
 
     // Update is called once per frame
@@ -47,14 +43,16 @@ public class PlayerATTACK : PlayerFSMController
                 controller.stat.finalDamage = controller.stat.weaponDamage;
                 break;
         }
-        if (curAnimSpeed >= maxAttackAnimTime)
+
+        if (controller.curAttackAnimSpeed >= maxAttackAnimTime)
         {
-            curAnimSpeed = 0;
+            controller.curAttackAnimSpeed = 0;
+            controller.AttackDirCheck(0);
             controller.states[PlayerState.ATTACK].enabled = false;
         }
         else
         {
-            curAnimSpeed += Time.deltaTime;
+            controller.curAttackAnimSpeed += Time.deltaTime;
         }
     }
 }
