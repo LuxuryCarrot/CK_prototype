@@ -14,8 +14,8 @@ public class Monster : MonoBehaviour
     public float nextTime = 0.0f;
     public float TimeLeft;
 
-    public GameObject FireBall;
-    public GameObject firePoint;
+    public Transform firepoint;
+    public GameObject FireBallPrefab;
 
     Animator animator;
     Vector3 movement;
@@ -31,8 +31,6 @@ public class Monster : MonoBehaviour
         
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-
-        firePoint = GameObject.FindGameObjectWithTag("FirePoint");
 
         Player = GameObject.FindGameObjectWithTag("Player");
 
@@ -58,8 +56,9 @@ public class Monster : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        Instantiate(FireBallPrefab, firepoint.position, firepoint.rotation);
+        Debug.Log("shoot");
         yield return new WaitForSeconds(3.0f);
-        Instantiate(FireBall);
         StartCoroutine("Shoot");
     }
 
@@ -87,7 +86,7 @@ public class Monster : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Player.SendMessage("ApplyDamage", 0.5f);
+            Player.SendMessage("ApplyDamage", 100f);
             Debug.Log("Hit");
         }
     }

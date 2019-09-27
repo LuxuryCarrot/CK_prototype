@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6522590824255154192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8006194236214712564}
@@ -83,7 +83,9 @@ MonoBehaviour:
   Hp: 10
   nextTime: 3
   TimeLeft: 0
-  FireBall: {fileID: 624037207638910439, guid: 9b356e0068d7f4e42a72aa1e34ea9f4d, type: 3}
+  firepoint: {fileID: 5795625553705059585}
+  FireBallPrefab: {fileID: 624037207638910439, guid: 9b356e0068d7f4e42a72aa1e34ea9f4d,
+    type: 3}
   firePoint: {fileID: 0}
 --- !u!212 &8006194236214712567
 SpriteRenderer:

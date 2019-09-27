@@ -168,6 +168,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThronBush (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_TagString
+      value: ThronBush
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1560110103153989480, guid: 2f68925c88304874499c0c3bbe513615,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -370,6 +380,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ThronBush (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_TagString
+      value: ThronBush
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1560110103153989480, guid: 2f68925c88304874499c0c3bbe513615,
         type: 3}
@@ -600,6 +620,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThronBush (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_TagString
+      value: ThronBush
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1560110103153989480, guid: 2f68925c88304874499c0c3bbe513615,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -668,6 +698,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ThronBush (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_TagString
+      value: ThronBush
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1560110103153989480, guid: 2f68925c88304874499c0c3bbe513615,
         type: 3}
@@ -914,6 +954,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThronBush (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_TagString
+      value: ThronBush
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1560110103153989480, guid: 2f68925c88304874499c0c3bbe513615,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -983,6 +1033,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThronBush
       objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_TagString
+      value: ThronBush
+      objectReference: {fileID: 0}
     - target: {fileID: 1560110103153989480, guid: 2f68925c88304874499c0c3bbe513615,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1038,6 +1093,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5318390911235428101, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f68925c88304874499c0c3bbe513615, type: 3}
 --- !u!1001 &1499868034
@@ -1051,6 +1111,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ThronBush (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_TagString
+      value: ThronBush
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796594731242607380, guid: 2f68925c88304874499c0c3bbe513615,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1560110103153989480, guid: 2f68925c88304874499c0c3bbe513615,
         type: 3}
