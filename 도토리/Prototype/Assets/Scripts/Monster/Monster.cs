@@ -9,13 +9,11 @@ public class Monster : MonoBehaviour
     private float currentHp = 0;
     private int movementFlag = 0;
     private bool isChasing;
-    private bool isFire = true;
-
     public float nextTime = 0.0f;
     public float TimeLeft;
 
-    public GameObject FireBall;
-    public GameObject firePoint;
+    public Transform firepoint;
+    public GameObject FireBallPrefab;
 
     Animator animator;
     Vector3 movement;
@@ -31,8 +29,6 @@ public class Monster : MonoBehaviour
         
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-
-        firePoint = GameObject.FindGameObjectWithTag("FirePoint");
 
         Player = GameObject.FindGameObjectWithTag("Player");
 
@@ -56,21 +52,19 @@ public class Monster : MonoBehaviour
         StartCoroutine("ChangeMovement");
     }
 
-    IEnumerator Shoot()
-    {
-        yield return new WaitForSeconds(3.0f);
-        Instantiate(FireBall);
-        StartCoroutine("Shoot");
-    }
+  
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
+
             ChaseTarget = other.gameObject;
             StopCoroutine("ChangeMovement");
             StartCoroutine("Shoot");
+            isChasing = true;
+            animator.SetBool("isMoving", true);
         }
     }
 
@@ -78,23 +72,25 @@ public class Monster : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            isChasing = true;
-            animator.SetBool("isMoving", true);
+            if (transform.position.x + 2.0f >= Player.transform.position.x || transform.position.x - 2.0f <= Player.transform.position.x)
+            {
+                isChasing = false;
+                animator.SetBool("isMoving", false);
+            }
+            else
+            {
+                isChasing = true;
+                animator.SetBool("isMoving", true);
+            }
+            //    isChasing = true;
+            //animator.SetBool("isMoving", true);
 
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Player.SendMessage("ApplyDamage", 0.5f);
-            Debug.Log("Hit");
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")    
+        if (collision.gameObject.tag == "Player")
         {
             isChasing = false;
             StartCoroutine("ChangeMovement");
@@ -102,10 +98,58 @@ public class Monster : MonoBehaviour
         }
 
     }
-    // Update is called once per frame
+    IEnumerator Shoot()
+    {
+        if (transform.position.x + 2.0f >= Player.transform.position.x || transform.position.x - 2.0f <= Player.transform.position.x)
+        {
+            Debug.Log("Flame");
+            Instantiate(FireBallPrefab, firepoint.position, firepoint.rotation);
+            yield return new WaitForSeconds(4.0f);
+        }
+        StartCoroutine("Shoot");
+    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        Player.SendMessage("ApplyDamage", 100f);
+    //        Debug.Log("Hit");
+    //    }
+    //}
+
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.gameObject.tag == "Player")
+    //    {
+    //        StartCoroutine("Shoot");
+    //    }
+    //}
+
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")    
+    //    {
+    //        StopCoroutine("Shoot");
+    //        StartCoroutine("ChangeMovement");
+    //    }
+
+    //}
+    //// Update is called once per frame
     void FixedUpdate()
     {
         Move();
+        //if (transform.position.x + 2.0f >= Player.transform.position.x || transform.position.x - 2.0f <= Player.transform.position.x)
+        //{
+        //    isChasing = false;
+        //    animator.SetBool("isMoving", false);
+        //}
+        //else
+        //{
+        //    isChasing = true;
+        //    animator.SetBool("isMoving", true);
+        //}
+
+
     }
 
     void Move()

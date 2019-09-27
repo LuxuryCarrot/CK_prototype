@@ -7,7 +7,7 @@ public class ThornBush : MonoBehaviour
     GameObject Player;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -21,6 +21,7 @@ public class ThornBush : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Hit");
             Player.SendMessage("ApplyDamage", 1.0f);
         }
     }
