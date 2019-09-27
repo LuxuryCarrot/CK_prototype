@@ -77,8 +77,16 @@ public class Monster : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            isChasing = true;
-            animator.SetBool("isMoving", true);
+            if (transform.position.x + 2.0f < Player.transform.position.x || transform.position.x - 2.0f > Player.transform.position.x)
+            {
+                isChasing = true;
+                animator.SetBool("isMoving", true);
+            }
+            else if (transform.position.x + 1.9f > Player.transform.position.x || transform.position.x - 1.9f < Player.transform.position.x)
+            {
+                isChasing = false;
+                animator.SetBool("isMoving", false);
+            }
 
         }
     }

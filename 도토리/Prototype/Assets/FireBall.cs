@@ -10,7 +10,7 @@ public class FireBall : MonoBehaviour
     GameObject Fox;
     ParticleSystem Ps;
 
-    CircleCollider2D m_CircleCollider2D;
+    CapsuleCollider2D m_CapsuleCollider2D;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,17 +19,20 @@ public class FireBall : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         Ps = GetComponentInChildren<ParticleSystem>();
-        m_CircleCollider2D = GetComponent<CircleCollider2D>();
+        m_CapsuleCollider2D = GetComponent<CapsuleCollider2D>();
 
-        if (transform.position.x > Fox.transform.position.x)
-        {
-            rb.velocity = transform.right * speed;
-        }
-        else
-        {
-            Ps.transform.localScale *= new Vector2(-1, 1);
-            rb.velocity = transform.right * -1 *speed;
-        }
+        // shooting fireball code 
+        //if (transform.position.x > Fox.transform.position.x)
+        //{
+        //    rb.velocity = transform.right * speed;
+        //}
+        //else
+        //{
+        //    Ps.transform.localScale *= new Vector2(-1, 1);
+        //    rb.velocity = transform.right * -1 *speed;
+        //}
+
+        Invoke("FireBallColliderDestroy", 1.0f);
         Invoke("FireBallDestroy", 2.0f);
 
         //transform.position = new Vector2(Fox.transform.position.x+2, Fox.transform.position.y + 3.0f);
@@ -39,22 +42,25 @@ public class FireBall : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            m_CircleCollider2D.enabled = false;
-            Debug.Log("fireball hit");
-            Player.SendMessage("ApplyDamage", 1.0f);
+            m_CapsuleCollider2D.enabled = false;
+            StartCoroutine("Flame");
+        }
+        else
+        {
+            StopCoroutine("Flame");
         }
     }
-    private void Update()
+    IEnumerator Flame()
     {
-
-        if (transform.position.x > Fox.transform.position.x + 1.5f || transform.position.x < Fox.transform.position.x - 1.5f)
-    	{
-            m_CircleCollider2D.enabled = false;
-        }
-        
-        
+        Player.SendMessage("ApplyDamage", 1.0f);
+        Debug.Log("fireball hit");
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine("Flame");
     }
-
+    void FireballColliderDestroy()
+    {
+        m_CapsuleCollider2D.enabled = false;
+    }
     void FireBallDestroy()
     {
         Destroy(gameObject);
