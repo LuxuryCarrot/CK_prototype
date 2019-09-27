@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 624037207638910436}
-  - component: {fileID: 624037207638910437}
   - component: {fileID: 624037207638910434}
   - component: {fileID: 624037207638910435}
+  - component: {fileID: 4791601234756889402}
+  - component: {fileID: 2318013642093340051}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: FireBall
@@ -34,22 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &624037207638910437
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624037207638910439}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.18242164
 --- !u!114 &624037207638910434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +69,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!70 &4791601234756889402
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624037207638910439}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.0001, y: 0.59}
+  m_Direction: 1
+--- !u!111 &2318013642093340051
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624037207638910439}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 77b7fdf5039875c4d9a7e424fefdfef8, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &624037206834836376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91,11 +108,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 624037207638910436}
     m_Modifications:
-    - target: {fileID: 1736432286028208911, guid: 135c2cf6e71df55488e38f8e9dd65907,
-        type: 3}
-      propertyPath: m_Name
-      value: mob_3_att_effect
-      objectReference: {fileID: 0}
     - target: {fileID: 1736432286028208914, guid: 135c2cf6e71df55488e38f8e9dd65907,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -149,6 +161,21 @@ PrefabInstance:
     - target: {fileID: 1736432286028208914, guid: 135c2cf6e71df55488e38f8e9dd65907,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736432286028208911, guid: 135c2cf6e71df55488e38f8e9dd65907,
+        type: 3}
+      propertyPath: m_Name
+      value: mob_3_att_effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736432286028208913, guid: 135c2cf6e71df55488e38f8e9dd65907,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736432286718114022, guid: 135c2cf6e71df55488e38f8e9dd65907,
+        type: 3}
+      propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
