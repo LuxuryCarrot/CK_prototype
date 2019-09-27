@@ -23,7 +23,7 @@ public class FireBall : MonoBehaviour
         }
         
 
-        Invoke("FireBallColliderDestroy", 1.0f);
+        //Invoke("FireBallColliderDestroy", 1.0f);
         Invoke("FireBallDestroy", 2.0f);
 
         //transform.position = new Vector2(Fox.transform.position.x+2, Fox.transform.position.y + 3.0f);
@@ -52,10 +52,10 @@ public class FireBall : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         StartCoroutine("Flame");
     }
-    void FireballColliderDestroy()
-    {
-        m_CapsuleCollider2D.enabled = false;
-    }
+    //void FireballColliderDestroy()
+    //{
+    //    m_CapsuleCollider2D.enabled = false;
+    //}
     void FireBallDestroy()
     {
         Destroy(gameObject);
