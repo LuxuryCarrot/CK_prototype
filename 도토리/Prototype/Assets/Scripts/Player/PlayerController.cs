@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public float gravity;
     public float verticalVelocity;
     public float curAttackAnimSpeed;
+    public const float maxAttackAnimTime = 0.5f;
     [HideInInspector]
     public Transform monster;
 
@@ -87,7 +88,7 @@ public class PlayerController : MonoBehaviour
             SetState(PlayerState.WALK);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(jumpCount==0)
+            if (jumpCount == 0)
                 SetState(PlayerState.JUMP);
         }
         if (Input.GetKey(KeyCode.S))
@@ -131,6 +132,20 @@ public class PlayerController : MonoBehaviour
         {
             spriteTrans.localScale = new Vector3(flipScale.x, flipScale.y, flipScale.z);
         }
+
+        MakeEffects();
+    }
+
+    public void MakeEffects()
+    {
+        if (states[PlayerState.WALK].enabled)
+        {
+            EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, (int)PlayerState.WALK - 1);
+        }
+        else if (states[PlayerState.ATTACK].enabled && curAttackAnimSpeed >= maxAttackAnimTime)     //anim end effect make
+        {
+            EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, 2);
+        }
     }
 
     public void SetState(PlayerState newState)
@@ -159,7 +174,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetInteger("curState", (int)stat.curState);
 
-            if(states[PlayerState.ATTACK].enabled)
+            if (states[PlayerState.ATTACK].enabled)
             {
                 attackDir = prevAttackDir;
 
@@ -172,7 +187,7 @@ public class PlayerController : MonoBehaviour
                 {
                     Debug.Log("Down Attack!");
                     AttackDirCheck(-1);
-                } 
+                }
 
             }
 
@@ -195,6 +210,11 @@ public class PlayerController : MonoBehaviour
             (gravity <= stat.fallSpeed))
         {
             jumpCount = 0;
+
+
+            if (states[PlayerState.JUMP].enabled)
+                EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, (int)PlayerState.JUMP - 1);
+
             states[PlayerState.JUMP].enabled = false;
         }
     }

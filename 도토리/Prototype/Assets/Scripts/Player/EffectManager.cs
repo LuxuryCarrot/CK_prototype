@@ -39,7 +39,13 @@ public class EffectManager : MonoBehaviour
 
         SetEffectPostion(currentXPos, currentMouseXPos, newEffectOfCurState);
 
-        effects[newEffectOfCurState].Play();
+
+
+        if (!effects[newEffectOfCurState].isPlaying)
+        {
+            Debug.Log("effect play");
+            effects[newEffectOfCurState].Play();                
+        }
     }
 
     public void SetEffectPostion(float currentXPos, float currentMouseXPos, int newEffectOfCurState)
@@ -52,18 +58,18 @@ public class EffectManager : MonoBehaviour
                     effects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);
                 }
                 else
-                    effects[newEffectOfCurState].transform.localPosition = posOfEffects[newEffectOfCurState].localPosition;
+                    effects[newEffectOfCurState].transform.position = posOfEffects[newEffectOfCurState].position;
                 break;
             case 1:                                            //landing
-                transform.localPosition = posOfEffects[newEffectOfCurState].position;
+                effects[newEffectOfCurState].transform.position = posOfEffects[newEffectOfCurState].position;
                 break;
-            case 4:                                             //attack  
+            case 2:                                             //attack  
                 if (currentXPos > currentMouseXPos)
                 {
-                    transform.localPosition = -posOfEffects[newEffectOfCurState].localPosition;
+                    effects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);
                 }
                 else
-                    transform.localPosition = posOfEffects[newEffectOfCurState].localPosition;
+                    effects[newEffectOfCurState].transform.position = posOfEffects[newEffectOfCurState].position;
                 break;
         }
     }

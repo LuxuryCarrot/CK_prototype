@@ -13,7 +13,6 @@ public class PlayerATTACK : PlayerFSMController
     IPassiveSkill waterPassive = new WaterSkill();
     IPassiveSkill grassPassive = new GrassSkill();
 
-    const float maxAttackAnimTime = 0.5f;
 
     public override void BeginState()
     {
@@ -44,7 +43,7 @@ public class PlayerATTACK : PlayerFSMController
                 break;
         }
 
-        if (controller.curAttackAnimSpeed >= maxAttackAnimTime)
+        if (controller.curAttackAnimSpeed >= PlayerController.maxAttackAnimTime)
         {
             controller.curAttackAnimSpeed = 0;
             controller.AttackDirCheck(0);

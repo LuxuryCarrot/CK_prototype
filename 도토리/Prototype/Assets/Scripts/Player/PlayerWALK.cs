@@ -24,6 +24,5 @@ public class PlayerWALK : PlayerFSMController
             controller.states[PlayerState.WALK].enabled = false;
         }
         controller.cc.Move(controller.lastMoveDir * controller.stat.walkSpeed * Time.deltaTime);
-        EffectManager.Instance.SetEffect(transform.position.x, controller.mousePos.x, (int)controller.stat.curState - 1);
     }
 }
