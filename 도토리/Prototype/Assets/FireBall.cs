@@ -58,6 +58,7 @@ public class FireBall : MonoBehaviour
     //}
     void FireBallDestroy()
     {
+        Debug.Log("Destroyed");
         Destroy(gameObject);
     }
 }

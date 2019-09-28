@@ -7,10 +7,11 @@ public class Monster : MonoBehaviour
     public float movePower;
     public float Hp;
     private float currentHp = 0;
-    private int movementFlag = 0;
+
+    public int movementFlag = 0;
     private bool isChasing;
-    public float nextTime = 0.0f;
-    public float TimeLeft;
+    private bool isMoving;
+    public bool AttackRange = true;
 
     public Transform firepoint;
     public GameObject FireBallPrefab;
@@ -52,102 +53,34 @@ public class Monster : MonoBehaviour
         StartCoroutine("ChangeMovement");
     }
 
-  
 
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-
-            ChaseTarget = other.gameObject;
-            StopCoroutine("ChangeMovement");
-            StartCoroutine("Shoot");
-            isChasing = true;
-            animator.SetBool("isMoving", true);
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            if (transform.position.x + 2.0f >= Player.transform.position.x || transform.position.x - 2.0f <= Player.transform.position.x)
-            {
-                isChasing = false;
-                animator.SetBool("isMoving", false);
-            }
-            else
-            {
-                isChasing = true;
-                animator.SetBool("isMoving", true);
-            }
-            //    isChasing = true;
-            //animator.SetBool("isMoving", true);
-
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            isChasing = false;
-            StartCoroutine("ChangeMovement");
-            StopCoroutine("Shoot");
-        }
-
-    }
-    IEnumerator Shoot()
-    {
-        if (transform.position.x + 2.0f >= Player.transform.position.x || transform.position.x - 2.0f <= Player.transform.position.x)
-        {
-            Debug.Log("Flame");
-            Instantiate(FireBallPrefab, firepoint.position, firepoint.rotation);
-            yield return new WaitForSeconds(4.0f);
-        }
-        StartCoroutine("Shoot");
-    }
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        Player.SendMessage("ApplyDamage", 100f);
-    //        Debug.Log("Hit");
-    //    }
-    //}
-
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.gameObject.tag == "Player")
-    //    {
-    //        StartCoroutine("Shoot");
-    //    }
-    //}
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")    
-    //    {
-    //        StopCoroutine("Shoot");
-    //        StartCoroutine("ChangeMovement");
-    //    }
-
-    //}
-    //// Update is called once per frame
     void FixedUpdate()
     {
-        Move();
-        //if (transform.position.x + 2.0f >= Player.transform.position.x || transform.position.x - 2.0f <= Player.transform.position.x)
-        //{
-        //    isChasing = false;
-        //    animator.SetBool("isMoving", false);
-        //}
-        //else
-        //{
-        //    isChasing = true;
-        //    animator.SetBool("isMoving", true);
-        //}
+        if ((transform.position.x + 5.0f >= Player.transform.position.x && transform.position.x - 5.0f <= Player.transform.position.x)
+            && (transform.position.x + 2.0f <= Player.transform.position.x || transform.position.x - 2.0f >= Player.transform.position.x)
+            && (transform.position.y + 2.0f >= Player.transform.position.y && transform.position.y - 1.0f <= Player.transform.position.y))
+        {
+            Debug.Log("Check");
+            isChasing = true;
+            StopCoroutine("Shoot");
+            animator.SetBool("isMoving", true);
+            AttackRange = true;
+        }
+        if ((transform.position.x + 2.0f >= Player.transform.position.x && transform.position.x - 2.0f <= Player.transform.position.x) 
+            && (transform.position.y + 2.0f >= Player.transform.position.y && transform.position.y - 1.0f <= Player.transform.position.y))
+        {
+            Debug.Log("CCCCCCC");
+            if (AttackRange == true)
+            {
+                StartCoroutine("Shoot");
+                AttackRange = false;
+            }
+        }
+        else
+        {
+             Move(); 
+        }
+     
 
 
     }
@@ -159,9 +92,9 @@ public class Monster : MonoBehaviour
 
         if (isChasing)
         {
-            Vector3 playerPos = ChaseTarget.transform.position;
+            Vector3 playerPos = Player.transform.position;
 
-            if (playerPos.x < transform.position.x)
+            if (playerPos.x <= transform.position.x)
             {
 
                 dist = "Left";
@@ -201,6 +134,35 @@ public class Monster : MonoBehaviour
         transform.position += moveVelocity * movePower * Time.deltaTime;
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            ChaseTarget = other.gameObject;
+            StopCoroutine("ChangeMovement");
+            //isChasing = true;
+            //animator.SetBool("isMoving", true);
+        }
+    }
+
+    IEnumerator Shoot()
+    {
+        Debug.Log("Flame");
+        Instantiate(FireBallPrefab, firepoint.position, firepoint.rotation);
+        yield return new WaitForSeconds(4.0f);
+        StartCoroutine("Shoot");
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            isChasing = false;
+            StartCoroutine("ChangeMovement");
+            StopCoroutine("Shoot");
+        }
+
+    }
     void ApplyDamage(float damage)
     {
         currentHp -= damage;
@@ -208,6 +170,5 @@ public class Monster : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
 }

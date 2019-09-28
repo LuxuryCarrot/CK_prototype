@@ -39,9 +39,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8006194236214712564}
-  - component: {fileID: 8006194236214712568}
   - component: {fileID: 8006194236214712567}
   - component: {fileID: 8006194236214712566}
+  - component: {fileID: 6407846687103469901}
   - component: {fileID: 8006194236214712570}
   - component: {fileID: 8006194236214712569}
   - component: {fileID: 8006194236214712565}
@@ -67,25 +67,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8006194236214712568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8006194236214712563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 061722087a7c5af4e97abc7e6e2b9458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movePower: 1
-  Hp: 10
-  nextTime: 3
-  TimeLeft: 0
-  firepoint: {fileID: 5795625553705059585}
-  FireBallPrefab: {fileID: 624037207638910439, guid: 9b356e0068d7f4e42a72aa1e34ea9f4d,
-    type: 3}
 --- !u!212 &8006194236214712567
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -153,6 +134,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6407846687103469901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8006194236214712563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061722087a7c5af4e97abc7e6e2b9458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movePower: 1
+  Hp: 10
+  movementFlag: 0
+  AttackRange: 1
+  firepoint: {fileID: 5795625553705059585}
+  FireBallPrefab: {fileID: 624037207638910439, guid: 9b356e0068d7f4e42a72aa1e34ea9f4d,
+    type: 3}
 --- !u!61 &8006194236214712570
 BoxCollider2D:
   m_ObjectHideFlags: 0
