@@ -17,12 +17,13 @@ public class ThornBush : MonoBehaviour
     {
         
     }
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
+        
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Hit");
-            Player.SendMessage("ApplyDamage", 1.0f);
+            Player.SendMessage("ApplyDamage", 0.5f);
         }
     }
 }

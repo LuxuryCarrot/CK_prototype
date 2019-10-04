@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class FrogScript : MonoBehaviour
 {
     public float movePower;
     public float Hp;
@@ -14,7 +14,7 @@ public class Monster : MonoBehaviour
     public bool AttackRange = true;
 
     public Transform firepoint;
-    public GameObject FireBallPrefab;
+    public GameObject SpearPrefab;
 
     Animator animator;
     Vector3 movement;
@@ -27,7 +27,7 @@ public class Monster : MonoBehaviour
     void Start()
     {
         currentHp = Hp;
-        
+
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
 
@@ -62,25 +62,24 @@ public class Monster : MonoBehaviour
         {
             Debug.Log("Check");
             isChasing = true;
-            StopCoroutine("Shoot");
+            StopCoroutine("Attack");
             animator.SetBool("isMoving", true);
             AttackRange = true;
         }
-        if ((transform.position.x + 2.0f >= Player.transform.position.x && transform.position.x - 2.0f <= Player.transform.position.x) 
+        if ((transform.position.x + 2.0f >= Player.transform.position.x && transform.position.x - 2.0f <= Player.transform.position.x)
             && (transform.position.y + 2.0f >= Player.transform.position.y && transform.position.y - 1.0f <= Player.transform.position.y))
         {
-            Debug.Log("CCCCCCC");
             if (AttackRange == true)
             {
-                StartCoroutine("Shoot");
+                StartCoroutine("Attack");
                 AttackRange = false;
             }
         }
         else
         {
-             Move(); 
+            Move();
         }
-     
+
 
 
     }
@@ -98,7 +97,7 @@ public class Monster : MonoBehaviour
             {
 
                 dist = "Left";
-                
+
             }
             else if (playerPos.x > transform.position.x)
             {
@@ -111,12 +110,12 @@ public class Monster : MonoBehaviour
             if (movementFlag == 1)
             {
                 dist = "Left";
-               
+
             }
             else if (movementFlag == 2)
             {
                 dist = "Right";
-              
+
             }
         }
 
@@ -145,12 +144,19 @@ public class Monster : MonoBehaviour
         }
     }
 
-    IEnumerator Shoot()
+    IEnumerator Attack()
     {
-        Debug.Log("Flame");
-        Instantiate(FireBallPrefab, firepoint.position, firepoint.rotation);
+        Debug.Log("Spear Attack!");
+        Instantiate(SpearPrefab, firepoint.position, firepoint.rotation);
         yield return new WaitForSeconds(4.0f);
-        StartCoroutine("Shoot");
+        StartCoroutine("Attack");
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Player.SendMessage("ApplyDamage", 0.5f);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -159,7 +165,7 @@ public class Monster : MonoBehaviour
         {
             isChasing = false;
             StartCoroutine("ChangeMovement");
-            StopCoroutine("Shoot");
+            StopCoroutine("Attack");
         }
 
     }
