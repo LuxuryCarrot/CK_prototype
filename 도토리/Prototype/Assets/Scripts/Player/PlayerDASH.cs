@@ -36,7 +36,7 @@ public class PlayerDASH : PlayerFSMController
             controller.states[PlayerState.DASH].enabled = false;
         }
 
-        if (controller.spriteTrans.localScale.x <= 0)           
+        if (controller.spriteTrans.localScale.x <= 0)
         {
             if (deltaMove.x > 0)
                 deltaMove.x = -deltaMove.x;
@@ -47,6 +47,13 @@ public class PlayerDASH : PlayerFSMController
                 deltaMove.x = -deltaMove.x;
         }
 
-        controller.cc.Move(deltaMove * Time.deltaTime * controller.stat.dashSpeed);
+        if (Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, controller.dashDir, PlayerController.BOXCAST_DISTANCE, controller.layerMask))
+        {
+            controller.states[PlayerState.DASH].enabled = false;
+        }
+        else
+        {
+            transform.Translate(deltaMove * Time.deltaTime * controller.stat.dashSpeed);
+        }
     }
 }

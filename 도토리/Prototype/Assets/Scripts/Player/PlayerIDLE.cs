@@ -12,6 +12,6 @@ public class PlayerIDLE : PlayerFSMController
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

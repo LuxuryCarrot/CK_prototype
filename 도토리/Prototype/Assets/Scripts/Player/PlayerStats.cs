@@ -7,9 +7,9 @@ public enum PlayerState
     IDLE = 0,
     WALK,
     JUMP,
-    DOWN,
-    DASH,
     ATTACK,
+    DASH,
+    DOWN,
     DEAD
 }
 

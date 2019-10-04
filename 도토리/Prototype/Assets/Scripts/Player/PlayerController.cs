@@ -18,9 +18,13 @@ public class PlayerController : MonoBehaviour
 
     public int jumpCount = 0;
 
-    [SerializeField]
-    private bool isKeyInputting = false;
+    public const float CONTROL_VALUE_OF_FALLSPEED = 2f;
 
+    public bool isKeyInputting = false;
+    public bool isJumping;
+    public bool isGrounded;
+    public bool isGroundCollisionCheck;
+    public bool isFalling;
     public int prevAttackDir = -1;
 
     public int attackDir = 0;
@@ -32,17 +36,18 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public Transform monster;
 
-    [SerializeField]
     public Vector3 mousePos;
     [HideInInspector]
     public Vector3 lastMoveDir = Vector3.zero;
     public Vector3 dashDir = Vector3.zero;
     private Vector2 moveDirection;
-    public CharacterController cc;
+    public Rigidbody2D rigidbody2;
     public Animator anim;
-
+    public CapsuleCollider2D playerCollider;
     public Transform spriteTrans;
     public Vector3 flipScale;
+
+    public const float BOXCAST_DISTANCE = 0.35f;
 
     public ElementalProperty curWeaponProperty;
 
@@ -52,26 +57,33 @@ public class PlayerController : MonoBehaviour
     public Dictionary<PlayerState, PlayerFSMController> states =
         new Dictionary<PlayerState, PlayerFSMController>();
 
+    public int layerMask;
 
     private void Awake()
     {
+        playerCollider = GetComponent<CapsuleCollider2D>();
+        isGroundCollisionCheck = true;
+        isFalling = false;
+
         stat = GetComponent<PlayerStats>();
 
         verticalVelocity = 9.8f;
 
-        cc = GetComponent<CharacterController>();
+        rigidbody2 = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
 
         spriteTrans = transform.GetChild(0);
         flipScale = spriteTrans.localScale;
 
+        layerMask = 1 << 10 | 1 << 11;
+
         monster = GameObject.FindGameObjectWithTag("Fox").transform;
         states.Add(PlayerState.IDLE, GetComponent<PlayerIDLE>());
         states.Add(PlayerState.WALK, GetComponent<PlayerWALK>());
         states.Add(PlayerState.JUMP, GetComponent<PlayerJUMP>());
-        states.Add(PlayerState.DOWN, GetComponent<PlayerDOWN>());
-        states.Add(PlayerState.DASH, GetComponent<PlayerDASH>());
         states.Add(PlayerState.ATTACK, GetComponent<PlayerATTACK>());
+        states.Add(PlayerState.DASH, GetComponent<PlayerDASH>());
+        states.Add(PlayerState.DOWN, GetComponent<PlayerDOWN>());
         states.Add(PlayerState.DEAD, GetComponent<PlayerDEAD>());
     }
 
@@ -86,22 +98,38 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.D)))
             SetState(PlayerState.WALK);
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (!Input.GetKey(KeyCode.S))
         {
-            if (jumpCount == 0)
-                SetState(PlayerState.JUMP);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (jumpCount == 0)
+                    SetState(PlayerState.JUMP);
+            }
         }
-        if (Input.GetKey(KeyCode.S))
-            SetState(PlayerState.DOWN);
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-            SetState(PlayerState.DASH);
+
         if (curAttackAnimSpeed == 0)
         {
             if (Input.GetMouseButtonDown(0))
                 SetState(PlayerState.ATTACK);
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            SetState(PlayerState.DASH);
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SetState(PlayerState.DOWN);
+            }
+        }
+
+
+
+        GroundCollisionCheck();
         Gravity();
+        JumpCheckAndStop();
 
         for (int i = 1; i < states.Count;)
         {
@@ -113,7 +141,9 @@ public class PlayerController : MonoBehaviour
                 break;
 
             if (i == states.Count)
+            {
                 isKeyInputting = false;
+            }
         }
 
         if (!isKeyInputting)
@@ -134,17 +164,24 @@ public class PlayerController : MonoBehaviour
         }
 
         MakeEffects();
+
+        if (transform.rotation != Quaternion.identity)
+            transform.rotation = Quaternion.identity;
+
     }
 
     public void MakeEffects()
     {
-        if (states[PlayerState.WALK].enabled)
+        if (states[PlayerState.WALK].enabled && !states[PlayerState.JUMP].enabled)
         {
             EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, (int)PlayerState.WALK - 1);
         }
         else if (states[PlayerState.ATTACK].enabled && curAttackAnimSpeed >= maxAttackAnimTime)     //anim end effect make
         {
-            EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, 2);
+            if (attackDir > -1)                                                                     //attack up
+                EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, (int)PlayerState.ATTACK - 1);
+            else                                                                                    //attack down
+                EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, (int)PlayerState.ATTACK);
         }
     }
 
@@ -197,27 +234,89 @@ public class PlayerController : MonoBehaviour
 
     public void Gravity()
     {
-        gravity -= stat.fallSpeed * Time.deltaTime;
-
-        moveDirection = Vector2.zero;
-        moveDirection.y = gravity * verticalVelocity;
-        cc.Move(moveDirection * Time.deltaTime);
-    }
-
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if ((hit.gameObject.tag == "Ground") &&
-            (gravity <= stat.fallSpeed))
+        if (!isGrounded)
         {
-            jumpCount = 0;
+            if (gravity >= -stat.fallSpeed / CONTROL_VALUE_OF_FALLSPEED)                //player FallSpeed control
+                gravity -= stat.fallSpeed * Time.deltaTime;
 
-
-            if (states[PlayerState.JUMP].enabled)
-                EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, (int)PlayerState.JUMP - 1);
-
-            states[PlayerState.JUMP].enabled = false;
+            moveDirection = Vector2.zero;
+            moveDirection.y = gravity * verticalVelocity;
+            transform.Translate(moveDirection * Time.deltaTime);
         }
     }
+
+    public void GroundCollisionCheck()
+    {
+        if (isGroundCollisionCheck && !isFalling)
+        {
+            if (Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, -transform.up, BOXCAST_DISTANCE, layerMask))
+            {
+                isGrounded = true;
+            }
+            else
+                isGrounded = false;
+        }
+        else
+            isGrounded = false;
+    }
+
+    public void JumpCheckAndStop()
+    {
+        if (!isGrounded)
+        {
+            if (states[PlayerState.JUMP].enabled)
+            {
+                if (transform.position.y >= transform.position.y + (gravity) * Time.deltaTime)
+                {
+                    isJumping = true;
+                }
+                if (isJumping)
+                {
+                    if (Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, -transform.up, 1f, layerMask))
+                    {
+                        isGroundCollisionCheck = true;
+                        isJumping = false;
+
+                        jumpCount = 0;
+
+                        if (states[PlayerState.JUMP].enabled)
+                            EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, (int)PlayerState.JUMP - 1);
+
+                        states[PlayerState.JUMP].enabled = false;
+                    }
+                }
+            }
+
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        RaycastHit2D hit2D;
+        //hit2D = Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, -transform.up, BOXCAST_DISTANCE, layerMask);
+        //if (hit2D)
+        //{
+        //    Gizmos.DrawRay(transform.position, -transform.up * hit2D.distance);
+        //    Gizmos.DrawWireCube(transform.position + -transform.up * hit2D.distance, transform.lossyScale);
+        //}
+        //else
+        //{
+        //    Gizmos.DrawRay(transform.position, -transform.up * 1f);
+        //}
+
+        if (states[PlayerState.DOWN].enabled)
+        {
+            hit2D = Physics2D.Raycast(transform.position, -transform.up, 20f, layerMask);
+            if (hit2D)
+            {
+                Gizmos.DrawRay(transform.position, -transform.up * 20f);
+            }
+        }
+
+    }
+
+
 
     public void AttackDirCheck(int newDir)
     {
@@ -241,4 +340,5 @@ public class PlayerController : MonoBehaviour
             Debug.Log("PlayerDead");
         }
     }
+
 }

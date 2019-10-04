@@ -23,6 +23,14 @@ public class PlayerWALK : PlayerFSMController
         {
             controller.states[PlayerState.WALK].enabled = false;
         }
-        controller.cc.Move(controller.lastMoveDir * controller.stat.walkSpeed * Time.deltaTime);
+
+        if (Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, controller.lastMoveDir, PlayerController.BOXCAST_DISTANCE, controller.layerMask))
+        {
+            controller.states[PlayerState.WALK].enabled = false;
+        }
+        else
+        {
+            transform.Translate(controller.lastMoveDir * controller.stat.walkSpeed * Time.deltaTime);
+        }
     }
 }
