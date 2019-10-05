@@ -423,7 +423,7 @@ PrefabInstance:
     - target: {fileID: 624037207638910439, guid: 9b356e0068d7f4e42a72aa1e34ea9f4d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 624037207638910436, guid: 9b356e0068d7f4e42a72aa1e34ea9f4d,
         type: 3}
@@ -770,30 +770,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3593959888274052721, guid: 6fe819ed2d19dd6468410dd80201df9d,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3593959888274052721, guid: 6fe819ed2d19dd6468410dd80201df9d,
-        type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1215923659, guid: 6fe819ed2d19dd6468410dd80201df9d, type: 3}
-      propertyPath: m_Name
-      value: Bubble_Shield_Idle_bubble
-      objectReference: {fileID: 0}
-    - target: {fileID: 3848592865997068880, guid: 6fe819ed2d19dd6468410dd80201df9d,
-        type: 3}
-      propertyPath: m_Name
-      value: Bubble_Shield_Start_Bubble
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845335638598926944, guid: 6fe819ed2d19dd6468410dd80201df9d,
-        type: 3}
-      propertyPath: m_Name
-      value: Bubble_Shield_Start_glow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fe819ed2d19dd6468410dd80201df9d, type: 3}
