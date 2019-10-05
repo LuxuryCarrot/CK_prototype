@@ -21,11 +21,11 @@ public class PlayerController : MonoBehaviour
     public const float CONTROL_VALUE_OF_FALLSPEED = 2f;
 
     public bool isKeyInputting = false;
-    public bool isJumping;
     public bool isGrounded;
-    public bool isGroundCollisionCheck;
     public bool isFalling;
     public int prevAttackDir = -1;
+    public bool isAirColliderPassing;
+    public bool isAirColliderTouching;
 
     public int attackDir = 0;
 
@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     public float verticalVelocity;
     public float curAttackAnimSpeed;
     public const float maxAttackAnimTime = 0.5f;
+
     [HideInInspector]
     public Transform monster;
 
@@ -62,7 +63,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         playerCollider = GetComponent<CapsuleCollider2D>();
-        isGroundCollisionCheck = true;
         isFalling = false;
 
         stat = GetComponent<PlayerStats>();
@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.D)))
             SetState(PlayerState.WALK);
 
@@ -124,12 +125,11 @@ public class PlayerController : MonoBehaviour
                 SetState(PlayerState.DOWN);
             }
         }
-
-
-
-        GroundCollisionCheck();
+        if (!states[PlayerState.DASH].enabled)
+        {
+            GroundCollisionCheck();
+        }
         Gravity();
-        JumpCheckAndStop();
 
         for (int i = 1; i < states.Count;)
         {
@@ -164,10 +164,6 @@ public class PlayerController : MonoBehaviour
         }
 
         MakeEffects();
-
-        if (transform.rotation != Quaternion.identity)
-            transform.rotation = Quaternion.identity;
-
     }
 
     public void MakeEffects()
@@ -244,10 +240,9 @@ public class PlayerController : MonoBehaviour
             transform.Translate(moveDirection * Time.deltaTime);
         }
     }
-
     public void GroundCollisionCheck()
     {
-        if (isGroundCollisionCheck && !isFalling)
+        if (!states[PlayerState.JUMP].enabled && !isAirColliderPassing)
         {
             if (Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, -transform.up, BOXCAST_DISTANCE, layerMask))
             {
@@ -256,38 +251,10 @@ public class PlayerController : MonoBehaviour
             else
                 isGrounded = false;
         }
-        else
-            isGrounded = false;
-    }
-
-    public void JumpCheckAndStop()
-    {
-        if (!isGrounded)
-        {
-            if (states[PlayerState.JUMP].enabled)
-            {
-                if (transform.position.y >= transform.position.y + (gravity) * Time.deltaTime)
-                {
-                    isJumping = true;
-                }
-                if (isJumping)
-                {
-                    if (Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, -transform.up, 1f, layerMask))
-                    {
-                        isGroundCollisionCheck = true;
-                        isJumping = false;
-
-                        jumpCount = 0;
-
-                        if (states[PlayerState.JUMP].enabled)
-                            EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, (int)PlayerState.JUMP - 1);
-
-                        states[PlayerState.JUMP].enabled = false;
-                    }
-                }
-            }
-
-        }
+        //else
+        //{
+        //    isGrounded = false;
+        //}
     }
 
     private void OnDrawGizmos()
@@ -340,5 +307,4 @@ public class PlayerController : MonoBehaviour
             Debug.Log("PlayerDead");
         }
     }
-
 }

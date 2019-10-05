@@ -7,7 +7,7 @@ public class PlayerDASH : PlayerFSMController
     [SerializeField]
     Vector3 deltaMove;
 
-    const float maxDashTime = 1.0f;
+    float maxDashTime = 0.9f;
     float dashStoppingSpeed = 0.1f;
     float currentDashTime;
 
@@ -22,8 +22,7 @@ public class PlayerDASH : PlayerFSMController
         deltaMove = controller.dashDir;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         if (currentDashTime < maxDashTime)
         {
@@ -33,6 +32,7 @@ public class PlayerDASH : PlayerFSMController
         else
         {
             deltaMove = Vector3.zero;
+
             controller.states[PlayerState.DASH].enabled = false;
         }
 
@@ -47,13 +47,19 @@ public class PlayerDASH : PlayerFSMController
                 deltaMove.x = -deltaMove.x;
         }
 
-        if (Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, controller.dashDir, PlayerController.BOXCAST_DISTANCE, controller.layerMask))
+        RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, deltaMove.normalized, PlayerController.BOXCAST_DISTANCE, controller.layerMask);
+
+        if (hit2D)
         {
-            controller.states[PlayerState.DASH].enabled = false;
+            if (hit2D.transform.gameObject.layer == 10)
+            {
+                controller.states[PlayerState.DASH].enabled = false;
+            }
         }
         else
         {
             transform.Translate(deltaMove * Time.deltaTime * controller.stat.dashSpeed);
         }
     }
+
 }

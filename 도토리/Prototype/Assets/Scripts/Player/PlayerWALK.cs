@@ -24,9 +24,12 @@ public class PlayerWALK : PlayerFSMController
             controller.states[PlayerState.WALK].enabled = false;
         }
 
-        if (Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, controller.lastMoveDir, PlayerController.BOXCAST_DISTANCE, controller.layerMask))
+        RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, controller.lastMoveDir, PlayerController.BOXCAST_DISTANCE, controller.layerMask);
+
+        if (hit2D)
         {
-            controller.states[PlayerState.WALK].enabled = false;
+            if (hit2D.transform.gameObject.layer == 10)
+                controller.states[PlayerState.WALK].enabled = false;
         }
         else
         {
