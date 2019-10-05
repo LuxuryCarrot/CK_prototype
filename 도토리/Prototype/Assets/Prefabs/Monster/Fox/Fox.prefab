@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5795625553705059585}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FirePoint
   m_TagString: FirePoint
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8006194236214712570}
   - component: {fileID: 8006194236214712569}
   - component: {fileID: 8006194236214712565}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Fox
   m_TagString: Fox
   m_Icon: {fileID: 0}

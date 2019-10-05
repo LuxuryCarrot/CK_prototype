@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class Monster_Frog : MonoBehaviour
 {
     public float movePower;
     public float Hp;
@@ -10,8 +10,9 @@ public class Monster : MonoBehaviour
 
     public int movementFlag = 0;
     private bool isChasing;
-    private bool isMoving;
     public bool AttackRange = true;
+
+    public int FrogShieldCount;
 
     public Transform firepoint;
     public GameObject FireBallPrefab;
@@ -27,7 +28,7 @@ public class Monster : MonoBehaviour
     void Start()
     {
         currentHp = Hp;
-        
+
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
 
@@ -62,25 +63,26 @@ public class Monster : MonoBehaviour
         {
             Debug.Log("Check");
             isChasing = true;
-            StopCoroutine("Shoot");
-            animator.SetBool("isMoving", true);
+            StopCoroutine("Attack");
+            animator.SetInteger("moveMentFlag", 1);
             AttackRange = true;
         }
-        if ((transform.position.x + 2.0f >= Player.transform.position.x && transform.position.x - 2.0f <= Player.transform.position.x) 
+        if ((transform.position.x + 2.0f >= Player.transform.position.x && transform.position.x - 2.0f <= Player.transform.position.x)
             && (transform.position.y + 2.0f >= Player.transform.position.y && transform.position.y - 1.0f <= Player.transform.position.y))
         {
-            Debug.Log("CCCCCCC");
             if (AttackRange == true)
             {
-                StartCoroutine("Shoot");
+                StartCoroutine("FirstAttack");
+                animator.SetInteger("moveMentFlag", 2);
                 AttackRange = false;
             }
         }
         else
         {
-             Move(); 
+            animator.SetInteger("moveMentFlag", 0);
+            Move();
         }
-     
+
 
 
     }
@@ -98,7 +100,7 @@ public class Monster : MonoBehaviour
             {
 
                 dist = "Left";
-                
+
             }
             else if (playerPos.x > transform.position.x)
             {
@@ -111,12 +113,12 @@ public class Monster : MonoBehaviour
             if (movementFlag == 1)
             {
                 dist = "Left";
-               
+
             }
             else if (movementFlag == 2)
             {
                 dist = "Right";
-              
+
             }
         }
 
@@ -144,13 +146,26 @@ public class Monster : MonoBehaviour
             //animator.SetBool("isMoving", true);
         }
     }
-
-    IEnumerator Shoot()
+    IEnumerator FirstAttack()
     {
-        Debug.Log("Flame");
-        Instantiate(FireBallPrefab, firepoint.position, firepoint.rotation);
-        yield return new WaitForSeconds(4.0f);
-        StartCoroutine("Shoot");
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine("Attack");
+        StopCoroutine("FirstAttack");
+    }
+
+    IEnumerator Attack()
+    {
+        Debug.Log("SpearAttack");
+        Player.SendMessage("ApplyDamage", 0.5f);
+        yield return new WaitForSeconds(2.0f);
+        StartCoroutine("Attack");
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Player.SendMessage("ApplyDamage", 0.5f);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -159,15 +174,26 @@ public class Monster : MonoBehaviour
         {
             isChasing = false;
             StartCoroutine("ChangeMovement");
-            StopCoroutine("Shoot");
+            StopCoroutine("Attack");
         }
 
     }
+
     void ApplyDamage(float damage)
     {
-        currentHp -= damage;
+        animator.SetInteger("moveMentFlag", 3);
+        if (FrogShieldCount > 0)
+        {
+            FrogShieldCount -= 1;
+        }
+        else if (FrogShieldCount >= 0)
+        {
+            currentHp -= damage;
+        }
+
         if (currentHp <= 0)
         {
+            animator.SetInteger("moveMentFlag", 4);
             Destroy(gameObject);
         }
     }
