@@ -1,72 +1,72 @@
 fileFormatVersion: 2
-guid: b4d353d4d45721741b929969b5c7757c
+guid: c21ad02aa3418ce41b56384692a7e4df
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mob_2_att_0
-    21300002: mob_2_att_1
-    21300004: mob_2_att_2
-    21300006: mob_2_att_3
-    21300008: mob_2_att_4
-    21300010: mob_2_att_5
-    21300012: mob_2_att_6
-    21300014: mob_2_att_7
-    21300016: mob_2_att_8
-    21300018: mob_2_att_9
-    21300020: mob_2_att_10
-    21300022: mob_2_att_11
-    21300024: mob_2_att_12
-    21300026: mob_2_att_13
-    21300028: mob_2_att_14
-    21300030: mob_2_att_15
-    21300032: mob_2_att_16
-    21300034: mob_2_att_17
-    21300036: mob_2_att_18
-    21300038: mob_2_att_19
-    21300040: mob_2_att_20
-    21300042: mob_2_att_21
-    21300044: mob_2_att_22
-    21300046: mob_2_att_23
-    21300048: mob_2_att_24
-    21300050: mob_2_att_25
-    21300052: mob_2_att_26
-    21300054: mob_2_att_27
-    21300056: mob_2_att_28
-    21300058: mob_2_att_29
-    21300060: mob_2_att_30
-    21300062: mob_2_att_31
-    21300064: mob_2_att_32
-    21300066: mob_2_att_33
-    21300068: mob_2_att_34
-    21300070: mob_2_att_35
-    21300072: mob_2_att_36
-    21300074: mob_2_att_37
-    21300076: mob_2_att_38
-    21300078: mob_2_att_39
-    21300080: mob_2_att_40
-    21300082: mob_2_att_41
-    21300084: mob_2_att_42
-    21300086: mob_2_att_43
-    21300088: mob_2_att_44
-    21300090: mob_2_att_45
-    21300092: mob_2_att_46
-    21300094: mob_2_att_47
-    21300096: mob_2_att_48
-    21300098: mob_2_att_49
-    21300100: mob_2_att_50
-    21300102: mob_2_att_51
-    21300104: mob_2_att_52
-    21300106: mob_2_att_53
-    21300108: mob_2_att_54
-    21300110: mob_2_att_55
-    21300112: mob_2_att_56
-    21300114: mob_2_att_57
-    21300116: mob_2_att_58
-    21300118: mob_2_att_59
+    21300000: player_2_idle_0
+    21300002: player_2_idle_1
+    21300004: player_2_idle_2
+    21300006: player_2_idle_3
+    21300008: player_2_idle_4
+    21300010: player_2_idle_5
+    21300012: player_2_idle_6
+    21300014: player_2_idle_7
+    21300016: player_2_idle_8
+    21300018: player_2_idle_9
+    21300020: player_2_idle_10
+    21300022: player_2_idle_11
+    21300024: player_2_idle_12
+    21300026: player_2_idle_13
+    21300028: player_2_idle_14
+    21300030: player_2_idle_15
+    21300032: player_2_idle_16
+    21300034: player_2_idle_17
+    21300036: player_2_idle_18
+    21300038: player_2_idle_19
+    21300040: player_2_idle_20
+    21300042: player_2_idle_21
+    21300044: player_2_idle_22
+    21300046: player_2_idle_23
+    21300048: player_2_idle_24
+    21300050: player_2_idle_25
+    21300052: player_2_idle_26
+    21300054: player_2_idle_27
+    21300056: player_2_idle_28
+    21300058: player_2_idle_29
+    21300060: player_2_idle_30
+    21300062: player_2_idle_31
+    21300064: player_2_idle_32
+    21300066: player_2_idle_33
+    21300068: player_2_idle_34
+    21300070: player_2_idle_35
+    21300072: player_2_idle_36
+    21300074: player_2_idle_37
+    21300076: player_2_idle_38
+    21300078: player_2_idle_39
+    21300080: player_2_idle_40
+    21300082: player_2_idle_41
+    21300084: player_2_idle_42
+    21300086: player_2_idle_43
+    21300088: player_2_idle_44
+    21300090: player_2_idle_45
+    21300092: player_2_idle_46
+    21300094: player_2_idle_47
+    21300096: player_2_idle_48
+    21300098: player_2_idle_49
+    21300100: player_2_idle_50
+    21300102: player_2_idle_51
+    21300104: player_2_idle_52
+    21300106: player_2_idle_53
+    21300108: player_2_idle_54
+    21300110: player_2_idle_55
+    21300112: player_2_idle_56
+    21300114: player_2_idle_57
+    21300116: player_2_idle_58
+    21300118: player_2_idle_59
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -140,1216 +140,1205 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mob_2_att_0
+      name: player_2_idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 405e2caeaee5c7c408addad8a28bae90
+      spriteID: 7a8b68471c4a4f943b9201691403bd94
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_1
+      name: player_2_idle_1
       rect:
         serializedVersion: 2
         x: 128
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9bfa01573aa04440821f8efd879f506
+      spriteID: 928f20197500448439a1edb6a63324fb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_2
+      name: player_2_idle_2
       rect:
         serializedVersion: 2
         x: 256
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e292b4f6f3f25647925cef36645e908
+      spriteID: 798e02beb99aea04790b5fd5919ae34c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_3
+      name: player_2_idle_3
       rect:
         serializedVersion: 2
         x: 384
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99464027b75452b41882d46ba85cbec9
+      spriteID: e7bb9178a66e94a46b05f35d94242cc0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_4
+      name: player_2_idle_4
       rect:
         serializedVersion: 2
         x: 512
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9efeed97dd375346a5b2d0c7413fccd
+      spriteID: a71c8ac099131194a8ef873d4eb9b028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_5
+      name: player_2_idle_5
       rect:
         serializedVersion: 2
         x: 640
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6600c1495cdb9a43ae0d6e663a04bd0
+      spriteID: ef5e7990da2786846ae7d6e71899821f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_6
+      name: player_2_idle_6
       rect:
         serializedVersion: 2
         x: 768
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c80cc1005ac253f4099efa28d36b46e1
+      spriteID: f9041e9d88695e146926c9cc6f61cb1a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_7
+      name: player_2_idle_7
       rect:
         serializedVersion: 2
         x: 896
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4128052f209d8134e923135b725f890e
+      spriteID: 3019bda1db70a1a41bb0c0677e2d49c1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_8
+      name: player_2_idle_8
       rect:
         serializedVersion: 2
         x: 1024
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2f478af6ae042b4bbf36616fe9c2724
+      spriteID: 0a5ef58cbc4574f4bb88c3bfe78b1494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_9
+      name: player_2_idle_9
       rect:
         serializedVersion: 2
         x: 1152
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c1011789d56da8479af5428bd008baa
+      spriteID: fff5242cfb279874b85afd2a3c535362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_10
+      name: player_2_idle_10
       rect:
         serializedVersion: 2
         x: 1280
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 222dfe282888fbd46bc6d1ab12fc5914
+      spriteID: 00b3390fa1b41c4408d26659b8d1606c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_11
+      name: player_2_idle_11
       rect:
         serializedVersion: 2
         x: 1408
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b79ffe1ad578403468cea3f832fa11ad
+      spriteID: 19b765e3ebde67d4e8c9c96cdf259dc6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_12
+      name: player_2_idle_12
       rect:
         serializedVersion: 2
         x: 0
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2726e6518689de4fb8fb2a90b16b010
+      spriteID: b70bc28ed5eadf742a15b3080c19127c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_13
+      name: player_2_idle_13
       rect:
         serializedVersion: 2
         x: 128
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2321ec93408c6342810ffe3f982160c
+      spriteID: 93f5e735719fd4741ad2c67160a3f229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_14
+      name: player_2_idle_14
       rect:
         serializedVersion: 2
         x: 256
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49733714a133bb24bb7803a037a3de2d
+      spriteID: fee585bbc26deda498394938dc8759fe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_15
+      name: player_2_idle_15
       rect:
         serializedVersion: 2
         x: 384
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e122a0b9efd12854c88d047769eb20bd
+      spriteID: 7564d0088523b0643b9e512724604187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_16
+      name: player_2_idle_16
       rect:
         serializedVersion: 2
         x: 512
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55fb03c3893b53b47b6e7c758eb7a3c1
+      spriteID: b54355379a7d6bf468173d15dbebba3e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_17
+      name: player_2_idle_17
       rect:
         serializedVersion: 2
         x: 640
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdd92ba5547980f498846fe3cbfc6376
+      spriteID: 701d75134a78fbc4883b68e2a0ebe101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_18
+      name: player_2_idle_18
       rect:
         serializedVersion: 2
         x: 768
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37ced9e31f2521a468070baf028e677e
+      spriteID: 3c57c8fbd4facca4d8b3821100459183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_19
+      name: player_2_idle_19
       rect:
         serializedVersion: 2
         x: 896
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7a83381650461a4d9f404392b05d180
+      spriteID: 057b2497e74438447aee313869a14401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_20
+      name: player_2_idle_20
       rect:
         serializedVersion: 2
         x: 1024
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89c6a6525bc63164da82df2876fbf894
+      spriteID: 4cd4232496e4b4340ae9770d257fe40b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_21
+      name: player_2_idle_21
       rect:
         serializedVersion: 2
         x: 1152
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 781ed17574cbb1947bba6e375b89aaf0
+      spriteID: e2d73010e61ec9d459fc2e1e9422d283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_22
+      name: player_2_idle_22
       rect:
         serializedVersion: 2
         x: 1280
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1756e6473b818d4c970b0583ba96563
+      spriteID: 148c08b2ee8d5f445bae31ff60d05b96
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_23
+      name: player_2_idle_23
       rect:
         serializedVersion: 2
         x: 1408
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 441bd1675e1ff4d4a967dd72de2d5b3a
+      spriteID: 0b6400b693bd5bc48a45027f010e9728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_24
+      name: player_2_idle_24
       rect:
         serializedVersion: 2
         x: 0
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12eefe923bf242e44a73f6b8650915e8
+      spriteID: c71cdb38a8923a047b55def673c663c4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_25
+      name: player_2_idle_25
       rect:
         serializedVersion: 2
         x: 128
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d251c139d7fccf419907d1092497457
+      spriteID: db9bbd0b37f9840488cbec6612814e47
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_26
+      name: player_2_idle_26
       rect:
         serializedVersion: 2
         x: 256
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8219fa1bd2f7dbd4883ea375c9a7ce61
+      spriteID: 38df230720f50dd4b94c95558189dee1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_27
+      name: player_2_idle_27
       rect:
         serializedVersion: 2
         x: 384
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ddf141b3621c27488c70f84d62d2564
+      spriteID: bcc535c7f7a5c224b9ea22982f88d780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_28
+      name: player_2_idle_28
       rect:
         serializedVersion: 2
         x: 512
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9868940cf7fcfb4b852440067167945
+      spriteID: 89ceed1a486c68f499a50532a5b58afb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_29
+      name: player_2_idle_29
       rect:
         serializedVersion: 2
         x: 640
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e10b500eccfe3042b0ff33433198232
+      spriteID: d4dbf4e77ab53e448a9274f6aba10181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_30
+      name: player_2_idle_30
       rect:
         serializedVersion: 2
         x: 768
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 188600cba93d0294eb4513d362e767fa
+      spriteID: cd1b6a918bf338d4daca5addb4a954d2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_31
+      name: player_2_idle_31
       rect:
         serializedVersion: 2
         x: 896
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27b26abd67f359c4eb414e6722f57a74
+      spriteID: 7384b4c9e1223d24d9b0561be9e2b915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_32
+      name: player_2_idle_32
       rect:
         serializedVersion: 2
         x: 1024
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ba284a858ec42047a52c3f15ed9cd0c
+      spriteID: 5fd7200321297ac409c14c6ab74f41c8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_33
+      name: player_2_idle_33
       rect:
         serializedVersion: 2
         x: 1152
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93ee55f687deae44dbc0bdb1eed56701
+      spriteID: 7ad4ba1ad072ee748acbe6d7e25d0964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_34
+      name: player_2_idle_34
       rect:
         serializedVersion: 2
         x: 1280
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c689d1ab2e91c14da9c38ab7c55d81c
+      spriteID: 22c8da63ca1c89c47976664d5612a167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_35
+      name: player_2_idle_35
       rect:
         serializedVersion: 2
         x: 1408
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bf232a027f3eda47a57a0a6d624bbf9
+      spriteID: b04f734ee796d71488cfbc5669b85bff
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_36
+      name: player_2_idle_36
       rect:
         serializedVersion: 2
         x: 0
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ef8e46428abf6f4d85762615c4f3e38
+      spriteID: 182516888580e714bb605e5b11e06cc9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_37
+      name: player_2_idle_37
       rect:
         serializedVersion: 2
         x: 128
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5f1115b015d1c840ad9a23889442e08
+      spriteID: fb37f154495a7fd4d9241c696ecff898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_38
+      name: player_2_idle_38
       rect:
         serializedVersion: 2
         x: 256
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0241e99dcceda554cbaf962a7ae81308
+      spriteID: 1fa03fd8957ddb54fae025cf6fbee46a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_39
+      name: player_2_idle_39
       rect:
         serializedVersion: 2
         x: 384
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 462829760d5bb8146956832ab5a0396e
+      spriteID: e872c457b6160f84ba4767f4c4d1e37a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_40
+      name: player_2_idle_40
       rect:
         serializedVersion: 2
         x: 512
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1c59782b17057440a045429625ed04b
+      spriteID: a333f324c06db4e41ac892b674ee9e7e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_41
+      name: player_2_idle_41
       rect:
         serializedVersion: 2
         x: 640
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77f24d84b6f565243a319a01cbce37ca
+      spriteID: 5f7e1cc8904507f4db3994f52e46444f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_42
+      name: player_2_idle_42
       rect:
         serializedVersion: 2
         x: 768
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27abf8d931ac8ab4092fcf2ae675e222
+      spriteID: c6997301580994e49bc1f23e8ad14afb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_43
+      name: player_2_idle_43
       rect:
         serializedVersion: 2
         x: 896
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 403f99b3a2cc39e41a563c4b2e6514a3
+      spriteID: 9c1ef55fc4f1a60439be5a37b48fcd73
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_44
+      name: player_2_idle_44
       rect:
         serializedVersion: 2
         x: 1024
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f812c5a6e71f5c048bde7d66eaa35cbe
+      spriteID: 709471a791674a44bb61b5eb2a3619d8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_45
+      name: player_2_idle_45
       rect:
         serializedVersion: 2
         x: 1152
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab49c83e7e1001d49b5048657298f40c
+      spriteID: d30684c212aed1548831f78557c9a223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_46
+      name: player_2_idle_46
       rect:
         serializedVersion: 2
         x: 1280
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3e9bc5d61e221045a155fb6767c1f04
+      spriteID: ed61b5114192eea40b5bcee0da0ea81d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_47
+      name: player_2_idle_47
       rect:
         serializedVersion: 2
         x: 1408
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7485c2f487b298469ae3296df21a588
+      spriteID: 8b9a96792d2769d4db5aaf460cefd7a5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_48
+      name: player_2_idle_48
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c689ee8ac40bdea4590e1e5a5b0d6547
+      spriteID: b3527ed0ccf986c46872505ec1eea83e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_49
+      name: player_2_idle_49
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2d63c90706c8f448bda5fce21549b0e
+      spriteID: 1266b5934b2e26a4c91d8ed425158e42
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_50
+      name: player_2_idle_50
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4943d32d97246e14eb0e7999b82651a6
+      spriteID: fb0f48d1a7b59e341bdb0ee918073546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_51
+      name: player_2_idle_51
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ac4c96cbe6ced443b97064101791f8e
+      spriteID: ddc966834d674264f87712309d28fa64
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_52
+      name: player_2_idle_52
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 683b0e08b8f9769489ecef0e5f6e750a
+      spriteID: c58d570ba66217a4c9c4c180400f7763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_53
+      name: player_2_idle_53
       rect:
         serializedVersion: 2
         x: 640
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a9d3cc1e1491224e88032cfbac0e04d
+      spriteID: 0b359e12699ca964ab0c2e782a14dfa4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_54
+      name: player_2_idle_54
       rect:
         serializedVersion: 2
         x: 768
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0422a98621dc2ad4991749f70f75637d
+      spriteID: dc16930d91ff46d408764976b8b58ee3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_55
+      name: player_2_idle_55
       rect:
         serializedVersion: 2
         x: 896
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49daba0924702b34ea0030760a959faa
+      spriteID: d869c06f495752544bfca192310f6264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_56
+      name: player_2_idle_56
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6a487b5520e0654cb045874ac6e7fba
+      spriteID: 11f2a377b2723744d9c04a35df778c82
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_57
+      name: player_2_idle_57
       rect:
         serializedVersion: 2
         x: 1152
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 702fedb48c847a84899db8ef3530bfd1
+      spriteID: 9a57baa9a7509454ca62af5cc31c3b28
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_58
+      name: player_2_idle_58
       rect:
         serializedVersion: 2
         x: 1280
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0cc78a7e1c0cad4ea9c6b84da37dcc0
+      spriteID: 99e35db688630824cab5bf339d1b0bf3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_59
+      name: player_2_idle_59
       rect:
         serializedVersion: 2
         x: 1408
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1764642d254ecb64b91c5c4feea17f9a
+      spriteID: 526d30b7ce60a1d41bb31ce4f0b46193
       vertices: []
       indices: 
       edges: []
@@ -1357,7 +1346,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8f32ae18109a82b439de417c017bb73d
+    spriteID: 011db999aef072b40a6f3b4f49232ba7
     vertices: []
     indices: 
     edges: []

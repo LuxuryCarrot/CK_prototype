@@ -1,72 +1,132 @@
 fileFormatVersion: 2
-guid: b4d353d4d45721741b929969b5c7757c
+guid: 5f8de95621bae434fbebced7d17ae5fd
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mob_2_att_0
-    21300002: mob_2_att_1
-    21300004: mob_2_att_2
-    21300006: mob_2_att_3
-    21300008: mob_2_att_4
-    21300010: mob_2_att_5
-    21300012: mob_2_att_6
-    21300014: mob_2_att_7
-    21300016: mob_2_att_8
-    21300018: mob_2_att_9
-    21300020: mob_2_att_10
-    21300022: mob_2_att_11
-    21300024: mob_2_att_12
-    21300026: mob_2_att_13
-    21300028: mob_2_att_14
-    21300030: mob_2_att_15
-    21300032: mob_2_att_16
-    21300034: mob_2_att_17
-    21300036: mob_2_att_18
-    21300038: mob_2_att_19
-    21300040: mob_2_att_20
-    21300042: mob_2_att_21
-    21300044: mob_2_att_22
-    21300046: mob_2_att_23
-    21300048: mob_2_att_24
-    21300050: mob_2_att_25
-    21300052: mob_2_att_26
-    21300054: mob_2_att_27
-    21300056: mob_2_att_28
-    21300058: mob_2_att_29
-    21300060: mob_2_att_30
-    21300062: mob_2_att_31
-    21300064: mob_2_att_32
-    21300066: mob_2_att_33
-    21300068: mob_2_att_34
-    21300070: mob_2_att_35
-    21300072: mob_2_att_36
-    21300074: mob_2_att_37
-    21300076: mob_2_att_38
-    21300078: mob_2_att_39
-    21300080: mob_2_att_40
-    21300082: mob_2_att_41
-    21300084: mob_2_att_42
-    21300086: mob_2_att_43
-    21300088: mob_2_att_44
-    21300090: mob_2_att_45
-    21300092: mob_2_att_46
-    21300094: mob_2_att_47
-    21300096: mob_2_att_48
-    21300098: mob_2_att_49
-    21300100: mob_2_att_50
-    21300102: mob_2_att_51
-    21300104: mob_2_att_52
-    21300106: mob_2_att_53
-    21300108: mob_2_att_54
-    21300110: mob_2_att_55
-    21300112: mob_2_att_56
-    21300114: mob_2_att_57
-    21300116: mob_2_att_58
-    21300118: mob_2_att_59
+    21300000: player_2_die_Sheet_0
+    21300002: player_2_die_Sheet_1
+    21300004: player_2_die_Sheet_2
+    21300006: player_2_die_Sheet_3
+    21300008: player_2_die_Sheet_4
+    21300010: player_2_die_Sheet_5
+    21300012: player_2_die_Sheet_6
+    21300014: player_2_die_Sheet_7
+    21300016: player_2_die_Sheet_8
+    21300018: player_2_die_Sheet_9
+    21300020: player_2_die_Sheet_10
+    21300022: player_2_die_Sheet_11
+    21300024: player_2_die_Sheet_12
+    21300026: player_2_die_Sheet_13
+    21300028: player_2_die_Sheet_14
+    21300030: player_2_die_Sheet_15
+    21300032: player_2_die_Sheet_16
+    21300034: player_2_die_Sheet_17
+    21300036: player_2_die_Sheet_18
+    21300038: player_2_die_Sheet_19
+    21300040: player_2_die_Sheet_20
+    21300042: player_2_die_Sheet_21
+    21300044: player_2_die_Sheet_22
+    21300046: player_2_die_Sheet_23
+    21300048: player_2_die_Sheet_24
+    21300050: player_2_die_Sheet_25
+    21300052: player_2_die_Sheet_26
+    21300054: player_2_die_Sheet_27
+    21300056: player_2_die_Sheet_28
+    21300058: player_2_die_Sheet_29
+    21300060: player_2_die_Sheet_30
+    21300062: player_2_die_Sheet_31
+    21300064: player_2_die_Sheet_32
+    21300066: player_2_die_Sheet_33
+    21300068: player_2_die_Sheet_34
+    21300070: player_2_die_Sheet_35
+    21300072: player_2_die_Sheet_36
+    21300074: player_2_die_Sheet_37
+    21300076: player_2_die_Sheet_38
+    21300078: player_2_die_Sheet_39
+    21300080: player_2_die_Sheet_40
+    21300082: player_2_die_Sheet_41
+    21300084: player_2_die_Sheet_42
+    21300086: player_2_die_Sheet_43
+    21300088: player_2_die_Sheet_44
+    21300090: player_2_die_Sheet_45
+    21300092: player_2_die_Sheet_46
+    21300094: player_2_die_Sheet_47
+    21300096: player_2_die_Sheet_48
+    21300098: player_2_die_Sheet_49
+    21300100: player_2_die_Sheet_50
+    21300102: player_2_die_Sheet_51
+    21300104: player_2_die_Sheet_52
+    21300106: player_2_die_Sheet_53
+    21300108: player_2_die_Sheet_54
+    21300110: player_2_die_Sheet_55
+    21300112: player_2_die_Sheet_56
+    21300114: player_2_die_Sheet_57
+    21300116: player_2_die_Sheet_58
+    21300118: player_2_die_Sheet_59
+    21300120: player_2_die_0
+    21300122: player_2_die_1
+    21300124: player_2_die_2
+    21300126: player_2_die_3
+    21300128: player_2_die_4
+    21300130: player_2_die_5
+    21300132: player_2_die_6
+    21300134: player_2_die_7
+    21300136: player_2_die_8
+    21300138: player_2_die_9
+    21300140: player_2_die_10
+    21300142: player_2_die_11
+    21300144: player_2_die_12
+    21300146: player_2_die_13
+    21300148: player_2_die_14
+    21300150: player_2_die_15
+    21300152: player_2_die_16
+    21300154: player_2_die_17
+    21300156: player_2_die_18
+    21300158: player_2_die_19
+    21300160: player_2_die_20
+    21300162: player_2_die_21
+    21300164: player_2_die_22
+    21300166: player_2_die_23
+    21300168: player_2_die_24
+    21300170: player_2_die_25
+    21300172: player_2_die_26
+    21300174: player_2_die_27
+    21300176: player_2_die_28
+    21300178: player_2_die_29
+    21300180: player_2_die_30
+    21300182: player_2_die_31
+    21300184: player_2_die_32
+    21300186: player_2_die_33
+    21300188: player_2_die_34
+    21300190: player_2_die_35
+    21300192: player_2_die_36
+    21300194: player_2_die_37
+    21300196: player_2_die_38
+    21300198: player_2_die_39
+    21300200: player_2_die_40
+    21300202: player_2_die_41
+    21300204: player_2_die_42
+    21300206: player_2_die_43
+    21300208: player_2_die_44
+    21300210: player_2_die_45
+    21300212: player_2_die_46
+    21300214: player_2_die_47
+    21300216: player_2_die_48
+    21300218: player_2_die_49
+    21300220: player_2_die_50
+    21300222: player_2_die_51
+    21300224: player_2_die_52
+    21300226: player_2_die_53
+    21300228: player_2_die_54
+    21300230: player_2_die_55
+    21300232: player_2_die_56
+    21300234: player_2_die_57
+    21300236: player_2_die_58
+    21300238: player_2_die_59
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -140,22 +200,11 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mob_2_att_0
+      name: player_2_die_0
       rect:
         serializedVersion: 2
         x: 0
@@ -163,19 +212,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 405e2caeaee5c7c408addad8a28bae90
+      spriteID: db5a8328a9bcdc745b3209d92a0abbaf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_1
+      name: player_2_die_1
       rect:
         serializedVersion: 2
         x: 128
@@ -183,19 +232,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9bfa01573aa04440821f8efd879f506
+      spriteID: fe77f380a1f4d924ba8859f3a5a2f2c8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_2
+      name: player_2_die_2
       rect:
         serializedVersion: 2
         x: 256
@@ -203,19 +252,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e292b4f6f3f25647925cef36645e908
+      spriteID: 94eccc3d920465245b42086b9967839a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_3
+      name: player_2_die_3
       rect:
         serializedVersion: 2
         x: 384
@@ -223,19 +272,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99464027b75452b41882d46ba85cbec9
+      spriteID: 6bea6f89670965b489e57720960209c2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_4
+      name: player_2_die_4
       rect:
         serializedVersion: 2
         x: 512
@@ -243,19 +292,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9efeed97dd375346a5b2d0c7413fccd
+      spriteID: acbaf5456248bde41b09de352c9d2be9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_5
+      name: player_2_die_5
       rect:
         serializedVersion: 2
         x: 640
@@ -263,19 +312,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6600c1495cdb9a43ae0d6e663a04bd0
+      spriteID: 588519ba309dd524b8b114dc799a4e16
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_6
+      name: player_2_die_6
       rect:
         serializedVersion: 2
         x: 768
@@ -283,19 +332,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c80cc1005ac253f4099efa28d36b46e1
+      spriteID: 0ebce13b31f100b449a942c8e4df382e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_7
+      name: player_2_die_7
       rect:
         serializedVersion: 2
         x: 896
@@ -303,19 +352,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4128052f209d8134e923135b725f890e
+      spriteID: bfd3330242fc83944a1564d877ee105d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_8
+      name: player_2_die_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -323,19 +372,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2f478af6ae042b4bbf36616fe9c2724
+      spriteID: 4f1fcec4e611ad540a6e59ee6ec87409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_9
+      name: player_2_die_9
       rect:
         serializedVersion: 2
         x: 1152
@@ -343,19 +392,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c1011789d56da8479af5428bd008baa
+      spriteID: ace0cb4d86b273c45809f9d07f627e4b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_10
+      name: player_2_die_10
       rect:
         serializedVersion: 2
         x: 1280
@@ -363,19 +412,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 222dfe282888fbd46bc6d1ab12fc5914
+      spriteID: c082b9a52c6a06342a36fd06808085de
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_11
+      name: player_2_die_11
       rect:
         serializedVersion: 2
         x: 1408
@@ -383,19 +432,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b79ffe1ad578403468cea3f832fa11ad
+      spriteID: 069c566b445ecff4ba2958ff42f73e1d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_12
+      name: player_2_die_12
       rect:
         serializedVersion: 2
         x: 0
@@ -403,19 +452,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2726e6518689de4fb8fb2a90b16b010
+      spriteID: 67fc38be39645fa44b7ca58393d58a66
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_13
+      name: player_2_die_13
       rect:
         serializedVersion: 2
         x: 128
@@ -423,19 +472,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2321ec93408c6342810ffe3f982160c
+      spriteID: 30907fcc3e360e94b821f73700796763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_14
+      name: player_2_die_14
       rect:
         serializedVersion: 2
         x: 256
@@ -443,19 +492,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49733714a133bb24bb7803a037a3de2d
+      spriteID: cd51b56b5ddd23f49b0cd41f75adcda0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_15
+      name: player_2_die_15
       rect:
         serializedVersion: 2
         x: 384
@@ -463,19 +512,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e122a0b9efd12854c88d047769eb20bd
+      spriteID: 113ae66888e3b3f43a9d031ee2f4e1f9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_16
+      name: player_2_die_16
       rect:
         serializedVersion: 2
         x: 512
@@ -483,19 +532,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55fb03c3893b53b47b6e7c758eb7a3c1
+      spriteID: 5db6c740c2f64e54e9b950b2bd097428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_17
+      name: player_2_die_17
       rect:
         serializedVersion: 2
         x: 640
@@ -503,19 +552,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdd92ba5547980f498846fe3cbfc6376
+      spriteID: 1b41f8dee45a2b540b067953c449afaa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_18
+      name: player_2_die_18
       rect:
         serializedVersion: 2
         x: 768
@@ -523,19 +572,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37ced9e31f2521a468070baf028e677e
+      spriteID: ab3eb4e868d798944a329e2d4585e2dc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_19
+      name: player_2_die_19
       rect:
         serializedVersion: 2
         x: 896
@@ -543,19 +592,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7a83381650461a4d9f404392b05d180
+      spriteID: ad2541389746cb240b7f93079bfb12be
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_20
+      name: player_2_die_20
       rect:
         serializedVersion: 2
         x: 1024
@@ -563,19 +612,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89c6a6525bc63164da82df2876fbf894
+      spriteID: 368b0299d7947e645a0b2f8366b85b1d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_21
+      name: player_2_die_21
       rect:
         serializedVersion: 2
         x: 1152
@@ -583,19 +632,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 781ed17574cbb1947bba6e375b89aaf0
+      spriteID: a8c4f582ec4b75940ba6c61a6e105d9c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_22
+      name: player_2_die_22
       rect:
         serializedVersion: 2
         x: 1280
@@ -603,19 +652,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1756e6473b818d4c970b0583ba96563
+      spriteID: d19928d307024794baa59ad515233bf2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_23
+      name: player_2_die_23
       rect:
         serializedVersion: 2
         x: 1408
@@ -623,19 +672,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 441bd1675e1ff4d4a967dd72de2d5b3a
+      spriteID: ed286408b7ae3a24ab1b221bb6b2e45b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_24
+      name: player_2_die_24
       rect:
         serializedVersion: 2
         x: 0
@@ -643,19 +692,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12eefe923bf242e44a73f6b8650915e8
+      spriteID: 218113b6392dfd04f9146242051fe5c0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_25
+      name: player_2_die_25
       rect:
         serializedVersion: 2
         x: 128
@@ -663,19 +712,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d251c139d7fccf419907d1092497457
+      spriteID: 039a99e5ddfe65541b264732a90a46c5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_26
+      name: player_2_die_26
       rect:
         serializedVersion: 2
         x: 256
@@ -683,19 +732,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8219fa1bd2f7dbd4883ea375c9a7ce61
+      spriteID: 551b9eb7f9ef2a44fa74108a8c5ceb30
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_27
+      name: player_2_die_27
       rect:
         serializedVersion: 2
         x: 384
@@ -703,19 +752,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ddf141b3621c27488c70f84d62d2564
+      spriteID: 08ce6169f08394148b678eb12b2b91d3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_28
+      name: player_2_die_28
       rect:
         serializedVersion: 2
         x: 512
@@ -723,19 +772,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9868940cf7fcfb4b852440067167945
+      spriteID: 7f146f95107a0bb4a904a00b325e2dc8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_29
+      name: player_2_die_29
       rect:
         serializedVersion: 2
         x: 640
@@ -743,19 +792,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e10b500eccfe3042b0ff33433198232
+      spriteID: b5b27a38cd5b9f04289e7fcfd8e2caa4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_30
+      name: player_2_die_30
       rect:
         serializedVersion: 2
         x: 768
@@ -763,19 +812,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 188600cba93d0294eb4513d362e767fa
+      spriteID: 36839ac6fab45844fafb8fcfccf2cf68
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_31
+      name: player_2_die_31
       rect:
         serializedVersion: 2
         x: 896
@@ -783,19 +832,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27b26abd67f359c4eb414e6722f57a74
+      spriteID: 26acea3a17342a940ba2d7248e32fe74
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_32
+      name: player_2_die_32
       rect:
         serializedVersion: 2
         x: 1024
@@ -803,19 +852,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ba284a858ec42047a52c3f15ed9cd0c
+      spriteID: 7ac316de26a49d14dbb28c9a03592d99
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_33
+      name: player_2_die_33
       rect:
         serializedVersion: 2
         x: 1152
@@ -823,19 +872,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93ee55f687deae44dbc0bdb1eed56701
+      spriteID: 01a99864b0c5d6847aeaf6b9573777e2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_34
+      name: player_2_die_34
       rect:
         serializedVersion: 2
         x: 1280
@@ -843,19 +892,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c689d1ab2e91c14da9c38ab7c55d81c
+      spriteID: 19d63a5eadf409241a4eaf317c19c505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_35
+      name: player_2_die_35
       rect:
         serializedVersion: 2
         x: 1408
@@ -863,19 +912,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bf232a027f3eda47a57a0a6d624bbf9
+      spriteID: 0c129fb578cf3f0468ba2e0e2c73474a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_36
+      name: player_2_die_36
       rect:
         serializedVersion: 2
         x: 0
@@ -883,19 +932,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ef8e46428abf6f4d85762615c4f3e38
+      spriteID: 19e3510ac0154ad46af8f64204809d2c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_37
+      name: player_2_die_37
       rect:
         serializedVersion: 2
         x: 128
@@ -903,19 +952,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5f1115b015d1c840ad9a23889442e08
+      spriteID: 8d9eb5ecead9d754c9f225e952697fa6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_38
+      name: player_2_die_38
       rect:
         serializedVersion: 2
         x: 256
@@ -923,19 +972,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0241e99dcceda554cbaf962a7ae81308
+      spriteID: 8f8b7e33827c8644a80a115cdf318705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_39
+      name: player_2_die_39
       rect:
         serializedVersion: 2
         x: 384
@@ -943,19 +992,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 462829760d5bb8146956832ab5a0396e
+      spriteID: d69be7d96103d754289a5406a764e3f0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_40
+      name: player_2_die_40
       rect:
         serializedVersion: 2
         x: 512
@@ -963,19 +1012,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1c59782b17057440a045429625ed04b
+      spriteID: f64567b2710cf874094ca6ebe45dc123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_41
+      name: player_2_die_41
       rect:
         serializedVersion: 2
         x: 640
@@ -983,19 +1032,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77f24d84b6f565243a319a01cbce37ca
+      spriteID: 2aa8bff2e98861b4198f933ee9f3e893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_42
+      name: player_2_die_42
       rect:
         serializedVersion: 2
         x: 768
@@ -1003,19 +1052,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27abf8d931ac8ab4092fcf2ae675e222
+      spriteID: e1da13f5b9f949d439519088ca12544a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_43
+      name: player_2_die_43
       rect:
         serializedVersion: 2
         x: 896
@@ -1023,19 +1072,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 403f99b3a2cc39e41a563c4b2e6514a3
+      spriteID: 7d703dd307f7393499d332fece73b299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_44
+      name: player_2_die_44
       rect:
         serializedVersion: 2
         x: 1024
@@ -1043,19 +1092,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f812c5a6e71f5c048bde7d66eaa35cbe
+      spriteID: 42c6fe47935522f4f99786ea90b444d1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_45
+      name: player_2_die_45
       rect:
         serializedVersion: 2
         x: 1152
@@ -1063,19 +1112,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab49c83e7e1001d49b5048657298f40c
+      spriteID: 2bb717eb764170b4bbf94fa93289e07f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_46
+      name: player_2_die_46
       rect:
         serializedVersion: 2
         x: 1280
@@ -1083,19 +1132,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3e9bc5d61e221045a155fb6767c1f04
+      spriteID: 8d836e9132f378b499d4fe7047e1c14f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_47
+      name: player_2_die_47
       rect:
         serializedVersion: 2
         x: 1408
@@ -1103,19 +1152,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7485c2f487b298469ae3296df21a588
+      spriteID: 2c15c1bde61004b46a9086fff5ba72ee
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_48
+      name: player_2_die_48
       rect:
         serializedVersion: 2
         x: 0
@@ -1123,19 +1172,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c689ee8ac40bdea4590e1e5a5b0d6547
+      spriteID: 18556714b361a004b9a6cc1c352cba04
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_49
+      name: player_2_die_49
       rect:
         serializedVersion: 2
         x: 128
@@ -1143,19 +1192,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2d63c90706c8f448bda5fce21549b0e
+      spriteID: 8d80c2bee0109fe42a9935bc70e8fa67
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_50
+      name: player_2_die_50
       rect:
         serializedVersion: 2
         x: 256
@@ -1163,19 +1212,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4943d32d97246e14eb0e7999b82651a6
+      spriteID: 42144301fc0f5a442929925e037ef43a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_51
+      name: player_2_die_51
       rect:
         serializedVersion: 2
         x: 384
@@ -1183,19 +1232,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ac4c96cbe6ced443b97064101791f8e
+      spriteID: 4eeb4ff84f538904aa6573385fd195ee
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_52
+      name: player_2_die_52
       rect:
         serializedVersion: 2
         x: 512
@@ -1203,19 +1252,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 683b0e08b8f9769489ecef0e5f6e750a
+      spriteID: 86917e6ac4e552949a87b27eb3d8ffe5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_53
+      name: player_2_die_53
       rect:
         serializedVersion: 2
         x: 640
@@ -1223,19 +1272,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a9d3cc1e1491224e88032cfbac0e04d
+      spriteID: 8ead9297729878f4da1689507956c0de
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_54
+      name: player_2_die_54
       rect:
         serializedVersion: 2
         x: 768
@@ -1243,19 +1292,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0422a98621dc2ad4991749f70f75637d
+      spriteID: 12981543c23a36548a48735ee206266c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_55
+      name: player_2_die_55
       rect:
         serializedVersion: 2
         x: 896
@@ -1263,19 +1312,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49daba0924702b34ea0030760a959faa
+      spriteID: 17d5684c1d1aa294abf296df8f69b223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_56
+      name: player_2_die_56
       rect:
         serializedVersion: 2
         x: 1024
@@ -1283,19 +1332,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6a487b5520e0654cb045874ac6e7fba
+      spriteID: 7bcff8ab9078e384ab6d72957c4dcd46
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_57
+      name: player_2_die_57
       rect:
         serializedVersion: 2
         x: 1152
@@ -1303,19 +1352,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 702fedb48c847a84899db8ef3530bfd1
+      spriteID: 9a18aeb25df3ab34c9b6c1a47915ac3c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_58
+      name: player_2_die_58
       rect:
         serializedVersion: 2
         x: 1280
@@ -1323,19 +1372,19 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0cc78a7e1c0cad4ea9c6b84da37dcc0
+      spriteID: f6c5068d22828aa4eae7d1390d1721e3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_2_att_59
+      name: player_2_die_59
       rect:
         serializedVersion: 2
         x: 1408
@@ -1343,13 +1392,13 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 9
-      pivot: {x: 0.52, y: 0.125}
+      pivot: {x: 0.5, y: 0.04}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1764642d254ecb64b91c5c4feea17f9a
+      spriteID: c2a4170e1e3e5a34d8b468fd4f9d69dc
       vertices: []
       indices: 
       edges: []
@@ -1357,7 +1406,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8f32ae18109a82b439de417c017bb73d
+    spriteID: 9d7a6f2c6d8923845a3cf4900a03ce63
     vertices: []
     indices: 
     edges: []

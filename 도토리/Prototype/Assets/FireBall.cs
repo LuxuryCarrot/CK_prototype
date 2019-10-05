@@ -5,19 +5,17 @@ using UnityEngine;
 public class FireBall : MonoBehaviour
 {
     GameObject Player;
-    GameObject Fox;
     ParticleSystem Ps;
     CapsuleCollider2D m_CapsuleCollider2D;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //Debug.Log("fireball");
-        Fox = GameObject.FindGameObjectWithTag("Fox");
         Player = GameObject.FindGameObjectWithTag("Player");
         Ps = GetComponentInChildren<ParticleSystem>();
         m_CapsuleCollider2D = GetComponent<CapsuleCollider2D>();
 
-        if (transform.position.x > Fox.transform.position.x)
+        if (transform.position.x < Player.transform.position.x)
         {
             Ps.transform.localScale *= new Vector2(-1, 1);
         }
@@ -47,7 +45,7 @@ public class FireBall : MonoBehaviour
     }
     IEnumerator Flame()
     {
-        Player.SendMessage("ApplyDamage", 1.0f);
+        Player.SendMessage("ApplyDamage", 1.5f);
         Debug.Log("Flame damage 1.0f");
         yield return new WaitForSeconds(0.5f);
         StartCoroutine("Flame");
