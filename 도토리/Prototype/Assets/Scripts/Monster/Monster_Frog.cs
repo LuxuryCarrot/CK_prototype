@@ -12,10 +12,11 @@ public class Monster_Frog : MonoBehaviour
     private bool isChasing;
     public bool AttackRange = true;
 
+    private GameObject FrogShield;
+
     public int FrogShieldCount;
 
     public Transform firepoint;
-    public GameObject FireBallPrefab;
 
     Animator animator;
     Vector3 movement;
@@ -28,11 +29,12 @@ public class Monster_Frog : MonoBehaviour
     void Start()
     {
         currentHp = Hp;
-
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
 
         Player = GameObject.FindGameObjectWithTag("Player");
+
+        //FrogShield = GameObject.Find
 
         StartCoroutine("ChangeMovement");
     }
@@ -43,11 +45,11 @@ public class Monster_Frog : MonoBehaviour
 
         if (movementFlag == 0)
         {
-            animator.SetBool("isMoving", false);
+            animator.SetInteger("moveMentFlag", 0);
         }
         else
         {
-            animator.SetBool("isMoving", true);
+            animator.SetInteger("moveMentFlag", 1);
         }
         yield return new WaitForSeconds(3.0f);
 
@@ -57,6 +59,10 @@ public class Monster_Frog : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (FrogShieldCount == 0)
+        {
+            //Destroy(FrogShield);
+        }
         if ((transform.position.x + 5.0f >= Player.transform.position.x && transform.position.x - 5.0f <= Player.transform.position.x)
             && (transform.position.x + 2.0f <= Player.transform.position.x || transform.position.x - 2.0f >= Player.transform.position.x)
             && (transform.position.y + 2.0f >= Player.transform.position.y && transform.position.y - 1.0f <= Player.transform.position.y))
@@ -79,7 +85,7 @@ public class Monster_Frog : MonoBehaviour
         }
         else
         {
-            animator.SetInteger("moveMentFlag", 0);
+            animator.SetInteger("moveMentFlag", 1);
             Move();
         }
 
@@ -142,8 +148,6 @@ public class Monster_Frog : MonoBehaviour
         {
             ChaseTarget = other.gameObject;
             StopCoroutine("ChangeMovement");
-            //isChasing = true;
-            //animator.SetBool("isMoving", true);
         }
     }
     IEnumerator FirstAttack()

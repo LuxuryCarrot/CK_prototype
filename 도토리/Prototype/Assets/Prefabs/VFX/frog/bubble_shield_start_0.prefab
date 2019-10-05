@@ -14356,7 +14356,6 @@ GameObject:
   - component: {fileID: 933097182032862239}
   - component: {fileID: 3593959888274052721}
   - component: {fileID: 1856500902291109631}
-  - component: {fileID: 315255488}
   m_Layer: 0
   m_Name: bubble_shield_start_0
   m_TagString: Untagged
@@ -14447,19 +14446,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &315255488
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117126300657318007}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1
