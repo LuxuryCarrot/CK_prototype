@@ -8,7 +8,7 @@ public class FireBall : MonoBehaviour
     ParticleSystem Ps;
     CapsuleCollider2D m_CapsuleCollider2D;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         //Debug.Log("fireball");
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -45,7 +45,7 @@ public class FireBall : MonoBehaviour
     }
     IEnumerator Flame()
     {
-        Player.SendMessage("ApplyDamage", 1.5f);
+        Player.SendMessage("ApplyDamage", 1.0f);
         Debug.Log("Flame damage 1.0f");
         yield return new WaitForSeconds(0.5f);
         StartCoroutine("Flame");

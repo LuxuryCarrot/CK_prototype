@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5795625553705059585}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FirePoint
   m_TagString: FirePoint
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8006194236214712570}
   - component: {fileID: 8006194236214712569}
   - component: {fileID: 8006194236214712565}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Fox
   m_TagString: Fox
   m_Icon: {fileID: 0}
@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061722087a7c5af4e97abc7e6e2b9458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePower: 0.85
-  Hp: 100
+  movePower: 1
+  Hp: 10
   movementFlag: 0
   AttackRange: 1
   firepoint: {fileID: 5795625553705059585}

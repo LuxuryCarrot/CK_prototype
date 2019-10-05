@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoxScript : MonoBehaviour
+public class Monster_Fox : MonoBehaviour
 {
     public float movePower;
     public float Hp;
@@ -10,7 +10,6 @@ public class FoxScript : MonoBehaviour
 
     public int movementFlag = 0;
     private bool isChasing;
-    private bool isMoving;
     public bool AttackRange = true;
 
     public Transform firepoint;
