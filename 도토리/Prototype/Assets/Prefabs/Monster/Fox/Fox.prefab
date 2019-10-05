@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061722087a7c5af4e97abc7e6e2b9458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePower: 0.85
-  Hp: 100
+  movePower: 1
+  Hp: 10
   movementFlag: 0
   AttackRange: 1
   firepoint: {fileID: 5795625553705059585}
