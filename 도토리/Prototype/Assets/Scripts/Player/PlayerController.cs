@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Tilemaps;
 
 public enum ElementalProperty
 {
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public bool isFalling;
     public int prevAttackDir = -1;
     public bool isAirColliderPassing;
-    public bool isAirColliderTouching;
+    public bool isAirColliderPassingEnd;
 
     public int attackDir = 0;
 
@@ -48,6 +49,8 @@ public class PlayerController : MonoBehaviour
     public Transform spriteTrans;
     public Vector3 flipScale;
 
+    public TilemapCollider2D stage1;
+
     public const float BOXCAST_DISTANCE = 0.35f;
 
     public ElementalProperty curWeaponProperty;
@@ -62,6 +65,9 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        isAirColliderPassing = false;
+        isAirColliderPassingEnd = false;
+
         playerCollider = GetComponent<CapsuleCollider2D>();
         isFalling = false;
 
@@ -77,6 +83,7 @@ public class PlayerController : MonoBehaviour
 
         layerMask = 1 << 10 | 1 << 11;
 
+        stage1 = GameObject.FindGameObjectWithTag("Stage").transform.GetChild(1).GetComponent<TilemapCollider2D>();
         monster = GameObject.FindGameObjectWithTag("Fox").transform;
         states.Add(PlayerState.IDLE, GetComponent<PlayerIDLE>());
         states.Add(PlayerState.WALK, GetComponent<PlayerWALK>());
@@ -96,7 +103,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.D)))
             SetState(PlayerState.WALK);
 
@@ -125,10 +131,9 @@ public class PlayerController : MonoBehaviour
                 SetState(PlayerState.DOWN);
             }
         }
-        if (!states[PlayerState.DASH].enabled)
-        {
-            GroundCollisionCheck();
-        }
+            
+
+        GroundCollisionCheck();
         Gravity();
 
         for (int i = 1; i < states.Count;)
@@ -242,19 +247,19 @@ public class PlayerController : MonoBehaviour
     }
     public void GroundCollisionCheck()
     {
-        if (!states[PlayerState.JUMP].enabled && !isAirColliderPassing)
+        if (!states[PlayerState.JUMP].enabled)
         {
-            if (Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, -transform.up, BOXCAST_DISTANCE, layerMask))
+            if (stage1.enabled)
             {
-                isGrounded = true;
+                RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, -transform.up, BOXCAST_DISTANCE, layerMask);
+                if (hit2D)
+                {
+                    isGrounded = true;
+                }
+                else
+                    isGrounded = false;
             }
-            else
-                isGrounded = false;
         }
-        //else
-        //{
-        //    isGrounded = false;
-        //}
     }
 
     private void OnDrawGizmos()

@@ -32,7 +32,6 @@ public class PlayerDASH : PlayerFSMController
         else
         {
             deltaMove = Vector3.zero;
-
             controller.states[PlayerState.DASH].enabled = false;
         }
 
