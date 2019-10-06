@@ -6,18 +6,18 @@ public class Monster_Frog : MonoBehaviour
 {
     public float movePower;
     public float Hp;
-    private float currentHp = 0;
 
     public int movementFlag = 0;
-    private bool isChasing;
     public bool AttackRange = true;
-
-    private GameObject FrogShield;
-
     public int FrogShieldCount;
+
+    private bool isDead;
+    private bool isChasing;
+    private float currentHp = 0;
 
     public Transform firepoint;
 
+    private GameObject FrogShield;
     Animator animator;
     Vector3 movement;
 
@@ -26,8 +26,10 @@ public class Monster_Frog : MonoBehaviour
 
     CharacterController cc;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        isDead = false;
+
         currentHp = Hp;
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
@@ -90,6 +92,10 @@ public class Monster_Frog : MonoBehaviour
             Move();
         }
 
+        if (isDead == true)
+        {
+            StartCoroutine("DestroyObject");
+        }
 
 
     }
@@ -161,9 +167,14 @@ public class Monster_Frog : MonoBehaviour
     IEnumerator Attack()
     {
         Debug.Log("SpearAttack");
-        Player.SendMessage("ApplyDamage", 0.5f);
+        Player.SendMessage("ApplyDamage", 0.8f);
         yield return new WaitForSeconds(2.0f);
         StartCoroutine("Attack");
+    }
+    IEnumerator DestroyObject()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -186,7 +197,6 @@ public class Monster_Frog : MonoBehaviour
 
     void ApplyDamage(float damage)
     {
-        animator.SetInteger("moveMentFlag", 3);
         if (FrogShieldCount > 0)
         {
             Debug.Log("Shield count -1");
@@ -194,13 +204,14 @@ public class Monster_Frog : MonoBehaviour
         }
         else if (FrogShieldCount >= 0)
         {
+            animator.SetInteger("moveMentFlag", 3);
             currentHp -= damage;
         }
 
         if (currentHp <= 0)
         {
             animator.SetInteger("moveMentFlag", 4);
-            Destroy(gameObject);
+            isDead = true;
         }
     }
 }
