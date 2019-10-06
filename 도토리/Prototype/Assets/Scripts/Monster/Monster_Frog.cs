@@ -34,7 +34,7 @@ public class Monster_Frog : MonoBehaviour
 
         Player = GameObject.FindGameObjectWithTag("Player");
 
-        //FrogShield = GameObject.Find
+        FrogShield = transform.GetChild(0).gameObject;
 
         StartCoroutine("ChangeMovement");
     }
@@ -61,7 +61,8 @@ public class Monster_Frog : MonoBehaviour
     {
         if (FrogShieldCount == 0)
         {
-            //Destroy(FrogShield);
+            Debug.Log("Shield Destroyed");
+            Destroy(FrogShield);
         }
         if ((transform.position.x + 5.0f >= Player.transform.position.x && transform.position.x - 5.0f <= Player.transform.position.x)
             && (transform.position.x + 2.0f <= Player.transform.position.x || transform.position.x - 2.0f >= Player.transform.position.x)
@@ -188,6 +189,7 @@ public class Monster_Frog : MonoBehaviour
         animator.SetInteger("moveMentFlag", 3);
         if (FrogShieldCount > 0)
         {
+            Debug.Log("Shield count -1");
             FrogShieldCount -= 1;
         }
         else if (FrogShieldCount >= 0)

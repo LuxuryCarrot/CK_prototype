@@ -52,7 +52,7 @@ MonoBehaviour:
   Hp: 150
   movementFlag: 0
   AttackRange: 1
-  FrogShieldCount: 0
+  FrogShieldCount: 3
   firepoint: {fileID: 0}
 --- !u!95 &5981310461043575927
 Animator:
@@ -179,6 +179,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: FrogShield
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117126300657318007, guid: 6fe819ed2d19dd6468410dd80201df9d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 933097182032862239, guid: 6fe819ed2d19dd6468410dd80201df9d,
         type: 3}
