@@ -21,10 +21,14 @@ public class Monster_Fox : MonoBehaviour
     GameObject ChaseTarget;
     GameObject Player;
 
+    private GameObject FoxStartSprite;
+
     CharacterController cc;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        FoxStartSprite = transform.GetChild(1).gameObject;
+        Destroy(FoxStartSprite);
         currentHp = Hp;
         
         cc = GetComponent<CharacterController>();
@@ -59,7 +63,6 @@ public class Monster_Fox : MonoBehaviour
             && (transform.position.x + 2.0f <= Player.transform.position.x || transform.position.x - 2.0f >= Player.transform.position.x)
             && (transform.position.y + 2.0f >= Player.transform.position.y && transform.position.y - 1.0f <= Player.transform.position.y))
         {
-            Debug.Log("Check");
             isChasing = true;
             StopCoroutine("Shoot");
             animator.SetBool("isMoving", true);

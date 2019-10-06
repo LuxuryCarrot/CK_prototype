@@ -2,27 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster_Frog : MonoBehaviour
+public class Monster_Raccoon : MonoBehaviour
 {
     public float movePower;
     public float Hp;
 
     public int movementFlag = 0;
     public bool AttackRange = true;
-    public int FrogShieldCount;
 
     private bool isDead;
     private bool isChasing;
     private float currentHp = 0;
 
-    public Transform firepoint;
+    public Transform SwordPoint;
 
     private GameObject FrogStartSprite;
-    private GameObject FrogShield;
+
     Animator animator;
     Vector3 movement;
 
-    public GameObject SpearPrefab;
+    public GameObject SwordPrefab;
     GameObject ChaseTarget;
     GameObject Player;
 
@@ -30,7 +29,7 @@ public class Monster_Frog : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        FrogStartSprite = transform.GetChild(2).gameObject;
+        FrogStartSprite = transform.GetChild(0).gameObject;
         Destroy(FrogStartSprite);
         isDead = false;
 
@@ -39,8 +38,6 @@ public class Monster_Frog : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
 
         Player = GameObject.FindGameObjectWithTag("Player");
-
-        FrogShield = transform.GetChild(0).gameObject;
 
         StartCoroutine("ChangeMovement");
     }
@@ -65,11 +62,7 @@ public class Monster_Frog : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (FrogShieldCount == 0)
-        {
-            Debug.Log("Shield Destroyed");
-            Destroy(FrogShield);
-        }
+
         if ((transform.position.x + 5.0f >= Player.transform.position.x && transform.position.x - 5.0f <= Player.transform.position.x)
             && (transform.position.x + 2.0f <= Player.transform.position.x || transform.position.x - 2.0f >= Player.transform.position.x)
             && (transform.position.y + 2.0f >= Player.transform.position.y && transform.position.y - 1.0f <= Player.transform.position.y))
@@ -85,7 +78,6 @@ public class Monster_Frog : MonoBehaviour
             if (AttackRange == true)
             {
                 StartCoroutine("FirstAttack");
-                animator.SetInteger("moveMentFlag", 2);
                 AttackRange = false;
             }
         }
@@ -170,8 +162,9 @@ public class Monster_Frog : MonoBehaviour
 
     IEnumerator Attack()
     {
-        Instantiate(SpearPrefab, firepoint.position, firepoint.rotation);
-        yield return new WaitForSeconds(2.0f);
+        animator.SetInteger("moveMentFlag", 2);
+        Instantiate(SwordPrefab, SwordPoint.position, SwordPoint.rotation);
+        yield return new WaitForSeconds(1.5f);
         StartCoroutine("Attack");
     }
     IEnumerator DestroyMonster()
@@ -201,19 +194,7 @@ public class Monster_Frog : MonoBehaviour
 
     void ApplyDamage(float damage)
     {
-        if (FrogShieldCount > 0)
-        {
-            Debug.Log("Shield count -1");
-            Debug.Log("Shield Count =" + FrogShieldCount);
-            FrogShieldCount -= 1;
-        }
-        else if (FrogShieldCount >= 0)
-        {
-            animator.SetInteger("moveMentFlag", 3);
-            Debug.Log("Damage =" + damage);
-            currentHp -= damage;
-            Debug.Log("Left Frog HP = " + currentHp);
-        }
+        currentHp -= damage;
 
         if (currentHp <= 0)
         {
