@@ -19,7 +19,9 @@ public class Monster_Frog : MonoBehaviour
 
     private GameObject FrogStartSprite;
     private GameObject FrogShield;
+
     Animator animator;
+
     Vector3 movement;
 
     public GameObject SpearPrefab;
@@ -36,7 +38,8 @@ public class Monster_Frog : MonoBehaviour
 
         currentHp = Hp;
         cc = GetComponent<CharacterController>();
-        animator = GetComponentInChildren<Animator>();
+
+        animator = GetComponent<Animator>();
 
         Player = GameObject.FindGameObjectWithTag("Player");
 
@@ -65,11 +68,17 @@ public class Monster_Frog : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (movementFlag == 0)
+        {
+            animator.SetInteger("moveMentFlag", 0);
+        }
+
         if (FrogShieldCount == 0)
         {
             Debug.Log("Shield Destroyed");
             Destroy(FrogShield);
         }
+
         if ((transform.position.x + 5.0f >= Player.transform.position.x && transform.position.x - 5.0f <= Player.transform.position.x)
             && (transform.position.x + 2.0f <= Player.transform.position.x || transform.position.x - 2.0f >= Player.transform.position.x)
             && (transform.position.y + 2.0f >= Player.transform.position.y && transform.position.y - 1.0f <= Player.transform.position.y))
@@ -79,6 +88,7 @@ public class Monster_Frog : MonoBehaviour
             animator.SetInteger("moveMentFlag", 1);
             AttackRange = true;
         }
+
         if ((transform.position.x + 2.0f >= Player.transform.position.x && transform.position.x - 2.0f <= Player.transform.position.x)
             && (transform.position.y + 2.0f >= Player.transform.position.y && transform.position.y - 1.0f <= Player.transform.position.y))
         {
