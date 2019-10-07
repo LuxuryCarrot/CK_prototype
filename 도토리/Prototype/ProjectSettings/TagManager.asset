@@ -15,6 +15,9 @@ TagManager:
   - Monster
   - Boss
   - GodHand
+  - GroundBounds
+  - Canvas
+  - PausePanel
   layers:
   - Default
   - TransparentFX
