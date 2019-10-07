@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePower: 1
-  Hp: 10
+  Hp: 40
   movementFlag: 0
   AttackRange: 1
   firepoint: {fileID: 5795625553705059585}

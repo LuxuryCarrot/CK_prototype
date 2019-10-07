@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePower: 1
-  Hp: 80
+  Hp: 30
   movementFlag: 0
   AttackRange: 1
   SwordPoint: {fileID: 4321728579290098602}
