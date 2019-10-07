@@ -250,8 +250,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: 0.051582217, y: -0.009360611}
+  m_Size: {x: 0.62099624, y: 0.7323834}
   m_Direction: 0
 --- !u!50 &1566541350721542489
 Rigidbody2D:
@@ -307,7 +307,7 @@ MonoBehaviour:
   playerCollider: {fileID: 0}
   spriteTrans: {fileID: 0}
   flipScale: {x: 0, y: 0, z: 0}
-  stage1: {fileID: 0}
+  tileMaplCollider: {fileID: 0}
   curWeaponProperty: 0
   curElementalDurantionTime: 0
   maxElementalDurantionTime: 0
@@ -428,9 +428,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
-  isThereGround: 0
-  isPlaformSearching: 0
-  isPlaformChecking: 0
 --- !u!114 &5070887619212790064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,22 +646,17 @@ PrefabInstance:
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.056098
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.056098
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4081
-      objectReference: {fileID: 0}
-    - target: {fileID: 8631425814118495424, guid: 72309da0d1ceb2847ae358e04a0e1054,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6126465548543910112, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
