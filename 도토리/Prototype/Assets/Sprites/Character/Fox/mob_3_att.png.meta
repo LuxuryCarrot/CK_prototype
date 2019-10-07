@@ -1,72 +1,72 @@
 fileFormatVersion: 2
-guid: 1ff3e90fbb936fb4ab8ba14981ccad41
+guid: a065f074e8a7a944cbf851582be3ad65
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mob_1_attack_0
-    21300002: mob_1_attack_1
-    21300004: mob_1_attack_2
-    21300006: mob_1_attack_3
-    21300008: mob_1_attack_4
-    21300010: mob_1_attack_5
-    21300012: mob_1_attack_6
-    21300014: mob_1_attack_7
-    21300016: mob_1_attack_8
-    21300018: mob_1_attack_9
-    21300020: mob_1_attack_10
-    21300022: mob_1_attack_11
-    21300024: mob_1_attack_12
-    21300026: mob_1_attack_13
-    21300028: mob_1_attack_14
-    21300030: mob_1_attack_15
-    21300032: mob_1_attack_16
-    21300034: mob_1_attack_17
-    21300036: mob_1_attack_18
-    21300038: mob_1_attack_19
-    21300040: mob_1_attack_20
-    21300042: mob_1_attack_21
-    21300044: mob_1_attack_22
-    21300046: mob_1_attack_23
-    21300048: mob_1_attack_24
-    21300050: mob_1_attack_25
-    21300052: mob_1_attack_26
-    21300054: mob_1_attack_27
-    21300056: mob_1_attack_28
-    21300058: mob_1_attack_29
-    21300060: mob_1_attack_30
-    21300062: mob_1_attack_31
-    21300064: mob_1_attack_32
-    21300066: mob_1_attack_33
-    21300068: mob_1_attack_34
-    21300070: mob_1_attack_35
-    21300072: mob_1_attack_36
-    21300074: mob_1_attack_37
-    21300076: mob_1_attack_38
-    21300078: mob_1_attack_39
-    21300080: mob_1_attack_40
-    21300082: mob_1_attack_41
-    21300084: mob_1_attack_42
-    21300086: mob_1_attack_43
-    21300088: mob_1_attack_44
-    21300090: mob_1_attack_45
-    21300092: mob_1_attack_46
-    21300094: mob_1_attack_47
-    21300096: mob_1_attack_48
-    21300098: mob_1_attack_49
-    21300100: mob_1_attack_50
-    21300102: mob_1_attack_51
-    21300104: mob_1_attack_52
-    21300106: mob_1_attack_53
-    21300108: mob_1_attack_54
-    21300110: mob_1_attack_55
-    21300112: mob_1_attack_56
-    21300114: mob_1_attack_57
-    21300116: mob_1_attack_58
-    21300118: mob_1_attack_59
+    21300000: mob_3_att_0
+    21300002: mob_3_att_1
+    21300004: mob_3_att_2
+    21300006: mob_3_att_3
+    21300008: mob_3_att_4
+    21300010: mob_3_att_5
+    21300012: mob_3_att_6
+    21300014: mob_3_att_7
+    21300016: mob_3_att_8
+    21300018: mob_3_att_9
+    21300020: mob_3_att_10
+    21300022: mob_3_att_11
+    21300024: mob_3_att_12
+    21300026: mob_3_att_13
+    21300028: mob_3_att_14
+    21300030: mob_3_att_15
+    21300032: mob_3_att_16
+    21300034: mob_3_att_17
+    21300036: mob_3_att_18
+    21300038: mob_3_att_19
+    21300040: mob_3_att_20
+    21300042: mob_3_att_21
+    21300044: mob_3_att_22
+    21300046: mob_3_att_23
+    21300048: mob_3_att_24
+    21300050: mob_3_att_25
+    21300052: mob_3_att_26
+    21300054: mob_3_att_27
+    21300056: mob_3_att_28
+    21300058: mob_3_att_29
+    21300060: mob_3_att_30
+    21300062: mob_3_att_31
+    21300064: mob_3_att_32
+    21300066: mob_3_att_33
+    21300068: mob_3_att_34
+    21300070: mob_3_att_35
+    21300072: mob_3_att_36
+    21300074: mob_3_att_37
+    21300076: mob_3_att_38
+    21300078: mob_3_att_39
+    21300080: mob_3_att_40
+    21300082: mob_3_att_41
+    21300084: mob_3_att_42
+    21300086: mob_3_att_43
+    21300088: mob_3_att_44
+    21300090: mob_3_att_45
+    21300092: mob_3_att_46
+    21300094: mob_3_att_47
+    21300096: mob_3_att_48
+    21300098: mob_3_att_49
+    21300100: mob_3_att_50
+    21300102: mob_3_att_51
+    21300104: mob_3_att_52
+    21300106: mob_3_att_53
+    21300108: mob_3_att_54
+    21300110: mob_3_att_55
+    21300112: mob_3_att_56
+    21300114: mob_3_att_57
+    21300116: mob_3_att_58
+    21300118: mob_3_att_59
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -144,1201 +144,1201 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mob_1_attack_0
+      name: mob_3_att_0
       rect:
         serializedVersion: 2
         x: 0
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a282a1dde70ce94fa28411cdad2c025
+      spriteID: 01463956633577742877d30ea5c80457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_1
+      name: mob_3_att_1
       rect:
         serializedVersion: 2
         x: 128
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2bb11465b4e91f43a4c4be7c6e5f98f
+      spriteID: aff6fd62b6112f542bca552ded2e5167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_2
+      name: mob_3_att_2
       rect:
         serializedVersion: 2
         x: 256
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d272bcca07872343a8f2f48d89f2f48
+      spriteID: b321e723f38f170419bd62b086ff7621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_3
+      name: mob_3_att_3
       rect:
         serializedVersion: 2
         x: 384
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d65e99c9f7d282145b15c4e251dbe08c
+      spriteID: ef2794f78ef4c274fb78d0f0d905848c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_4
+      name: mob_3_att_4
       rect:
         serializedVersion: 2
         x: 512
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: deb231d34ad675142bc27bab9f31fa1a
+      spriteID: 8273d5a510a931a419958147439a2dfc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_5
+      name: mob_3_att_5
       rect:
         serializedVersion: 2
         x: 640
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 349b4f01422b1af489f0c5191e404191
+      spriteID: 50b968bcbbffe374a8f618cf645f4ba5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_6
+      name: mob_3_att_6
       rect:
         serializedVersion: 2
         x: 768
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca0b119a0b51ecf4fa5db2241060de2b
+      spriteID: 4a0076cf71b15894a8ade446b3af280d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_7
+      name: mob_3_att_7
       rect:
         serializedVersion: 2
         x: 896
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b01bad2ad71146f4aa8f821240d165d7
+      spriteID: 609a405a7a67ddb4ca60c857e6276194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_8
+      name: mob_3_att_8
       rect:
         serializedVersion: 2
         x: 1024
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 738cfc52e013706499949516b640522e
+      spriteID: 40da95e0ad9a9d54b9080d554617de1f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_9
+      name: mob_3_att_9
       rect:
         serializedVersion: 2
         x: 1152
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b8fb74313004c149830d351446995fa
+      spriteID: fe176a2a26813a648894f44caa485ae8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_10
+      name: mob_3_att_10
       rect:
         serializedVersion: 2
         x: 1280
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8faed0bb15d7f6742ab0ce68ceb863c5
+      spriteID: 680eb8351c99a36429af746d957445e5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_11
+      name: mob_3_att_11
       rect:
         serializedVersion: 2
         x: 1408
         y: 512
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d127d8d98145c8498b07477d3a658c0
+      spriteID: 46560fd521c859d4b9063971943d023d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_12
+      name: mob_3_att_12
       rect:
         serializedVersion: 2
         x: 0
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcfcb6f3097c8794d801b9eaa002de4b
+      spriteID: 866dcb8aedb5d3b48a359204a722398c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_13
+      name: mob_3_att_13
       rect:
         serializedVersion: 2
         x: 128
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d513ce4427bd51548ba25c74fe858a86
+      spriteID: 825852145d9b3834894d97d4a40666c0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_14
+      name: mob_3_att_14
       rect:
         serializedVersion: 2
         x: 256
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2452ff965963a2241a38f752e3cf0b4a
+      spriteID: 3f72d492d27cb3146b9c58c40f1e9b06
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_15
+      name: mob_3_att_15
       rect:
         serializedVersion: 2
         x: 384
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27ffd831a41340f4785e93f0c187ee8d
+      spriteID: fe5f942ef43ea7a4bbd3a201d4f40c73
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_16
+      name: mob_3_att_16
       rect:
         serializedVersion: 2
         x: 512
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d03207fd546ccfd4fb0c9239fdbaf5f8
+      spriteID: a4fe2449ad5e0e944bf8d19ba4a6a711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_17
+      name: mob_3_att_17
       rect:
         serializedVersion: 2
         x: 640
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d55154f8562965145b0b475f435f5483
+      spriteID: f8f9eb4d135217645971ce6ae382b975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_18
+      name: mob_3_att_18
       rect:
         serializedVersion: 2
         x: 768
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edbb21e1d4d5d7c44a5546f9b4e78e77
+      spriteID: 6212e1989ee29ba4690154a51f3f861c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_19
+      name: mob_3_att_19
       rect:
         serializedVersion: 2
         x: 896
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b18cf8eb4c657f24abc9293cf33af1c0
+      spriteID: 7a24c362927904b4393d38f8a6245b3a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_20
+      name: mob_3_att_20
       rect:
         serializedVersion: 2
         x: 1024
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e132c2f28664a9f47901fa291de0fab9
+      spriteID: edf5f9eb247cfee4cadcc8fc67b62ddc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_21
+      name: mob_3_att_21
       rect:
         serializedVersion: 2
         x: 1152
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 062714e633e7db74a8b9c7f56132a387
+      spriteID: cf524476a9351864f97e51e3f991d2b9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_22
+      name: mob_3_att_22
       rect:
         serializedVersion: 2
         x: 1280
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dc30b404ad47c24c8730737ae03e834
+      spriteID: 8ed91fb8110b6be46a179ed76ab9ba4a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_23
+      name: mob_3_att_23
       rect:
         serializedVersion: 2
         x: 1408
         y: 384
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1381852e20c01574fae30b79be873f34
+      spriteID: 164dbcdb27e695e46bc87dbfe00ef5c6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_24
+      name: mob_3_att_24
       rect:
         serializedVersion: 2
         x: 0
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b1b15f42dd27c645a7b0f41fdba4b8a
+      spriteID: 4bb600eff272bc8448dc92d69f54c63e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_25
+      name: mob_3_att_25
       rect:
         serializedVersion: 2
         x: 128
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c7d3b3fe73a07541846c9cf622f01bd
+      spriteID: e167889a35a81894f8c798c3db5a1bdf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_26
+      name: mob_3_att_26
       rect:
         serializedVersion: 2
         x: 256
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10f983dc70561984db3577f807496b47
+      spriteID: d13ddabcdd2217e4ba83a5968075ca3f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_27
+      name: mob_3_att_27
       rect:
         serializedVersion: 2
         x: 384
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 395a1902cb23a774f9bd77d9cce59c26
+      spriteID: 39f3cb682aa8717469616b5b404f7ff2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_28
+      name: mob_3_att_28
       rect:
         serializedVersion: 2
         x: 512
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 518bdcdd52c5b354aaef8965e913dc5b
+      spriteID: bb9b6051ac315fc49b5038240358361e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_29
+      name: mob_3_att_29
       rect:
         serializedVersion: 2
         x: 640
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d8ebe28ab50c0046a49c442a921b09f
+      spriteID: deba64a514cf7244bbaeda6579a877db
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_30
+      name: mob_3_att_30
       rect:
         serializedVersion: 2
         x: 768
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17d5e5e26b103ed45ba4f9e36bf82711
+      spriteID: ddaed7ad2b4a10e44bc2a94b01a1f3c6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_31
+      name: mob_3_att_31
       rect:
         serializedVersion: 2
         x: 896
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 538a677822b64ce4196dee0ac2e8fa2b
+      spriteID: 92589b5928deed343ad3a177a320f797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_32
+      name: mob_3_att_32
       rect:
         serializedVersion: 2
         x: 1024
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 226b37240090b30418a736f6d5725bc8
+      spriteID: ce947a6d9c8874f4496fbfa90da7a690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_33
+      name: mob_3_att_33
       rect:
         serializedVersion: 2
         x: 1152
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5428a6c70b4d4244aa6cd026f0012652
+      spriteID: 25bbf377a722a014488a10d43439c747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_34
+      name: mob_3_att_34
       rect:
         serializedVersion: 2
         x: 1280
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9b2faf0b5391ba47a49abfc09a41453
+      spriteID: 4551d13a354e86245be90943097ef4b5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_35
+      name: mob_3_att_35
       rect:
         serializedVersion: 2
         x: 1408
         y: 256
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5672a465da14f004ebc1ff36ba394771
+      spriteID: 3f579c71453cc48449c8078f868cf31d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_36
+      name: mob_3_att_36
       rect:
         serializedVersion: 2
         x: 0
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51d61f8807e137c498369181b34dee75
+      spriteID: 1236785c6c8c95c49b30357b4e59c10a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_37
+      name: mob_3_att_37
       rect:
         serializedVersion: 2
         x: 128
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5262721f937efa468e3c0e06d971fcd
+      spriteID: 87a6b7f964cc6c641803c19e09ca8419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_38
+      name: mob_3_att_38
       rect:
         serializedVersion: 2
         x: 256
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a3d43ac14385cb44a0647ff99a2dfc1
+      spriteID: 191828a4180d9d749a0b04997c6deda5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_39
+      name: mob_3_att_39
       rect:
         serializedVersion: 2
         x: 384
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee93665903142ec4489d991f15825f36
+      spriteID: d2f3d647d4ec5234ba863cadabcc9a97
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_40
+      name: mob_3_att_40
       rect:
         serializedVersion: 2
         x: 512
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cc592779fd95f24ba79d6abedb916e0
+      spriteID: 64e313e96f915364c996be88bc5d7a56
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_41
+      name: mob_3_att_41
       rect:
         serializedVersion: 2
         x: 640
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6aaf514145da4f746b976a767cdc107a
+      spriteID: 82ec8b213de349e418e611a7ab09fa7f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_42
+      name: mob_3_att_42
       rect:
         serializedVersion: 2
         x: 768
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8ce54856e6e2ef4b9c2e67c44b894c3
+      spriteID: 13ddab30dedfbfa41abb6e8796873f6f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_43
+      name: mob_3_att_43
       rect:
         serializedVersion: 2
         x: 896
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6918562393066644a80a61040bafcfb
+      spriteID: 2443989ea47674b49acc5ca886b6b904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_44
+      name: mob_3_att_44
       rect:
         serializedVersion: 2
         x: 1024
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3bffcb6b9f6ac9449225d3a0b87915c
+      spriteID: ab0bf5317d14bbc47a5b610cdc225a8e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_45
+      name: mob_3_att_45
       rect:
         serializedVersion: 2
         x: 1152
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01f7472486696c34eab43b051e686e97
+      spriteID: 42599b514ddd29e4fa8576e23db3a86c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_46
+      name: mob_3_att_46
       rect:
         serializedVersion: 2
         x: 1280
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 591c16fdafea83043b362d3506b04851
+      spriteID: a6f3ae7a732e1774591ba6572154ef8e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_47
+      name: mob_3_att_47
       rect:
         serializedVersion: 2
         x: 1408
         y: 128
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93934ad689dc4794bb5f477ed0c243ad
+      spriteID: 61846d65aad06ed449ef9c59b07e40b4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_48
+      name: mob_3_att_48
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99cbe959c59a2644c9adb40c79d3c759
+      spriteID: a4f82b3aa3e326341be8235bfa08bbe5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_49
+      name: mob_3_att_49
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 944d023b44c9fd64d8704a03591cc324
+      spriteID: ec5b9d087a0bdc140b52f8a36d6b6e75
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_50
+      name: mob_3_att_50
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3266ca05384839644a24ea8d4ed21fe1
+      spriteID: 517c8cb74ceecd647b7f92f0b74194fc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_51
+      name: mob_3_att_51
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b911e28654ab92e4881dc6fb2ca64a98
+      spriteID: 3db6e1cee9b435547928f38b1660d1b8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_52
+      name: mob_3_att_52
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d50f84f267101e44c8b452175c573145
+      spriteID: 2efeb8f998468d142b8fa80c90673770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_53
+      name: mob_3_att_53
       rect:
         serializedVersion: 2
         x: 640
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 113d2b4a6cf35b349899cc05e0f18618
+      spriteID: 6af7ec0ebfc59d64f8f4281dd82a034b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_54
+      name: mob_3_att_54
       rect:
         serializedVersion: 2
         x: 768
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdbc8f4e9ee3ced4abfeebab2b8a71be
+      spriteID: a845a17122d936d4c9b823517b398669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_55
+      name: mob_3_att_55
       rect:
         serializedVersion: 2
         x: 896
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a504723af208ed42b1b90649834e9ee
+      spriteID: dcd23e4d4228ab04f840962c6f16a003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_56
+      name: mob_3_att_56
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eb52cffa34dd874ba1b29651c0b7060
+      spriteID: 6021d97bed48a8c4eb73bb754de82fc3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_57
+      name: mob_3_att_57
       rect:
         serializedVersion: 2
         x: 1152
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 979aae2be8ebdd3458e609a5635133d9
+      spriteID: aaed3c66d7a155948af0f25b32d55225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_58
+      name: mob_3_att_58
       rect:
         serializedVersion: 2
         x: 1280
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a96a387399805c945a4375d3a009bb2f
+      spriteID: f7807388edc2a1547a0d254159464363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mob_1_attack_59
+      name: mob_3_att_59
       rect:
         serializedVersion: 2
         x: 1408
         y: 0
         width: 128
         height: 128
-      alignment: 9
-      pivot: {x: 0.63, y: 0.125}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e27942a9e2a0c244a9a1fefd4eac6dd1
+      spriteID: 4c42bdd6b0d15674688e3bf9420fc175
       vertices: []
       indices: 
       edges: []
@@ -1346,7 +1346,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a5645105ad11fd74f984ff4bed26c2e3
+    spriteID: df85617065497b34690b52ca48c346c4
     vertices: []
     indices: 
     edges: []
