@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 800
-  FoxPrefab: {fileID: 8006194236214712563, guid: 5965798181d1de64cb7061881f95032f,
+  FoxPreFab: {fileID: 8006194236214712563, guid: 5965798181d1de64cb7061881f95032f,
     type: 3}
   FrogPreFab: {fileID: 4800075350215400766, guid: 30b102dc3d537f744a854a160cfb8202,
     type: 3}
