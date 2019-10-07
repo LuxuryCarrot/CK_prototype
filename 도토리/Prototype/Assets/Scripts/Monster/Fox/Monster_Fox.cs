@@ -144,6 +144,11 @@ public class Monster_Fox : MonoBehaviour
             //isChasing = true;
             //animator.SetBool("isMoving", true);
         }
+
+        if (other.gameObject.tag == "GodHand")
+        {
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator Shoot()

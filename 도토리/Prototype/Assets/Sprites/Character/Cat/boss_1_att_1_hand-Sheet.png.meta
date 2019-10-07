@@ -1,7 +1,73 @@
 fileFormatVersion: 2
 guid: 099cab9ba6d71d5489c4446438ce61b9
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: boss_1_att_1_hand-Sheet_0
+    21300002: boss_1_att_1_hand-Sheet_1
+    21300004: boss_1_att_1_hand-Sheet_2
+    21300006: boss_1_att_1_hand-Sheet_3
+    21300008: boss_1_att_1_hand-Sheet_4
+    21300010: boss_1_att_1_hand-Sheet_5
+    21300012: boss_1_att_1_hand-Sheet_6
+    21300014: boss_1_att_1_hand-Sheet_7
+    21300016: boss_1_att_1_hand-Sheet_8
+    21300018: boss_1_att_1_hand-Sheet_9
+    21300020: boss_1_att_1_hand-Sheet_10
+    21300022: boss_1_att_1_hand-Sheet_11
+    21300024: boss_1_att_1_hand-Sheet_12
+    21300026: boss_1_att_1_hand-Sheet_13
+    21300028: boss_1_att_1_hand-Sheet_14
+    21300030: boss_1_att_1_hand-Sheet_15
+    21300032: boss_1_att_1_hand-Sheet_16
+    21300034: boss_1_att_1_hand-Sheet_17
+    21300036: boss_1_att_1_hand-Sheet_18
+    21300038: boss_1_att_1_hand-Sheet_19
+    21300040: boss_1_att_1_hand-Sheet_20
+    21300042: boss_1_att_1_hand-Sheet_21
+    21300044: boss_1_att_1_hand-Sheet_22
+    21300046: boss_1_att_1_hand-Sheet_23
+    21300048: boss_1_att_1_hand-Sheet_24
+    21300050: boss_1_att_1_hand-Sheet_25
+    21300052: boss_1_att_1_hand-Sheet_26
+    21300054: boss_1_att_1_hand-Sheet_27
+    21300056: boss_1_att_1_hand-Sheet_28
+    21300058: boss_1_att_1_hand-Sheet_29
+    21300060: boss_1_att_1_hand-Sheet_30
+    21300062: boss_1_att_1_hand-Sheet_31
+    21300064: boss_1_att_1_hand-Sheet_32
+    21300066: boss_1_att_1_hand-Sheet_33
+    21300068: boss_1_att_1_hand-Sheet_34
+    21300070: boss_1_att_1_hand-Sheet_35
+    21300072: boss_1_att_1_hand-Sheet_36
+    21300074: boss_1_att_1_hand-Sheet_37
+    21300076: boss_1_att_1_hand-Sheet_38
+    21300078: boss_1_att_1_hand-Sheet_39
+    21300080: boss_1_att_1_hand-Sheet_40
+    21300082: boss_1_att_1_hand-Sheet_41
+    21300084: boss_1_att_1_hand-Sheet_42
+    21300086: boss_1_att_1_hand-Sheet_43
+    21300088: boss_1_att_1_hand-Sheet_44
+    21300090: boss_1_att_1_hand-Sheet_45
+    21300092: boss_1_att_1_hand-Sheet_46
+    21300094: boss_1_att_1_hand-Sheet_47
+    21300096: boss_1_att_1_hand-Sheet_48
+    21300098: boss_1_att_1_hand-Sheet_49
+    21300100: boss_1_att_1_hand-Sheet_50
+    21300102: boss_1_att_1_hand-Sheet_51
+    21300104: boss_1_att_1_hand-Sheet_52
+    21300106: boss_1_att_1_hand-Sheet_53
+    21300108: boss_1_att_1_hand-Sheet_54
+    21300110: boss_1_att_1_hand-Sheet_55
+    21300112: boss_1_att_1_hand-Sheet_56
+    21300114: boss_1_att_1_hand-Sheet_57
+    21300116: boss_1_att_1_hand-Sheet_58
+    21300118: boss_1_att_1_hand-Sheet_59
+    21300120: boss_1_att_1_hand-Sheet_60
+    21300122: boss_1_att_1_hand-Sheet_61
+    21300124: boss_1_att_1_hand-Sheet_62
+    21300126: boss_1_att_1_hand-Sheet_63
+    21300128: boss_1_att_1_hand-Sheet_64
+    21300130: boss_1_att_1_hand-Sheet_65
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +106,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -80,9 +146,1340 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2197
+        width: 162
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1ead11a44fcfe4b8233921f94aa753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 2197
+        width: 165
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebaa25f81f917ec4fb28b77d0641abe8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 2197
+        width: 165
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6948a86e247fe15409b7920559545c9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 2197
+        width: 165
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70de78ae8c21c3441a97b9f17a6a4b29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2061
+        y: 2197
+        width: 168
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96632a9640600f54ebeb3da8bff344b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 2197
+        width: 165
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a5e24f540b3244b836c68cd9db7e14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3087
+        y: 2197
+        width: 165
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d285c6d14d8534479b0b25abd03454f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 2206
+        width: 186
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a83ab80c2ef8d42ab176ab91bc3220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4095
+        y: 2227
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa38fc7555e4f534088395ae931aed5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2155
+        width: 183
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50d4886d3be13a439894600bf91e80d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 5127
+        y: 2119
+        width: 186
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f76765ff05a5eb41ae9d9b7c06391ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 5655
+        y: 2056
+        width: 174
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab29b15ed90c494ba5b533ca9cc7528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3675
+        y: 2176
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9176c7c33566caa4abd9f62d20c52495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 4170
+        y: 2131
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20db5806844021d44b0c3eb494ef7ed2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 4689
+        y: 2077
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87268e8869bf23e47b8664b1b4f76869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 5244
+        y: 2050
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1e027273973254cb6c318333a2871d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 5799
+        y: 1987
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa6ecad3544caa42bcabdbcd037af4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f24439eec7460649803f94a6719a32d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5450ea6b701fc2a4293713092f16568f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d21a30c47658b441b04af3bd00b3b60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576c30e4d2f57714ca3dd2f7b0d525fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61da53278bf970498755399bf620226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24b58fc63219924faf96b0d8d3bac68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee2c06c35f16b54f8ae8fda92dd368c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 3675
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab607d490c15144980c7a974deac777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae8532cab50d0f4083b22465f8779a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 4701
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2193a6e42c2aa4fb28f5fd15f8af72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 5211
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4ed44cb355c3b4694c85240bd73f4f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 5724
+        y: 1534
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f2446a952ba7a4c8eb8b759ba280b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1459
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239fd1c5452c3c64898689c53e7ef8a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69792ef9962866648a6ca9f21a780e7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5402e187eb977c4429ac2a15d5d8a1d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2adf981ad50503e46965a58c2a6ab306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0eee00a20794bd4e9f443bfcf41b912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f106d8dc1fb63c0408f8677d2ed44223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d47e27dbf22a8a4bbf3a6b0d2658dfa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bbc6be8f301c54eb1a808af8c04528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 3675
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fd0da9aaf98f0458d6c6c6d16ca640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6c05c4e3e9a474e935f147a5f7fee8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 4701
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9880c8ecb24b1488067057312b169d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 5211
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1165f9818f1421a4883492b8652930d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 5724
+        y: 1020
+        width: 114
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48e756a8fa003c4a9a21e0e034a07c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348fb388d77ffa84ea20deaa0d2f6f92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a0448058e9611468b635690dc7942c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844dff280d6b1fc478eb23da2a782b22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae68bec052f365844aa9a9d897374548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de467f0395e34ba4db16927a933bf10d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b500004248c07044bf7dcd7d11e0ffc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4b997fee706ef40bbc5b1bc92e49c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 3675
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d5fd9559da18f4d92a3affca9297ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f67bd8daae88d48afedba2beaf4825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 4701
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414afc0e47a147d429b7bb8495115a2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 5211
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c73f0779c5a6c4ba6a1ff531a49520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 5724
+        y: 510
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f27cf87027acb3f43b5ff52da038512e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9162c4f38f1a99a4e9119b9575f2d224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76dd83903fee4149b15f080d85fe719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75e70fa8c363b04ebc68890c0efef75
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ed68dcca5ffa6429a78c0a20419077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cf5b08a069ddc4c8bea7098139538f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1ba83ecc0369d4f8fbd9226310f28e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d2c935c1be9a04ab95f1cb282cf644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 3675
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b7b073ebb67ed44a8624423d7021a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842e300fb38fb7049a00263e7b2428d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 4701
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16bb3dbe42258a49bf0f16a2b7dd0d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 5211
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d470e785d8165aa41b9e2963a217d14e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_hand-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 5724
+        y: 0
+        width: 114
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17159c1071c2b0e4e976ec7305553ce7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

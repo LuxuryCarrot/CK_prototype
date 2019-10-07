@@ -151,6 +151,11 @@ public class Monster_Raccoon : MonoBehaviour
             ChaseTarget = other.gameObject;
             StopCoroutine("ChangeMovement");
         }
+
+        if (other.gameObject.tag == "GodHand")
+        {
+            Destroy(gameObject);
+        }
     }
     IEnumerator FirstAttack()
     {

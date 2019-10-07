@@ -1,7 +1,67 @@
 fileFormatVersion: 2
 guid: fcbb038d17b565c48a587c73336894ce
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: boss_1_idle_Sheet_0
+    21300002: boss_1_idle_Sheet_1
+    21300004: boss_1_idle_Sheet_2
+    21300006: boss_1_idle_Sheet_3
+    21300008: boss_1_idle_Sheet_4
+    21300010: boss_1_idle_Sheet_5
+    21300012: boss_1_idle_Sheet_6
+    21300014: boss_1_idle_Sheet_7
+    21300016: boss_1_idle_Sheet_8
+    21300018: boss_1_idle_Sheet_9
+    21300020: boss_1_idle_Sheet_10
+    21300022: boss_1_idle_Sheet_11
+    21300024: boss_1_idle_Sheet_12
+    21300026: boss_1_idle_Sheet_13
+    21300028: boss_1_idle_Sheet_14
+    21300030: boss_1_idle_Sheet_15
+    21300032: boss_1_idle_Sheet_16
+    21300034: boss_1_idle_Sheet_17
+    21300036: boss_1_idle_Sheet_18
+    21300038: boss_1_idle_Sheet_19
+    21300040: boss_1_idle_Sheet_20
+    21300042: boss_1_idle_Sheet_21
+    21300044: boss_1_idle_Sheet_22
+    21300046: boss_1_idle_Sheet_23
+    21300048: boss_1_idle_Sheet_24
+    21300050: boss_1_idle_Sheet_25
+    21300052: boss_1_idle_Sheet_26
+    21300054: boss_1_idle_Sheet_27
+    21300056: boss_1_idle_Sheet_28
+    21300058: boss_1_idle_Sheet_29
+    21300060: boss_1_idle_Sheet_30
+    21300062: boss_1_idle_Sheet_31
+    21300064: boss_1_idle_Sheet_32
+    21300066: boss_1_idle_Sheet_33
+    21300068: boss_1_idle_Sheet_34
+    21300070: boss_1_idle_Sheet_35
+    21300072: boss_1_idle_Sheet_36
+    21300074: boss_1_idle_Sheet_37
+    21300076: boss_1_idle_Sheet_38
+    21300078: boss_1_idle_Sheet_39
+    21300080: boss_1_idle_Sheet_40
+    21300082: boss_1_idle_Sheet_41
+    21300084: boss_1_idle_Sheet_42
+    21300086: boss_1_idle_Sheet_43
+    21300088: boss_1_idle_Sheet_44
+    21300090: boss_1_idle_Sheet_45
+    21300092: boss_1_idle_Sheet_46
+    21300094: boss_1_idle_Sheet_47
+    21300096: boss_1_idle_Sheet_48
+    21300098: boss_1_idle_Sheet_49
+    21300100: boss_1_idle_Sheet_50
+    21300102: boss_1_idle_Sheet_51
+    21300104: boss_1_idle_Sheet_52
+    21300106: boss_1_idle_Sheet_53
+    21300108: boss_1_idle_Sheet_54
+    21300110: boss_1_idle_Sheet_55
+    21300112: boss_1_idle_Sheet_56
+    21300114: boss_1_idle_Sheet_57
+    21300116: boss_1_idle_Sheet_58
+    21300118: boss_1_idle_Sheet_59
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +100,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -80,9 +140,1220 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aecc199c071988419e3363f9323f81d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3765019499365fc4db69c6166da202e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a68dbfccc69984297ff5acae526a7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d4a0c943a488c4f8d7e625bd42658f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddbef6abe2e743479da56e3fd2afadf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13a488d1d7d6644fa448faaab885a31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491beec9b3616fa4f8c310ef7aeed8dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3645
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4995f8d4d4c0ac047b0e47201b8a4b24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4158
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ca11186de20c54aaab0ca672ae82a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4668
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011a0a451983b574387e138f8cc7a8ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 5181
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924234748fc84e941b04b410fca7c6a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 5694
+        y: 2047
+        width: 390
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31270e408ab3a3444ad7bd8f69236e78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1534
+        width: 390
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19983d8d253a15c4b942e59e6eaf8aff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1534
+        width: 390
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5c90c981c8fd249bf3bf7bf077306b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1534
+        width: 390
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ac20122626970429ed6a966b587891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1534
+        width: 390
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ef1b94af47bc4458e23ab0476c2ad4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 1534
+        width: 390
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de6cc2f7e376b041ae9e1c6474ce237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 1534
+        width: 390
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85815dfe68254d041af144750ba359d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 1534
+        width: 390
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af655f755a3b5440bbbe864820bb966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 3645
+        y: 1534
+        width: 390
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cba7e5aa931504408a0be338762cdb7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 4158
+        y: 1534
+        width: 390
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5955a0d46c65eb4aa1e2f79772d48fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 4668
+        y: 1534
+        width: 393
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0deeedf5cda0af54db89adff27e645ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 5181
+        y: 1534
+        width: 390
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928576d5dac6aea408b5d88da65d1387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5694
+        y: 1534
+        width: 390
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812a6c28cd188b043864564650ddbf34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1020
+        width: 393
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d051b790e2e08624098d7083645eb40e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1020
+        width: 393
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02ab7d066ddaa64e85d242739ada713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1020
+        width: 390
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4271e08d467e780488d710131dd9d058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1020
+        width: 393
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0a81ce1b531604ea4564035b96edda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 1020
+        width: 393
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3296be163240e449933814f6c7b6ce7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 1020
+        width: 393
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f411ecf4c0e7e954ba0385617c46d7fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 1020
+        width: 393
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c5ce47355337643be784b47d13dcfd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 3645
+        y: 1020
+        width: 393
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4437b26f37690409069aa62e7672fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 4158
+        y: 1020
+        width: 393
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54260fd4a01fcd4b88fa5ffefc2c5ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 4668
+        y: 1020
+        width: 396
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4517bbdcb2a968a4dad09aa769818b0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 5181
+        y: 1020
+        width: 393
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a890f1befc1d744a2cf46df0a87e74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 5694
+        y: 1020
+        width: 393
+        height: 448
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d57615ff48b6c4b8d14a5c4d56d83d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 510
+        width: 396
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de709fa661cc9c4dbed436e7c8b39ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 510
+        width: 396
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811833fcf53d50b40b36755b3072aa7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 510
+        width: 393
+        height: 444
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d10bf9e9dcadb04a9b9d0148e53dc23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 510
+        width: 396
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f82149c68c0e34bb394523bf985c49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 510
+        width: 396
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1584eb7b6b152f448bd5fd3ffebe100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 510
+        width: 396
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d21f56bab46454b86f77a9bb02f693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 510
+        width: 399
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73505f6f429b17408e8bec5f18afb79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 3645
+        y: 510
+        width: 399
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e7fc128a8448a4eb46a522970dc6f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 4158
+        y: 510
+        width: 399
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdd7ba93048c3c4fb31260f7db5fff2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 4668
+        y: 510
+        width: 405
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526d7130de9d4de4eb32b750e9159d9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 5181
+        y: 510
+        width: 402
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47ca904076996a41affeda78dfce32e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 5694
+        y: 510
+        width: 399
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2450b9f9966dacc49bc8bd65428b06e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 399
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6d36215edce0f44bba30f802dffd93
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 0
+        width: 396
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cac949821ad207459ddb554b144de0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 0
+        width: 393
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a658bedb35eea514a8b6f28983f13f4a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 0
+        width: 396
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605abd123071c2940add5f93f64ed7fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 0
+        width: 393
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e0792bdadae484eba5b5775d2c8da2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 0
+        width: 393
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdf32c09eea6204884f12cb5e5b9205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 0
+        width: 393
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33a2d4347e78c8418c7438ced44e36f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 3645
+        y: 0
+        width: 393
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c80942214de8d4298bd8fa01a22042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 4158
+        y: 0
+        width: 390
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6c5d6b0ff2b1c4086e7bb1f0ac5d00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 4668
+        y: 0
+        width: 393
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8081bf2827377874f8dc34fcda490029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 5181
+        y: 0
+        width: 390
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef00328a22c244e49a1dc88771fe158c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_idle_Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 5694
+        y: 0
+        width: 390
+        height: 438
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a418003dacb810544bf8069e69a670b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

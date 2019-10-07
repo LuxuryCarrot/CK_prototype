@@ -11,10 +11,10 @@ TagManager:
   - FireBall
   - FirePoint
   - ThronBush
-  - Frog
   - Stage
-  - Raccoon
   - Monster
+  - Boss
+  - GodHand
   layers:
   - Default
   - TransparentFX
@@ -29,7 +29,7 @@ TagManager:
   - Ground
   - Air
   - Monster
-  - 
+  - Boss
   - 
   - 
   - 
