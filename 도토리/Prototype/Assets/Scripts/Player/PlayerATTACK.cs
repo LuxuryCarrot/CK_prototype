@@ -43,7 +43,7 @@ public class PlayerATTACK : PlayerFSMController
                 break;
         }
 
-        if (controller.curAttackAnimSpeed >= PlayerController.maxAttackAnimTime)
+        if (controller.curAttackAnimSpeed >= PlayerController.MAX_ATTACK_ANIM_TIME)
         {
             controller.curAttackAnimSpeed = 0;
             controller.AttackDirCheck(0);

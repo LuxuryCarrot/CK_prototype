@@ -39,7 +39,7 @@ public class EffectManager : MonoBehaviour
 
         if (!effects[newEffectOfCurState].isPlaying)
         {
-            Debug.Log("effect play   name : " + effects[newEffectOfCurState].name);
+            //Debug.Log("effect play   name : " + effects[newEffectOfCurState].name);
             effects[newEffectOfCurState].Play();
         }
     }
@@ -124,7 +124,6 @@ public class EffectManager : MonoBehaviour
 
                         isFlipped = true;
                     }
-
                     effects[newEffectOfCurState].transform.position = posOfEffects[newEffectOfCurState].position;
                 }
                 break;

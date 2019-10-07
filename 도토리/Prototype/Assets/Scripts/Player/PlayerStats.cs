@@ -35,12 +35,12 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<PlayerController>();
-        jumpForce = 1.4f;
+        jumpForce = 1.5f;
         walkSpeed = 3f;
         dashSpeed = 6f;
         dashForce = 1.2f;
         fallSpeed = 4f;
-        hp = 100;
+        hp = 10;
         weaponDamage = 50f;
     }
 

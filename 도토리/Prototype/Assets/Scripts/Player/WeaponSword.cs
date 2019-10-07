@@ -6,7 +6,7 @@ public class WeaponSword : MonoBehaviour
 {
     public PlayerStats stat;
 
-    private Transform playerTrans;
+    private PlayerController player;
     private CapsuleCollider2D weaponCol;
     private BoxCollider2D monsterCol;
 
@@ -16,28 +16,26 @@ public class WeaponSword : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerTrans = transform.root;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         weaponCol = GetComponent<CapsuleCollider2D>();
-        monster = GameObject.FindGameObjectWithTag("Fox").transform;
-        monsterCol = monster.GetComponent<BoxCollider2D>();
-        stat = playerTrans.GetComponent<PlayerStats>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        stat = player.transform.GetComponent<PlayerStats>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if ((collision.gameObject.tag.CompareTo("Fox") == 0) &&
-            (collision == monsterCol) &&
+        if ((collision.gameObject.tag.CompareTo("Monster") == 0) &&
             (stat.curState == PlayerState.ATTACK))
         {
-            if (Input.GetMouseButtonUp(0))
+            monster = collision.transform;
+            monsterCol = monster.GetComponent<BoxCollider2D>();
+
+            if(collision==monsterCol)
             {
-                Debug.Log("Player Damage : " + stat.finalDamage);
-                monster.SendMessage("ApplyDamage", stat.finalDamage);
+                if (player.curAttackAnimSpeed >= PlayerController.MAX_ATTACK_ANIM_TIME)
+                {
+                    Debug.Log("Player Damage : " + stat.finalDamage);
+                    monster.SendMessage("ApplyDamage", stat.finalDamage);
+                }
             }
         }
     }

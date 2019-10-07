@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PlayerDASH : PlayerFSMController
 {
     [SerializeField]
     Vector3 deltaMove;
 
-    float maxDashTime = 0.9f;
+    float maxDashTime = 1.0f;
     float dashStoppingSpeed = 0.1f;
     float currentDashTime;
 
@@ -46,19 +47,29 @@ public class PlayerDASH : PlayerFSMController
                 deltaMove.x = -deltaMove.x;
         }
 
-        RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, deltaMove.normalized, PlayerController.BOXCAST_DISTANCE, controller.layerMask);
+        RaycastHit2D groundHit = Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, deltaMove.normalized, PlayerController.BOXCAST_DISTANCE, controller.layerMask);
 
-        if (hit2D)
+        if (groundHit)
         {
-            if (hit2D.transform.gameObject.layer == 10)
+            if (groundHit.transform.gameObject.layer == 10)
             {
+                deltaMove = Vector3.zero;
                 controller.states[PlayerState.DASH].enabled = false;
             }
+            else if(groundHit.transform.gameObject.layer==11)
+            {
+                if(!controller.isAirColliderPassingEnd)
+                {
+                    groundHit.transform.GetComponent<TilemapCollider2D>().enabled = false;
+                }
+            }
+                
         }
         else
         {
-            transform.Translate(deltaMove * Time.deltaTime * controller.stat.dashSpeed);
+            if(deltaMove!=Vector3.zero)
+                transform.Translate(deltaMove * Time.deltaTime * controller.stat.dashSpeed);
         }
-    }
 
+    }
 }
