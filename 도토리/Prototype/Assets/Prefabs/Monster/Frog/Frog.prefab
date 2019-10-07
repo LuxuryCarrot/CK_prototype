@@ -85,7 +85,7 @@ MonoBehaviour:
   Hp: 50
   movementFlag: 0
   AttackRange: 1
-  FrogShieldCount: 3
+  FrogShieldCount: 1
   firepoint: {fileID: 6148838535624479190}
   SpearPrefab: {fileID: 7289021374371827779, guid: 4e406c118a28af2498a045bfa1bfeeb7,
     type: 3}
