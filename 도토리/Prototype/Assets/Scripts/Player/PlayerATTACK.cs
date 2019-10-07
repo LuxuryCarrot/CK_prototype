@@ -24,7 +24,7 @@ public class PlayerATTACK : PlayerFSMController
     // Update is called once per frame
     void Update()
     {
-        switch (controller.curWeaponProperty)
+        switch (controller.stat.curWeaponProperty)
         {
             case ElementalProperty.Fire:
                 dele = new DamageCalc(firePassive.DamageMUL);

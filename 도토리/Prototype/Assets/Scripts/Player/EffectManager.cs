@@ -11,10 +11,19 @@ public class EffectManager : MonoBehaviour
         get { return instance; }
     }
 
-    public List<GameObject> particleObjs;
+    public List<GameObject> particleStateObjs;
+    public List<GameObject> particlePropertyObjs;
+    public GameObject particlePlayerShotObj;
 
-    public List<ParticleSystem> effects = null;
-    public List<Transform> posOfEffects;
+    public List<ParticleSystem> stateEffects = null;
+    public List<ParticleSystem> propertyEffects = null;
+    public ParticleSystem playerShotEffect = null;
+
+
+    public List<Transform> posOfStateEffects;
+    public Transform posOfPropertyEffects;
+    public Transform posOfPlayerShotEffect;
+
 
     bool isFlipped;
 
@@ -24,23 +33,51 @@ public class EffectManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        for (int i = 0; i < particleObjs.Count; i++)
+        for (int i = 0; i < particleStateObjs.Count; i++)
         {
-            effects.Add(Instantiate(particleObjs[i].GetComponent<ParticleSystem>(), transform.position, Quaternion.identity));
-            effects[i].transform.SetParent(posOfEffects[i]);
-            effects[i].Stop();
+            stateEffects.Add(Instantiate(particleStateObjs[i].GetComponent<ParticleSystem>(), transform.position, Quaternion.identity));
+            stateEffects[i].transform.SetParent(posOfStateEffects[i]);
+            stateEffects[i].Stop();
         }
 
+        for (int i = 0; i < particlePropertyObjs.Count; i++)
+        {
+            propertyEffects.Add(Instantiate(particlePropertyObjs[i].GetComponent<ParticleSystem>(), transform.position, Quaternion.identity));
+            propertyEffects[i].transform.SetParent(posOfPropertyEffects); //착지했을때의 위치를 그대로 사용한다
+            propertyEffects[i].Stop();
+        }
+
+        playerShotEffect = Instantiate(particlePlayerShotObj.GetComponent<ParticleSystem>(), transform.position, Quaternion.identity);
+        playerShotEffect.transform.SetParent(posOfPlayerShotEffect);
+        playerShotEffect.Stop();
     }
 
     public void SetEffect(float currentXPos, float currentMouseXPos, int newEffectOfCurState)
     {
         SetEffectPostion(currentXPos, currentMouseXPos, newEffectOfCurState);
 
-        if (!effects[newEffectOfCurState].isPlaying)
+        if (!stateEffects[newEffectOfCurState].isPlaying)
         {
             //Debug.Log("effect play   name : " + effects[newEffectOfCurState].name);
-            effects[newEffectOfCurState].Play();
+            stateEffects[newEffectOfCurState].Play();
+        }
+    }
+
+    public void SetElementalEffect(int curProperty)
+    {
+        if (!propertyEffects[curProperty].isPlaying)
+        {
+            propertyEffects[curProperty].transform.position = posOfPropertyEffects.position;
+            propertyEffects[curProperty].Play();
+        }
+    }
+
+    public void SetPlayerShotEffect()
+    {
+        if (!playerShotEffect.isPlaying)
+        {
+            playerShotEffect.transform.position = posOfPlayerShotEffect.position;
+            playerShotEffect.Play();
         }
     }
 
@@ -51,81 +88,84 @@ public class EffectManager : MonoBehaviour
             case 0:                                                                                     //walk
                 if (currentXPos > currentMouseXPos)
                 {
-                    effects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);
+                    stateEffects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);
                 }
-                effects[newEffectOfCurState].transform.position = posOfEffects[newEffectOfCurState].position;
+                stateEffects[newEffectOfCurState].transform.position = posOfStateEffects[newEffectOfCurState].position;
                 break;
             case 1:                                                                                     //landing
-                effects[newEffectOfCurState].transform.position = posOfEffects[newEffectOfCurState].position;
+                stateEffects[newEffectOfCurState].transform.position = posOfStateEffects[newEffectOfCurState].position;
                 break;
             case 2:                                                                                     //attackUp
                 if (currentXPos > currentMouseXPos)
                 {
-                    if (effects[newEffectOfCurState].transform.localScale.x != -1)
+                    if (stateEffects[newEffectOfCurState].transform.localScale.x != -1)
                     {
-                        effects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);        //effect flip
+                        stateEffects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);        //effect flip
 
                         isFlipped = false;
                     }
 
                     if (!isFlipped)
                     {
-                        Vector2 temp = posOfEffects[newEffectOfCurState].transform.position.normalized;
-                        temp.y = effects[newEffectOfCurState].transform.localPosition.y;
+                        Vector2 temp = posOfStateEffects[newEffectOfCurState].transform.position.normalized;
+                        temp.y = stateEffects[newEffectOfCurState].transform.localPosition.y;
 
                         if (currentXPos < 0)
                             temp.x *= REFLECTION_POSITION_OF_ATTACK_UP;
                         else
                             temp.x *= -REFLECTION_POSITION_OF_ATTACK_UP;
 
-                        effects[newEffectOfCurState].transform.localPosition = new Vector2(temp.x, temp.y);
+                        stateEffects[newEffectOfCurState].transform.localPosition = new Vector2(temp.x, temp.y);
                     }
                 }
                 else
                 {
-                    if (effects[newEffectOfCurState].transform.localScale.x != 1)
+                    if (stateEffects[newEffectOfCurState].transform.localScale.x != 1)
                     {
-                        effects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);        //effect flip
+                        stateEffects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);        //effect flip
 
                         isFlipped = true;
                     }
 
-                    effects[newEffectOfCurState].transform.position = posOfEffects[newEffectOfCurState].position;
+                    stateEffects[newEffectOfCurState].transform.position = posOfStateEffects[newEffectOfCurState].position;
                 }
                 break;
             case 3:                                                                                     //attackDown
                 if (currentXPos > currentMouseXPos)
                 {
-                    if (effects[newEffectOfCurState].transform.localScale.x != -1)
+                    if (stateEffects[newEffectOfCurState].transform.localScale.x != -1)
                     {
-                        effects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);        //effect flip
+                        stateEffects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);        //effect flip
 
                         isFlipped = false;
                     }
 
                     if (!isFlipped)
                     {
-                        Vector2 temp = posOfEffects[newEffectOfCurState].transform.position.normalized;
-                        temp.y = effects[newEffectOfCurState].transform.localPosition.y;
+                        Vector2 temp = posOfStateEffects[newEffectOfCurState].transform.position.normalized;
+                        temp.y = stateEffects[newEffectOfCurState].transform.localPosition.y;
 
                         if (currentXPos < 0)
                             temp.x *= REFLECTION_POSITION_OF_ATTACK_DOWN;
                         else
                             temp.x *= -REFLECTION_POSITION_OF_ATTACK_DOWN;
 
-                        effects[newEffectOfCurState].transform.localPosition = new Vector2(temp.x, temp.y);
+                        stateEffects[newEffectOfCurState].transform.localPosition = new Vector2(temp.x, temp.y);
                     }
                 }
                 else
                 {
-                    if (effects[newEffectOfCurState].transform.localScale.x != 1)
+                    if (stateEffects[newEffectOfCurState].transform.localScale.x != 1)
                     {
-                        effects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);        //effect flip
+                        stateEffects[newEffectOfCurState].transform.localScale *= new Vector2(-1, 1);        //effect flip
 
                         isFlipped = true;
                     }
-                    effects[newEffectOfCurState].transform.position = posOfEffects[newEffectOfCurState].position;
+                    stateEffects[newEffectOfCurState].transform.position = posOfStateEffects[newEffectOfCurState].position;
                 }
+                break;
+            case 6:
+                stateEffects[newEffectOfCurState-2].transform.position = posOfStateEffects[newEffectOfCurState-2].position;         //나중에 상태 순서에 맞게 다시 할것
                 break;
         }
     }

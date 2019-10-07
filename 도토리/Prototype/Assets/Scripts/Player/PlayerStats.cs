@@ -13,6 +13,14 @@ public enum PlayerState
     DEAD
 }
 
+public enum ElementalProperty
+{
+    None,
+    Fire,
+    Water,
+    Grass
+}
+
 public class PlayerStats : MonoBehaviour
 {
     public float walkSpeed;
@@ -27,21 +35,27 @@ public class PlayerStats : MonoBehaviour
     public float weaponDamage;
     public float finalDamage;
 
+
+
+
     public PlayerController controller;
 
     public PlayerState startState;
     public PlayerState curState;
 
+    public ElementalProperty curWeaponProperty;
+
+
     private void Awake()
     {
         controller = GetComponent<PlayerController>();
-        jumpForce = 1.3f;
+        jumpForce = 1.5f;
         walkSpeed = 3f;
         dashSpeed = 6f;
         dashForce = 1.2f;
         fallSpeed = 4f;
         hp = 10;
-        weaponDamage = 50f;
+        weaponDamage = 10f;
     }
 
     // Start is called before the first frame update

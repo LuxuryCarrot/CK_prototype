@@ -4,14 +4,6 @@ using UnityEngine;
 using System;
 using UnityEngine.Tilemaps;
 
-public enum ElementalProperty
-{
-    None,
-    Fire,
-    Water,
-    Grass
-}
-
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public int jumpCount = 0;
 
     public const float CONTROL_VALUE_OF_FALLSPEED = 2f;
+
+    public bool gracePeriodEnable = false;
 
     public bool isKeyInputting = false;
     public bool isGrounded;
@@ -48,13 +42,15 @@ public class PlayerController : MonoBehaviour
     public CapsuleCollider2D playerCollider;
     public Transform spriteTrans;
     public Vector3 flipScale;
+    public Material whiteMat;
+    public Material originalMat;
+
 
     //public Camera camera;
     public TilemapCollider2D tileMaplCollider;
 
     public const float BOXCAST_DISTANCE = 0.4f;
 
-    public ElementalProperty curWeaponProperty;
 
     public float curElementalDurantionTime;
     public float maxElementalDurantionTime;     //const
@@ -254,7 +250,7 @@ public class PlayerController : MonoBehaviour
 
     public void GroundCollisionCheck()
     {
-        if (!states[PlayerState.JUMP].enabled&&!states[PlayerState.DASH].enabled&&!states[PlayerState.DOWN].enabled)
+        if (!states[PlayerState.JUMP].enabled && !states[PlayerState.DASH].enabled && !states[PlayerState.DOWN].enabled)
         {
             if (tileMaplCollider.enabled)
             {
@@ -314,14 +310,43 @@ public class PlayerController : MonoBehaviour
 
     void ApplyDamage(float damage)
     {
-        stat.currentHP -= damage;
-
-        if (stat.currentHP <= 0)
+        if (!gracePeriodEnable)
         {
-            Debug.Log("PlayerDead");
-            GameManager.Instance.isPlayerDead = true;
-            SetState(PlayerState.DEAD);
+            stat.currentHP -= damage;
+            EffectManager.Instance.SetPlayerShotEffect();
+            StartCoroutine("GracePeriod");
+            if (stat.currentHP <= 0)
+            {
+                Debug.Log("PlayerDead");
+                GameManager.Instance.isPlayerDead = true;
+                SetState(PlayerState.DEAD);
+            }
         }
+    }
+
+    IEnumerator GracePeriod()
+    {
+        gracePeriodEnable = true;
+
+        int countTime = 0; //깜빡이는 횟수
+        while (countTime < 5)
+        {
+            if (countTime % 2 == 0)
+            {
+                transform.GetComponentInChildren<SpriteRenderer>().material = originalMat;
+                transform.GetComponentInChildren<SpriteRenderer>().color = new Color32(255, 255, 255, 200);
+            }
+            else
+            {
+                transform.GetComponentInChildren<SpriteRenderer>().material = whiteMat;
+                transform.GetComponentInChildren<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
+            }
+            yield return new WaitForSeconds(0.1f);
+            countTime++;
+        }
+
+        transform.GetComponentInChildren<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+        gracePeriodEnable = false;
     }
 
     //private void OnCollisionEnter2D(Collision2D collision)

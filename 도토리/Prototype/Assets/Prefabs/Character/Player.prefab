@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &565953625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565953626}
+  m_Layer: 8
+  m_Name: 'Elemental_VFX_Point '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565953626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565953625}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.089, y: -0.58, z: -0.015892578}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1114466056991060604}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1522810953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522810954}
+  m_Layer: 8
+  m_Name: Player_Shot_VFX_Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1522810954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522810953}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1114466056991060604}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6543115123817640598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +167,8 @@ Transform:
   - {fileID: 5153834642090849724}
   - {fileID: 1406903137107547563}
   - {fileID: 8642181410536022447}
+  - {fileID: 565953626}
+  - {fileID: 1522810954}
   m_Father: {fileID: 6543115124112480777}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -122,17 +184,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3773dd88ce12d054c9e43dca26f5cbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleObjs:
+  particleStateObjs:
   - {fileID: 2694994999105392136, guid: 9d2731ada33361d49b70aaa590ac9a9f, type: 3}
   - {fileID: 4466255244903681232, guid: 2fcaac888ebe1d9428ea3b9b0e339b7e, type: 3}
   - {fileID: 1114526665073101483, guid: ca99ca1c171623b4080936149890f532, type: 3}
   - {fileID: 5749951219719267630, guid: 63de1473936097040b8fb0a7e59d5396, type: 3}
-  effects: []
-  posOfEffects:
+  - {fileID: 8551330761557929664, guid: 3891c9bb7f86a294a801b56cba503f3f, type: 3}
+  particlePropertyObjs:
+  - {fileID: 2962013091314927911, guid: bd08a91ec1d1597428e7f5ccaff29b1a, type: 3}
+  particlePlayerShotObj: {fileID: 6649074675131341910, guid: 8382b87c55626f94db60c857956277ee,
+    type: 3}
+  stateEffects: []
+  propertyEffects: []
+  playerShotEffect: {fileID: 0}
+  posOfStateEffects:
   - {fileID: 6543115123018120621}
   - {fileID: 1406903137107547563}
   - {fileID: 5153834642090849724}
   - {fileID: 6197181640577253449}
+  - {fileID: 8642181410536022447}
+  posOfPropertyEffects: {fileID: 565953626}
+  posOfPlayerShotEffect: {fileID: 1522810954}
 --- !u!1 &6446757745380027343
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,8 +322,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.051582217, y: -0.009360611}
-  m_Size: {x: 0.62099624, y: 0.7323834}
+  m_Offset: {x: 0.05980611, y: -0.009302974}
+  m_Size: {x: 0.6624274, y: 0.74216914}
   m_Direction: 0
 --- !u!50 &1566541350721542489
 Rigidbody2D:
@@ -288,6 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stat: {fileID: 0}
   jumpCount: 0
+  gracePeriodEnable: 0
   isKeyInputting: 0
   isGrounded: 0
   isFalling: 0
@@ -307,8 +380,9 @@ MonoBehaviour:
   playerCollider: {fileID: 0}
   spriteTrans: {fileID: 0}
   flipScale: {x: 0, y: 0, z: 0}
+  whiteMat: {fileID: 2100000, guid: a80155a136f2d1d4ba04e7592b3f0b03, type: 2}
+  originalMat: {fileID: 2100000, guid: 68d3da164f3c49f41a4115b2b97b3564, type: 2}
   tileMaplCollider: {fileID: 0}
-  curWeaponProperty: 0
   curElementalDurantionTime: 0
   maxElementalDurantionTime: 0
   layerMask: 0
@@ -336,6 +410,7 @@ MonoBehaviour:
   controller: {fileID: 0}
   startState: 0
   curState: 0
+  curWeaponProperty: 0
 --- !u!114 &9081972321046764703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,7 +585,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2e6e40764c63c044daf225c5f1e3ec79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -646,17 +721,12 @@ PrefabInstance:
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6126465548543910112, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
