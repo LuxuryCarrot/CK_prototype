@@ -6,14 +6,12 @@ public class FireBall : MonoBehaviour
 {
     GameObject Player;
     ParticleSystem Ps;
-    CapsuleCollider2D m_CapsuleCollider2D;
     // Start is called before the first frame update
     void Start()
     {
         //Debug.Log("fireball");
         Player = GameObject.FindGameObjectWithTag("Player");
         Ps = GetComponentInChildren<ParticleSystem>();
-        m_CapsuleCollider2D = GetComponent<CapsuleCollider2D>();
 
         if (transform.position.x < Player.transform.position.x)
         {
@@ -31,7 +29,6 @@ public class FireBall : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            m_CapsuleCollider2D.enabled = false;
             StartCoroutine("Flame");
         }
     }
