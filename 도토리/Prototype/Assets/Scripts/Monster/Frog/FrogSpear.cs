@@ -8,7 +8,7 @@ public class FrogSpear : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Debug.Log("SpearAttack");
+        //Debug.Log("SpearAttack");
         Player = GameObject.FindGameObjectWithTag("Player");
         Invoke("DestroySpear", 0.5f);
     }
@@ -24,6 +24,6 @@ public class FrogSpear : MonoBehaviour
     void DestroySpear()
     {
         Destroy(gameObject);
-        Debug.Log("SpearDestroied");
+        //Debug.Log("SpearDestroied");
     }
 }

@@ -10,7 +10,8 @@ public enum PlayerState
     ATTACK,
     DASH,
     DOWN,
-    DEAD
+    DEAD,       
+    SHOT        //피격
 }
 
 public enum ElementalProperty
