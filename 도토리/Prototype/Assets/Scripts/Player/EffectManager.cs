@@ -26,6 +26,7 @@ public class EffectManager : MonoBehaviour
 
 
     bool isFlipped;
+    public bool isAttackEffectPlaying;
 
     private const float REFLECTION_POSITION_OF_ATTACK_UP = 2f;
     private const float REFLECTION_POSITION_OF_ATTACK_DOWN = 1.3f;
@@ -52,9 +53,22 @@ public class EffectManager : MonoBehaviour
         playerShotEffect.Stop();
     }
 
-    public void SetEffect(float currentXPos, float currentMouseXPos, int newEffectOfCurState)
+    private void Update()
     {
-        SetEffectPostion(currentXPos, currentMouseXPos, newEffectOfCurState);
+        if (stateEffects[2].isEmitting ||
+            stateEffects[3].isEmitting)
+        {
+            isAttackEffectPlaying = true;                   //공격이펙트 재생중
+        }
+        else
+        {
+            isAttackEffectPlaying = false;
+        }
+    }
+
+    public void SetStateEffect(float currentXPos, float currentMouseXPos, int newEffectOfCurState)
+    {
+        SetStateEffectPostion(currentXPos, currentMouseXPos, newEffectOfCurState);
 
         if (!stateEffects[newEffectOfCurState].isPlaying)
         {
@@ -81,7 +95,7 @@ public class EffectManager : MonoBehaviour
         }
     }
 
-    public void SetEffectPostion(float currentXPos, float currentMouseXPos, int newEffectOfCurState)
+    public void SetStateEffectPostion(float currentXPos, float currentMouseXPos, int newEffectOfCurState)
     {
         switch (newEffectOfCurState)
         {
@@ -165,8 +179,18 @@ public class EffectManager : MonoBehaviour
                 }
                 break;
             case 6:
-                stateEffects[newEffectOfCurState-2].transform.position = posOfStateEffects[newEffectOfCurState-2].position;         //나중에 상태 순서에 맞게 다시 할것
+                stateEffects[newEffectOfCurState - 2].transform.position = posOfStateEffects[newEffectOfCurState - 2].position;         //나중에 상태 순서에 맞게 다시 할것
                 break;
         }
+    }
+
+    public void TargetStateEffectStop(int targetState)
+    {
+        stateEffects[targetState].Stop();
+    }
+
+    public void ClearStateEffects()
+    {
+        stateEffects.Clear();
     }
 }

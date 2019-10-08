@@ -26,8 +26,12 @@ public class PlayerController : MonoBehaviour
 
     public float gravity;
     public float verticalVelocity;
+
     public float curAttackAnimSpeed;
-    public const float MAX_ATTACK_ANIM_TIME = 0.5f;
+    public const float MAX_ATTACK_ANIM_TIME = 0.5f;      // + effect time
+    public float curShotAnimSpeed;
+    public const float MAX_SHOT_ANIM_TIME = 1f;
+
 
     [HideInInspector]
     public Transform monster;
@@ -89,6 +93,7 @@ public class PlayerController : MonoBehaviour
         states.Add(PlayerState.DASH, GetComponent<PlayerDASH>());
         states.Add(PlayerState.DOWN, GetComponent<PlayerDOWN>());
         states.Add(PlayerState.DEAD, GetComponent<PlayerDEAD>());
+        states.Add(PlayerState.SHOT, GetComponent<PlayerSHOT>());
     }
 
     // Start is called before the first frame update
@@ -102,73 +107,103 @@ public class PlayerController : MonoBehaviour
     {
         if (!GameManager.Instance.isPlayerDead)
         {
-            if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.D)))
+            CommandCheck();
+
+            KeyInputtingCheck();
+
+            SetMousePosition();
+
+            SpriteFlipCheck();
+
+            MakeEffects();
+        }
+        else
+        {
+            if (stat.curState != PlayerState.DEAD)                              //한번만 실행
+                SetState(PlayerState.DEAD);
+        }
+        GroundCollisionCheck();
+
+        Gravity();
+    }
+
+    public void CommandCheck()
+    {
+
+        if (curAttackAnimSpeed == 0 && !EffectManager.Instance.isAttackEffectPlaying)      //공격의 애니메이션,이펙트의 재생이 종료되면 제어가능
+        {
+            if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.D)))       //걷기
                 SetState(PlayerState.WALK);
 
             if (!Input.GetKey(KeyCode.S))
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space))                        //점프    
                 {
                     if (jumpCount == 0)
                         SetState(PlayerState.JUMP);
                 }
             }
 
-            if (curAttackAnimSpeed == 0)
+            if (!gracePeriodEnable)                                            //피격중에는 공격 불가
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0))                                //공격
                     SetState(PlayerState.ATTACK);
             }
-
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift))                        //대시
                 SetState(PlayerState.DASH);
 
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S))                                    //하강점프          
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     SetState(PlayerState.DOWN);
                 }
             }
+        }
 
+    }
 
-
-            GroundCollisionCheck();
-            Gravity();
-
-            for (int i = 1; i < states.Count;)
+    public void KeyInputtingCheck()
+    {
+        for (int i = 1; i < states.Count;)
+        {
+            if (states[(PlayerState)i].enabled == false)
             {
-                if (states[(PlayerState)i].enabled == false)
-                {
-                    i++;
-                }
-                else
-                    break;
-
-                if (i == states.Count)
-                {
-                    isKeyInputting = false;
-                }
-            }
-
-            if (!isKeyInputting)
-                SetState(PlayerState.IDLE);
-
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-            mousePos.z = 0;
-
-            //sprite flip
-            if (transform.position.x > mousePos.x)
-            {
-                spriteTrans.localScale = new Vector3(-flipScale.x, flipScale.y, flipScale.z);
+                i++;
             }
             else
-            {
-                spriteTrans.localScale = new Vector3(flipScale.x, flipScale.y, flipScale.z);
-            }
+                break;
 
-            MakeEffects();
+            if (i == states.Count)
+            {
+                isKeyInputting = false;
+            }
+        }
+
+        if (!isKeyInputting)
+        {
+            if (curShotAnimSpeed == 0)             //피격중에는 기다림
+                SetState(PlayerState.IDLE);
+        }
+    }
+
+    public void SetMousePosition()
+    {
+        mousePos = Input.mousePosition;
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        mousePos.z = 0;
+    }
+
+    public void SpriteFlipCheck()
+    {
+        //sprite flip
+        if (transform.position.x > mousePos.x)
+        {
+            spriteTrans.localScale = new Vector3(-flipScale.x, flipScale.y, flipScale.z);
+        }
+        else
+        {
+            spriteTrans.localScale = new Vector3(flipScale.x, flipScale.y, flipScale.z);
         }
     }
 
@@ -176,14 +211,14 @@ public class PlayerController : MonoBehaviour
     {
         if (states[PlayerState.WALK].enabled && !states[PlayerState.JUMP].enabled)
         {
-            EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, (int)PlayerState.WALK - 1);
+            EffectManager.Instance.SetStateEffect(transform.position.x, mousePos.x, (int)PlayerState.WALK - 1);
         }
         else if (states[PlayerState.ATTACK].enabled && curAttackAnimSpeed >= MAX_ATTACK_ANIM_TIME)     //anim end effect make
         {
             if (attackDir > -1)                                                                     //attack up
-                EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, (int)PlayerState.ATTACK - 1);
+                EffectManager.Instance.SetStateEffect(transform.position.x, mousePos.x, (int)PlayerState.ATTACK - 1);
             else                                                                                    //attack down
-                EffectManager.Instance.SetEffect(transform.position.x, mousePos.x, (int)PlayerState.ATTACK);
+                EffectManager.Instance.SetStateEffect(transform.position.x, mousePos.x, (int)PlayerState.ATTACK);
         }
     }
 
@@ -206,8 +241,12 @@ public class PlayerController : MonoBehaviour
         stat.curState = newState;
         states[stat.curState].enabled = true;
         states[stat.curState].BeginState();
+        SetAnimation();                                     //애니메이션 설정
+    }
 
-        if (states[PlayerState.JUMP].enabled)           //Jumping
+    public void SetAnimation()
+    {
+        if (!isGrounded)                                            //공중에 떠있을때는 점프 애니메이션 실행
             anim.SetInteger("curState", (int)PlayerState.JUMP);
         else
         {
@@ -219,19 +258,14 @@ public class PlayerController : MonoBehaviour
 
                 if (attackDir < 1)                               //Prev Anim down attack
                 {
-                    //Debug.Log("Up Attack!");
                     AttackDirCheck(1);
                 }
                 else                                            // Prev Anim up attack 
                 {
-                    //Debug.Log("Down Attack!");
                     AttackDirCheck(-1);
                 }
-
             }
-
         }
-
     }
 
     public void Gravity()
@@ -267,34 +301,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //private void OnDrawGizmos()           //error
-    //{
-    //    Gizmos.color = Color.red;
-    //    RaycastHit2D hit2D;
-    //    //hit2D = Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, -transform.up, BOXCAST_DISTANCE, layerMask);
-    //    //if (hit2D)
-    //    //{
-    //    //    Gizmos.DrawRay(transform.position, -transform.up * hit2D.distance);
-    //    //    Gizmos.DrawWireCube(transform.position + -transform.up * hit2D.distance, transform.lossyScale);
-    //    //}
-    //    //else
-    //    //{
-    //    //    Gizmos.DrawRay(transform.position, -transform.up * 1f);
-    //    //}
-
-    //    if (states[PlayerState.DOWN].enabled)
-    //    {
-    //        hit2D = Physics2D.Raycast(transform.position, -transform.up, 20f, layerMask);
-    //        if (hit2D)
-    //        {
-    //            Gizmos.DrawRay(transform.position, -transform.up * 20f);
-    //        }
-    //    }
-
-    //}
-
-
-
     public void AttackDirCheck(int newDir)
     {
         if (newDir != 0)                               //attackDir Change
@@ -310,16 +316,19 @@ public class PlayerController : MonoBehaviour
 
     void ApplyDamage(float damage)
     {
-        if (!gracePeriodEnable)
+        if (!GameManager.Instance.isPlayerDead)
         {
-            stat.currentHP -= damage;
-            EffectManager.Instance.SetPlayerShotEffect();
-            StartCoroutine("GracePeriod");
-            if (stat.currentHP <= 0)
+            if (!gracePeriodEnable)
             {
-                Debug.Log("PlayerDead");
-                GameManager.Instance.isPlayerDead = true;
-                SetState(PlayerState.DEAD);
+                stat.currentHP -= damage;
+                EffectManager.Instance.SetPlayerShotEffect();
+                SetState(PlayerState.SHOT);
+                StartCoroutine("GracePeriod");
+                if (stat.currentHP <= 0)
+                {
+                    Debug.Log("PlayerDead");
+                    GameManager.Instance.isPlayerDead = true;
+                }
             }
         }
     }
@@ -348,13 +357,4 @@ public class PlayerController : MonoBehaviour
         transform.GetComponentInChildren<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
         gracePeriodEnable = false;
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if(collision.gameObject.layer==11)
-    //    {
-    //        tileMaplCollider = collision.transform.GetComponent<TilemapCollider2D>();
-    //        Debug.Log(tileMaplCollider);
-    //    }
-    //}
 }

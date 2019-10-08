@@ -43,7 +43,7 @@ public class PlayerJUMP : PlayerFSMController
                 if (Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, -transform.up, PlayerController.BOXCAST_DISTANCE, controller.layerMask))
                 {
                     if (controller.states[PlayerState.JUMP].enabled)
-                        EffectManager.Instance.SetEffect(transform.position.x, controller.mousePos.x, (int)PlayerState.JUMP - 1);
+                        EffectManager.Instance.SetStateEffect(transform.position.x, controller.mousePos.x, (int)PlayerState.JUMP - 1);
 
                     controller.jumpCount = 0;
                     controller.states[PlayerState.JUMP].enabled = false;

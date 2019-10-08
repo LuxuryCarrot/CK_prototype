@@ -8,7 +8,9 @@ public class PlayerDEAD : PlayerFSMController
     {
         base.BeginState();
 
-        EffectManager.Instance.SetEffect(transform.position.x, controller.mousePos.x, (int)PlayerState.DEAD-2);     //나중에 상태에 맞게 변경한다
-        controller.states[PlayerState.DEAD].enabled = false;
+        if (EffectManager.Instance.stateEffects != null)
+        {
+            EffectManager.Instance.SetStateEffect(transform.position.x, controller.mousePos.x, (int)PlayerState.DEAD - 2);     //나중에 상태에 맞게 변경한다
+        }
     }
 }
