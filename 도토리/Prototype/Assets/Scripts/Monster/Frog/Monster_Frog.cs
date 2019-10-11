@@ -193,6 +193,7 @@ public class Monster_Frog : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+        StopCoroutine("DestroyMonster");
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

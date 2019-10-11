@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class PlayerJUMP : PlayerFSMController
 {
     bool isJumping;
+    int tileCheckCount;
 
     public override void BeginState()
     {
@@ -18,18 +19,21 @@ public class PlayerJUMP : PlayerFSMController
     // Update is called once per frame
     void Update()
     {
-        if (!controller.isAirColliderPassingEnd)
+        if (tileCheckCount == 0)
         {
-            RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, transform.up, PlayerController.BOXCAST_DISTANCE, controller.layerMask);
-
-            if (hit2D)
+            if (!controller.isAirColliderPassingEnd)
             {
-                if (hit2D.transform.gameObject.layer == 11)
+                RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, transform.up, PlayerController.BOXCAST_DISTANCE, controller.layerMask);
+
+                if (hit2D)
                 {
-                    hit2D.transform.GetComponent<TilemapCollider2D>().enabled = false;
+                    if (hit2D.transform.gameObject.layer == 11)
+                    {
+                        hit2D.transform.GetComponent<TilemapCollider2D>().enabled = false;
+                        tileCheckCount++;
+                    }
                 }
             }
-
         }
         if (transform.position.y >= transform.position.y + (controller.gravity) * Time.deltaTime)
         {
@@ -40,14 +44,15 @@ public class PlayerJUMP : PlayerFSMController
             if (!controller.isAirColliderPassingEnd)
             {
 
-                if (Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, -transform.up, PlayerController.BOXCAST_DISTANCE, controller.layerMask))
+                if (Physics2D.BoxCast(transform.position, new Vector2(0.4f, transform.lossyScale.y/1000), 0, -transform.up, PlayerController.BOXCAST_DISTANCE, controller.layerMask))
                 {
                     if (controller.states[PlayerState.JUMP].enabled)
                         EffectManager.Instance.SetStateEffect(transform.position.x, controller.mousePos.x, (int)PlayerState.JUMP - 1);
 
                     controller.jumpCount = 0;
-                    controller.states[PlayerState.JUMP].enabled = false;
+                    tileCheckCount = 0;
                     controller.isGrounded = true;
+                    controller.states[PlayerState.JUMP].enabled = false;
                 }
             }
         }

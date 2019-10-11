@@ -12,7 +12,7 @@ public class Monster_Raccoon : MonoBehaviour
 
     private bool isDead;
     private bool isChasing;
-    private float currentHp = 0;
+    public float currentHp = 0;
 
     public Transform SwordPoint;
 

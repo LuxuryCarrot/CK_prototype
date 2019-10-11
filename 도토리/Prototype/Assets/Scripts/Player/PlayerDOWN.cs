@@ -11,11 +11,12 @@ public class PlayerDOWN : PlayerFSMController
     public override void BeginState()
     {
         base.BeginState();
+        controller.isGrounded = false;
     }
 
     private void Update()
     {
-        RaycastHit2D airPlaformHit = Physics2D.BoxCast(transform.position, transform.lossyScale, 0, -transform.up, PlayerController.BOXCAST_DISTANCE, controller.layerMask);
+        RaycastHit2D airPlaformHit = Physics2D.BoxCast(transform.position, new Vector2(0.4f, transform.lossyScale.y / 1000), 0, -transform.up, PlayerController.BOXCAST_DISTANCE, controller.layerMask);
 
         if (airPlaformHit)
         {
@@ -24,17 +25,34 @@ public class PlayerDOWN : PlayerFSMController
                 if (!controller.isAirColliderPassingEnd)
                 {
                     airPlaformHit.transform.GetComponent<TilemapCollider2D>().enabled = false;
-                    controller.isGrounded = false;
-                    nextTileCount++;
+                    controller.states[PlayerState.DOWN].enabled = false;
                 }
             }
-            else if (airPlaformHit.transform.gameObject.layer == 10)        //바닥 충돌
+            else if(airPlaformHit.transform.gameObject.layer == 10)
             {
                 controller.isGrounded = true;
                 controller.states[PlayerState.DOWN].enabled = false;
-                nextTileCount++;
             }
         }
+
+        //if (airPlaformHit)
+        //{
+        //    if (airPlaformHit.transform.gameObject.layer == 11)                 //air바닥 충돌
+        //    {
+        //        if (!controller.isAirColliderPassingEnd)
+        //        {
+        //            airPlaformHit.transform.GetComponent<TilemapCollider2D>().enabled = false;
+        //            controller.isGrounded = false;
+        //            nextTileCount++;
+        //        }
+        //    }
+        //    else if (airPlaformHit.transform.gameObject.layer == 10)        //바닥 충돌
+        //    {
+        //        controller.isGrounded = true;
+        //        controller.states[PlayerState.DOWN].enabled = false;
+        //        nextTileCount++;
+        //    }
+        //}
     }
 
   
