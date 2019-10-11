@@ -10,6 +10,7 @@ public class Monster_Fox : MonoBehaviour
 
     public int movementFlag = 0;
     private bool isChasing;
+    public bool isDead;
     public bool AttackRange = true;
 
     public Transform firepoint;
@@ -23,6 +24,8 @@ public class Monster_Fox : MonoBehaviour
 
     private GameObject FoxStartSprite;
 
+    CircleCollider2D CircleCollider2;
+
     CharacterController cc;
     // Start is called before the first frame update
     void Awake()
@@ -30,11 +33,15 @@ public class Monster_Fox : MonoBehaviour
         FoxStartSprite = transform.GetChild(1).gameObject;
         Destroy(FoxStartSprite);
         currentHp = Hp;
+
+        isDead = false;
         
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
 
         Player = GameObject.FindGameObjectWithTag("Player");
+
+        CircleCollider2 = GetComponent<CircleCollider2D>();
 
         StartCoroutine("ChangeMovement");
     }
@@ -81,8 +88,14 @@ public class Monster_Fox : MonoBehaviour
         {
              Move(); 
         }
-     
 
+        if (isDead)
+        {
+            StartCoroutine("DestroyMonster");
+            StopCoroutine("ChangeMovement");
+            isChasing = false;
+            movementFlag = 0;
+        }
 
     }
 
@@ -143,6 +156,7 @@ public class Monster_Fox : MonoBehaviour
             StopCoroutine("ChangeMovement");
             //isChasing = true;
             //animator.SetBool("isMoving", true);
+            CircleCollider2.enabled = false;
         }
 
         if (other.gameObject.tag == "GodHand")
@@ -159,6 +173,14 @@ public class Monster_Fox : MonoBehaviour
         StartCoroutine("Shoot");
     }
 
+    IEnumerator DestroyMonster()
+    {
+        animator.SetInteger("CurrentState", 4);
+        yield return new WaitForSeconds(1.3f);
+        Destroy(gameObject);
+        StopCoroutine("DestroyMonster");
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -166,6 +188,7 @@ public class Monster_Fox : MonoBehaviour
             isChasing = false;
             StartCoroutine("ChangeMovement");
             StopCoroutine("Shoot");
+            CircleCollider2.enabled = true;
         }
 
     }
@@ -174,7 +197,7 @@ public class Monster_Fox : MonoBehaviour
         currentHp -= damage;
         if (currentHp <= 0)
         {
-            Destroy(gameObject);
+            isDead = true;
         }
     }
 }
