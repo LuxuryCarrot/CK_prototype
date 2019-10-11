@@ -15138,6 +15138,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9117126300657318007, guid: 6fe819ed2d19dd6468410dd80201df9d,
+        type: 3}
+      propertyPath: m_Name
+      value: bubble_shield_start
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117126300657318007, guid: 6fe819ed2d19dd6468410dd80201df9d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 933097182032862239, guid: 6fe819ed2d19dd6468410dd80201df9d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15191,16 +15201,6 @@ PrefabInstance:
     - target: {fileID: 933097182032862239, guid: 6fe819ed2d19dd6468410dd80201df9d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9117126300657318007, guid: 6fe819ed2d19dd6468410dd80201df9d,
-        type: 3}
-      propertyPath: m_Name
-      value: bubble_shield_start
-      objectReference: {fileID: 0}
-    - target: {fileID: 9117126300657318007, guid: 6fe819ed2d19dd6468410dd80201df9d,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
