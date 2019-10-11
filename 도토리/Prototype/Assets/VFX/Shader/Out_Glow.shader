@@ -1,6 +1,4 @@
-﻿t// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-Shader "Custom/Out_Glow"
+﻿Shader "Custom/Out_Glow"
 {
 	Properties
 	{
@@ -87,7 +85,7 @@ Shader "Custom/Out_Glow"
 			{
 				fixed4 c = SampleSpriteTexture(IN.texcoord) * IN.color;
 
-				if (_Outline > 0 && c.a != 0
+				if (_Outline > 0 && c.a != 0)
 				{
 					fixed4 pixelUp = tex2D(_MainTex, IN.texcoord + fixed2(0, _MainTex_TexelSize.y));
 					fixed4 pixelDown = tex2D(_MainTex, IN.texcoord - fixed2(0, _MainTex_TexelSize.y));
@@ -100,7 +98,7 @@ Shader "Custom/Out_Glow"
 					}
 				}
 
-				c.rgb* = c.a;
+				c.rgb *= c.a;
 
 				return c;
 			}
