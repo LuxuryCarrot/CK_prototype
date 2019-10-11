@@ -13,12 +13,30 @@ public class WeaponSword : MonoBehaviour
     [HideInInspector]
     public Transform monster;
 
+    bool isMonsterCheck;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         weaponCol = GetComponent<CapsuleCollider2D>();
         stat = player.transform.GetComponent<PlayerStats>();
+    }
+
+    private void Update()
+    {
+        if(isMonsterCheck)
+        {
+            if (monster != null)
+            {
+                if (player.curAttackAnimSpeed >= PlayerController.MAX_ATTACK_ANIM_TIME)
+                {
+                    Debug.Log("Player Damage : " + stat.finalDamage);
+                    monster.SendMessage("ApplyDamage", stat.finalDamage);
+                    isMonsterCheck = false;
+                }
+            }
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -29,13 +47,9 @@ public class WeaponSword : MonoBehaviour
             monster = collision.transform;
             monsterCol = monster.GetComponent<BoxCollider2D>();
 
-            if(collision==monsterCol)
+            if (collision == monsterCol)
             {
-                if (player.curAttackAnimSpeed >= PlayerController.MAX_ATTACK_ANIM_TIME)
-                {
-                    Debug.Log("Player Damage : " + stat.finalDamage);
-                    monster.SendMessage("ApplyDamage", stat.finalDamage);
-                }
+                isMonsterCheck = true;
             }
         }
     }

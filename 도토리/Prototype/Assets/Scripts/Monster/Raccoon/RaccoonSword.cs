@@ -8,7 +8,7 @@ public class RaccoonSword : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Debug.Log("SwordAttack");
+        //Debug.Log("SwordAttack");
         Player = GameObject.FindGameObjectWithTag("Player");
         Invoke("DestroySpear", 0.5f);
     }
@@ -24,6 +24,6 @@ public class RaccoonSword : MonoBehaviour
     void DestroySpear()
     {
         Destroy(gameObject);
-        Debug.Log("SwordDestroied");
+        //Debug.Log("SwordDestroied");
     }
 }

@@ -52,10 +52,10 @@ public class PlayerStats : MonoBehaviour
         controller = GetComponent<PlayerController>();
         jumpForce = 1.5f;
         walkSpeed = 3f;
-        dashSpeed = 6f;
+        dashSpeed = 4f;
         dashForce = 1.2f;
-        fallSpeed = 4f;
-        hp = 10;
+        fallSpeed = 3.5f;
+        hp = 1000;
         weaponDamage = 10f;
     }
 

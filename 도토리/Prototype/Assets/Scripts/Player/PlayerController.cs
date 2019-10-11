@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public float curShotAnimSpeed;
     public const float MAX_SHOT_ANIM_TIME = 1f;
 
+    public float boxScale = 100;
 
     [HideInInspector]
     public Transform monster;
@@ -50,10 +51,9 @@ public class PlayerController : MonoBehaviour
     public Material originalMat;
 
 
-    //public Camera camera;
     public TilemapCollider2D tileMaplCollider;
 
-    public const float BOXCAST_DISTANCE = 0.4f;
+    public const float BOXCAST_DISTANCE = 0.5f;
 
 
     public float curElementalDurantionTime;
@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         stat = GetComponent<PlayerStats>();
 
         verticalVelocity = 9.8f;
-        //camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        boxScale = 500f;
         rigidbody2 = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
 
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
         layerMask = 1 << 10 | 1 << 11;
 
         tileMaplCollider = GameObject.FindGameObjectWithTag("Stage").transform.GetChild(1).GetComponent<TilemapCollider2D>();
-        monster = GameObject.FindGameObjectWithTag("Monster").transform;
+        //monster = GameObject.FindGameObjectWithTag("Monster").transform;
         states.Add(PlayerState.IDLE, GetComponent<PlayerIDLE>());
         states.Add(PlayerState.WALK, GetComponent<PlayerWALK>());
         states.Add(PlayerState.JUMP, GetComponent<PlayerJUMP>());
@@ -247,7 +247,9 @@ public class PlayerController : MonoBehaviour
     public void SetAnimation()
     {
         if (!isGrounded)                                            //공중에 떠있을때는 점프 애니메이션 실행
+        {
             anim.SetInteger("curState", (int)PlayerState.JUMP);
+        }
         else
         {
             anim.SetInteger("curState", (int)stat.curState);
@@ -270,25 +272,31 @@ public class PlayerController : MonoBehaviour
 
     public void Gravity()
     {
-        if (!isGrounded)
+        if (!states[PlayerState.DASH].enabled)
         {
-            if (gravity >= -stat.fallSpeed / CONTROL_VALUE_OF_FALLSPEED)                //player FallSpeed control
-                gravity -= stat.fallSpeed * Time.deltaTime;
+            if (!isGrounded)
+            {
+                if (gravity >= -stat.fallSpeed / CONTROL_VALUE_OF_FALLSPEED)                //player FallSpeed control
+                    gravity -= stat.fallSpeed * Time.deltaTime;
 
-            moveDirection = Vector2.zero;
-            moveDirection.y = gravity * verticalVelocity;
-            transform.Translate(moveDirection * Time.deltaTime);
+                moveDirection = Vector2.zero;
+                moveDirection.y = gravity * verticalVelocity;
+                transform.Translate(moveDirection * Time.deltaTime);
+            }
+            else
+                gravity = 0;
         }
     }
 
 
     public void GroundCollisionCheck()
     {
-        if (!states[PlayerState.JUMP].enabled && !states[PlayerState.DASH].enabled && !states[PlayerState.DOWN].enabled)
+        if (!states[PlayerState.JUMP].enabled && !states[PlayerState.DOWN].enabled && !states[PlayerState.DASH].enabled)
         {
             if (tileMaplCollider.enabled)
             {
-                RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, -transform.up, BOXCAST_DISTANCE, layerMask);
+                RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, new Vector2(0.4f, transform.lossyScale.y / 1000), 0, -transform.up, BOXCAST_DISTANCE, layerMask);
+
                 if (hit2D)
                 {
                     isGrounded = true;
