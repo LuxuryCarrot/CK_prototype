@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,7 +16,12 @@ public class GameManager : MonoBehaviour
     public int stage;
     private GameObject stageExit;
     public AsyncOperation asyncOper;
+
     public UIManager ui;
+    public FollowPlayer camera;
+    public PlayerController player;
+
+    public string prevStageName;
 
     private void Awake()
     {
@@ -29,49 +35,106 @@ public class GameManager : MonoBehaviour
             DestroyObject(gameObject);
         }
 
-        stage = 0;
+        stage = 1;
         asyncOper = null;
     }
 
-    private void Update()
+    private void Start()
     {
+        StartCoroutine(this.LoadScene());
+    }
+
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name != "Play_Tutorial")
+        {
+            //스테이지 전환시 카메라 다시 셋팅
+            SetStage();
+            SetCamera();
+        }
+
+        Debug.Log(scene.name);
+    }
+
+    public void SetCamera()
+    {
+        if (camera != null)
+        {
+            camera.boundsCol = GameObject.FindGameObjectWithTag("GroundBounds").GetComponent<BoxCollider2D>();
+            camera.minBound = camera.boundsCol.bounds.min;
+            camera.maxBound = camera.boundsCol.bounds.max;
+            camera.halfHeight = camera.theCamera.orthographicSize;
+            camera.halfWidth = camera.halfHeight * Screen.width / Screen.height;      //해상도
+        }
+        else
+            Debug.LogError("camera need");
+    }
+
+    public void SetStage()
+    {
+        if (player != null)
+        {
+            player.transform.position = GameObject.FindGameObjectWithTag("StartPosition").transform.position;
+            player.tileMaplCollider = GameObject.FindGameObjectWithTag("Air").transform.GetComponent<TilemapCollider2D>();
+        }
+        else
+            Debug.LogError("Player need");
+    }
+
+    public void PlayerHPGauge()
+    {
+        if (ui.playerHP.fillAmount <= 0)
+        {
+            ui.playerHP.fillAmount -= 6 / 100;
+        }
+        else
+        {
+            GameManager.instance.isPlayerDead = true;       //플레이어 사망
+        }
+
     }
 
     IEnumerator LoadScene()
     {
-        switch (stage)
+        switch (stage)      //다음 씬 지정
         {
-            case 0:
-                asyncOper = SceneManager.LoadSceneAsync("Play_Tutorial");
-                break;
             case 1:
                 asyncOper = SceneManager.LoadSceneAsync("Play_Stage2");
+                stage++;                //스테이지 증가
                 break;
             case 2:
                 asyncOper = SceneManager.LoadSceneAsync("Play_Stage3");
+                stage++;                //스테이지 증가
                 break;
             case 3:
                 asyncOper = SceneManager.LoadSceneAsync("Play_Stage4");
+                stage++;                //스테이지 증가
                 break;
             case 4:
                 asyncOper = SceneManager.LoadSceneAsync("Play_Boss_Stage");
                 break;
         }
 
-        ui.loadingSprite = GameObject.FindGameObjectWithTag("Loading");
 
         if (asyncOper != null)
         {
-            //asyncOper.allowSceneActivation = false;
+            asyncOper.allowSceneActivation = false;
             while (!asyncOper.isDone)
             {
-                ui.loadingSprite.SetActive(true);
                 yield return null;
                 Debug.Log(asyncOper.progress);
             }
-
-            ui.loadingSprite.SetActive(false);
-
         }
         else
         {

@@ -10,24 +10,29 @@ public class FollowPlayer : MonoBehaviour
     public GameObject target;
     private Vector3 targetPosition;
     public float moveSpeed;
-    BoxCollider2D boundsCol;
+    public BoxCollider2D boundsCol;
 
     //맵의 최대 박스 컬라이더 영역
-    private Vector3 minBound;
-    private Vector3 maxBound;
+    public Vector3 minBound;
+    public Vector3 maxBound;
 
     //카메라의 반너비,높이
-    private float halfWidth;
-    private float halfHeight;
+    public float halfWidth;
+    public float halfHeight;
 
-    private Camera theCamera;
+    public Camera theCamera;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        theCamera = GetComponent<Camera>();
+        target = GameObject.FindGameObjectWithTag("Player");
+        boundsCol = GameObject.FindGameObjectWithTag("GroundBounds").GetComponent<BoxCollider2D>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        theCamera = GetComponent<Camera>();
-        target = GameObject.FindGameObjectWithTag("Player");
-        boundsCol = GameObject.FindGameObjectWithTag("GroundBounds").GetComponent<BoxCollider2D>();
         minBound = boundsCol.bounds.min;
         maxBound = boundsCol.bounds.max;
         halfHeight = theCamera.orthographicSize;
@@ -43,6 +48,7 @@ public class FollowPlayer : MonoBehaviour
         //float posY = Mathf.SmoothDamp(transform.position.y, target.transform.position.y, ref velocity.y, smoothTimeY);
 
         //transform.position = new Vector3(posX, posY, transform.position.z);
+
 
         if (target.gameObject != null)
         {
