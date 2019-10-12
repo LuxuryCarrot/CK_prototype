@@ -42,7 +42,7 @@ public class WeaponSword : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if ((collision.gameObject.tag.CompareTo("Monster") == 0) &&
-            (stat.curState == PlayerState.ATTACK))
+            (stat.controller.states[PlayerState.ATTACK].enabled/*stat.curState == PlayerState.ATTACK*/))
         {
             monster = collision.transform;
             monsterCol = monster.GetComponent<BoxCollider2D>();

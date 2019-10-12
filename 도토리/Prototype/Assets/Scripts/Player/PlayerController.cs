@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public int prevAttackDir = -1;
     public bool isAirColliderPassing;
     public bool isAirColliderPassingEnd;
+    public bool isDashCoolTimeEnd;
+    public float currentCoolTime;
 
     public int attackDir = 0;
 
@@ -130,37 +132,51 @@ public class PlayerController : MonoBehaviour
     public void CommandCheck()
     {
 
-        if (curAttackAnimSpeed == 0 && !EffectManager.Instance.isAttackEffectPlaying)      //공격의 애니메이션,이펙트의 재생이 종료되면 제어가능
+
+        if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.D)))       //걷기
+            SetState(PlayerState.WALK);
+
+        if (!Input.GetKey(KeyCode.S))
         {
-            if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.D)))       //걷기
-                SetState(PlayerState.WALK);
-
-            if (!Input.GetKey(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.Space))                        //점프    
             {
-                if (Input.GetKeyDown(KeyCode.Space))                        //점프    
-                {
-                    if (jumpCount == 0)
-                        SetState(PlayerState.JUMP);
-                }
-            }
-
-            if (!gracePeriodEnable)                                            //피격중에는 공격 불가
-            {
-                if (Input.GetMouseButtonDown(0))                                //공격
-                    SetState(PlayerState.ATTACK);
-            }
-            if (Input.GetKeyDown(KeyCode.LeftShift))                        //대시
-                SetState(PlayerState.DASH);
-
-            if (Input.GetKey(KeyCode.S))                                    //하강점프          
-            {
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    SetState(PlayerState.DOWN);
-                }
+                if (jumpCount == 0)
+                    SetState(PlayerState.JUMP);
             }
         }
 
+        //if (!gracePeriodEnable)                                            //피격중에는 공격 불가(선택)
+        //{
+        if (Input.GetMouseButtonDown(0))                                //공격
+        {
+            if (curAttackAnimSpeed == 0 && !EffectManager.Instance.isAttackEffectPlaying)      //공격의 애니메이션,이펙트의 재생이 종료되면 제어가능(선택 대시는 주의)
+            {
+                Debug.Log("실행");
+                    SetState(PlayerState.ATTACK);
+            }
+            //}
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))                        //대시
+        {
+            if (currentCoolTime == 0)
+            {
+                StartCoroutine(this.DashCoolTimeRoutine());
+            }
+            if (isDashCoolTimeEnd)
+            {
+                SetState(PlayerState.DASH);
+            }
+        }
+
+        if (Input.GetKey(KeyCode.S))                                    //하강점프          
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SetState(PlayerState.DOWN);
+            }
+        }
     }
 
     public void KeyInputtingCheck()
@@ -213,13 +229,6 @@ public class PlayerController : MonoBehaviour
         {
             EffectManager.Instance.SetStateEffect(transform.position.x, mousePos.x, (int)PlayerState.WALK - 1);
         }
-        else if (states[PlayerState.ATTACK].enabled && curAttackAnimSpeed >= MAX_ATTACK_ANIM_TIME)     //anim end effect make
-        {
-            if (attackDir > -1)                                                                     //attack up
-                EffectManager.Instance.SetStateEffect(transform.position.x, mousePos.x, (int)PlayerState.ATTACK - 1);
-            else                                                                                    //attack down
-                EffectManager.Instance.SetStateEffect(transform.position.x, mousePos.x, (int)PlayerState.ATTACK);
-        }
     }
 
     public void SetState(PlayerState newState)
@@ -248,14 +257,35 @@ public class PlayerController : MonoBehaviour
     {
         if (!isGrounded)                                            //공중에 떠있을때는 점프 애니메이션 실행
         {
-            anim.SetInteger("curState", (int)PlayerState.JUMP);
+            if (states[PlayerState.ATTACK].enabled)
+            {
+                anim.SetInteger("curState", (int)PlayerState.ATTACK);
+
+                attackDir = prevAttackDir;                          //전 공격의 행동 저장
+
+                if (attackDir < 1)                               //Prev Anim down attack
+                {
+                    AttackDirCheck(1);
+                }
+                else                                            // Prev Anim up attack 
+                {
+                    AttackDirCheck(-1);
+                }
+            }
+            else
+            {
+                anim.SetInteger("curState", (int)PlayerState.JUMP);
+            }
+
         }
         else
         {
-            anim.SetInteger("curState", (int)stat.curState);
+            //anim.SetInteger("curState", (int)stat.curState);
 
             if (states[PlayerState.ATTACK].enabled)
             {
+                anim.SetInteger("curState", (int)PlayerState.ATTACK);
+
                 attackDir = prevAttackDir;
 
                 if (attackDir < 1)                               //Prev Anim down attack
@@ -266,6 +296,10 @@ public class PlayerController : MonoBehaviour
                 {
                     AttackDirCheck(-1);
                 }
+            }
+            else
+            {
+                anim.SetInteger("curState", (int)stat.curState);
             }
         }
     }
@@ -365,4 +399,25 @@ public class PlayerController : MonoBehaviour
         transform.GetComponentInChildren<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
         gracePeriodEnable = false;
     }
+
+    IEnumerator DashCoolTimeRoutine()
+    {
+        if (currentCoolTime == 0)
+        {
+            isDashCoolTimeEnd = true;
+            yield return null;
+        }
+
+
+        while (currentCoolTime < 2)
+        {
+            currentCoolTime += Time.deltaTime;
+            isDashCoolTimeEnd = false;
+            yield return null;
+        }
+
+        currentCoolTime = 0;
+        isDashCoolTimeEnd = true;
+    }
+
 }
