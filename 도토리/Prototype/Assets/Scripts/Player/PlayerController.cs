@@ -34,11 +34,6 @@ public class PlayerController : MonoBehaviour
     public float curShotAnimSpeed;
     public const float MAX_SHOT_ANIM_TIME = 1f;
 
-    public float boxScale = 100;
-
-    [HideInInspector]
-    public Transform monster;
-
     public Vector3 mousePos;
     [HideInInspector]
     public Vector3 lastMoveDir = Vector3.zero;
@@ -68,6 +63,8 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+
         isAirColliderPassing = false;
         isAirColliderPassingEnd = false;
 
@@ -77,7 +74,6 @@ public class PlayerController : MonoBehaviour
         stat = GetComponent<PlayerStats>();
 
         verticalVelocity = 9.8f;
-        boxScale = 500f;
         rigidbody2 = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
 
@@ -87,7 +83,6 @@ public class PlayerController : MonoBehaviour
         layerMask = 1 << 10 | 1 << 11;
 
         tileMaplCollider = GameObject.FindGameObjectWithTag("Stage").transform.GetChild(1).GetComponent<TilemapCollider2D>();
-        //monster = GameObject.FindGameObjectWithTag("Monster").transform;
         states.Add(PlayerState.IDLE, GetComponent<PlayerIDLE>());
         states.Add(PlayerState.WALK, GetComponent<PlayerWALK>());
         states.Add(PlayerState.JUMP, GetComponent<PlayerJUMP>());

@@ -29,21 +29,32 @@ public class GameManager : MonoBehaviour
             DestroyObject(gameObject);
         }
 
-        stage = 0;
+        stage = 1;
         asyncOper = null;
     }
 
-    private void Update()
+    private void Start()
     {
+        StartCoroutine(this.LoadScene());
+    }
+
+    public void PlayerHPGauge()
+    {
+        if (ui.playerHP.fillAmount <= 0)
+        {
+            ui.playerHP.fillAmount -= 6 / 100;
+        }
+        else
+        {
+            GameManager.instance.isPlayerDead = true;       //플레이어 사망
+        }
+
     }
 
     IEnumerator LoadScene()
     {
-        switch (stage)
+        switch (stage)      //다음 씬 지정
         {
-            case 0:
-                asyncOper = SceneManager.LoadSceneAsync("Play_Tutorial");
-                break;
             case 1:
                 asyncOper = SceneManager.LoadSceneAsync("Play_Stage2");
                 break;
@@ -58,20 +69,16 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        ui.loadingSprite = GameObject.FindGameObjectWithTag("Loading");
+        stage++;                //스테이지 증가
 
         if (asyncOper != null)
         {
-            //asyncOper.allowSceneActivation = false;
+            asyncOper.allowSceneActivation = false;         
             while (!asyncOper.isDone)
             {
-                ui.loadingSprite.SetActive(true);
                 yield return null;
                 Debug.Log(asyncOper.progress);
             }
-
-            ui.loadingSprite.SetActive(false);
-
         }
         else
         {

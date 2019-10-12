@@ -1,18 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject loadingSprite;
+    public Image playerHP;
 
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-    }
-
-    public void StartBtn()
-    {
-        GameManager.Instance.StartCoroutine("LoadScene");
     }
 }

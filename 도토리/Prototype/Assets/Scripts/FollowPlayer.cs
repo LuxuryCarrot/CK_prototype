@@ -44,6 +44,7 @@ public class FollowPlayer : MonoBehaviour
 
         //transform.position = new Vector3(posX, posY, transform.position.z);
 
+
         if (target.gameObject != null)
         {
             targetPosition.Set(target.transform.position.x, target.transform.transform.position.y, this.transform.position.z);
