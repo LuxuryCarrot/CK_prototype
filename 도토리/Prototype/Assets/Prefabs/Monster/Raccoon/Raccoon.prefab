@@ -161,9 +161,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePower: 1
   Hp: 30
+  currentHp: 0
   movementFlag: 0
   AttackRange: 1
   SwordPoint: {fileID: 4321728579290098602}
+  CoreItemPrefab: {fileID: 7589299749149762895, guid: 65e378e56d1f9b84eb980fcc37ae15bc,
+    type: 3}
   SwordPrefab: {fileID: 5114835494467660605, guid: cee5355cb65d3a64498916a739562a43,
     type: 3}
 --- !u!95 &2540891123378290435
