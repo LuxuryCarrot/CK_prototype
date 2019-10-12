@@ -58,11 +58,11 @@ public class Monster_Fox : MonoBehaviour
 
         if (movementFlag == 0)
         {
-            animator.SetBool("isMoving", false);
+            animator.SetInteger("CurrentState", 0);
         }
         else
         {
-            animator.SetBool("isMoving", true);
+            animator.SetInteger("CurrentState", 1);
         }
         yield return new WaitForSeconds(3.0f);
 
@@ -78,7 +78,7 @@ public class Monster_Fox : MonoBehaviour
         {
             isChasing = true;
             StopCoroutine("Shoot");
-            animator.SetBool("isMoving", true);
+            animator.SetInteger("CurrentState", 1);
             AttackRange = true;
         }
         if ((transform.position.x + 2.0f >= Player.transform.position.x && transform.position.x - 2.0f <= Player.transform.position.x) 
@@ -174,6 +174,7 @@ public class Monster_Fox : MonoBehaviour
     IEnumerator Shoot()
     {
         Debug.Log("Flame");
+        animator.SetInteger("CurrentState", 2);
         Instantiate(FireBallPrefab, firepoint.position, firepoint.rotation);
         yield return new WaitForSeconds(4.0f);
         StartCoroutine("Shoot");
@@ -220,6 +221,7 @@ public class Monster_Fox : MonoBehaviour
     }
     void ApplyDamage(float damage)
     {
+        animator.SetInteger("CurrentState", 3);
         currentHp -= damage;
         if (currentHp <= 0)
         {
