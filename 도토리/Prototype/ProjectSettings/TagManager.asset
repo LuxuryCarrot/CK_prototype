@@ -18,6 +18,7 @@ TagManager:
   - GroundBounds
   - Canvas
   - PausePanel
+  - Loading
   layers:
   - Default
   - TransparentFX

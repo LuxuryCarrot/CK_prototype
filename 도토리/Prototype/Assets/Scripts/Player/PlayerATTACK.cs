@@ -17,8 +17,6 @@ public class PlayerATTACK : PlayerFSMController
     public override void BeginState()
     {
         base.BeginState();
-
-        controller.curAttackAnimSpeed = 0;
     }
 
     // Update is called once per frame
@@ -45,6 +43,11 @@ public class PlayerATTACK : PlayerFSMController
 
         if (controller.curAttackAnimSpeed >= PlayerController.MAX_ATTACK_ANIM_TIME)
         {
+            if (controller.attackDir == 1)                                                                     //attack up
+                EffectManager.Instance.SetStateEffect(transform.position.x, controller.mousePos.x, (int)PlayerState.ATTACK - 1);
+            else if (controller.attackDir == -1)                                                                                    //attack down
+                EffectManager.Instance.SetStateEffect(transform.position.x, controller.mousePos.x, (int)PlayerState.ATTACK);
+
             controller.curAttackAnimSpeed = 0;
             controller.AttackDirCheck(0);
             controller.states[PlayerState.ATTACK].enabled = false;
