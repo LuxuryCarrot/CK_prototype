@@ -84,10 +84,12 @@ MonoBehaviour:
   movePower: 0.85
   Hp: 50
   movementFlag: 0
-  AttackRange: 1
   FrogShieldCount: 1
+  AttackRange: 1
   firepoint: {fileID: 6148838535624479190}
   SpearPrefab: {fileID: 7289021374371827779, guid: 4e406c118a28af2498a045bfa1bfeeb7,
+    type: 3}
+  CoreItemPrefab: {fileID: 29475218430809918, guid: 3e047f4c3c5c27f419d77c3538edd13c,
     type: 3}
 --- !u!95 &5981310461043575927
 Animator:
@@ -102,7 +104,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 489bf92f44553234499f15aaee3c8549, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
