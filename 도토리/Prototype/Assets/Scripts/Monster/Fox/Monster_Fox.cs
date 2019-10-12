@@ -6,23 +6,29 @@ public class Monster_Fox : MonoBehaviour
 {
     public float movePower;
     public float Hp;
+
     private float currentHp = 0;
 
     public int movementFlag = 0;
-    private bool isChasing;
+
+    private int RandNum;
+
     public bool isDead;
     public bool AttackRange = true;
 
+    private bool isChasing;
+
     public Transform firepoint;
     public GameObject FireBallPrefab;
-
-    Animator animator;
-    Vector3 movement;
-
-    GameObject ChaseTarget;
-    GameObject Player;
+    public GameObject CoreItemPrefab;
 
     private GameObject FoxStartSprite;
+    private GameObject ChaseTarget;
+    private GameObject Player;
+
+    Animator animator;
+
+    Vector3 movement;
 
     CircleCollider2D CircleCollider2;
 
@@ -177,8 +183,28 @@ public class Monster_Fox : MonoBehaviour
     {
         animator.SetInteger("CurrentState", 4);
         yield return new WaitForSeconds(1.3f);
+        CoreItemDrop();
         Destroy(gameObject);
         StopCoroutine("DestroyMonster");
+    }
+
+    
+    private void CoreItemDrop()
+    {
+        RandNum = Random.Range(0, 9);
+        Debug.Log("RandomNum : " + RandNum);
+        if (RandNum == 0 || RandNum == 1 || RandNum == 2)
+        {
+            Instantiate(CoreItemPrefab, transform.position, transform.rotation);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Player.SendMessage("ApplyDamage", 0.5f);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
