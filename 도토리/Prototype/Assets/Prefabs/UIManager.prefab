@@ -575,8 +575,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ef1af951a108f1840b8013af67148692, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 7001e8b74e288bd44851486e2666b16c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -596,6 +596,7 @@ GameObject:
   - component: {fileID: 5962310431364034734}
   - component: {fileID: 6678141067610749002}
   - component: {fileID: 1112626259158178992}
+  - component: {fileID: 8845272993346239506}
   - component: {fileID: 4949184213200347677}
   m_Layer: 5
   m_Name: Shot_Line
@@ -684,6 +685,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!95 &8845272993346239506
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2879576298847800840}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e83213ca4072bce4ab6be75a00cf013d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!111 &4949184213200347677
 Animation:
   m_ObjectHideFlags: 0
@@ -695,6 +715,8 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 9792683bfea7b0241862799d50bed167, type: 2}
   m_Animations:
+  - {fileID: 7400000, guid: 9792683bfea7b0241862799d50bed167, type: 2}
+  - {fileID: 0}
   - {fileID: 7400000, guid: 9792683bfea7b0241862799d50bed167, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1

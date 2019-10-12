@@ -7,24 +7,30 @@ public class Monster_Frog : MonoBehaviour
     public float movePower;
     public float Hp;
 
+    private float currentHp = 0;
+
     public int movementFlag = 0;
-    public bool AttackRange = true;
     public int FrogShieldCount;
 
-    private bool isDead;
+    private int RandNum;
+
+    public bool AttackRange = true;
+    public bool isDead;
+
     private bool isChasing;
-    private float currentHp = 0;
 
     public Transform firepoint;
 
-    private GameObject FrogStartSprite;
+    public GameObject SpearPrefab;
+    public GameObject CoreItemPrefab;
+
     private GameObject FrogShield;
+    private GameObject FrogStartSprite;
 
     Animator animator;
 
     Vector3 movement;
 
-    public GameObject SpearPrefab;
     GameObject ChaseTarget;
     GameObject Player;
 
@@ -108,6 +114,9 @@ public class Monster_Frog : MonoBehaviour
         if (isDead == true)
         {
             StartCoroutine("DestroyMonster");
+            StopCoroutine("ChangeMovement");
+            isChasing = false;
+            movementFlag = 0;
         }
 
 
@@ -175,6 +184,16 @@ public class Monster_Frog : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void CoreItemDrop()
+    {
+        RandNum = Random.Range(0, 9);
+        if (RandNum == 0 || RandNum == 1 || RandNum == 2)
+        {
+            Instantiate(CoreItemPrefab, transform.position, transform.rotation);
+        }
+    }
+
     IEnumerator FirstAttack()
     {
         Debug.Log("FirstAttackStart");
@@ -189,12 +208,16 @@ public class Monster_Frog : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         StartCoroutine("Attack");
     }
+
     IEnumerator DestroyMonster()
     {
-        yield return new WaitForSeconds(0.5f);
+        animator.SetInteger("moveMentFlag", 4);
+        yield return new WaitForSeconds(1.3f);
+        CoreItemDrop();
         Destroy(gameObject);
         StopCoroutine("DestroyMonster");
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -233,7 +256,6 @@ public class Monster_Frog : MonoBehaviour
 
         if (currentHp <= 0)
         {
-            animator.SetInteger("moveMentFlag", 4);
             isDead = true;
         }
     }

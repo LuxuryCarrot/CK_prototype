@@ -6,22 +6,26 @@ public class Monster_Raccoon : MonoBehaviour
 {
     public float movePower;
     public float Hp;
-
-    public int movementFlag = 0;
-    public bool AttackRange = true;
-
-    private bool isDead;
-    private bool isChasing;
     public float currentHp = 0;
 
+    public int movementFlag = 0;
+    private int RandNum;
+
+    public bool AttackRange = true;
+    public bool isDead;
+
+    private bool isChasing;
+
     public Transform SwordPoint;
+
+    public GameObject CoreItemPrefab;
+    public GameObject SwordPrefab;
 
     private GameObject FrogStartSprite;
 
     Animator animator;
     Vector3 movement;
 
-    public GameObject SwordPrefab;
     GameObject ChaseTarget;
     GameObject Player;
 
@@ -90,6 +94,9 @@ public class Monster_Raccoon : MonoBehaviour
         if (isDead == true)
         {
             StartCoroutine("DestroyMonster");
+            StopCoroutine("ChangeMovement");
+            isChasing = false;
+            movementFlag = 0;
         }
 
 
@@ -144,6 +151,15 @@ public class Monster_Raccoon : MonoBehaviour
         transform.position += moveVelocity * movePower * Time.deltaTime;
     }
 
+    private void CoreItemDrop()
+    {
+        RandNum = Random.Range(0, 9);
+        if (RandNum == 0 || RandNum == 1 || RandNum == 2)
+        {
+            Instantiate(CoreItemPrefab, transform.position, transform.rotation);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
@@ -174,8 +190,11 @@ public class Monster_Raccoon : MonoBehaviour
     }
     IEnumerator DestroyMonster()
     {
-        yield return new WaitForSeconds(0.5f);
+        animator.SetInteger("moveMentFlag", 4);
+        yield return new WaitForSeconds(1.3f);
+        CoreItemDrop();
         Destroy(gameObject);
+        StopCoroutine("DestroyMonster");
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -203,7 +222,6 @@ public class Monster_Raccoon : MonoBehaviour
 
         if (currentHp <= 0)
         {
-            animator.SetInteger("moveMentFlag", 4);
             isDead = true;
         }
     }
