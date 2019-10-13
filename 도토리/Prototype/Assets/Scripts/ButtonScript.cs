@@ -11,18 +11,18 @@ public class ButtonScript : MonoBehaviour
         PausePanel = GameObject.FindGameObjectWithTag("PausePanel");
     }
 
-    private void Start()
-    {
-        PausePanel.SetActive(false);
-    }
-    public void OnClickPause()
-    {
-        PausePanel.SetActive(true);
-    }
-    public void OnClickContinue()
-    {
-        PausePanel.SetActive(false);
-    }
+    //private void Start()
+    //{
+    //    PausePanel.SetActive(false);
+    //}
+    //public void OnClickPause()
+    //{
+    //    PausePanel.SetActive(true);
+    //}
+    //public void OnClickContinue()
+    //{
+    //    PausePanel.SetActive(false);
+    //}
     public void OnClickExit()
     {
 #if UNITY_EDITOR

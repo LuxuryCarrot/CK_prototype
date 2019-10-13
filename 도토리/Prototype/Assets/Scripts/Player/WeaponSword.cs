@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class WeaponSword : MonoBehaviour
 {
@@ -25,12 +26,19 @@ public class WeaponSword : MonoBehaviour
 
     private void Update()
     {
-        if(isMonsterCheck)
+        if (isMonsterCheck)
         {
             if (monster != null)
             {
                 if (player.curAttackAnimSpeed >= PlayerController.MAX_ATTACK_ANIM_TIME)
                 {
+                    //대미지 텍스트를 몬스터 위치에 생성
+                    var cloneText = Instantiate(GameManager.Instance.ui.prefab_floating_text, 
+                        Camera.main.WorldToScreenPoint(new Vector3(monster.position.x, monster.position.y + 1f, monster.position.z)), Quaternion.identity);
+
+                    cloneText.GetComponent<FloatingDamageText>().text.text = Convert.ToString(stat.finalDamage);
+                    cloneText.transform.SetParent(GameManager.Instance.ui.canvas.transform); 
+
                     Debug.Log("Player Damage : " + stat.finalDamage);
                     monster.SendMessage("ApplyDamage", stat.finalDamage);
                     isMonsterCheck = false;

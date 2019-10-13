@@ -30,9 +30,6 @@ public class PlayerStats : MonoBehaviour
     public float dashSpeed;
     public float dashForce;
 
-    public float hp;
-    public float currentHP;
-
     public float weaponDamage;
     public float finalDamage;
 
@@ -55,13 +52,6 @@ public class PlayerStats : MonoBehaviour
         dashSpeed = 4f;
         dashForce = 1.2f;
         fallSpeed = 3.5f;
-        hp = 1000;
         weaponDamage = 10f;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        currentHP = hp;
     }
 }

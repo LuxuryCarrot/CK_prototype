@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
         layerMask = 1 << 10 | 1 << 11;
 
-        tileMaplCollider = GameObject.FindGameObjectWithTag("Stage").transform.GetChild(1).GetComponent<TilemapCollider2D>();
+        tileMaplCollider = GameObject.FindGameObjectWithTag("Air").transform.GetComponent<TilemapCollider2D>();
         states.Add(PlayerState.IDLE, GetComponent<PlayerIDLE>());
         states.Add(PlayerState.WALK, GetComponent<PlayerWALK>());
         states.Add(PlayerState.JUMP, GetComponent<PlayerJUMP>());
@@ -250,53 +250,64 @@ public class PlayerController : MonoBehaviour
 
     public void SetAnimation()
     {
-        if (!isGrounded)                                            //공중에 떠있을때는 점프 애니메이션 실행
+        //피격중일땐 그 상태 끝날때 까지 애니메이션 저장
+
+        if (!GameManager.Instance.isPlayerDead)
         {
-            if (states[PlayerState.ATTACK].enabled)
+            if (!isGrounded)                                            //공중에 떠있을때
             {
-                anim.SetInteger("curState", (int)PlayerState.ATTACK);
-
-                attackDir = prevAttackDir;                          //전 공격의 행동 저장
-
-                if (attackDir < 1)                               //Prev Anim down attack
+                if (states[PlayerState.ATTACK].enabled)
                 {
-                    AttackDirCheck(1);
+                    anim.SetInteger("curState", (int)PlayerState.ATTACK);
+
+                    attackDir = prevAttackDir;                          //전 공격의 행동 저장
+
+                    if (attackDir < 1)                               //Prev Anim down attack
+                    {
+                        AttackDirCheck(1);
+                    }
+                    else                                            // Prev Anim up attack 
+                    {
+                        AttackDirCheck(-1);
+                    }
                 }
-                else                                            // Prev Anim up attack 
+                else
                 {
-                    AttackDirCheck(-1);
+                    if (states[PlayerState.SHOT].enabled)                           //맞았다면 shot실행
+                    {
+                        anim.SetInteger("curState", (int)PlayerState.SHOT);
+                    }
+                    else
+                        anim.SetInteger("curState", (int)PlayerState.JUMP);         //아니라면 점프
                 }
+
             }
             else
             {
-                anim.SetInteger("curState", (int)PlayerState.JUMP);
-            }
+                //anim.SetInteger("curState", (int)stat.curState);
+                if (states[PlayerState.ATTACK].enabled)
+                {
+                    anim.SetInteger("curState", (int)PlayerState.ATTACK);
 
+                    attackDir = prevAttackDir;
+
+                    if (attackDir < 1)                               //Prev Anim down attack
+                    {
+                        AttackDirCheck(1);
+                    }
+                    else                                            // Prev Anim up attack 
+                    {
+                        AttackDirCheck(-1);
+                    }
+                }
+                else
+                {
+                    anim.SetInteger("curState", (int)stat.curState);
+                }
+            }
         }
         else
-        {
-            //anim.SetInteger("curState", (int)stat.curState);
-
-            if (states[PlayerState.ATTACK].enabled)
-            {
-                anim.SetInteger("curState", (int)PlayerState.ATTACK);
-
-                attackDir = prevAttackDir;
-
-                if (attackDir < 1)                               //Prev Anim down attack
-                {
-                    AttackDirCheck(1);
-                }
-                else                                            // Prev Anim up attack 
-                {
-                    AttackDirCheck(-1);
-                }
-            }
-            else
-            {
-                anim.SetInteger("curState", (int)stat.curState);
-            }
-        }
+            anim.SetInteger("curState", (int)PlayerState.DEAD);             //플레이어 사망시 dead 애니메이션 실행
     }
 
     public void Gravity()
@@ -357,15 +368,20 @@ public class PlayerController : MonoBehaviour
         {
             if (!gracePeriodEnable)
             {
-                stat.currentHP -= damage;
+                GameManager.Instance.ui.playerShotAnimUI.SetActive(true);           //히트했을때 ui실행
+
                 EffectManager.Instance.SetPlayerShotEffect();
-                SetState(PlayerState.SHOT);
-                StartCoroutine("GracePeriod");
-                if (stat.currentHP <= 0)
+                if (GameManager.Instance.ui.playerHP.fillAmount > 0.17)         //마지막 공격을 맞을때는 실행x
                 {
-                    Debug.Log("PlayerDead");
-                    GameManager.Instance.isPlayerDead = true;
+                    SetState(PlayerState.SHOT);
+                    StartCoroutine("GracePeriod");
                 }
+                    GameManager.Instance.PlayerHPGauge();
+                //if (stat.currentHP <= 0)
+                //{
+                //    Debug.Log("PlayerDead");
+                //    GameManager.Instance.isPlayerDead = true;
+                //}
             }
         }
     }
@@ -375,7 +391,7 @@ public class PlayerController : MonoBehaviour
         gracePeriodEnable = true;
 
         int countTime = 0; //깜빡이는 횟수
-        while (countTime < 5)
+        while (countTime < 10)
         {
             if (countTime % 2 == 0)
             {
