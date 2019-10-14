@@ -22,6 +22,9 @@ public class WaterItem : MonoBehaviour
                     GameManager.Instance.isItemEatting = true;
                 player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Water;
 
+                    player.GetComponent<PlayerColliderController>().ChangeWeaponCol();
+
+
                     EffectManager.Instance.AttackEffectChange(player.GetComponent<PlayerController>().stat.curWeaponProperty);
 
                     player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Water);

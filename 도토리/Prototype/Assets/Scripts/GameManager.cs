@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
         if (ui.playerHP.fillAmount == 0)        //도토리가 없으면 플레이어 사망
         {
             isPlayerDead = true;
+            player.playerCol_Control.ChangeDieCol();    //컬라이더 변환
         }
 
         //if (ui.bossHP.fillAmount == 0)             //보스의 Hp가 0가 되면 게임 클리어
@@ -124,6 +125,7 @@ public class GameManager : MonoBehaviour
     public void SetPlayer()
     {
         player.states[PlayerState.DEAD].enabled = false;
+        player.playerCol_Control.ChangeDieCol();                    //컬라이더 변환
         player.SetState(PlayerState.IDLE);
         player.stat.finalDamage = player.stat.weaponDamage;
         player.stat.curWeaponProperty = ElementalProperty.None;

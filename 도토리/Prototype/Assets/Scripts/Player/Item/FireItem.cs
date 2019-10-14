@@ -23,6 +23,8 @@ public class FireItem : MonoBehaviour
                     GameManager.Instance.isItemEatting = true;              //처음 먹었을 때만 
                 player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Fire;
 
+                    player.GetComponent<PlayerColliderController>().ChangeWeaponCol();
+
                     EffectManager.Instance.AttackEffectChange(player.GetComponent<PlayerController>().stat.curWeaponProperty);
 
                     player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Fire);

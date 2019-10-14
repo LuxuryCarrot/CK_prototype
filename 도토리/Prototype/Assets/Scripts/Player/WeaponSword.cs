@@ -8,7 +8,7 @@ public class WeaponSword : MonoBehaviour
     public PlayerStats stat;
 
     private PlayerController player;
-    private CapsuleCollider2D weaponCol;
+    public CapsuleCollider2D weaponCol;
     private BoxCollider2D monsterCol;
 
     [HideInInspector]
