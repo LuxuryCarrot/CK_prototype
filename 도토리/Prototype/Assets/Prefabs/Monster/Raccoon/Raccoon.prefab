@@ -168,6 +168,7 @@ MonoBehaviour:
   movementFlag: 0
   AttackRange: 1
   isDead: 0
+  HpBar: {fileID: 4510977412121048131}
   SwordPoint: {fileID: 4321728579290098602}
   CoreItemPrefab: {fileID: 7589299749149762895, guid: 65e378e56d1f9b84eb980fcc37ae15bc,
     type: 3}
@@ -441,3 +442,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1392141687691417994}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4510977412121048131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3299968042721947081, guid: 563560cedae916642b50f3ac4d4f05a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1392141687691417994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

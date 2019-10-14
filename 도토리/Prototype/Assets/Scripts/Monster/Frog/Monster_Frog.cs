@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 
@@ -20,6 +21,8 @@ public class Monster_Frog : Monster
     public bool isDead;
 
     private bool isChasing;
+
+    public Image HpBar;
 
     public Transform firepoint;
 
@@ -265,8 +268,13 @@ public class Monster_Frog : Monster
         else if (FrogShieldCount >= 0)
         {
             AnimState = 3;
+
             Debug.Log("Damage =" + damage);
+
             currentHp -= damage;
+
+            HpBar.fillAmount -= damage / Hp;
+
             Debug.Log("Left Frog HP = " + currentHp);
         }
 

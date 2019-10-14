@@ -168,6 +168,7 @@ MonoBehaviour:
   isDead: 0
   AttackRange: 1
   isTutorial: 0
+  HpBar: {fileID: 758802199006487509}
   firepoint: {fileID: 5795625553705059585}
   FireBallPrefab: {fileID: 624037207638910439, guid: 9b356e0068d7f4e42a72aa1e34ea9f4d,
     type: 3}
@@ -441,3 +442,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2831666745805377052}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &758802199006487509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3299968042721947081, guid: 563560cedae916642b50f3ac4d4f05a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2831666745805377052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

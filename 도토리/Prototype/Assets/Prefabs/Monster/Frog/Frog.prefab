@@ -90,6 +90,7 @@ MonoBehaviour:
   FrogShieldCount: 1
   AttackRange: 1
   isDead: 0
+  HpBar: {fileID: 3164022061272100819}
   firepoint: {fileID: 6148838535624479190}
   SpearPrefab: {fileID: 7289021374371827779, guid: 4e406c118a28af2498a045bfa1bfeeb7,
     type: 3}
@@ -442,6 +443,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 442208451478307354}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3164022061272100819 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3299968042721947081, guid: 563560cedae916642b50f3ac4d4f05a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 442208451478307354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3522059580532626820
 PrefabInstance:
   m_ObjectHideFlags: 0

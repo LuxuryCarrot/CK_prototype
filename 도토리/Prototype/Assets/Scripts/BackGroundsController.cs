@@ -24,6 +24,11 @@ public class BackGroundsController : MonoBehaviour
     public float stHalfHeight;
     public bool isPrevPosSaved;
 
+    private void Awake()
+    {
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
+    }
+
     private void Start()
     {
         minColBound = bgBoundsCol.bounds.min;

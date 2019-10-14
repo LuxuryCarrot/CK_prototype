@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 
@@ -18,6 +19,8 @@ public class Monster_Raccoon : Monster
     public bool isDead;
 
     private bool isChasing;
+
+    public Image HpBar;
 
     public Transform SwordPoint;
 
@@ -236,6 +239,8 @@ public class Monster_Raccoon : Monster
         AnimState = 3;
 
         currentHp -= damage;
+
+        HpBar.fillAmount -= damage / Hp;
 
         if (currentHp <= 0)
         {
