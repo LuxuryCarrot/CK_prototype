@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     public Material whiteMat;
     public Material originalMat;
 
+    public BoxCollider2D bounds;
 
 
     public TilemapCollider2D tileMaplCollider;
@@ -86,7 +87,7 @@ public class PlayerController : MonoBehaviour
         spriteTrans = transform.GetChild(0);
         flipScale = spriteTrans.localScale;
 
-        layerMask = 1 << 10 | 1 << 11;
+        layerMask = 1 << 10 | 1 << 11 | 1 << 15;
 
         tileMaplCollider = GameObject.FindGameObjectWithTag("Air").transform.GetComponent<TilemapCollider2D>();
         states.Add(PlayerState.IDLE, GetComponent<PlayerIDLE>());
@@ -362,8 +363,8 @@ public class PlayerController : MonoBehaviour
         {
             if (tileMaplCollider.enabled)
             {
-                var size = new Vector2(playerCollider.size.x, playerCollider.size.y * 0.1f / 2);
-                var rayLength = (playerCollider.size.y / 2 - playerCollider.size.y * 0.1f / 2)+0.125f;
+                var size = new Vector2(playerCollider.size.x/2, playerCollider.size.y * 0.1f / 2);
+                var rayLength = (playerCollider.size.y / 2 - playerCollider.size.y * 0.1f / 2)+0.153f;
 
                 RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, size,
                 0, Vector2.down, rayLength, layerMask);

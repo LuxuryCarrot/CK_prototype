@@ -13,29 +13,34 @@ public class PlayerWALK : PlayerFSMController
     {
         if (!GameManager.Instance.isGamePause)
         {
-            if (Input.GetKey(KeyCode.A))
+            if (!GameManager.Instance.isItemEatting)
             {
-                controller.lastMoveDir = Vector3.left;
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                controller.lastMoveDir = Vector3.right;
-            }
-            else
-            {
-                controller.states[PlayerState.WALK].enabled = false;
-            }
-
-            RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, transform.lossyScale / 2, 0, controller.lastMoveDir, PlayerController.BOXCAST_DISTANCE, controller.layerMask);
-
-            if (hit2D)
-            {
-                if (hit2D.transform.gameObject.layer == 10)
+                if (Input.GetKey(KeyCode.A))
+                {
+                    controller.lastMoveDir = Vector3.left;
+                }
+                else if (Input.GetKey(KeyCode.D))
+                {
+                    controller.lastMoveDir = Vector3.right;
+                }
+                else
+                {
                     controller.states[PlayerState.WALK].enabled = false;
-            }
-            else
-            {
-                transform.Translate(controller.lastMoveDir * controller.stat.walkSpeed * Time.deltaTime);
+                }
+
+                var size = new Vector2(controller.playerCollider.size.x / 2, controller.playerCollider.size.y * 0.1f / 2);
+
+                RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, size, 0, controller.lastMoveDir, PlayerController.BOXCAST_DISTANCE, controller.layerMask);
+
+                if (hit2D)
+                {
+                    if (hit2D.transform.gameObject.layer == 10)
+                        controller.states[PlayerState.WALK].enabled = false;
+                }
+                else
+                {
+                    transform.Translate(controller.lastMoveDir * controller.stat.walkSpeed * Time.deltaTime);
+                }
             }
         }
     }
