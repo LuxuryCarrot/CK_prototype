@@ -352,7 +352,7 @@ public class PlayerController : MonoBehaviour
             if (tileMaplCollider.enabled)
             {
                 //RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, new Vector2(0.4f, transform.lossyScale.y / HEIGHT_LENGTH), 0, -transform.up, BOXCAST_DISTANCE, layerMask);
-                RaycastHit2D hit2D = Physics2D.Raycast(transform.position, Vector2.down, playerCollider.bounds.extents.y+0.05f,layerMask);
+                RaycastHit2D hit2D = Physics2D.Raycast(transform.position, Vector2.down, playerCollider.bounds.extents.y+0.1f,layerMask);
 
                 if (hit2D)
                 {

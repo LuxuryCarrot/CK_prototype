@@ -177,7 +177,7 @@ public class Monster_Raccoon : MonoBehaviour
 
         if (other.gameObject.tag == "GodHand")
         {
-            Destroy(gameObject);
+            isDead = true;
         }
     }
     IEnumerator FirstAttack()

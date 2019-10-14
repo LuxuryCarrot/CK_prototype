@@ -44,7 +44,7 @@ public class PlayerJUMP : PlayerFSMController
             if (!controller.isAirColliderPassingEnd)
             {
                 //if (Physics2D.BoxCast(transform.position, new Vector2(0.4f, transform.lossyScale.y/PlayerController.HEIGHT_LENGTH), 0, -transform.up, PlayerController.BOXCAST_DISTANCE, controller.layerMask))
-                if (Physics2D.Raycast(transform.position, Vector2.down, controller.playerCollider.bounds.extents.y+0.05f, controller.layerMask)) 
+                if (Physics2D.Raycast(transform.position, Vector2.down, controller.playerCollider.bounds.extents.y+0.1f, controller.layerMask)) 
                 {
                     if (controller.states[PlayerState.JUMP].enabled)
                         EffectManager.Instance.SetStateEffect(transform.position.x, controller.mousePos.x, (int)PlayerState.JUMP - 1);

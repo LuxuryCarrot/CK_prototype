@@ -9,6 +9,7 @@ public class BossMonster : MonoBehaviour
 
     private int PatternCount;
     private int PatternFlag;
+    private int AnimState;
 
     private bool isPatternA;
     private bool isPatternB;
@@ -18,19 +19,28 @@ public class BossMonster : MonoBehaviour
     private bool Phase1;
     private bool Phase2;
     private bool Phase3;
+    private bool isDead;
 
     public GameObject FoxPreFab;
     public GameObject FrogPreFab;
     public GameObject RaccoonPreFab;
+
+    private GameObject BossStartSprite;
 
     public Transform summonPos;
 
     public GameObject Arm;
     public Transform ArmPos;
 
+    private Animator animator;
+
+
     // Start is called before the first frame update
     void Awake()
     {
+        BossStartSprite = transform.GetChild(0).gameObject;
+        Destroy(BossStartSprite);
+
         currentHP = HP;
         PatternFlag = 0;
 
@@ -50,36 +60,42 @@ public class BossMonster : MonoBehaviour
     void Update()
     {
         Pattern();
+        if (!isDead)
+        {
+            if (currentHP < 600.0f && currentHP > 399.0f)
+            {
+                Phase1 = true;
+            }
+            else if (currentHP < 400.0f && currentHP > 199.0f)
+            {
+                Phase1 = false;
+                Phase2 = true;
+            }
+            else if (currentHP < 200.0f && currentHP > 0.0f)
+            {
+                Phase2 = false;
+                Phase3 = true;
+            }
 
-        if (currentHP < 600.0f && currentHP > 399.0f)
-        {
-            Phase1 = true;
+            if (PatternFlag > -1 && PatternFlag < 6)
+            {
+                PatternCount += 1;
+                isPatternA = true;
+            }
+            else if (PatternFlag > 5 && PatternFlag  < 8)
+            {
+                PatternCount += 1;
+                isPatternB = true;
+            }
+            else if (PatternFlag > 7 && PatternFlag < 10)
+            {
+                PatternCount += 1;
+                isPatternC = true;
+            }
         }
-        else if (currentHP < 400.0f && currentHP > 199.0f)
+        else if(isDead)
         {
-            Phase1 = false;
-            Phase2 = true;
-        }
-        else if (currentHP < 200.0f && currentHP > 0.0f)
-        {
-            Phase2 = false;
-            Phase3 = true;
-        }
 
-        if (PatternFlag > -1 && PatternFlag < 6)
-        {
-            PatternCount += 1;
-            isPatternA = true;
-        }
-        else if (PatternFlag > 5 && PatternFlag  < 8)
-        {
-            PatternCount += 1;
-            isPatternB = true;
-        }
-        else if (PatternFlag > 7 && PatternFlag < 10)
-        {
-            PatternCount += 1;
-            isPatternC = true;
         }
     }
 
@@ -89,6 +105,12 @@ public class BossMonster : MonoBehaviour
         PatternFlag = Random.Range(0, 10);
         PatternCount = 0;
         StartCoroutine("ChangePattern");
+    }
+
+    IEnumerator DestroyMonster()
+    {
+
+        yield return new WaitForSeconds(1.0f);
     }
 
     void Pattern()
@@ -202,5 +224,14 @@ public class BossMonster : MonoBehaviour
             isPatternC = false;
         }
 
+    }
+    void ApplyDamage(float damage)
+    {
+        currentHP -= damage;
+
+        if (currentHP <= 0)
+        {
+            isDead = true;
+        }
     }
 }

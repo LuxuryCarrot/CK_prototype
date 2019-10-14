@@ -174,7 +174,7 @@ public class Monster_Fox : MonoBehaviour
 
         if (other.gameObject.tag == "GodHand")
         {
-            Destroy(gameObject);
+            isDead = true;
         }
     }
 
