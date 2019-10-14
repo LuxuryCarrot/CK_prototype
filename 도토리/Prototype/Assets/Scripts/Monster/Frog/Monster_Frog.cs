@@ -13,6 +13,7 @@ public class Monster_Frog : MonoBehaviour
     public int FrogShieldCount;
 
     private int RandNum;
+    private int AnimState;
 
     public bool AttackRange = true;
     public bool isDead;
@@ -43,6 +44,8 @@ public class Monster_Frog : MonoBehaviour
         isDead = false;
 
         currentHp = Hp;
+        AnimState = 0;
+
         cc = GetComponent<CharacterController>();
 
         animator = GetComponent<Animator>();
@@ -60,11 +63,11 @@ public class Monster_Frog : MonoBehaviour
 
         if (movementFlag == 0)
         {
-            animator.SetInteger("moveMentFlag", 0);
+            AnimState = 0;
         }
         else
         {
-            animator.SetInteger("moveMentFlag", 1);
+            AnimState = 1;
         }
         yield return new WaitForSeconds(3.0f);
 
@@ -74,9 +77,11 @@ public class Monster_Frog : MonoBehaviour
 
     void FixedUpdate()
     {
+        animator.SetInteger("moveMentFlag", AnimState);
+
         if (movementFlag == 0)
         {
-            animator.SetInteger("moveMentFlag", 0);
+            AnimState = 0;
         }
 
         if (FrogShieldCount == 0)
@@ -91,7 +96,7 @@ public class Monster_Frog : MonoBehaviour
         {
             isChasing = true;
             StopCoroutine("Attack");
-            animator.SetInteger("moveMentFlag", 1);
+            AnimState = 1;
             AttackRange = true;
         }
 
@@ -101,13 +106,12 @@ public class Monster_Frog : MonoBehaviour
             if (AttackRange == true)
             {
                 StartCoroutine("FirstAttack");
-                animator.SetInteger("moveMentFlag", 2);
                 AttackRange = false;
             }
         }
         else
         {
-            animator.SetInteger("moveMentFlag", 1);
+            AnimState = 1;
             Move();
         }
 
@@ -197,21 +201,27 @@ public class Monster_Frog : MonoBehaviour
     IEnumerator FirstAttack()
     {
         Debug.Log("FirstAttackStart");
-        yield return new WaitForSeconds(0.5f);
+        AnimState = 2;
+        yield return new WaitForSeconds(0.25f);
+        AnimState = 0;
+        yield return new WaitForSeconds(0.25f);
         StartCoroutine("Attack");
         StopCoroutine("FirstAttack");
     }
 
     IEnumerator Attack()
     {
+        AnimState = 2;
         Instantiate(SpearPrefab, firepoint.position, firepoint.rotation);
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
+        AnimState = 0;
+        yield return new WaitForSeconds(1.0f);
         StartCoroutine("Attack");
     }
 
     IEnumerator DestroyMonster()
     {
-        animator.SetInteger("moveMentFlag", 4);
+        AnimState = 4;
         yield return new WaitForSeconds(1.3f);
         CoreItemDrop();
         Destroy(gameObject);
@@ -248,7 +258,7 @@ public class Monster_Frog : MonoBehaviour
         }
         else if (FrogShieldCount >= 0)
         {
-            animator.SetInteger("moveMentFlag", 3);
+            AnimState = 3;
             Debug.Log("Damage =" + damage);
             currentHp -= damage;
             Debug.Log("Left Frog HP = " + currentHp);

@@ -9,7 +9,9 @@ public class Monster_Raccoon : MonoBehaviour
     public float currentHp = 0;
 
     public int movementFlag = 0;
+
     private int RandNum;
+    private int AnimState;
 
     public bool AttackRange = true;
     public bool isDead;
@@ -34,10 +36,14 @@ public class Monster_Raccoon : MonoBehaviour
     void Awake()
     {
         FrogStartSprite = transform.GetChild(0).gameObject;
+
         Destroy(FrogStartSprite);
+
         isDead = false;
 
         currentHp = Hp;
+        AnimState = 0;
+
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
 
@@ -52,11 +58,11 @@ public class Monster_Raccoon : MonoBehaviour
 
         if (movementFlag == 0)
         {
-            animator.SetInteger("moveMentFlag", 0);
+            AnimState = 0;
         }
         else
         {
-            animator.SetInteger("moveMentFlag", 1);
+            AnimState = 1;
         }
         yield return new WaitForSeconds(3.0f);
 
@@ -66,6 +72,7 @@ public class Monster_Raccoon : MonoBehaviour
 
     void FixedUpdate()
     {
+        animator.SetInteger("moveMentFlag", AnimState);
 
         if ((transform.position.x + 5.0f >= Player.transform.position.x && transform.position.x - 5.0f <= Player.transform.position.x)
             && (transform.position.x + 2.0f <= Player.transform.position.x || transform.position.x - 2.0f >= Player.transform.position.x)
@@ -73,7 +80,7 @@ public class Monster_Raccoon : MonoBehaviour
         {
             isChasing = true;
             StopCoroutine("Attack");
-            animator.SetInteger("moveMentFlag", 1);
+            AnimState = 1;
             AttackRange = true;
         }
         if ((transform.position.x + 2.0f >= Player.transform.position.x && transform.position.x - 2.0f <= Player.transform.position.x)
@@ -87,7 +94,7 @@ public class Monster_Raccoon : MonoBehaviour
         }
         else
         {
-            animator.SetInteger("moveMentFlag", 1);
+            AnimState = 1;
             Move();
         }
 
@@ -175,22 +182,27 @@ public class Monster_Raccoon : MonoBehaviour
     }
     IEnumerator FirstAttack()
     {
+        AnimState = 2;
         Debug.Log("FirstAttackStart");
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
+        AnimState = 0;
+        yield return new WaitForSeconds(0.25f);
         StartCoroutine("Attack");
         StopCoroutine("FirstAttack");
     }
 
     IEnumerator Attack()
     {
-        animator.SetInteger("moveMentFlag", 2);
+        AnimState = 2;
         Instantiate(SwordPrefab, SwordPoint.position, SwordPoint.rotation);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.75f);
+        AnimState = 0;
+        yield return new WaitForSeconds(0.75f);
         StartCoroutine("Attack");
     }
     IEnumerator DestroyMonster()
     {
-        animator.SetInteger("moveMentFlag", 4);
+        AnimState = 4;
         yield return new WaitForSeconds(1.3f);
         CoreItemDrop();
         Destroy(gameObject);
@@ -218,6 +230,8 @@ public class Monster_Raccoon : MonoBehaviour
 
     void ApplyDamage(float damage)
     {
+        AnimState = 3;
+
         currentHp -= damage;
 
         if (currentHp <= 0)

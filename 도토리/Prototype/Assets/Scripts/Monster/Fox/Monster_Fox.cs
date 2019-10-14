@@ -12,9 +12,11 @@ public class Monster_Fox : MonoBehaviour
     public int movementFlag = 0;
 
     private int RandNum;
+    private int AnimState;
 
     public bool isDead;
-    public bool AttackRange = true;
+    public bool AttackRange;
+    public bool isTutorial;
 
     private bool isChasing;
 
@@ -38,8 +40,11 @@ public class Monster_Fox : MonoBehaviour
     {
         FoxStartSprite = transform.GetChild(1).gameObject;
         Destroy(FoxStartSprite);
+
+        AnimState = 0;
         currentHp = Hp;
 
+        AttackRange = true;
         isDead = false;
         
         cc = GetComponent<CharacterController>();
@@ -58,11 +63,11 @@ public class Monster_Fox : MonoBehaviour
 
         if (movementFlag == 0)
         {
-            animator.SetInteger("CurrentState", 0);
+            AnimState = 0;
         }
         else
         {
-            animator.SetInteger("CurrentState", 1);
+            AnimState = 1;
         }
         yield return new WaitForSeconds(3.0f);
 
@@ -72,13 +77,15 @@ public class Monster_Fox : MonoBehaviour
 
     void FixedUpdate()
     {
+        animator.SetInteger("CurrentState", AnimState);
+
         if ((transform.position.x + 5.0f >= Player.transform.position.x && transform.position.x - 5.0f <= Player.transform.position.x)
             && (transform.position.x + 2.0f <= Player.transform.position.x || transform.position.x - 2.0f >= Player.transform.position.x)
             && (transform.position.y + 2.0f >= Player.transform.position.y && transform.position.y - 1.0f <= Player.transform.position.y))
         {
             isChasing = true;
             StopCoroutine("Shoot");
-            animator.SetInteger("CurrentState", 1);
+            AnimState = 1;
             AttackRange = true;
         }
         if ((transform.position.x + 2.0f >= Player.transform.position.x && transform.position.x - 2.0f <= Player.transform.position.x) 
@@ -174,15 +181,18 @@ public class Monster_Fox : MonoBehaviour
     IEnumerator Shoot()
     {
         Debug.Log("Flame");
-        animator.SetInteger("CurrentState", 2);
+        AnimState = 2;
         Instantiate(FireBallPrefab, firepoint.position, firepoint.rotation);
-        yield return new WaitForSeconds(4.0f);
+        yield return new WaitForSeconds(1.0f);
+        AnimState = 0;
+        yield return new WaitForSeconds(3.0f);
+
         StartCoroutine("Shoot");
     }
 
     IEnumerator DestroyMonster()
     {
-        animator.SetInteger("CurrentState", 4);
+        AnimState = 4;
         yield return new WaitForSeconds(1.3f);
         CoreItemDrop();
         Destroy(gameObject);
@@ -193,10 +203,18 @@ public class Monster_Fox : MonoBehaviour
     private void CoreItemDrop()
     {
         RandNum = Random.Range(0, 9);
-        Debug.Log("RandomNum : " + RandNum);
-        if (RandNum == 0 || RandNum == 1 || RandNum == 2)
+        if(isTutorial)
         {
+            Debug.Log("isTutorial Stage");
             Instantiate(CoreItemPrefab, transform.position, transform.rotation);
+        }
+        else if (!isTutorial)
+        {
+            Debug.Log("RandNum = " + RandNum);
+            if (RandNum == 0 || RandNum == 1 || RandNum == 2)
+            {
+                Instantiate(CoreItemPrefab, transform.position, transform.rotation);
+            }
         }
     }
 
@@ -221,8 +239,10 @@ public class Monster_Fox : MonoBehaviour
     }
     void ApplyDamage(float damage)
     {
-        animator.SetInteger("CurrentState", 3);
+        AnimState = 3;
+
         currentHp -= damage;
+
         if (currentHp <= 0)
         {
             isDead = true;
