@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BossMonster : MonoBehaviour
 {
+    public AnimalName animalname;
+
     public float HP;
     public float currentHP;
 
@@ -69,16 +71,19 @@ public class BossMonster : MonoBehaviour
             if (currentHP < 600.0f && currentHP > 399.0f)
             {
                 Phase1 = true;
+                animalname = AnimalName.FOX;
             }
             else if (currentHP < 400.0f && currentHP > 199.0f)
             {
                 Phase1 = false;
                 Phase2 = true;
+                animalname = AnimalName.FROG;
             }
             else if (currentHP < 200.0f && currentHP > 0.0f)
             {
                 Phase2 = false;
                 Phase3 = true;
+                animalname = AnimalName.RACCOON;
             }
 
             if (PatternFlag > -1 && PatternFlag < 6)
