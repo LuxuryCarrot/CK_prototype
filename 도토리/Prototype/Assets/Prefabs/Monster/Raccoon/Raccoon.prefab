@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 3694041035198249929}
   - component: {fileID: 1794024882814145863}
   - component: {fileID: 6225492754671925726}
+  - component: {fileID: 2021192366503517797}
   m_Layer: 0
   m_Name: Raccoon
   m_TagString: Monster
@@ -159,11 +160,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84e704edd03933408f2a625e00909ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalname: 0
   movePower: 1
   Hp: 30
   currentHp: 0
   movementFlag: 0
   AttackRange: 1
+  isDead: 0
   SwordPoint: {fileID: 4321728579290098602}
   CoreItemPrefab: {fileID: 7589299749149762895, guid: 65e378e56d1f9b84eb980fcc37ae15bc,
     type: 3}
@@ -299,3 +302,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.5}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &2021192366503517797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068593824074979374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e618d52bb6210df46a073b9a73f05a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalname: 0

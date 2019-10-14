@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class BossMonster : MonoBehaviour
+public class BossMonster : Monster
 {
-    public AnimalName animalname;
-
     public float HP;
     public float currentHP;
 

@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 558923788382673317}
   - component: {fileID: 5565892162855449365}
   - component: {fileID: 1897804785}
+  - component: {fileID: 7430527222297299414}
   m_Layer: 12
   m_Name: Frog
   m_TagString: Monster
@@ -81,11 +82,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c94584c98b5e5594bacaf57815d6205d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalname: 0
   movePower: 0.85
   Hp: 50
   movementFlag: 0
   FrogShieldCount: 1
   AttackRange: 1
+  isDead: 0
   firepoint: {fileID: 6148838535624479190}
   SpearPrefab: {fileID: 7289021374371827779, guid: 4e406c118a28af2498a045bfa1bfeeb7,
     type: 3}
@@ -221,6 +224,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &7430527222297299414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4800075350215400766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e618d52bb6210df46a073b9a73f05a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalname: 0
 --- !u!1 &8917637699081307983
 GameObject:
   m_ObjectHideFlags: 0
