@@ -5,8 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class PlayerDASH : PlayerFSMController
 {
-    float dashDistance = 0.5f;
-    float dashDuration = 0.15f;
+    public float dashDistance = 0.4f;
+    public float dashDuration = 0.15f;
 
     bool isRayChecking = false;
     bool isDashing = false;
