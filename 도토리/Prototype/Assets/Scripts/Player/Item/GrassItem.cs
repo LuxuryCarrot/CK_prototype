@@ -21,6 +21,9 @@ public class GrassItem : MonoBehaviour
                 if (player.GetComponent<PlayerController>().stat.curWeaponProperty != ElementalProperty.Grass)
                 {
                     GameManager.Instance.isItemEatting = true;
+
+                    EffectManager.Instance.AttackEffectChange(player.GetComponent<PlayerController>().stat.curWeaponProperty);
+
                     player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Grass);
                 }
 

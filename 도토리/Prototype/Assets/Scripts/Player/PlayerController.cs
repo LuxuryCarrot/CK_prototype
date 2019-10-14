@@ -8,6 +8,7 @@ using UnityEngine.Tilemaps;
 public class PlayerController : MonoBehaviour
 {
     public PlayerStats stat;
+    public PlayerColliderController playerCol_Control;
 
     public int jumpCount = 0;
 
@@ -79,6 +80,7 @@ public class PlayerController : MonoBehaviour
         isFalling = false;
 
         stat = GetComponent<PlayerStats>();
+        playerCol_Control = GetComponent<PlayerColliderController>();
 
         verticalVelocity = 9.8f;
         rigidbody2 = GetComponent<Rigidbody2D>();
