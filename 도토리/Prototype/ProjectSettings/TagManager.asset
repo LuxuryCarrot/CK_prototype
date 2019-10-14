@@ -21,6 +21,7 @@ TagManager:
   - Loading
   - Air
   - StartPosition
+  - Portal
   layers:
   - Default
   - TransparentFX

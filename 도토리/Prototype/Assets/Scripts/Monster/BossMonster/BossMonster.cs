@@ -23,6 +23,8 @@ public class BossMonster : MonoBehaviour
     public GameObject FrogPreFab;
     public GameObject RaccoonPreFab;
 
+    private GameObject BossStartSprite;
+
     public Transform summonPos;
 
     public GameObject Arm;
@@ -31,6 +33,9 @@ public class BossMonster : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        BossStartSprite = transform.GetChild(0).gameObject;
+        Destroy(BossStartSprite);
+
         currentHP = HP;
         PatternFlag = 0;
 
