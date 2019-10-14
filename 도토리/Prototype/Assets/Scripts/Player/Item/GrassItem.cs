@@ -20,7 +20,7 @@ public class GrassItem : MonoBehaviour
                 GameManager.Instance.isItemEatting = true;
                 player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Grass);
                 player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Grass;
-                EffectManager.Instance.SetElementalEffect((int)ElementalProperty.Fire - 1);
+                EffectManager.Instance.SetElementalEffect((int)ElementalProperty.Grass - 1);
                 Destroy(gameObject);
             }
         }
