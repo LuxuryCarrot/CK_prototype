@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Monster_Frog : MonoBehaviour
+public class Monster_Frog : Monster
 {
-    public AnimalName animalname;
-
     public float movePower;
     public float Hp;
 
@@ -39,6 +37,8 @@ public class Monster_Frog : MonoBehaviour
     GameObject Player;
 
     CharacterController cc;
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -46,6 +46,7 @@ public class Monster_Frog : MonoBehaviour
 
         FrogStartSprite = transform.GetChild(2).gameObject;
         Destroy(FrogStartSprite);
+
         isDead = false;
 
         currentHp = Hp;

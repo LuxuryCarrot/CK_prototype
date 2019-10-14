@@ -6,6 +6,6 @@ public delegate float DamageCalc(float a,float b);
 public interface IPassiveSkill
 {
     float EmpowerInWeapon(float weaponDamage, float elementalDamage, DamageCalc calc);
-    float DamageMUL(float x, float y);
-    float GetBuff();
+    float DamagePercent(float x, float y);
+    float GetDamage(float x);
 }

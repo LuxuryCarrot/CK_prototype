@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 6742601855624608266}
   - component: {fileID: 4954392842749468030}
   - component: {fileID: 8111075858282194598}
+  - component: {fileID: 1396618162333580069}
   m_Layer: 13
   m_Name: ImTheBOSS
   m_TagString: Monster
@@ -240,8 +241,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a9853c6d0e821408eaaaf31641ffce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalname: 0
   HP: 800
   currentHP: 0
+  isDead: 0
   BossHP_UI: {fileID: 0}
   FoxPreFab: {fileID: 8006194236214712563, guid: 5965798181d1de64cb7061881f95032f,
     type: 3}
@@ -366,6 +369,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &1396618162333580069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572904523561675663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e618d52bb6210df46a073b9a73f05a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalname: 0
 --- !u!1 &8185787052975899106
 GameObject:
   m_ObjectHideFlags: 0

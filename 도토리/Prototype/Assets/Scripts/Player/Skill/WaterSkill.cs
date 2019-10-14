@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class WaterSkill : IPassiveSkill
 {
-    private const float WATER_DEMN = 0.7f;
+    private float finalWaterDemn;
 
-    public float DamageMUL(float x, float y)
+    public float DamagePercent(float x, float y)
     {
-        return x * y;
+        return x += ((x * y) / 100f);
     }
 
     public float EmpowerInWeapon(float weaponDamage, float elementalDamage, DamageCalc calc)
@@ -16,8 +16,8 @@ public class WaterSkill : IPassiveSkill
         return calc(weaponDamage, elementalDamage);
     }
 
-    public float GetBuff()
+    public float GetDamage(float x)
     {
-        return WATER_DEMN;
+        return finalWaterDemn;
     }
 }

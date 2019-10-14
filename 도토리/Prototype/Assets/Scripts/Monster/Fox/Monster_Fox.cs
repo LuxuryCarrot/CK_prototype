@@ -2,18 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AnimalName
-{
-    FOX,
-    FROG,
-    RACCOON,
-    BOSS
-}
 
-public class Monster_Fox : MonoBehaviour
+public class Monster_Fox : Monster
 {
-    public AnimalName animalname;
-
     public float movePower;
     public float Hp;
 

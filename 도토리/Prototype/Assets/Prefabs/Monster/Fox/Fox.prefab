@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 8006194236214712570}
   - component: {fileID: 8006194236214712569}
   - component: {fileID: 8006194236214712565}
+  - component: {fileID: 7399568218895254256}
   m_Layer: 12
   m_Name: Fox
   m_TagString: Monster
@@ -159,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061722087a7c5af4e97abc7e6e2b9458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalname: 0
   movePower: 1
   Hp: 100
   movementFlag: 0
@@ -300,3 +302,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.5}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &7399568218895254256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8006194236214712563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e618d52bb6210df46a073b9a73f05a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalname: 0
