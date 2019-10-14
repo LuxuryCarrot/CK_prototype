@@ -38,12 +38,10 @@ public class WeaponSword : MonoBehaviour
             {
                 if (player.curAttackAnimSpeed >= PlayerController.MAX_ATTACK_ANIM_TIME)
                 {
-                    /*
-                    var animal = monster.get; 상태 enum
-                     */
-                    stat.finalDamage = stat.weaponDamage;
 
+                    var animal = monster.GetComponent<Monster>().animalname;
 
+                    stat.finalDamage = DamageCalc(ref animal);
 
 
                     //대미지 텍스트를 몬스터 위치에 생성
@@ -67,30 +65,45 @@ public class WeaponSword : MonoBehaviour
     public float DamageCalc(ref AnimalName animal)
     {
         float damage = 0;
+        float fireDamage = firePassive.GetDamage(stat.weaponDamage);
 
-        switch(animal)
+        switch (animal)
         {
             case AnimalName.FOX:
-                if(player.stat.curWeaponProperty == ElementalProperty.Water)
+                if (player.stat.curWeaponProperty == ElementalProperty.Water)
                 {
                     dele = new DamageCalc(waterPassive.DamagePercent);
                     damage = waterPassive.EmpowerInWeapon(stat.weaponDamage, 50f, dele);
-
                 }
+                else if (player.stat.curWeaponProperty == ElementalProperty.Fire)
+                {
+                    damage = fireDamage;
+                }
+                else
+                    damage = stat.weaponDamage;
                 break;
             case AnimalName.FROG:
-                if(player.stat.curWeaponProperty==ElementalProperty.Grass)
+                if (player.stat.curWeaponProperty == ElementalProperty.Grass)
                 {
                     dele = new DamageCalc(grassPassive.DamagePercent);
                     damage = grassPassive.EmpowerInWeapon(stat.weaponDamage, 50f, dele);
-
                 }
+                else if (player.stat.curWeaponProperty == ElementalProperty.Fire)
+                {
+                    damage = fireDamage;
+                }
+                else
+                    damage = stat.weaponDamage;
                 break;
             case AnimalName.RACCOON:
-                if(player.stat.curWeaponProperty==ElementalProperty.Fire)
+                if (player.stat.curWeaponProperty == ElementalProperty.Fire)
                 {
                     dele = new DamageCalc(firePassive.DamagePercent);
-                    damage = firePassive.EmpowerInWeapon(firePassive.GetDamage(stat.weaponDamage), 50f, dele);
+                    damage = firePassive.EmpowerInWeapon(fireDamage, 50f, dele);
+                }
+                else
+                {
+                    damage = stat.weaponDamage;
                 }
                 break;
         }

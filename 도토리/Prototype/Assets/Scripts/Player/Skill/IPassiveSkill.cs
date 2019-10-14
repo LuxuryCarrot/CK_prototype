@@ -7,5 +7,5 @@ public interface IPassiveSkill
 {
     float EmpowerInWeapon(float weaponDamage, float elementalDamage, DamageCalc calc);
     float DamagePercent(float x, float y);
-    float GetDamage(float x=0);
+    float GetDamage(float x);
 }
