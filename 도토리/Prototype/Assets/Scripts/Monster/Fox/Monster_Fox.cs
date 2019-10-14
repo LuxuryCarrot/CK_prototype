@@ -2,8 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum AnimalName
+{
+    FOX,
+    FROG,
+    RACCOON,
+    BOSS
+}
+
 public class Monster_Fox : MonoBehaviour
 {
+    public AnimalName animalname;
+
     public float movePower;
     public float Hp;
 
@@ -38,6 +48,8 @@ public class Monster_Fox : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        animalname = AnimalName.FOX;
+
         FoxStartSprite = transform.GetChild(1).gameObject;
         Destroy(FoxStartSprite);
 

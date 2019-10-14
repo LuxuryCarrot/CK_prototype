@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Monster_Raccoon : MonoBehaviour
 {
+    public AnimalName animalname;
+
     public float movePower;
     public float Hp;
     public float currentHp = 0;
@@ -35,6 +38,8 @@ public class Monster_Raccoon : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        animalname = AnimalName.RACCOON;
+
         FrogStartSprite = transform.GetChild(0).gameObject;
 
         Destroy(FrogStartSprite);
