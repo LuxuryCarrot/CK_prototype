@@ -425,19 +425,22 @@ public class PlayerController : MonoBehaviour
     {
         if (!GameManager.Instance.isPlayerDead)
         {
-            if (!gracePeriodEnable)
+            if (stat.curWeaponProperty != ElementalProperty.Water)
             {
-                GameManager.Instance.ui.playerShotAnimUI.SetActive(true);           //히트했을때 ui실행
-
-                EffectManager.Instance.SetPlayerShotEffect();
-
-                
-                if (GameManager.Instance.ui.playerHP.fillAmount > 0.17)         //마지막 공격을 맞을때는 실행x
+                if (!gracePeriodEnable)
                 {
-                    SetState(PlayerState.SHOT);
-                    StartCoroutine("GracePeriod");
+                    GameManager.Instance.ui.playerShotAnimUI.SetActive(true);           //히트했을때 ui실행
+
+                    EffectManager.Instance.SetPlayerShotEffect();
+
+
+                    if (GameManager.Instance.ui.playerHP.fillAmount > 0.17)         //마지막 공격을 맞을때는 실행x
+                    {
+                        SetState(PlayerState.SHOT);
+                        StartCoroutine("GracePeriod");
+                    }
+                    GameManager.Instance.PlayerHPGauge();
                 }
-                GameManager.Instance.PlayerHPGauge();
             }
         }
     }
