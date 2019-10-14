@@ -17,6 +17,8 @@ public class FireItem : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
+                GameManager.Instance.isItemEatting = true;
+                player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Fire);
                 player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Fire;
                 EffectManager.Instance.SetElementalEffect((int)ElementalProperty.Fire-1);
                 Destroy(gameObject);

@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public bool isPlayerDead = false;
     public bool isGameClear = false;
     public bool isGamePause = false;
+    public bool isItemEatting;
     public int stage;
     public int bossKillCount;
     private GameObject stageExit;
