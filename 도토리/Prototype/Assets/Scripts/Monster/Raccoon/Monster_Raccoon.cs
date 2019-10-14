@@ -215,7 +215,7 @@ public class Monster_Raccoon : Monster
     {
         if (collision.gameObject.tag == "Player")
         {
-            Player.SendMessage("ApplyDamage", 0.5f);
+            Player.SendMessage("ApplyBodyDamage", 0.5f);
             Debug.Log("몸통박치기 데미지");
         }
     }
