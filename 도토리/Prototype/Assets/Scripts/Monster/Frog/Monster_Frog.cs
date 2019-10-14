@@ -41,11 +41,15 @@ public class Monster_Frog : Monster
 
     CharacterController cc;
 
+    BoxCollider2D boxCollider;
+
 
     // Start is called before the first frame update
     void Awake()
     {
         animalname = AnimalName.FROG;
+
+        boxCollider = GetComponent<BoxCollider2D>();
 
         FrogStartSprite = transform.GetChild(2).gameObject;
         Destroy(FrogStartSprite);
@@ -230,6 +234,7 @@ public class Monster_Frog : Monster
 
     IEnumerator DestroyMonster()
     {
+        boxCollider.enabled = false;
         AnimState = 4;
         yield return new WaitForSeconds(1.3f);
         CoreItemDrop();

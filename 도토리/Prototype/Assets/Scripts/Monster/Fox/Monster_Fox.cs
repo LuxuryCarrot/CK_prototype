@@ -39,6 +39,8 @@ public class Monster_Fox : Monster
 
     CircleCollider2D CircleCollider2;
 
+    BoxCollider2D boxCollider2D;
+
     CharacterController cc;
     // Start is called before the first frame update
     void Awake()
@@ -53,6 +55,8 @@ public class Monster_Fox : Monster
 
         AttackRange = true;
         isDead = false;
+
+        boxCollider2D = GetComponent<BoxCollider2D>();
 
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
@@ -199,6 +203,7 @@ public class Monster_Fox : Monster
 
     IEnumerator DestroyMonster()
     {
+        boxCollider2D.enabled = false;
         AnimState = 4;
         yield return new WaitForSeconds(1.3f);
         CoreItemDrop();
