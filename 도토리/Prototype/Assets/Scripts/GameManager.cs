@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
         player.playerCol_Control.ChangeDieCol();                    //컬라이더 변환
         player.SetState(PlayerState.IDLE);
         player.stat.finalDamage = player.stat.weaponDamage;
-        player.stat.curWeaponProperty = ElementalProperty.None;
+        //player.stat.curWeaponProperty = ElementalProperty.None;
     }
 
     public void PlayerHPGauge()

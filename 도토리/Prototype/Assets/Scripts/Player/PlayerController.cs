@@ -32,9 +32,9 @@ public class PlayerController : MonoBehaviour
 
     public float curAttackAnimSpeed;
     public float maxAttackAnimSpeed;      // + effect time
-    public const float MAX_CHANGE_ATTACK_ANIM_TIME = 0.25f;      // + effect time
+    public const float MAX_CHANGE_ATTACK_ANIM_TIME = 0.6f;      // + effect time
 
-    public const float MAX_NORMAL_ATTACK_ANIM_TIME = 0.5f;      // + effect time
+    public const float MAX_NORMAL_ATTACK_ANIM_TIME = 0.6f;      // + effect time
 
 
     public float curShotAnimSpeed;
