@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Monster_Frog : MonoBehaviour
 {
+    public AnimalName animalname;
+
     public float movePower;
     public float Hp;
 
@@ -39,6 +42,8 @@ public class Monster_Frog : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        animalname = AnimalName.FROG;
+
         FrogStartSprite = transform.GetChild(2).gameObject;
         Destroy(FrogStartSprite);
         isDead = false;
