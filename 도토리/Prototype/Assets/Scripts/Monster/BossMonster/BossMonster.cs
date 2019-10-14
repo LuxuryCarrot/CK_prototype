@@ -119,6 +119,7 @@ public class BossMonster : Monster
         else if(isDead)
         {
             GameManager.Instance.isGameClear = true;
+            Destroy(gameObject);
         }
     }
 
