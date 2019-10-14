@@ -2398,7 +2398,7 @@ PrefabInstance:
     - target: {fileID: 845031951545209416, guid: 6cfda997427a6554194ecba96ed388a6,
         type: 3}
       propertyPath: yMoveSpeed.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 845031951545209416, guid: 6cfda997427a6554194ecba96ed388a6,
         type: 3}
@@ -2424,7 +2424,7 @@ PrefabInstance:
     - target: {fileID: 845031951545209416, guid: 6cfda997427a6554194ecba96ed388a6,
         type: 3}
       propertyPath: yMoveSpeed.Array.data[3]
-      value: 0.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 845031951545209416, guid: 6cfda997427a6554194ecba96ed388a6,
         type: 3}
@@ -2464,17 +2464,17 @@ PrefabInstance:
     - target: {fileID: 845031951545209416, guid: 6cfda997427a6554194ecba96ed388a6,
         type: 3}
       propertyPath: yMoveSpeed.Array.data[0]
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 845031951545209416, guid: 6cfda997427a6554194ecba96ed388a6,
         type: 3}
       propertyPath: yMoveSpeed.Array.data[1]
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 845031951545209416, guid: 6cfda997427a6554194ecba96ed388a6,
         type: 3}
       propertyPath: yMoveSpeed.Array.data[2]
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cfda997427a6554194ecba96ed388a6, type: 3}
