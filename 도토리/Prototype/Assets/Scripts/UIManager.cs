@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -57,13 +58,14 @@ public class UIManager : MonoBehaviour
         //var hoverSprite = pauseButtonUI.GetComponent<Button>().spriteState.highlightedSprite;
         //pauseButtonSt.highlightedSprite = hoverSprite;
         //pauseButtonUI.GetComponent<Button>().spriteState = pauseButtonSt;
-
+        GameManager.Instance.isGamePause = true;
         EventSystem.current.SetSelectedGameObject(null);
         pauseGrayUI.SetActive(true);
     }
 
     public void PauseExcuteButton()
     {
+        GameManager.Instance.isGamePause = false;
         pauseGrayUI.SetActive(false);
     }
 

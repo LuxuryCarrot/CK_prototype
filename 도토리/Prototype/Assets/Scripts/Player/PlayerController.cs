@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public float curShotAnimSpeed;
     public const float MAX_SHOT_ANIM_TIME = 1f;
 
+
     public Vector3 mousePos;
     [HideInInspector]
     public Vector3 lastMoveDir = Vector3.zero;
@@ -50,7 +51,8 @@ public class PlayerController : MonoBehaviour
 
     public TilemapCollider2D tileMaplCollider;
 
-    public const float BOXCAST_DISTANCE = 0.5f;
+    public const float BOXCAST_DISTANCE = 0.7f;
+    public const float HEIGHT_LENGTH = 10f;
 
 
     public float curElementalDurantionTime;
@@ -102,26 +104,29 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.Instance.isPlayerDead)
+        if (!GameManager.Instance.isGamePause)
         {
-            CommandCheck();
+            if (!GameManager.Instance.isPlayerDead)
+            {
+                CommandCheck();
 
-            KeyInputtingCheck();
+                KeyInputtingCheck();
 
-            SetMousePosition();
+                SetMousePosition();
 
-            SpriteFlipCheck();
+                SpriteFlipCheck();
 
-            MakeEffects();
+                MakeEffects();
+            }
+            else
+            {
+                if (stat.curState != PlayerState.DEAD)                              //한번만 실행
+                    SetState(PlayerState.DEAD);
+            }
+            GroundCollisionCheck();
+
+            Gravity();
         }
-        else
-        {
-            if (stat.curState != PlayerState.DEAD)                              //한번만 실행
-                SetState(PlayerState.DEAD);
-        }
-        GroundCollisionCheck();
-
-        Gravity();
     }
 
     public void CommandCheck()
@@ -228,86 +233,97 @@ public class PlayerController : MonoBehaviour
 
     public void SetState(PlayerState newState)
     {
-        if (newState != PlayerState.IDLE)
+        if (!GameManager.Instance.isGamePause)
         {
-            isKeyInputting = true;
-            states[PlayerState.IDLE].enabled = false;
-        }
-
-        if (!isKeyInputting)
-        {
-            foreach (PlayerFSMController fsm in states.Values)
+            if (newState != PlayerState.IDLE)
             {
-                fsm.enabled = false;
+                isKeyInputting = true;
+                states[PlayerState.IDLE].enabled = false;
             }
-        }
 
-        stat.curState = newState;
-        states[stat.curState].enabled = true;
-        states[stat.curState].BeginState();
-        SetAnimation();                                     //애니메이션 설정
+            if (!isKeyInputting)
+            {
+                foreach (PlayerFSMController fsm in states.Values)
+                {
+                    fsm.enabled = false;
+                }
+            }
+
+            stat.curState = newState;
+            states[stat.curState].enabled = true;
+            states[stat.curState].BeginState();
+            SetAnimation();                                     //애니메이션 설정
+        }
     }
 
     public void SetAnimation()
     {
         //피격중일땐 그 상태 끝날때 까지 애니메이션 저장
-
-        if (!GameManager.Instance.isPlayerDead)
+        if (!GameManager.Instance.isGamePause)
         {
-            if (!isGrounded)                                            //공중에 떠있을때
+            anim.enabled = true;
+
+            if (!GameManager.Instance.isPlayerDead)
             {
-                if (states[PlayerState.ATTACK].enabled)
+                if (!isGrounded)                                            //공중에 떠있을때
                 {
-                    anim.SetInteger("curState", (int)PlayerState.ATTACK);
+                    if (states[PlayerState.ATTACK].enabled)
+                    {
+                        anim.SetInteger("curState", (int)PlayerState.ATTACK);
 
-                    attackDir = prevAttackDir;                          //전 공격의 행동 저장
+                        attackDir = prevAttackDir;                          //전 공격의 행동 저장
 
-                    if (attackDir < 1)                               //Prev Anim down attack
-                    {
-                        AttackDirCheck(1);
-                    }
-                    else                                            // Prev Anim up attack 
-                    {
-                        AttackDirCheck(-1);
-                    }
-                }
-                else
-                {
-                    if (states[PlayerState.SHOT].enabled)                           //맞았다면 shot실행
-                    {
-                        anim.SetInteger("curState", (int)PlayerState.SHOT);
+                        if (attackDir < 1)                               //Prev Anim down attack
+                        {
+                            AttackDirCheck(1);
+                        }
+                        else                                            // Prev Anim up attack 
+                        {
+                            AttackDirCheck(-1);
+                        }
                     }
                     else
-                        anim.SetInteger("curState", (int)PlayerState.JUMP);         //아니라면 점프
-                }
-
-            }
-            else
-            {
-                //anim.SetInteger("curState", (int)stat.curState);
-                if (states[PlayerState.ATTACK].enabled)
-                {
-                    anim.SetInteger("curState", (int)PlayerState.ATTACK);
-
-                    attackDir = prevAttackDir;
-
-                    if (attackDir < 1)                               //Prev Anim down attack
                     {
-                        AttackDirCheck(1);
+                        if (states[PlayerState.SHOT].enabled)                           //맞았다면 shot실행
+                        {
+                            anim.SetInteger("curState", (int)PlayerState.SHOT);
+                        }
+                        else
+                            anim.SetInteger("curState", (int)PlayerState.JUMP);         //아니라면 점프
                     }
-                    else                                            // Prev Anim up attack 
-                    {
-                        AttackDirCheck(-1);
-                    }
+
                 }
                 else
                 {
-                    anim.SetInteger("curState", (int)stat.curState);
+                    //anim.SetInteger("curState", (int)stat.curState);
+                    if (states[PlayerState.ATTACK].enabled)
+                    {
+                        anim.SetInteger("curState", (int)PlayerState.ATTACK);
+
+                        attackDir = prevAttackDir;
+
+                        if (attackDir < 1)                               //Prev Anim down attack
+                        {
+                            AttackDirCheck(1);
+                        }
+                        else                                            // Prev Anim up attack 
+                        {
+                            AttackDirCheck(-1);
+                        }
+                    }
+                    else
+                    {
+                        anim.SetInteger("curState", (int)stat.curState);
+                    }
                 }
             }
+            else
+                anim.SetInteger("curState", (int)PlayerState.DEAD);             //플레이어 사망시 dead 애니메이션 실행
         }
         else
-            anim.SetInteger("curState", (int)PlayerState.DEAD);             //플레이어 사망시 dead 애니메이션 실행
+        {
+            anim.enabled = false;
+        }
     }
 
     public void Gravity()
@@ -335,7 +351,8 @@ public class PlayerController : MonoBehaviour
         {
             if (tileMaplCollider.enabled)
             {
-                RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, new Vector2(0.4f, transform.lossyScale.y / 1000), 0, -transform.up, BOXCAST_DISTANCE, layerMask);
+                //RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, new Vector2(0.4f, transform.lossyScale.y / HEIGHT_LENGTH), 0, -transform.up, BOXCAST_DISTANCE, layerMask);
+                RaycastHit2D hit2D = Physics2D.Raycast(transform.position, Vector2.down, playerCollider.bounds.extents.y+0.05f,layerMask);
 
                 if (hit2D)
                 {

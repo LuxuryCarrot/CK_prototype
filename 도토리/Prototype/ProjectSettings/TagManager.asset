@@ -58,3 +58,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: GameScene
+    uniqueID: 3898945161
+    locked: 0
+  - name: CutScene
+    uniqueID: 3165994339
+    locked: 0

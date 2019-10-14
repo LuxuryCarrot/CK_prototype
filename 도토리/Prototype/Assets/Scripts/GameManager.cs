@@ -14,7 +14,9 @@ public class GameManager : MonoBehaviour
 
     public bool isPlayerDead = false;
     public bool isGameClear = false;
+    public bool isGamePause = false;
     public int stage;
+    public int bossKillCount;
     private GameObject stageExit;
     public AsyncOperation asyncOper;
 
@@ -29,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        SceneManager.LoadScene("Cut_Scene", LoadSceneMode.Additive);
+
         if (instance == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -56,10 +60,16 @@ public class GameManager : MonoBehaviour
             isPlayerDead = true;
         }
 
-        //if(ui.bossHP.fillAmount==0)             //보스의 Hp가 0가 되면 게임 클리어
+        //if (ui.bossHP.fillAmount == 0)             //보스의 Hp가 0가 되면 게임 클리어
         //{
         //    isGameClear = true;
         //}
+
+        if(isGameClear)
+        {
+            GameClear();
+        }
+
     }
 
     private void OnEnable()
@@ -74,7 +84,7 @@ public class GameManager : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name != "Play_Tutorial")
+        if (scene.name != "Cut_Scene")
         {
             //스테이지 전환시 카메라 다시 셋팅
             SetStage();
@@ -131,6 +141,13 @@ public class GameManager : MonoBehaviour
         {
             ui.bossHP.fillAmount -= player.stat.finalDamage / 100f;
         }
+    }
+
+    public void GameClear()
+    {
+        isGameClear = false;
+        bossKillCount++;
+        SceneManager.LoadScene("Cut_Scene", LoadSceneMode.Additive);
     }
 
     IEnumerator LoadScene()

@@ -21,6 +21,8 @@ public class FollowPlayer : MonoBehaviour
     public float halfHeight;
 
     public Camera theCamera;
+    public bool isApproximate;
+    //public Vector3 stopPosition;
 
     private void Awake()
     {
@@ -52,15 +54,36 @@ public class FollowPlayer : MonoBehaviour
 
         if (target.gameObject != null)
         {
-            targetPosition.Set(target.transform.position.x, target.transform.transform.position.y, this.transform.position.z);
+            if (!GameManager.Instance.isGamePause)
+            {
+                targetPosition.Set(target.transform.position.x, target.transform.transform.position.y, this.transform.position.z);
 
-            //1초에 moveSpeed만큼 이동
-            this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
+                //1초에 moveSpeed만큼 이동
+                this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
-            float clampedX = Mathf.Clamp(this.transform.position.x, minBound.x + halfWidth, maxBound.x - halfWidth);
-            float clampedY = Mathf.Clamp(this.transform.position.y, minBound.y + halfHeight, maxBound.y - halfHeight);
+                float clampedX = Mathf.Clamp(this.transform.position.x, minBound.x + halfWidth, maxBound.x - halfWidth);
+                float clampedY = Mathf.Clamp(this.transform.position.y, minBound.y + halfHeight, maxBound.y - halfHeight);
 
-            this.transform.position = new Vector3(clampedX, clampedY, this.transform.position.z);
+                this.transform.position = new Vector3(clampedX, clampedY, this.transform.position.z);
+
+
+
+                var tempX = Mathf.Clamp(targetPosition.x, minBound.x + halfWidth, maxBound.x - halfWidth);
+                var tempY = Mathf.Clamp(targetPosition.y, minBound.y + halfHeight, maxBound.y - halfHeight);
+
+                var errorXValue = Mathf.Abs(this.transform.position.x) - Mathf.Abs(tempX);       //오차범위 계산
+                var errorYValue = Mathf.Abs(this.transform.position.y) - Mathf.Abs(tempY);
+
+                if (Mathf.Abs(errorXValue) < 0.1f && Mathf.Abs(errorYValue) < 0.1f)          //목표위치값과 근사하다 
+                {
+                    isApproximate = true;
+                    //stopPosition = new Vector3(tempX, tempY, this.transform.position.z);        //근사값 저장
+                }
+                else
+                {
+                    isApproximate = false;
+                }
+            }
         }
     }
 }
