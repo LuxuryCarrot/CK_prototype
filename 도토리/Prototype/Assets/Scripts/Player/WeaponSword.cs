@@ -66,6 +66,9 @@ public class WeaponSword : MonoBehaviour
     {
         float damage = 0;
         float fireDamage = firePassive.GetDamage(stat.weaponDamage);
+        float waterDamage = waterPassive.GetDamage(stat.weaponDamage);
+        float grassDamage = grassPassive.GetDamage(stat.weaponDamage);
+
 
         switch (animal)
         {
@@ -73,27 +76,27 @@ public class WeaponSword : MonoBehaviour
                 if (player.stat.curWeaponProperty == ElementalProperty.Water)
                 {
                     dele = new DamageCalc(waterPassive.DamagePercent);
-                    damage = waterPassive.EmpowerInWeapon(stat.weaponDamage, 50f, dele);
+                    damage = waterPassive.EmpowerInWeapon(waterDamage, 50f, dele);
                 }
                 else if (player.stat.curWeaponProperty == ElementalProperty.Fire)
                 {
                     damage = fireDamage;
                 }
                 else
-                    damage = stat.weaponDamage;
+                    damage = grassDamage;
                 break;
             case AnimalName.FROG:
                 if (player.stat.curWeaponProperty == ElementalProperty.Grass)
                 {
                     dele = new DamageCalc(grassPassive.DamagePercent);
-                    damage = grassPassive.EmpowerInWeapon(stat.weaponDamage, 50f, dele);
+                    damage = grassPassive.EmpowerInWeapon(grassDamage, 50f, dele);
                 }
                 else if (player.stat.curWeaponProperty == ElementalProperty.Fire)
                 {
                     damage = fireDamage;
                 }
                 else
-                    damage = stat.weaponDamage;
+                    damage = waterDamage;
                 break;
             case AnimalName.RACCOON:
                 if (player.stat.curWeaponProperty == ElementalProperty.Fire)
@@ -101,10 +104,12 @@ public class WeaponSword : MonoBehaviour
                     dele = new DamageCalc(firePassive.DamagePercent);
                     damage = firePassive.EmpowerInWeapon(fireDamage, 50f, dele);
                 }
-                else
+                else if (player.stat.curWeaponProperty == ElementalProperty.Water)
                 {
-                    damage = stat.weaponDamage;
+                    damage = waterDamage;
                 }
+                else
+                    damage = grassDamage;
                 break;
         }
 
