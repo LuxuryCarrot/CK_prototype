@@ -17,8 +17,11 @@ public class WaterItem : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                GameManager.Instance.isItemEatting = true;
-                player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Water);
+                if (player.GetComponent<PlayerController>().stat.curWeaponProperty != ElementalProperty.Water)
+                {
+                    GameManager.Instance.isItemEatting = true;
+                    player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Water);
+                }
                 player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Water;
                 EffectManager.Instance.SetElementalEffect((int)ElementalProperty.Water - 1);
                 Destroy(gameObject);

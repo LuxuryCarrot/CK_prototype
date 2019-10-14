@@ -13,14 +13,18 @@ public class FireItem : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag.CompareTo("Player")==0)
+        if (collision.gameObject.tag.CompareTo("Player") == 0)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                GameManager.Instance.isItemEatting = true;
-                player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Fire);
+
+                if (player.GetComponent<PlayerController>().stat.curWeaponProperty != ElementalProperty.Fire)
+                {
+                    GameManager.Instance.isItemEatting = true;              //처음 먹었을 때만 
+                    player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Fire);
+                }
                 player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Fire;
-                EffectManager.Instance.SetElementalEffect((int)ElementalProperty.Fire-1);
+                EffectManager.Instance.SetElementalEffect((int)ElementalProperty.Fire - 1);
                 Destroy(gameObject);
             }
         }
