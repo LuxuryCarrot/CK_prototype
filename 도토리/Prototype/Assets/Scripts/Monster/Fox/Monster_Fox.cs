@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 
@@ -21,7 +22,10 @@ public class Monster_Fox : Monster
 
     private bool isChasing;
 
+    public Image HpBar;
+
     public Transform firepoint;
+
     public GameObject FireBallPrefab;
     public GameObject CoreItemPrefab;
 
@@ -49,7 +53,7 @@ public class Monster_Fox : Monster
 
         AttackRange = true;
         isDead = false;
-        
+
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
 
@@ -245,6 +249,8 @@ public class Monster_Fox : Monster
         AnimState = 3;
 
         currentHp -= damage;
+
+        HpBar.fillAmount -= damage / Hp;
 
         if (currentHp <= 0)
         {
