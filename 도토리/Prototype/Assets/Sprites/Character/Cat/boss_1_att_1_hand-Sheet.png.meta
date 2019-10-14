@@ -126,7 +126,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -137,7 +137,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -164,18 +164,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 2197
-        width: 162
-        height: 273
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d1ead11a44fcfe4b8233921f94aa753
+      spriteID: 1fa3752b42c28414687c5830c7ba9f6c
       vertices: []
       indices: 
       edges: []
@@ -184,18 +184,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_1
       rect:
         serializedVersion: 2
-        x: 528
-        y: 2197
-        width: 165
-        height: 273
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebaa25f81f917ec4fb28b77d0641abe8
+      spriteID: 0729c37ac30696f4cac301c110acb453
       vertices: []
       indices: 
       edges: []
@@ -204,18 +204,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1041
-        y: 2197
-        width: 165
-        height: 273
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6948a86e247fe15409b7920559545c9e
+      spriteID: 5f140e75096f68e4fac92fd9f09ee812
       vertices: []
       indices: 
       edges: []
@@ -224,18 +224,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_3
       rect:
         serializedVersion: 2
-        x: 1551
-        y: 2197
-        width: 165
-        height: 264
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70de78ae8c21c3441a97b9f17a6a4b29
+      spriteID: c6ac754023369b3458f9a8f142b25130
       vertices: []
       indices: 
       edges: []
@@ -244,18 +244,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_4
       rect:
         serializedVersion: 2
-        x: 2061
-        y: 2197
-        width: 168
-        height: 255
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96632a9640600f54ebeb3da8bff344b5
+      spriteID: 455d93886596c9d4cb14266c19c21420
       vertices: []
       indices: 
       edges: []
@@ -264,18 +264,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_5
       rect:
         serializedVersion: 2
-        x: 2574
-        y: 2197
-        width: 165
-        height: 234
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2560
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9a5e24f540b3244b836c68cd9db7e14
+      spriteID: 63eb1a4c1326ec44494ba1ded8f0e2d9
       vertices: []
       indices: 
       edges: []
@@ -284,18 +284,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_6
       rect:
         serializedVersion: 2
-        x: 3087
-        y: 2197
-        width: 165
-        height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3072
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d285c6d14d8534479b0b25abd03454f
+      spriteID: f159aa807625622478b66d3da8e7f1a4
       vertices: []
       indices: 
       edges: []
@@ -304,18 +304,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_7
       rect:
         serializedVersion: 2
-        x: 3585
-        y: 2206
-        width: 186
-        height: 165
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3584
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23a83ab80c2ef8d42ab176ab91bc3220
+      spriteID: d752a427b35f96b468047c39dc6e20fb
       vertices: []
       indices: 
       edges: []
@@ -324,18 +324,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_8
       rect:
         serializedVersion: 2
-        x: 4095
-        y: 2227
-        width: 180
-        height: 132
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4096
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa38fc7555e4f534088395ae931aed5e
+      spriteID: 71450d279670d10468e53c23d023a1b5
       vertices: []
       indices: 
       edges: []
@@ -345,17 +345,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4608
-        y: 2155
-        width: 183
-        height: 138
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b50d4886d3be13a439894600bf91e80d
+      spriteID: 323539ba45743bf47b1ff6f0c344eff0
       vertices: []
       indices: 
       edges: []
@@ -364,18 +364,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_10
       rect:
         serializedVersion: 2
-        x: 5127
-        y: 2119
-        width: 186
-        height: 168
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5120
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f76765ff05a5eb41ae9d9b7c06391ff
+      spriteID: 619828349bba6b64e82a637de514810d
       vertices: []
       indices: 
       edges: []
@@ -384,18 +384,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_11
       rect:
         serializedVersion: 2
-        x: 5655
-        y: 2056
-        width: 174
-        height: 231
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5632
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eab29b15ed90c494ba5b533ca9cc7528
+      spriteID: ee0a0ae3ce8a11543818342444858275
       vertices: []
       indices: 
       edges: []
@@ -404,18 +404,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_12
       rect:
         serializedVersion: 2
-        x: 3675
-        y: 2176
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9176c7c33566caa4abd9f62d20c52495
+      spriteID: a6cb37543d6f677409ca718912ea48ae
       vertices: []
       indices: 
       edges: []
@@ -424,18 +424,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_13
       rect:
         serializedVersion: 2
-        x: 4170
-        y: 2131
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20db5806844021d44b0c3eb494ef7ed2
+      spriteID: f608944fd836592468fada052c68f622
       vertices: []
       indices: 
       edges: []
@@ -444,18 +444,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_14
       rect:
         serializedVersion: 2
-        x: 4689
-        y: 2077
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87268e8869bf23e47b8664b1b4f76869
+      spriteID: 93a447dc85f01494997dc166d4cdd767
       vertices: []
       indices: 
       edges: []
@@ -464,18 +464,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_15
       rect:
         serializedVersion: 2
-        x: 5244
-        y: 2050
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d1e027273973254cb6c318333a2871d
+      spriteID: 0160f675618f7544599f24bdebb37feb
       vertices: []
       indices: 
       edges: []
@@ -484,18 +484,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_16
       rect:
         serializedVersion: 2
-        x: 5799
-        y: 1987
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fa6ecad3544caa42bcabdbcd037af4e
+      spriteID: dd744a53441e3e245a056718d9bc003f
       vertices: []
       indices: 
       edges: []
@@ -504,18 +504,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_17
       rect:
         serializedVersion: 2
-        x: 84
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2560
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f24439eec7460649803f94a6719a32d
+      spriteID: ad3ed44f270686e449a63c4248bcc922
       vertices: []
       indices: 
       edges: []
@@ -524,18 +524,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_18
       rect:
         serializedVersion: 2
-        x: 603
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3072
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5450ea6b701fc2a4293713092f16568f
+      spriteID: c5b007439fa33384c8f30f466c6b1dd5
       vertices: []
       indices: 
       edges: []
@@ -544,18 +544,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_19
       rect:
         serializedVersion: 2
-        x: 1116
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3584
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d21a30c47658b441b04af3bd00b3b60
+      spriteID: a154829a7d6355643b6cbc9236227403
       vertices: []
       indices: 
       edges: []
@@ -564,18 +564,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_20
       rect:
         serializedVersion: 2
-        x: 1629
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4096
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 576c30e4d2f57714ca3dd2f7b0d525fd
+      spriteID: d716577a810cf00439e994ae43f3a534
       vertices: []
       indices: 
       edges: []
@@ -584,18 +584,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_21
       rect:
         serializedVersion: 2
-        x: 2139
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4608
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f61da53278bf970498755399bf620226
+      spriteID: ab584c32a6ceb8c40ba2eeed0dc5dc74
       vertices: []
       indices: 
       edges: []
@@ -604,18 +604,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_22
       rect:
         serializedVersion: 2
-        x: 2652
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5120
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b24b58fc63219924faf96b0d8d3bac68
+      spriteID: db459e0f2dc25ce4989cc226f8ced940
       vertices: []
       indices: 
       edges: []
@@ -624,18 +624,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_23
       rect:
         serializedVersion: 2
-        x: 3165
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5632
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ee2c06c35f16b54f8ae8fda92dd368c
+      spriteID: 27d2a0132f3860c4bb946bf3329cfe3b
       vertices: []
       indices: 
       edges: []
@@ -644,18 +644,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_24
       rect:
         serializedVersion: 2
-        x: 3675
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ab607d490c15144980c7a974deac777
+      spriteID: ee75c497a1fc5a241912e133c7e074a6
       vertices: []
       indices: 
       edges: []
@@ -664,18 +664,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_25
       rect:
         serializedVersion: 2
-        x: 4188
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ae8532cab50d0f4083b22465f8779a8
+      spriteID: 9a45d4a1e9f8b554ea4bcff66a8be1f7
       vertices: []
       indices: 
       edges: []
@@ -684,18 +684,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_26
       rect:
         serializedVersion: 2
-        x: 4701
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa2193a6e42c2aa4fb28f5fd15f8af72
+      spriteID: bcc87c62c2a5bff40a3e47d228f54c57
       vertices: []
       indices: 
       edges: []
@@ -704,18 +704,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_27
       rect:
         serializedVersion: 2
-        x: 5211
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da4ed44cb355c3b4694c85240bd73f4f
+      spriteID: 90e4938c55ab06f49a81a8a7d193a85c
       vertices: []
       indices: 
       edges: []
@@ -724,18 +724,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_28
       rect:
         serializedVersion: 2
-        x: 5724
-        y: 1534
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63f2446a952ba7a4c8eb8b759ba280b3
+      spriteID: 5ac260f070fb54c43bcea8e205b11d5b
       vertices: []
       indices: 
       edges: []
@@ -744,18 +744,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_29
       rect:
         serializedVersion: 2
-        x: 237
-        y: 1459
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2560
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 239fd1c5452c3c64898689c53e7ef8a5
+      spriteID: 082b185c21439cc4f9e1e4d67aa65721
       vertices: []
       indices: 
       edges: []
@@ -764,18 +764,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_30
       rect:
         serializedVersion: 2
-        x: 93
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3072
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69792ef9962866648a6ca9f21a780e7d
+      spriteID: 04949064430994a4e877b3dcfd13288a
       vertices: []
       indices: 
       edges: []
@@ -784,18 +784,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_31
       rect:
         serializedVersion: 2
-        x: 603
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3584
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5402e187eb977c4429ac2a15d5d8a1d3
+      spriteID: b9538946dd041114192adc0eae9b793b
       vertices: []
       indices: 
       edges: []
@@ -804,18 +804,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_32
       rect:
         serializedVersion: 2
-        x: 1116
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4096
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2adf981ad50503e46965a58c2a6ab306
+      spriteID: dbd1e812288007348835a9944c690553
       vertices: []
       indices: 
       edges: []
@@ -824,18 +824,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_33
       rect:
         serializedVersion: 2
-        x: 1629
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4608
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0eee00a20794bd4e9f443bfcf41b912
+      spriteID: 438e3e6f0db026e48a666d702318d6fb
       vertices: []
       indices: 
       edges: []
@@ -844,18 +844,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_34
       rect:
         serializedVersion: 2
-        x: 2139
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5120
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f106d8dc1fb63c0408f8677d2ed44223
+      spriteID: 12173cc9167e64f49b25be451c6ecf53
       vertices: []
       indices: 
       edges: []
@@ -864,18 +864,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_35
       rect:
         serializedVersion: 2
-        x: 2652
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5632
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d47e27dbf22a8a4bbf3a6b0d2658dfa
+      spriteID: 4444cc701a3403f4697ac6cfb6141197
       vertices: []
       indices: 
       edges: []
@@ -884,18 +884,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_36
       rect:
         serializedVersion: 2
-        x: 3165
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1bbc6be8f301c54eb1a808af8c04528
+      spriteID: 55ad11954848af94e9f250a01a15e850
       vertices: []
       indices: 
       edges: []
@@ -904,18 +904,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_37
       rect:
         serializedVersion: 2
-        x: 3675
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4fd0da9aaf98f0458d6c6c6d16ca640
+      spriteID: 53f9cf2202ccfe2458394982fcfc41d8
       vertices: []
       indices: 
       edges: []
@@ -924,18 +924,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_38
       rect:
         serializedVersion: 2
-        x: 4188
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da6c05c4e3e9a474e935f147a5f7fee8
+      spriteID: 588a8047a7c74ea429eaacd73a99688d
       vertices: []
       indices: 
       edges: []
@@ -944,18 +944,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_39
       rect:
         serializedVersion: 2
-        x: 4701
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c9880c8ecb24b1488067057312b169d
+      spriteID: 29603acd52b828e4ab91645f89644612
       vertices: []
       indices: 
       edges: []
@@ -964,18 +964,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_40
       rect:
         serializedVersion: 2
-        x: 5211
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1165f9818f1421a4883492b8652930d7
+      spriteID: e44154e0f4fdd2f4aa625a873b3df205
       vertices: []
       indices: 
       edges: []
@@ -984,18 +984,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_41
       rect:
         serializedVersion: 2
-        x: 5724
-        y: 1020
-        width: 114
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b48e756a8fa003c4a9a21e0e034a07c2
+      spriteID: 630702834e2b7fe46a0f75a58ed42d7e
       vertices: []
       indices: 
       edges: []
@@ -1004,18 +1004,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_42
       rect:
         serializedVersion: 2
-        x: 93
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3072
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 348fb388d77ffa84ea20deaa0d2f6f92
+      spriteID: 0552e7bee11347c43aa578f98b335d7b
       vertices: []
       indices: 
       edges: []
@@ -1024,18 +1024,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_43
       rect:
         serializedVersion: 2
-        x: 603
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3584
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01a0448058e9611468b635690dc7942c
+      spriteID: 57883849225a88f459651bac10dfc758
       vertices: []
       indices: 
       edges: []
@@ -1044,18 +1044,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_44
       rect:
         serializedVersion: 2
-        x: 1116
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4096
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 844dff280d6b1fc478eb23da2a782b22
+      spriteID: e5a196c38d3d17d4babdc12782979342
       vertices: []
       indices: 
       edges: []
@@ -1064,18 +1064,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_45
       rect:
         serializedVersion: 2
-        x: 1629
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4608
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae68bec052f365844aa9a9d897374548
+      spriteID: b0ed1adfeb5738242bcfa20cc2303a78
       vertices: []
       indices: 
       edges: []
@@ -1084,18 +1084,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_46
       rect:
         serializedVersion: 2
-        x: 2139
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5120
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de467f0395e34ba4db16927a933bf10d
+      spriteID: 15561a6a24943074dbf9c1bd9c10748e
       vertices: []
       indices: 
       edges: []
@@ -1104,18 +1104,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_47
       rect:
         serializedVersion: 2
-        x: 2652
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5632
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b500004248c07044bf7dcd7d11e0ffc
+      spriteID: 18021bd55769da1418dfef167be1bbb8
       vertices: []
       indices: 
       edges: []
@@ -1124,18 +1124,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_48
       rect:
         serializedVersion: 2
-        x: 3165
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd4b997fee706ef40bbc5b1bc92e49c2
+      spriteID: be32f7f01691a2540904dbfd3dd05f9d
       vertices: []
       indices: 
       edges: []
@@ -1144,18 +1144,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_49
       rect:
         serializedVersion: 2
-        x: 3675
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26d5fd9559da18f4d92a3affca9297ad
+      spriteID: 941706fa88b0e07418c13f4156adf411
       vertices: []
       indices: 
       edges: []
@@ -1164,18 +1164,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_50
       rect:
         serializedVersion: 2
-        x: 4188
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30f67bd8daae88d48afedba2beaf4825
+      spriteID: 54f613f1a58531a459bed4f1facfb3c1
       vertices: []
       indices: 
       edges: []
@@ -1184,18 +1184,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_51
       rect:
         serializedVersion: 2
-        x: 4701
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 414afc0e47a147d429b7bb8495115a2b
+      spriteID: d5437d9c950512d408818503cab2dd12
       vertices: []
       indices: 
       edges: []
@@ -1204,18 +1204,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_52
       rect:
         serializedVersion: 2
-        x: 5211
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9c73f0779c5a6c4ba6a1ff531a49520
+      spriteID: 70eb2547ed13c704aafe359e9f335f93
       vertices: []
       indices: 
       edges: []
@@ -1224,18 +1224,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_53
       rect:
         serializedVersion: 2
-        x: 5724
-        y: 510
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f27cf87027acb3f43b5ff52da038512e
+      spriteID: d3a45c7ba105fee42a04697a4b30956f
       vertices: []
       indices: 
       edges: []
@@ -1244,18 +1244,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_54
       rect:
         serializedVersion: 2
-        x: 93
+        x: 3072
         y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9162c4f38f1a99a4e9119b9575f2d224
+      spriteID: 2d9abd537f81150458ca8af89aa28aa1
       vertices: []
       indices: 
       edges: []
@@ -1264,18 +1264,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_55
       rect:
         serializedVersion: 2
-        x: 603
+        x: 3584
         y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f76dd83903fee4149b15f080d85fe719
+      spriteID: b1b017020e6b9f147aa904ee13eb00e4
       vertices: []
       indices: 
       edges: []
@@ -1284,18 +1284,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_56
       rect:
         serializedVersion: 2
-        x: 1116
+        x: 4096
         y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b75e70fa8c363b04ebc68890c0efef75
+      spriteID: 79ed4e43dc780d54cab237827e009fbc
       vertices: []
       indices: 
       edges: []
@@ -1304,18 +1304,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_57
       rect:
         serializedVersion: 2
-        x: 1629
+        x: 4608
         y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0ed68dcca5ffa6429a78c0a20419077
+      spriteID: 9926273b55e87034eb0ba9afb5125bc5
       vertices: []
       indices: 
       edges: []
@@ -1324,18 +1324,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_58
       rect:
         serializedVersion: 2
-        x: 2139
+        x: 5120
         y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92cf5b08a069ddc4c8bea7098139538f
+      spriteID: d6acc0b7783bc454f93ae1bebbf5a4c6
       vertices: []
       indices: 
       edges: []
@@ -1344,138 +1344,18 @@ TextureImporter:
       name: boss_1_att_1_hand-Sheet_59
       rect:
         serializedVersion: 2
-        x: 2652
+        x: 5632
         y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db1ba83ecc0369d4f8fbd9226310f28e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_1_att_1_hand-Sheet_60
-      rect:
-        serializedVersion: 2
-        x: 3165
-        y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50d2c935c1be9a04ab95f1cb282cf644
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_1_att_1_hand-Sheet_61
-      rect:
-        serializedVersion: 2
-        x: 3675
-        y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23b7b073ebb67ed44a8624423d7021a3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_1_att_1_hand-Sheet_62
-      rect:
-        serializedVersion: 2
-        x: 4188
-        y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 842e300fb38fb7049a00263e7b2428d8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_1_att_1_hand-Sheet_63
-      rect:
-        serializedVersion: 2
-        x: 4701
-        y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b16bb3dbe42258a49bf0f16a2b7dd0d5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_1_att_1_hand-Sheet_64
-      rect:
-        serializedVersion: 2
-        x: 5211
-        y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d470e785d8165aa41b9e2963a217d14e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_1_att_1_hand-Sheet_65
-      rect:
-        serializedVersion: 2
-        x: 5724
-        y: 0
-        width: 114
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17159c1071c2b0e4e976ec7305553ce7
+      spriteID: 9a47126a04f84d1469ebc9cac0570a87
       vertices: []
       indices: 
       edges: []
