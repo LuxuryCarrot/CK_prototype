@@ -42,11 +42,15 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDirection;
     public Rigidbody2D rigidbody2;
     public Animator anim;
+    public List<RuntimeAnimatorController> propertyAnimController = new List<RuntimeAnimatorController>();
+
+
     public CapsuleCollider2D playerCollider;
     public Transform spriteTrans;
     public Vector3 flipScale;
     public Material whiteMat;
     public Material originalMat;
+
 
 
     public TilemapCollider2D tileMaplCollider;
@@ -108,7 +112,10 @@ public class PlayerController : MonoBehaviour
         {
             if (!GameManager.Instance.isPlayerDead)
             {
-                CommandCheck();
+                if (!GameManager.Instance.isItemEatting)
+                {
+                    CommandCheck();
+                }
 
                 KeyInputtingCheck();
 
@@ -152,7 +159,7 @@ public class PlayerController : MonoBehaviour
             if (curAttackAnimSpeed == 0 && !EffectManager.Instance.isAttackEffectPlaying)      //공격의 애니메이션,이펙트의 재생이 종료되면 제어가능(선택 대시는 주의)
             {
                 Debug.Log("실행");
-                    SetState(PlayerState.ATTACK);
+                SetState(PlayerState.ATTACK);
             }
             //}
         }
@@ -265,55 +272,59 @@ public class PlayerController : MonoBehaviour
 
             if (!GameManager.Instance.isPlayerDead)
             {
-                if (!isGrounded)                                            //공중에 떠있을때
+                if (!GameManager.Instance.isItemEatting)
                 {
-                    if (states[PlayerState.ATTACK].enabled)
+                    if (!isGrounded)                                            //공중에 떠있을때
                     {
-                        anim.SetInteger("curState", (int)PlayerState.ATTACK);
+                        if (states[PlayerState.ATTACK].enabled)
+                        {
+                            anim.SetInteger("curState", (int)PlayerState.ATTACK);
 
-                        attackDir = prevAttackDir;                          //전 공격의 행동 저장
+                            attackDir = prevAttackDir;                          //전 공격의 행동 저장
 
-                        if (attackDir < 1)                               //Prev Anim down attack
-                        {
-                            AttackDirCheck(1);
-                        }
-                        else                                            // Prev Anim up attack 
-                        {
-                            AttackDirCheck(-1);
-                        }
-                    }
-                    else
-                    {
-                        if (states[PlayerState.SHOT].enabled)                           //맞았다면 shot실행
-                        {
-                            anim.SetInteger("curState", (int)PlayerState.SHOT);
+                            if (attackDir < 1)                               //Prev Anim down attack
+                            {
+                                AttackDirCheck(1);
+                            }
+                            else                                            // Prev Anim up attack 
+                            {
+                                AttackDirCheck(-1);
+                            }
                         }
                         else
-                            anim.SetInteger("curState", (int)PlayerState.JUMP);         //아니라면 점프
-                    }
-
-                }
-                else
-                {
-                    //anim.SetInteger("curState", (int)stat.curState);
-                    if (states[PlayerState.ATTACK].enabled)
-                    {
-                        anim.SetInteger("curState", (int)PlayerState.ATTACK);
-
-                        attackDir = prevAttackDir;
-
-                        if (attackDir < 1)                               //Prev Anim down attack
                         {
-                            AttackDirCheck(1);
+                            if (states[PlayerState.SHOT].enabled)                           //맞았다면 shot실행
+                            {
+                                anim.SetInteger("curState", (int)PlayerState.SHOT);
+                            }
+                            else
+                                anim.SetInteger("curState", (int)PlayerState.JUMP);         //아니라면 점프
                         }
-                        else                                            // Prev Anim up attack 
-                        {
-                            AttackDirCheck(-1);
-                        }
+
                     }
                     else
                     {
-                        anim.SetInteger("curState", (int)stat.curState);
+
+                        //anim.SetInteger("curState", (int)stat.curState);
+                        if (states[PlayerState.ATTACK].enabled)
+                        {
+                            anim.SetInteger("curState", (int)PlayerState.ATTACK);
+
+                            attackDir = prevAttackDir;
+
+                            if (attackDir < 1)                               //Prev Anim down attack
+                            {
+                                AttackDirCheck(1);
+                            }
+                            else                                            // Prev Anim up attack 
+                            {
+                                AttackDirCheck(-1);
+                            }
+                        }
+                        else
+                        {
+                            anim.SetInteger("curState", (int)stat.curState);
+                        }
                     }
                 }
             }
@@ -352,7 +363,7 @@ public class PlayerController : MonoBehaviour
             if (tileMaplCollider.enabled)
             {
                 //RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, new Vector2(0.4f, transform.lossyScale.y / HEIGHT_LENGTH), 0, -transform.up, BOXCAST_DISTANCE, layerMask);
-                RaycastHit2D hit2D = Physics2D.Raycast(transform.position, Vector2.down, playerCollider.bounds.extents.y+0.1f,layerMask);
+                RaycastHit2D hit2D = Physics2D.Raycast(transform.position, Vector2.down, playerCollider.bounds.extents.y + 0.1f, layerMask);
 
                 if (hit2D)
                 {
@@ -393,7 +404,7 @@ public class PlayerController : MonoBehaviour
                     SetState(PlayerState.SHOT);
                     StartCoroutine("GracePeriod");
                 }
-                    GameManager.Instance.PlayerHPGauge();
+                GameManager.Instance.PlayerHPGauge();
                 //if (stat.currentHP <= 0)
                 //{
                 //    Debug.Log("PlayerDead");
