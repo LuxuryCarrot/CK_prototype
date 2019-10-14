@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalname: 0
   movePower: 1
-  Hp: 100
+  Hp: 50
   movementFlag: 0
   isDead: 0
   AttackRange: 1

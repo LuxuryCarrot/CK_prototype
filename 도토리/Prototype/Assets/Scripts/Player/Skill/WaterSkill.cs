@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WaterSkill : IPassiveSkill
 {
+    private const float BASE_WATER_DEMN = 10f;
     private float finalWaterDemn;
 
     public float DamagePercent(float x, float y)
@@ -18,6 +19,6 @@ public class WaterSkill : IPassiveSkill
 
     public float GetDamage(float x)
     {
-        return finalWaterDemn;
+        return x+ BASE_WATER_DEMN;
     }
 }

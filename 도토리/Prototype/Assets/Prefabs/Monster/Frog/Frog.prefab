@@ -85,7 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalname: 0
   movePower: 0.85
-  Hp: 50
+  Hp: 60
   movementFlag: 0
   FrogShieldCount: 1
   AttackRange: 1
