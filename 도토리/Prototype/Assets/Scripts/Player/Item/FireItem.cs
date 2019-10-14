@@ -21,12 +21,12 @@ public class FireItem : MonoBehaviour
                 if (player.GetComponent<PlayerController>().stat.curWeaponProperty != ElementalProperty.Fire)
                 {
                     GameManager.Instance.isItemEatting = true;              //처음 먹었을 때만 
+                player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Fire;
 
                     EffectManager.Instance.AttackEffectChange(player.GetComponent<PlayerController>().stat.curWeaponProperty);
 
                     player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Fire);
                 }
-                player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Fire;
                 EffectManager.Instance.SetElementalEffect((int)ElementalProperty.Fire - 1);
                 Destroy(gameObject);
             }
