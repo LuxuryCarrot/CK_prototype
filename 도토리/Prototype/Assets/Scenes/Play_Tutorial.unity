@@ -914,6 +914,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireItem
       objectReference: {fileID: 0}
+    - target: {fileID: 8887056523232573115, guid: 10b0ccda8f858e6439722dbea97e3c82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8887056523232573119, guid: 10b0ccda8f858e6439722dbea97e3c82,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1201,6 +1206,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'GrassItem '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589299749149762895, guid: 65e378e56d1f9b84eb980fcc37ae15bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2908474148696843124, guid: 65e378e56d1f9b84eb980fcc37ae15bc,
         type: 3}
@@ -2768,11 +2778,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2155645856087703621, guid: 419f62211b344cd4684e0d5c6aff8d83,
-        type: 3}
-      propertyPath: BossHP_UI
-      value: 
-      objectReference: {fileID: 1415639130}
     - target: {fileID: 4111518050172305297, guid: 419f62211b344cd4684e0d5c6aff8d83,
         type: 3}
       propertyPath: m_Size.x
@@ -2793,6 +2798,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2155645856087703621, guid: 419f62211b344cd4684e0d5c6aff8d83,
+        type: 3}
+      propertyPath: BossHP_UI
+      value: 
+      objectReference: {fileID: 1415639130}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 419f62211b344cd4684e0d5c6aff8d83, type: 3}
 --- !u!1001 &6260520371744170861
