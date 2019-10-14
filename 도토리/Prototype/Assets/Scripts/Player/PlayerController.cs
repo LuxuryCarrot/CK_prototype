@@ -372,7 +372,7 @@ public class PlayerController : MonoBehaviour
         {
             if (tileMaplCollider.enabled)
             {
-                var size = new Vector2(playerCollider.size.x/2, playerCollider.size.y * 0.1f / 2);
+                var size = new Vector2(playerCollider.size.x/1.2f, playerCollider.size.y * 0.1f / 2);
                 var rayLength = (playerCollider.size.y / 2 - playerCollider.size.y * 0.1f / 2)+0.18f;
 
                 RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, size,

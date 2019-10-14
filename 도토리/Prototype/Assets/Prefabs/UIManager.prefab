@@ -454,7 +454,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2886586282293310491}
-        m_MethodName: ReStartButton
+        m_MethodName: PauseReStartButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

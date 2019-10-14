@@ -63,6 +63,16 @@ public class UIManager : MonoBehaviour
         pauseGrayUI.SetActive(true);
     }
 
+    public void PauseReStartButton()
+    {
+        playerHP.fillAmount = 1;
+        GameManager.Instance.isPlayerDead = false;
+        GameManager.Instance.SetStage();
+        GameManager.Instance.SetPlayer();
+        GameManager.Instance.isGamePause = false;
+        pauseGrayUI.SetActive(false);
+    }
+
     public void PauseExcuteButton()
     {
         GameManager.Instance.isGamePause = false;
