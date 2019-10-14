@@ -2758,7 +2758,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 20
+  - time: 27
     functionName: TutoCutSceneEnd
     data: 
     objectReferenceParameter: {fileID: 0}
