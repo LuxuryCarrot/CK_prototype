@@ -205,6 +205,7 @@ MonoBehaviour:
   - {fileID: 8642181410536022447}
   posOfPropertyEffects: {fileID: 565953626}
   posOfPlayerShotEffect: {fileID: 1522810954}
+  isAttackEffectPlaying: 0
 --- !u!1 &6446757745380027343
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +287,7 @@ GameObject:
   - component: {fileID: 6594863402315553058}
   - component: {fileID: 4599261841596829609}
   - component: {fileID: 5070887619212790064}
+  - component: {fileID: 1028745608}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -322,8 +324,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05980611, y: -0.009302974}
-  m_Size: {x: 0.6624274, y: 0.74216914}
+  m_Offset: {x: 0.05980611, y: -0}
+  m_Size: {x: 0.6624274, y: 0.92}
   m_Direction: 0
 --- !u!50 &1566541350721542489
 Rigidbody2D:
@@ -367,16 +369,22 @@ MonoBehaviour:
   prevAttackDir: -1
   isAirColliderPassing: 0
   isAirColliderPassingEnd: 0
+  isDashCoolTimeEnd: 0
+  currentCoolTime: 0
   attackDir: 0
   gravity: 0
   verticalVelocity: 0
   curAttackAnimSpeed: 0
-  monster: {fileID: 0}
+  curShotAnimSpeed: 0
   mousePos: {x: 0, y: 0, z: 0}
   lastMoveDir: {x: 0, y: 0, z: 0}
   dashDir: {x: 0, y: 0, z: 0}
   rigidbody2: {fileID: 0}
   anim: {fileID: 0}
+  propertyAnimController:
+  - {fileID: 9100000, guid: 6c105713c900ea24ba0aefb24681a777, type: 2}
+  - {fileID: 9100000, guid: 2a74faffd9858bc4491bdd5128cd416d, type: 2}
+  - {fileID: 9100000, guid: 23fba55c95ede984188d39a45d70cfd8, type: 2}
   playerCollider: {fileID: 0}
   spriteTrans: {fileID: 0}
   flipScale: {x: 0, y: 0, z: 0}
@@ -403,8 +411,6 @@ MonoBehaviour:
   jumpForce: 0
   dashSpeed: 0
   dashForce: 0
-  hp: 0
-  currentHP: 0
   weaponDamage: 0
   finalDamage: 0
   controller: {fileID: 0}
@@ -489,7 +495,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
-  deltaMove: {x: 0, y: 0, z: 0}
 --- !u!114 &4599261841596829609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,6 +521,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
+--- !u!114 &1028745608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543115124112480884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd7e1b3f5eb9cf4fa7a5c0229ed482d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
 --- !u!1 &6543115124138596636
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,6 +545,7 @@ GameObject:
   - component: {fileID: 6543115124138596627}
   - component: {fileID: 6543115124138596626}
   - component: {fileID: 6543115124138596625}
+  - component: {fileID: 374343128}
   m_Layer: 8
   m_Name: chipmunk
   m_TagString: Player
@@ -585,9 +604,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2e6e40764c63c044daf225c5f1e3ec79, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -616,6 +635,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &374343128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543115124138596636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7bf83f77319884a985d1f5c842a995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9183019307281111241
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,12 +752,17 @@ PrefabInstance:
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631425814118495424, guid: 72309da0d1ceb2847ae358e04a0e1054,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6126465548543910112, guid: 72309da0d1ceb2847ae358e04a0e1054,
         type: 3}
@@ -735,15 +771,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72309da0d1ceb2847ae358e04a0e1054, type: 3}
---- !u!1 &2384725551535878732 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6460731404109605315, guid: 72309da0d1ceb2847ae358e04a0e1054,
-    type: 3}
-  m_PrefabInstance: {fileID: 8696767240516541327}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8347684416495594857 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 822453414632273638, guid: 72309da0d1ceb2847ae358e04a0e1054,
+    type: 3}
+  m_PrefabInstance: {fileID: 8696767240516541327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2384725551535878732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6460731404109605315, guid: 72309da0d1ceb2847ae358e04a0e1054,
     type: 3}
   m_PrefabInstance: {fileID: 8696767240516541327}
   m_PrefabAsset: {fileID: 0}
