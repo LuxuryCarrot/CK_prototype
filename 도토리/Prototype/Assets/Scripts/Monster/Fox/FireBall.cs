@@ -12,13 +12,13 @@ public class FireBall : MonoBehaviour
         //Debug.Log("fireball");
         Player = GameObject.FindGameObjectWithTag("Player");
         Ps = GetComponentInChildren<ParticleSystem>();
-
+   
         if (transform.position.x < Player.transform.position.x)
         {
             Ps.transform.localScale *= new Vector2(-1, 1);
         }
         
-
+        
         //Invoke("FireBallColliderDestroy", 1.0f);
         Invoke("FireBallDestroy", 2.0f);
 

@@ -59,15 +59,21 @@ public class BossMonster : MonoBehaviour
         isPatternB = false;
         isPatternC = false;
         StartCoroutine("ChangePattern");
+
+        animator = GetComponent<Animator>();
+
+        AnimState = 0;
     }
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Pattern();
         if (!isDead)
         {
+            animator.SetInteger("MovementState", AnimState);
+
             if (currentHP < 600.0f && currentHP > 399.0f)
             {
                 Phase1 = true;
@@ -128,6 +134,7 @@ public class BossMonster : MonoBehaviour
         {
             if (PatternCount == 1)
             {
+                AnimState = 1;
                 Instantiate(Arm, ArmPos.position, ArmPos.rotation);
                 Debug.Log("isPatternA");
             }
@@ -137,6 +144,7 @@ public class BossMonster : MonoBehaviour
         {
             if (PatternCount == 1)
             {
+                AnimState = 2;
                  Debug.Log("isPatternB");
             }
             isPatternB = false;
@@ -145,6 +153,7 @@ public class BossMonster : MonoBehaviour
         {
             if (PatternCount == 1)
             {
+                AnimState = 3;
                 if (Phase0)
                 {
                     Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);

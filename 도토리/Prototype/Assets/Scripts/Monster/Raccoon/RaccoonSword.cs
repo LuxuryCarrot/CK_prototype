@@ -14,7 +14,7 @@ public class RaccoonSword : MonoBehaviour
 
         Player = GameObject.FindGameObjectWithTag("Player");
 
-        if (transform.position.x < Player.transform.position.x)
+        if (transform.position.x > Player.transform.position.x)
         {
             Ps.transform.localScale *= new Vector2(-1, 1);
         }

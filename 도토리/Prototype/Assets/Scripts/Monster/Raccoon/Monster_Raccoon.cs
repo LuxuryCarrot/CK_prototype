@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Monster_Raccoon : MonoBehaviour
+public class Monster_Raccoon : Monster
 {
-    public AnimalName animalname;
-
     public float movePower;
     public float Hp;
     public float currentHp = 0;
