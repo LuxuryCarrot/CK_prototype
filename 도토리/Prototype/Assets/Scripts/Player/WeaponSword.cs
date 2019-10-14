@@ -16,6 +16,12 @@ public class WeaponSword : MonoBehaviour
 
     bool isMonsterCheck;
 
+    DamageCalc dele;
+
+    IPassiveSkill firePassive = new FireSkill();
+    IPassiveSkill waterPassive = new WaterSkill();
+    IPassiveSkill grassPassive = new GrassSkill();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,13 +38,22 @@ public class WeaponSword : MonoBehaviour
             {
                 if (player.curAttackAnimSpeed >= PlayerController.MAX_ATTACK_ANIM_TIME)
                 {
-                    //대미지 텍스트를 몬스터 위치에 생성
+                    /*
+                    var animal = monster.get; 상태 enum
+                     */
+                    stat.finalDamage = stat.weaponDamage;
 
+
+
+
+                    //대미지 텍스트를 몬스터 위치에 생성
                     var cloneText = Instantiate(GameManager.Instance.ui.prefab_floating_text,
                     Camera.main.WorldToScreenPoint(new Vector3(monster.position.x, monster.position.y + 1f, monster.position.z)), Quaternion.identity);
 
                     cloneText.GetComponent<FloatingDamageText>().text.text = Convert.ToString(stat.finalDamage);
                     cloneText.transform.SetParent(GameManager.Instance.ui.canvas.transform);
+                    ////////////////////////////////////////////////////////////////////////////////////
+
 
                     Debug.Log("Player Damage : " + stat.finalDamage);
                     monster.SendMessage("ApplyDamage", stat.finalDamage);
@@ -46,6 +61,41 @@ public class WeaponSword : MonoBehaviour
                 }
             }
         }
+    }
+
+
+    public float DamageCalc(ref AnimalName animal)
+    {
+        float damage = 0;
+
+        switch(animal)
+        {
+            case AnimalName.FOX:
+                if(player.stat.curWeaponProperty == ElementalProperty.Water)
+                {
+                    dele = new DamageCalc(waterPassive.DamagePercent);
+                    damage = waterPassive.EmpowerInWeapon(stat.weaponDamage, 50f, dele);
+
+                }
+                break;
+            case AnimalName.FROG:
+                if(player.stat.curWeaponProperty==ElementalProperty.Grass)
+                {
+                    dele = new DamageCalc(grassPassive.DamagePercent);
+                    damage = grassPassive.EmpowerInWeapon(stat.weaponDamage, 50f, dele);
+
+                }
+                break;
+            case AnimalName.RACCOON:
+                if(player.stat.curWeaponProperty==ElementalProperty.Fire)
+                {
+                    dele = new DamageCalc(firePassive.DamagePercent);
+                    damage = firePassive.EmpowerInWeapon(firePassive.GetDamage(stat.weaponDamage), 50f, dele);
+                }
+                break;
+        }
+
+        return damage;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
