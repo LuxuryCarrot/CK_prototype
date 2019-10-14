@@ -31,7 +31,12 @@ public class PlayerController : MonoBehaviour
     public float verticalVelocity;
 
     public float curAttackAnimSpeed;
-    public const float MAX_ATTACK_ANIM_TIME = 0.5f;      // + effect time
+    public float maxAttackAnimSpeed;      // + effect time
+    public const float MAX_CHANGE_ATTACK_ANIM_TIME = 0.25f;      // + effect time
+
+    public const float MAX_NORMAL_ATTACK_ANIM_TIME = 0.5f;      // + effect time
+
+
     public float curShotAnimSpeed;
     public const float MAX_SHOT_ANIM_TIME = 1f;
 
@@ -88,6 +93,8 @@ public class PlayerController : MonoBehaviour
 
         spriteTrans = transform.GetChild(0);
         flipScale = spriteTrans.localScale;
+
+        maxAttackAnimSpeed = MAX_NORMAL_ATTACK_ANIM_TIME;     //애니메이션 최대 속도 설정
 
         layerMask = 1 << 10 | 1 << 11 | 1 << 15;
 
@@ -381,6 +388,20 @@ public class PlayerController : MonoBehaviour
                     isGrounded = false;
                 }
             }
+        }
+    }
+
+    public void ChangeStateSpeed()
+    {
+        if(stat.curWeaponProperty==ElementalProperty.Grass)
+        {
+            stat.walkSpeed += stat.changeWalkSpeed;
+            maxAttackAnimSpeed = MAX_CHANGE_ATTACK_ANIM_TIME;
+        }
+        else
+        {
+            stat.walkSpeed = stat.normalWalkSpeed;
+            maxAttackAnimSpeed = MAX_NORMAL_ATTACK_ANIM_TIME;
         }
     }
 

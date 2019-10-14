@@ -25,6 +25,8 @@ public enum ElementalProperty
 public class PlayerStats : MonoBehaviour
 {
     public float walkSpeed;
+    public float changeWalkSpeed;
+    public float normalWalkSpeed;
     public float fallSpeed;
     public float jumpForce;
     public float dashSpeed;
@@ -49,6 +51,8 @@ public class PlayerStats : MonoBehaviour
         controller = GetComponent<PlayerController>();
         jumpForce = 1.5f;
         walkSpeed = 3f;
+        normalWalkSpeed = walkSpeed;
+        changeWalkSpeed = 1.5f;
         dashSpeed = 4f;
         dashForce = 1.2f;
         fallSpeed = 3.5f;

@@ -36,7 +36,7 @@ public class WeaponSword : MonoBehaviour
         {
             if (monster != null)
             {
-                if (player.curAttackAnimSpeed >= PlayerController.MAX_ATTACK_ANIM_TIME)
+                if (player.curAttackAnimSpeed >= player.maxAttackAnimSpeed)
                 {
 
                     var animal = monster.GetComponent<Monster>().animalname;

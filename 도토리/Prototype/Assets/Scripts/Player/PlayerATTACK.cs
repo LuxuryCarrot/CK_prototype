@@ -14,7 +14,7 @@ public class PlayerATTACK : PlayerFSMController
     // Update is called once per frame
     void Update()
     {
-        if (controller.curAttackAnimSpeed >= PlayerController.MAX_ATTACK_ANIM_TIME)
+        if (controller.curAttackAnimSpeed >= controller.maxAttackAnimSpeed)
         {
             if (controller.attackDir == 1)                                                                     //attack up
                 EffectManager.Instance.SetStateEffect(transform.position.x, controller.mousePos.x, (int)PlayerState.ATTACK - 1);

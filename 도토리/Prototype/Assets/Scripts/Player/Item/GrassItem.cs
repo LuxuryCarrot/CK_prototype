@@ -24,7 +24,7 @@ public class GrassItem : MonoBehaviour
                 player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Grass;
 
                     player.GetComponent<PlayerColliderController>().ChangeWeaponCol();
-
+                    player.GetComponent<PlayerController>().ChangeStateSpeed();
 
                     EffectManager.Instance.AttackEffectChange(player.GetComponent<PlayerController>().stat.curWeaponProperty);
 

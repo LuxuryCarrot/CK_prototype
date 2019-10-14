@@ -24,7 +24,7 @@ public class FireItem : MonoBehaviour
                 player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Fire;
 
                     player.GetComponent<PlayerColliderController>().ChangeWeaponCol();
-
+                    player.GetComponent<PlayerController>().ChangeStateSpeed();
                     EffectManager.Instance.AttackEffectChange(player.GetComponent<PlayerController>().stat.curWeaponProperty);
 
                     player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Fire);
