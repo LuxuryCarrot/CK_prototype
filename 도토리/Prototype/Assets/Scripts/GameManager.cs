@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+
         if (ui.playerHP.fillAmount == 0)        //도토리가 없으면 플레이어 사망
         {
             isPlayerDead = true;
