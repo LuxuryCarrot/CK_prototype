@@ -20,7 +20,8 @@ public class BossMonster : MonoBehaviour
     private bool Phase1;
     private bool Phase2;
     private bool Phase3;
-    private bool isDead;
+
+    public bool isDead;
 
     public Image BossHP_UI;
 
@@ -98,7 +99,7 @@ public class BossMonster : MonoBehaviour
         }
         else if(isDead)
         {
-
+            GameManager.Instance.isGameClear = true;
         }
     }
 
