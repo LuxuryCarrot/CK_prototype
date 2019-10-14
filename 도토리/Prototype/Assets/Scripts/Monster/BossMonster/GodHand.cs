@@ -29,7 +29,7 @@ public class GodHand : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("PlayerAttacked");
-            Player.SendMessage("ApllyDamage", 1.0f);
+            Player.SendMessage("ApplyDamage", 1.0f);
         }
     }
     void DestroyArm()

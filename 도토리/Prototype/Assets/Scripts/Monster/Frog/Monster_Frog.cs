@@ -185,7 +185,7 @@ public class Monster_Frog : MonoBehaviour
 
         if (other.gameObject.tag == "GodHand")
         {
-            Destroy(gameObject);
+            isDead = true;
         }
     }
 

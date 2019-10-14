@@ -1,7 +1,67 @@
 fileFormatVersion: 2
 guid: 6299115182d01be43b492a03f62a6607
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: boss_1_att_1_body-Sheet_0
+    21300002: boss_1_att_1_body-Sheet_1
+    21300004: boss_1_att_1_body-Sheet_2
+    21300006: boss_1_att_1_body-Sheet_3
+    21300008: boss_1_att_1_body-Sheet_4
+    21300010: boss_1_att_1_body-Sheet_5
+    21300012: boss_1_att_1_body-Sheet_6
+    21300014: boss_1_att_1_body-Sheet_7
+    21300016: boss_1_att_1_body-Sheet_8
+    21300018: boss_1_att_1_body-Sheet_9
+    21300020: boss_1_att_1_body-Sheet_10
+    21300022: boss_1_att_1_body-Sheet_11
+    21300024: boss_1_att_1_body-Sheet_12
+    21300026: boss_1_att_1_body-Sheet_13
+    21300028: boss_1_att_1_body-Sheet_14
+    21300030: boss_1_att_1_body-Sheet_15
+    21300032: boss_1_att_1_body-Sheet_16
+    21300034: boss_1_att_1_body-Sheet_17
+    21300036: boss_1_att_1_body-Sheet_18
+    21300038: boss_1_att_1_body-Sheet_19
+    21300040: boss_1_att_1_body-Sheet_20
+    21300042: boss_1_att_1_body-Sheet_21
+    21300044: boss_1_att_1_body-Sheet_22
+    21300046: boss_1_att_1_body-Sheet_23
+    21300048: boss_1_att_1_body-Sheet_24
+    21300050: boss_1_att_1_body-Sheet_25
+    21300052: boss_1_att_1_body-Sheet_26
+    21300054: boss_1_att_1_body-Sheet_27
+    21300056: boss_1_att_1_body-Sheet_28
+    21300058: boss_1_att_1_body-Sheet_29
+    21300060: boss_1_att_1_body-Sheet_30
+    21300062: boss_1_att_1_body-Sheet_31
+    21300064: boss_1_att_1_body-Sheet_32
+    21300066: boss_1_att_1_body-Sheet_33
+    21300068: boss_1_att_1_body-Sheet_34
+    21300070: boss_1_att_1_body-Sheet_35
+    21300072: boss_1_att_1_body-Sheet_36
+    21300074: boss_1_att_1_body-Sheet_37
+    21300076: boss_1_att_1_body-Sheet_38
+    21300078: boss_1_att_1_body-Sheet_39
+    21300080: boss_1_att_1_body-Sheet_40
+    21300082: boss_1_att_1_body-Sheet_41
+    21300084: boss_1_att_1_body-Sheet_42
+    21300086: boss_1_att_1_body-Sheet_43
+    21300088: boss_1_att_1_body-Sheet_44
+    21300090: boss_1_att_1_body-Sheet_45
+    21300092: boss_1_att_1_body-Sheet_46
+    21300094: boss_1_att_1_body-Sheet_47
+    21300096: boss_1_att_1_body-Sheet_48
+    21300098: boss_1_att_1_body-Sheet_49
+    21300100: boss_1_att_1_body-Sheet_50
+    21300102: boss_1_att_1_body-Sheet_51
+    21300104: boss_1_att_1_body-Sheet_52
+    21300106: boss_1_att_1_body-Sheet_53
+    21300108: boss_1_att_1_body-Sheet_54
+    21300110: boss_1_att_1_body-Sheet_55
+    21300112: boss_1_att_1_body-Sheet_56
+    21300114: boss_1_att_1_body-Sheet_57
+    21300116: boss_1_att_1_body-Sheet_58
+    21300118: boss_1_att_1_body-Sheet_59
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +100,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -80,9 +140,1220 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 2044
+        width: 390
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ccbdfa8d1170814ab6db66a604fc2bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 2044
+        width: 390
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95bffa8c6c88eb144b76d6d930f80e5d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 2044
+        width: 390
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5664f1d401851d4cac824e1eca94b7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 2044
+        width: 390
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a24be1bd958abf4998d0a41575882a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2106
+        y: 2044
+        width: 396
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1fd77dd31ee0c4cb9914b44ac551b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2619
+        y: 2044
+        width: 408
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5da4451ccc9c9f44af1927dd75bd097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 2044
+        width: 426
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e01467bef36b634c969d7e036260fd2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 2044
+        width: 420
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4781ac79051aaa943bb9fda5a616f40b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4158
+        y: 2044
+        width: 408
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d62cda1393033a459345a4f2ace0719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4668
+        y: 2044
+        width: 402
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f05fd09b51ac2c49afa43440c081938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 5178
+        y: 2044
+        width: 396
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ccf7b678e4cd404e98faffdfc245d40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 5688
+        y: 2044
+        width: 396
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ed81764cdfd0e438f98611d58f6ccb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1531
+        width: 402
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8661834672237043824dcc4a3157b69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1531
+        width: 402
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd9dff602e038e4d9a7c3436eb18e61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1531
+        width: 393
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b4545189683c44389d2c30fa404473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1531
+        width: 390
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c2e3f118ebf3642a703634e6c0bd4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 1531
+        width: 387
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33cb7d93160159847b7a22a00a0b5e1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2625
+        y: 1531
+        width: 381
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce7b804f88ae8b418fb17e8a112571b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 1531
+        width: 378
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a13a52ce0a498b44b017b7eff8fa4c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 3651
+        y: 1531
+        width: 384
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04156d8a30bc34445a3b404506f72953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 4164
+        y: 1531
+        width: 381
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3008a0d4c92e2149a5cbf6d5cdd4be6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 4677
+        y: 1531
+        width: 381
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b712bd9b82c0c4cb59230753c8dc2f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 5187
+        y: 1531
+        width: 384
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a569a12b935ce4fa919bf6fe2928a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5700
+        y: 1531
+        width: 381
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aab089af40b66440b03402f23bdde61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1017
+        width: 381
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e26bd54390d0642b4cb6c4e75ffe6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 1017
+        width: 384
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b15da0955a6e0f49a0131b475bf8494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1017
+        width: 384
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4449bb6129c99c43a9aea04c9093cb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1017
+        width: 381
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87923539d6087d469a641004ec671ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 1017
+        width: 384
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ed3fcaa764e3140b7a87fcc9949770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 1017
+        width: 384
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2964f3ac07c5b7444ba9b805967e524a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 1017
+        width: 381
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b04f7e7711c3cb4c91f83017f3271aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 3651
+        y: 1017
+        width: 384
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11cc99a6dbf30a4aae0b3c12dc739d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 4164
+        y: 1017
+        width: 384
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8b34a40be6ed84b874ee2e5b059ea1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 4677
+        y: 1017
+        width: 381
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a9b5967316f9e4f968c305b55ab531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 5187
+        y: 1017
+        width: 384
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087597c9f209a6c46b45ad04da783f6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 5700
+        y: 1017
+        width: 384
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f251cea89b272419600e9957bffb82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 507
+        width: 381
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388cb03ef6290b14094586309715c422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 507
+        width: 384
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c72fa45378bd84bbfc7aa55d2da146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 507
+        width: 384
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629d484cff37a844da2d2e3747115bc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 507
+        width: 381
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e7f12fa981e6645a65225144720c69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 507
+        width: 384
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f9a2251e2a6fd4c9fe561b6f7e61a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 507
+        width: 384
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689e758dbb928c9438e6d0cf749c3f05
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 507
+        width: 381
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf9f349a27bd254ba52029496385e24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 3651
+        y: 507
+        width: 384
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccafc4bf74a8c634185eb77be3d92dfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 4164
+        y: 507
+        width: 384
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6045011489a89904e881ebf6fd0dec6d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 4677
+        y: 507
+        width: 381
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7febce3f8cfe57e49a99aa2870cf9ee6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 5187
+        y: 507
+        width: 384
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb8d676ba91ee24b9d1fb89deb5b4a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 5700
+        y: 507
+        width: 384
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a338998d12665f4d862b9940bc7591e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 381
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d256e83d74917a846ab01c556650fe4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 0
+        width: 384
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8bef67d11555194f92170974f831b08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 0
+        width: 384
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3fe18a01ea7c84ab8e8c376a327390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 0
+        width: 381
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd76b47ce4769d5499b4a02671ac6bd5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 0
+        width: 384
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88034685b5aa03142b01a693544d5f48
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 0
+        width: 384
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cd8c26a5eb2e84c9b8b213a64c30d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 0
+        width: 381
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db406cb67160f424aaa7d425d43be182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 3651
+        y: 0
+        width: 384
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163906cf7d1f1d643951b02f886d249c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 4164
+        y: 0
+        width: 384
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f421939c41cf2649845a895567027a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 4677
+        y: 0
+        width: 381
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e321fcd800dbd84baf1368c87574ef3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 5187
+        y: 0
+        width: 384
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e96b2cd2d7bb4d43a70ec6f1da64dc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_1_att_1_body-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 5700
+        y: 0
+        width: 384
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b79347e20f4784d81a0187adf52a20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
