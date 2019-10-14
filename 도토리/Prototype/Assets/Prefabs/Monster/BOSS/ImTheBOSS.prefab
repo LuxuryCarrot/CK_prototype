@@ -188,6 +188,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1351972964480660953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8490544754400458650}
+  m_Layer: 13
+  m_Name: ArmBPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8490544754400458650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351972964480660953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5, y: 2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3183471965388516755}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5572904523561675663
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +256,7 @@ Transform:
   - {fileID: 8841374819103456551}
   - {fileID: 1416431270}
   - {fileID: 1142242419}
+  - {fileID: 8490544754400458650}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -253,8 +284,10 @@ MonoBehaviour:
   RaccoonPreFab: {fileID: 9068593824074979374, guid: e4166761eceefcb4993a0fef7b25e51e,
     type: 3}
   summonPos: {fileID: 8841374819103456551}
-  Arm: {fileID: 1650085613714734690, guid: fedf6a2674e60e74fa4e38e720eff678, type: 3}
-  ArmPos: {fileID: 892554621}
+  ArmA: {fileID: 1650085613714734690, guid: fedf6a2674e60e74fa4e38e720eff678, type: 3}
+  ArmB: {fileID: 5627350274056013793, guid: a6d8167dbf5dad141b1be86bf2937dc1, type: 3}
+  ArmAPos: {fileID: 892554621}
+  ArmBPos: {fileID: 8490544754400458650}
 --- !u!114 &1396618162333580069
 MonoBehaviour:
   m_ObjectHideFlags: 0

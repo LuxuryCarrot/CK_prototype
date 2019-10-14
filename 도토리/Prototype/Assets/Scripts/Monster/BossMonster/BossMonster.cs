@@ -32,11 +32,15 @@ public class BossMonster : Monster
     public GameObject RaccoonPreFab;
 
     private GameObject BossStartSprite;
+    private GameObject Player;
 
     public Transform summonPos;
 
-    public GameObject Arm;
-    public Transform ArmPos;
+    public GameObject ArmA;
+    public GameObject ArmB;
+
+    public Transform ArmAPos;
+    public Transform ArmBPos;
 
     private Animator animator;
 
@@ -61,6 +65,7 @@ public class BossMonster : Monster
         StartCoroutine("ChangePattern");
 
         animator = GetComponent<Animator>();
+        Player = GameObject.FindGameObjectWithTag("Player");
 
         AnimState = 0;
     }
@@ -164,8 +169,9 @@ public class BossMonster : Monster
     {
         AnimState = 1;
         Debug.Log("isPatternA");
-        yield return new WaitForSeconds(1.0f);
-        Instantiate(Arm, ArmPos.position, ArmPos.rotation);
+        yield return new WaitForSeconds(0.6f);
+        Instantiate(ArmA, ArmAPos.position, ArmAPos.rotation);
+        yield return new WaitForSeconds(0.4f);
         AnimState = 0;
         StopCoroutine("BossPattern1");
     }
@@ -173,13 +179,16 @@ public class BossMonster : Monster
     {
         AnimState = 2;
         Debug.Log("isPatternB");
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.6f);
+        Instantiate(ArmB, /*new Vector3(ArmBPos.position.x, Player.transform.position.y, ArmBPos.position.z)*/ArmBPos.position, ArmBPos.rotation);
+        yield return new WaitForSeconds(0.4f);
         AnimState = 0;
         StopCoroutine("BossPattern2");
     }
     IEnumerator BossPattern3()
     {
         AnimState = 3;
+        yield return new WaitForSeconds(0.5f);
         if (Phase0)
         {
             Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
