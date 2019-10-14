@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3439142281126624961}
   - component: {fileID: 4502727413750125543}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: mob_1_idle_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4321728579290098602}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SwordPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 1794024882814145863}
   - component: {fileID: 6225492754671925726}
   - component: {fileID: 2021192366503517797}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Raccoon
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -329,6 +329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HP_Mob
       objectReference: {fileID: 0}
+    - target: {fileID: 6154616547542413496, guid: 563560cedae916642b50f3ac4d4f05a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6723085074627851055, guid: 563560cedae916642b50f3ac4d4f05a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -433,6 +438,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2092605924704800910, guid: 563560cedae916642b50f3ac4d4f05a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 96647476648001256, guid: 563560cedae916642b50f3ac4d4f05a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504368113730489959, guid: 563560cedae916642b50f3ac4d4f05a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 563560cedae916642b50f3ac4d4f05a6, type: 3}
