@@ -418,9 +418,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3714284151103279259}
-  - component: {fileID: 3714284151103279256}
   m_Layer: 0
-  m_Name: BackGround
+  m_Name: BackGround_1st
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -447,39 +446,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3714284151103279256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714284151103279258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90a33780a819cd040b5edafdda7a02f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgs:
-  - {fileID: 3714284152377932488}
-  - {fileID: 3714284150785992450}
-  - {fileID: 3714284150892396193}
-  xMoveSpeed:
-  - 0.5
-  - 0.4
-  - 0.3
-  yMoveSpeed:
-  - 0.25
-  - 0
-  - 0.2
-  camera: {fileID: 0}
-  bg: {fileID: 3714284151018751043}
-  bgBoundsCol: {fileID: 0}
-  minColBound: {x: 0, y: 0, z: 0}
-  maxColBound: {x: 0, y: 0, z: 0}
-  prevPos: {x: 0, y: 0, z: 0}
-  stHalfWidth: 0
-  stHalfHeight: 0
-  isPrevPosSaved: 0
 --- !u!1 &3714284151108999836
 GameObject:
   m_ObjectHideFlags: 0
