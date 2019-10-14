@@ -225,7 +225,7 @@ public class Monster_Fox : Monster
     {
         if (collision.gameObject.tag == "Player")
         {
-            Player.SendMessage("ApplyDamage", 0.5f);
+            Player.SendMessage("ApplyBodyDamage", 0.5f);
         }
     }
 
