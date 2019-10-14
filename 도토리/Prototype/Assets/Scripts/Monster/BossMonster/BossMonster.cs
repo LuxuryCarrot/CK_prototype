@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class BossMonster : MonoBehaviour
 {
     public float HP;
-    private float currentHP;
+    public float currentHP;
 
     private int PatternCount;
     private int PatternFlag;
@@ -20,6 +21,8 @@ public class BossMonster : MonoBehaviour
     private bool Phase2;
     private bool Phase3;
     private bool isDead;
+
+    public Image BossHP_UI;
 
     public GameObject FoxPreFab;
     public GameObject FrogPreFab;
@@ -228,6 +231,8 @@ public class BossMonster : MonoBehaviour
     void ApplyDamage(float damage)
     {
         currentHP -= damage;
+
+        BossHP_UI.fillAmount -= damage / HP;
 
         if (currentHP <= 0)
         {
