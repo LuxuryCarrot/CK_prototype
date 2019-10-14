@@ -527,7 +527,7 @@ MonoBehaviour:
   HP: 800
   currentHP: 0
   isDead: 0
-  BossHP_UI: {fileID: 0}
+  BossHP_UI: {fileID: 3379357746644645714}
   FoxPreFab: {fileID: 8006194236214712563, guid: 5965798181d1de64cb7061881f95032f,
     type: 3}
   FrogPreFab: {fileID: 4800075350215400766, guid: 30b102dc3d537f744a854a160cfb8202,

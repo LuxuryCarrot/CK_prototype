@@ -35,6 +35,8 @@ public class Monster_Raccoon : Monster
     GameObject ChaseTarget;
     GameObject Player;
 
+    BoxCollider2D boxCollider2D;
+
     CharacterController cc;
     // Start is called before the first frame update
     void Awake()
@@ -49,6 +51,8 @@ public class Monster_Raccoon : Monster
 
         currentHp = Hp;
         AnimState = 0;
+
+        boxCollider2D = GetComponent<BoxCollider2D>();
 
         cc = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
@@ -208,6 +212,7 @@ public class Monster_Raccoon : Monster
     }
     IEnumerator DestroyMonster()
     {
+        boxCollider2D.enabled = false;
         AnimState = 4;
         yield return new WaitForSeconds(1.3f);
         CoreItemDrop();
