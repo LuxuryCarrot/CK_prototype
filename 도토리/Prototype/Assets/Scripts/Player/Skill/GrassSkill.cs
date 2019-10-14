@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GrassSkill : IPassiveSkill
 {
+    private const float BASE_GRASS_DEMN = 5f;
     private float finalGrassDemn;
 
 
@@ -19,7 +20,7 @@ public class GrassSkill : IPassiveSkill
 
     public float GetDamage(float x)
     {
-        return finalGrassDemn;
+        return x+ BASE_GRASS_DEMN;
     }
 
 }
