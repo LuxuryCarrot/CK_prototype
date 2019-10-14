@@ -28,7 +28,7 @@ public class PlayerWALK : PlayerFSMController
                     controller.states[PlayerState.WALK].enabled = false;
                 }
 
-                var size = new Vector2(controller.playerCollider.size.x / 2, controller.playerCollider.size.y * 0.1f / 2);
+                var size = new Vector2(controller.playerCollider.size.x / 3f, controller.playerCollider.size.y * 0.1f / 2);
 
                 RaycastHit2D hit2D = Physics2D.BoxCast(transform.position, size, 0, controller.lastMoveDir, PlayerController.BOXCAST_DISTANCE, controller.layerMask);
 
