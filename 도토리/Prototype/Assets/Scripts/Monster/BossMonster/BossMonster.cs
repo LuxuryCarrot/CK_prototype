@@ -74,6 +74,14 @@ public class BossMonster : Monster
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (transform.position.x < Player.transform.position.x)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (transform.position.x > Player.transform.position.x)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
         Pattern();
         if (!isDead)
         {

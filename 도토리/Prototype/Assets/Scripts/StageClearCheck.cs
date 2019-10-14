@@ -33,7 +33,7 @@ public class StageClearCheck : MonoBehaviour
                 {
                     if (SceneManager.GetActiveScene().buildIndex >= 3)      //마지막은 로딩하지 않는다
                     {
-                        GameManager.Instance.ui.bossUI.SetActive(true);
+                        //GameManager.Instance.ui.bossUI.SetActive(true);
                         GameManager.Instance.asyncOper.allowSceneActivation = true;         //다음씬 불러오기
                     }
                     else
