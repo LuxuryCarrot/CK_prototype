@@ -198,11 +198,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3183471965388516755}
   - component: {fileID: 2155645856087703621}
+  - component: {fileID: 1396618162333580069}
   - component: {fileID: 4111518050172305297}
   - component: {fileID: 6742601855624608266}
   - component: {fileID: 4954392842749468030}
   - component: {fileID: 8111075858282194598}
-  - component: {fileID: 1396618162333580069}
   m_Layer: 13
   m_Name: ImTheBOSS
   m_TagString: Monster
@@ -255,6 +255,19 @@ MonoBehaviour:
   summonPos: {fileID: 8841374819103456551}
   Arm: {fileID: 1650085613714734690, guid: fedf6a2674e60e74fa4e38e720eff678, type: 3}
   ArmPos: {fileID: 892554621}
+--- !u!114 &1396618162333580069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572904523561675663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e618d52bb6210df46a073b9a73f05a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalname: 0
 --- !u!212 &4111518050172305297
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -369,19 +382,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!114 &1396618162333580069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5572904523561675663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e618d52bb6210df46a073b9a73f05a3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalname: 0
 --- !u!1 &8185787052975899106
 GameObject:
   m_ObjectHideFlags: 0
