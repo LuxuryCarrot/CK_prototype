@@ -158,18 +158,18 @@ TextureImporter:
       name: boss_1_die_Sheet_0
       rect:
         serializedVersion: 2
-        x: 60
-        y: 2047
-        width: 390
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d253394f6bcc4494591319d79cf51ce4
+      spriteID: 15379f396cae29a469459ad0a8fa9473
       vertices: []
       indices: 
       edges: []
@@ -178,18 +178,18 @@ TextureImporter:
       name: boss_1_die_Sheet_1
       rect:
         serializedVersion: 2
-        x: 573
-        y: 2047
-        width: 387
-        height: 435
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eeabec1bd6f1b3418d8d682a1ef7f3c
+      spriteID: ceded0baa218f424b9bd1e58df76f137
       vertices: []
       indices: 
       edges: []
@@ -198,18 +198,18 @@ TextureImporter:
       name: boss_1_die_Sheet_2
       rect:
         serializedVersion: 2
-        x: 1086
-        y: 2047
-        width: 384
-        height: 435
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3c67f494956af34a85c8ffb99502a0a
+      spriteID: 409605a1c4925124bae1f073e6e1ab78
       vertices: []
       indices: 
       edges: []
@@ -218,18 +218,18 @@ TextureImporter:
       name: boss_1_die_Sheet_3
       rect:
         serializedVersion: 2
-        x: 1596
-        y: 2047
-        width: 384
-        height: 432
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85ec105349147414abef9a67126cf34d
+      spriteID: f787e3681662d9a459531e4486b17efe
       vertices: []
       indices: 
       edges: []
@@ -238,18 +238,18 @@ TextureImporter:
       name: boss_1_die_Sheet_4
       rect:
         serializedVersion: 2
-        x: 2109
-        y: 2047
-        width: 381
-        height: 429
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 173c4d6a0be47104ca7c68af7e3f8d21
+      spriteID: 3a8d8f8a84e4032468893fcb4b820375
       vertices: []
       indices: 
       edges: []
@@ -258,18 +258,18 @@ TextureImporter:
       name: boss_1_die_Sheet_5
       rect:
         serializedVersion: 2
-        x: 2622
-        y: 2047
-        width: 378
-        height: 426
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2560
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2f14d30b8dd81f4aab48e53ac219f8d
+      spriteID: 4dc2eb885c06b3548999a74ffc3cdb1f
       vertices: []
       indices: 
       edges: []
@@ -278,18 +278,18 @@ TextureImporter:
       name: boss_1_die_Sheet_6
       rect:
         serializedVersion: 2
-        x: 3132
-        y: 2047
-        width: 378
-        height: 426
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18c5b0b5b46c7b047993a2a81f8e4faa
+      spriteID: 7183691ef7605de42951f5d90d7577dd
       vertices: []
       indices: 
       edges: []
@@ -298,18 +298,18 @@ TextureImporter:
       name: boss_1_die_Sheet_7
       rect:
         serializedVersion: 2
-        x: 3645
-        y: 2047
-        width: 378
-        height: 426
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3584
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3ff990fb8288144cb86338cb970aafd
+      spriteID: 729ed164996a24d40919de0e679b3c26
       vertices: []
       indices: 
       edges: []
@@ -318,18 +318,18 @@ TextureImporter:
       name: boss_1_die_Sheet_8
       rect:
         serializedVersion: 2
-        x: 4158
-        y: 2047
-        width: 378
-        height: 426
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 732ac37a76146f44ab19d03b6c386cfa
+      spriteID: eb8c83aaad70b4d4d991a8035aa1082c
       vertices: []
       indices: 
       edges: []
@@ -338,18 +338,18 @@ TextureImporter:
       name: boss_1_die_Sheet_9
       rect:
         serializedVersion: 2
-        x: 4668
-        y: 2047
-        width: 384
-        height: 426
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4608
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d746ebec4f1bfdc4591c361a2a80d8e9
+      spriteID: a3cda1a3d41fa8948b9d18eb1b884b05
       vertices: []
       indices: 
       edges: []
@@ -358,18 +358,18 @@ TextureImporter:
       name: boss_1_die_Sheet_10
       rect:
         serializedVersion: 2
-        x: 5181
-        y: 2047
-        width: 384
-        height: 426
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5120
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc3263cb2fa448141a8f8556a754e4d3
+      spriteID: d37ebd1b0f826584ea4d31639b79c4af
       vertices: []
       indices: 
       edges: []
@@ -378,18 +378,18 @@ TextureImporter:
       name: boss_1_die_Sheet_11
       rect:
         serializedVersion: 2
-        x: 5694
-        y: 2047
-        width: 387
-        height: 426
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5632
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e903e4a72aedab448f8f05ec155ff12
+      spriteID: f779bcf57d3b7ab4cb33aabbc36c2157
       vertices: []
       indices: 
       edges: []
@@ -398,18 +398,18 @@ TextureImporter:
       name: boss_1_die_Sheet_12
       rect:
         serializedVersion: 2
-        x: 60
-        y: 1534
-        width: 390
-        height: 429
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4217cf22017fae34e96ae8cf4f86e79e
+      spriteID: 5a12c1f26f1334245bee5bbe81cc3b46
       vertices: []
       indices: 
       edges: []
@@ -418,18 +418,18 @@ TextureImporter:
       name: boss_1_die_Sheet_13
       rect:
         serializedVersion: 2
-        x: 573
-        y: 1534
-        width: 390
-        height: 429
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba6f64890f5803f42954ed30b71ffe5c
+      spriteID: e24d16eeb78c43247b2f6bfc1d04bc1b
       vertices: []
       indices: 
       edges: []
@@ -438,18 +438,18 @@ TextureImporter:
       name: boss_1_die_Sheet_14
       rect:
         serializedVersion: 2
-        x: 1086
-        y: 1534
-        width: 393
-        height: 429
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a59469e25af3fe4b91b766b693bdbfa
+      spriteID: 9147f9c6ec13cea41a9594cdaf39ab95
       vertices: []
       indices: 
       edges: []
@@ -458,18 +458,18 @@ TextureImporter:
       name: boss_1_die_Sheet_15
       rect:
         serializedVersion: 2
-        x: 1596
-        y: 1534
-        width: 405
-        height: 429
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6da992a7202c51c4f9ae6f31304d21ae
+      spriteID: af87ce31ac4bb9a489a6202b85f184b5
       vertices: []
       indices: 
       edges: []
@@ -478,18 +478,18 @@ TextureImporter:
       name: boss_1_die_Sheet_16
       rect:
         serializedVersion: 2
-        x: 2109
-        y: 1534
-        width: 414
-        height: 429
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11bd2c7be7ab3a6498f0b8d07ce0bf46
+      spriteID: 5a39ad306ec13094cb66f255d743216f
       vertices: []
       indices: 
       edges: []
@@ -498,18 +498,18 @@ TextureImporter:
       name: boss_1_die_Sheet_17
       rect:
         serializedVersion: 2
-        x: 2622
-        y: 1534
-        width: 423
-        height: 432
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2560
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33f40b3b9bce0c1409bb4bc516f42aa0
+      spriteID: f5ff47fdf75ff344f8e12355f3e43817
       vertices: []
       indices: 
       edges: []
@@ -518,18 +518,18 @@ TextureImporter:
       name: boss_1_die_Sheet_18
       rect:
         serializedVersion: 2
-        x: 3132
-        y: 1534
-        width: 435
-        height: 432
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a5d63d937fd0f499f1dd9759fd0127
+      spriteID: 59230cf9b2ed18742abac35841d0c467
       vertices: []
       indices: 
       edges: []
@@ -538,18 +538,18 @@ TextureImporter:
       name: boss_1_die_Sheet_19
       rect:
         serializedVersion: 2
-        x: 3645
-        y: 1534
-        width: 441
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3584
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95e405cba66c35a4cb98642a44d4b470
+      spriteID: 0a26139cabf61df439f326e1a6cbf356
       vertices: []
       indices: 
       edges: []
@@ -558,18 +558,18 @@ TextureImporter:
       name: boss_1_die_Sheet_20
       rect:
         serializedVersion: 2
-        x: 4158
-        y: 1534
-        width: 432
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3857b8d22553a4d48a6a4cf2c61da9ca
+      spriteID: cab6e2052af22534086bb92ac1a75cc6
       vertices: []
       indices: 
       edges: []
@@ -578,18 +578,18 @@ TextureImporter:
       name: boss_1_die_Sheet_21
       rect:
         serializedVersion: 2
-        x: 4668
-        y: 1534
-        width: 426
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4608
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c10c61893e756cd45b3bcc04db576434
+      spriteID: 368e05e5547ad7546952edb9df25bde6
       vertices: []
       indices: 
       edges: []
@@ -598,18 +598,18 @@ TextureImporter:
       name: boss_1_die_Sheet_22
       rect:
         serializedVersion: 2
-        x: 5181
-        y: 1534
-        width: 420
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5120
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c4ad60cfd834e54e918d9183a261298
+      spriteID: dbca52ecb2754f14f8f7b85bc4116d94
       vertices: []
       indices: 
       edges: []
@@ -618,18 +618,18 @@ TextureImporter:
       name: boss_1_die_Sheet_23
       rect:
         serializedVersion: 2
-        x: 5694
-        y: 1534
-        width: 411
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5632
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f40997cc42da7b44385975486ed775ed
+      spriteID: 75dafb1a04ab5d140a3a19aed6399e1f
       vertices: []
       indices: 
       edges: []
@@ -638,18 +638,18 @@ TextureImporter:
       name: boss_1_die_Sheet_24
       rect:
         serializedVersion: 2
-        x: 60
-        y: 1020
-        width: 408
-        height: 394
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c6c153e2d6129f458542ffafcd7f9f7
+      spriteID: 47a2119db3d15144eab65a29cf8d3753
       vertices: []
       indices: 
       edges: []
@@ -658,18 +658,18 @@ TextureImporter:
       name: boss_1_die_Sheet_25
       rect:
         serializedVersion: 2
-        x: 573
-        y: 1020
-        width: 399
-        height: 394
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f51593dff6ec73f4894bc2be02f1cdf9
+      spriteID: 3bfa5cd8bff465b4180a1f4b38e14377
       vertices: []
       indices: 
       edges: []
@@ -678,18 +678,18 @@ TextureImporter:
       name: boss_1_die_Sheet_26
       rect:
         serializedVersion: 2
-        x: 1086
-        y: 1020
-        width: 396
-        height: 385
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4490b9d455d20048a5ab44e3e6d4962
+      spriteID: a3997423251e75048b64399bd52aa563
       vertices: []
       indices: 
       edges: []
@@ -698,18 +698,18 @@ TextureImporter:
       name: boss_1_die_Sheet_27
       rect:
         serializedVersion: 2
-        x: 1596
-        y: 1020
-        width: 393
-        height: 388
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaac6eae7558c24489c8d2c93415851e
+      spriteID: 398771f402dc8bd428aa13f045de9be8
       vertices: []
       indices: 
       edges: []
@@ -718,18 +718,18 @@ TextureImporter:
       name: boss_1_die_Sheet_28
       rect:
         serializedVersion: 2
-        x: 2109
-        y: 1020
-        width: 387
-        height: 388
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3457164886ec9e47ab3edeaaa6995c1
+      spriteID: 8dd6b36148d18704a8e813bfeecb31cf
       vertices: []
       indices: 
       edges: []
@@ -738,18 +738,18 @@ TextureImporter:
       name: boss_1_die_Sheet_29
       rect:
         serializedVersion: 2
-        x: 2622
-        y: 1020
-        width: 387
-        height: 388
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2560
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f97b038e4860de94e9ea17254cf4defc
+      spriteID: ff2ccf35033df7d418299b460cf4a7f5
       vertices: []
       indices: 
       edges: []
@@ -758,18 +758,18 @@ TextureImporter:
       name: boss_1_die_Sheet_30
       rect:
         serializedVersion: 2
-        x: 3132
-        y: 1020
-        width: 390
-        height: 388
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e743bf0019fd9a40a6fd6eb63506465
+      spriteID: f034f5b1fda25214a8c25a124bbe21e3
       vertices: []
       indices: 
       edges: []
@@ -778,18 +778,18 @@ TextureImporter:
       name: boss_1_die_Sheet_31
       rect:
         serializedVersion: 2
-        x: 3645
-        y: 1020
-        width: 390
-        height: 388
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3584
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ae3dd7ed4747664e887265ebc7fb0ac
+      spriteID: 56a8d25519beb764c8f34d4733b26b5b
       vertices: []
       indices: 
       edges: []
@@ -798,18 +798,18 @@ TextureImporter:
       name: boss_1_die_Sheet_32
       rect:
         serializedVersion: 2
-        x: 4158
-        y: 1020
-        width: 390
-        height: 394
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c67d5cef172407345bfb6aca58aa7841
+      spriteID: bd78fedfde9b06b488d943836f93a22c
       vertices: []
       indices: 
       edges: []
@@ -818,18 +818,18 @@ TextureImporter:
       name: boss_1_die_Sheet_33
       rect:
         serializedVersion: 2
-        x: 4668
-        y: 1020
-        width: 390
-        height: 391
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4608
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09bddebe55271104d868b09d87fbfed4
+      spriteID: 0fd03f261063bd947888887beebec7bd
       vertices: []
       indices: 
       edges: []
@@ -838,18 +838,18 @@ TextureImporter:
       name: boss_1_die_Sheet_34
       rect:
         serializedVersion: 2
-        x: 5181
-        y: 1020
-        width: 390
-        height: 391
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5120
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 164fadfca1c970e4d978ab22519ab387
+      spriteID: 04bb3ff6878e0d541be7dd7d8f494574
       vertices: []
       indices: 
       edges: []
@@ -858,18 +858,18 @@ TextureImporter:
       name: boss_1_die_Sheet_35
       rect:
         serializedVersion: 2
-        x: 5694
-        y: 1020
-        width: 387
-        height: 394
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5632
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d236cd41d5bf06a40950f934c135120f
+      spriteID: caab0a6686cd3f44fa567acad6d6117b
       vertices: []
       indices: 
       edges: []
@@ -878,18 +878,18 @@ TextureImporter:
       name: boss_1_die_Sheet_36
       rect:
         serializedVersion: 2
-        x: 60
-        y: 510
-        width: 387
-        height: 393
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7a289d84cb182041996d720f1e8af27
+      spriteID: 3bcf5bde970157c43aa5b94575719641
       vertices: []
       indices: 
       edges: []
@@ -898,18 +898,18 @@ TextureImporter:
       name: boss_1_die_Sheet_37
       rect:
         serializedVersion: 2
-        x: 573
-        y: 510
-        width: 387
-        height: 396
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc7ed68e1cc1be54f8871c0d779566b7
+      spriteID: 095951489603be545991ddecaf68cee7
       vertices: []
       indices: 
       edges: []
@@ -918,18 +918,18 @@ TextureImporter:
       name: boss_1_die_Sheet_38
       rect:
         serializedVersion: 2
-        x: 1086
-        y: 510
-        width: 384
-        height: 396
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a8e47a7b529915468723c6fb12993ef
+      spriteID: 0e0a8966eef20dd4dbf6c213c35cdf65
       vertices: []
       indices: 
       edges: []
@@ -938,18 +938,18 @@ TextureImporter:
       name: boss_1_die_Sheet_39
       rect:
         serializedVersion: 2
-        x: 1596
-        y: 510
-        width: 384
-        height: 396
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47ea8491e1604dc4d8e8e739d5e1ac4c
+      spriteID: 5f8acfeeff83a9649ba64c07890bd90a
       vertices: []
       indices: 
       edges: []
@@ -958,18 +958,18 @@ TextureImporter:
       name: boss_1_die_Sheet_40
       rect:
         serializedVersion: 2
-        x: 2109
-        y: 510
-        width: 384
-        height: 396
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59c58d52758835c4a9d7fe6740365d80
+      spriteID: 5c56991a1d02c5b4ba40ef5c6dc08cb3
       vertices: []
       indices: 
       edges: []
@@ -978,18 +978,18 @@ TextureImporter:
       name: boss_1_die_Sheet_41
       rect:
         serializedVersion: 2
-        x: 2622
-        y: 510
-        width: 381
-        height: 396
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c97b52c41b94a55499eed90d52eaca1c
+      spriteID: b3a759da873a42c49b793ed335ef22eb
       vertices: []
       indices: 
       edges: []
@@ -998,18 +998,18 @@ TextureImporter:
       name: boss_1_die_Sheet_42
       rect:
         serializedVersion: 2
-        x: 3132
-        y: 510
-        width: 381
-        height: 396
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3072
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a2edfd8e514cfc44ac23d4d9201f35c
+      spriteID: 631b29865257eb243927d7e60f806aa2
       vertices: []
       indices: 
       edges: []
@@ -1018,18 +1018,18 @@ TextureImporter:
       name: boss_1_die_Sheet_43
       rect:
         serializedVersion: 2
-        x: 3645
-        y: 510
-        width: 378
-        height: 396
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3584
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5ab821b45b7d6c47b7ad056841a7720
+      spriteID: 6d7d0b7d406d0234aa7a5e67c564cb19
       vertices: []
       indices: 
       edges: []
@@ -1038,18 +1038,18 @@ TextureImporter:
       name: boss_1_die_Sheet_44
       rect:
         serializedVersion: 2
-        x: 4158
-        y: 510
-        width: 378
-        height: 393
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4096
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb9166cac6f468f4e9a6c748b56ed965
+      spriteID: 82a4d4789bc3dbb439cb488dddd58dfc
       vertices: []
       indices: 
       edges: []
@@ -1058,18 +1058,18 @@ TextureImporter:
       name: boss_1_die_Sheet_45
       rect:
         serializedVersion: 2
-        x: 4668
-        y: 510
-        width: 378
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4608
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e764f649eca2574aad358904428002b
+      spriteID: 9bdc32b3742352c4aacd6b68af9568c1
       vertices: []
       indices: 
       edges: []
@@ -1078,18 +1078,18 @@ TextureImporter:
       name: boss_1_die_Sheet_46
       rect:
         serializedVersion: 2
-        x: 5181
-        y: 510
-        width: 378
-        height: 387
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5120
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85d9f94d8147e0343a8e84ae5dd7954a
+      spriteID: b2897aaee0d437347872ba281f9e4c1c
       vertices: []
       indices: 
       edges: []
@@ -1098,18 +1098,18 @@ TextureImporter:
       name: boss_1_die_Sheet_47
       rect:
         serializedVersion: 2
-        x: 5694
-        y: 510
-        width: 378
-        height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5632
+        y: 512
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eef1de59d522d5141879e3573263c98c
+      spriteID: f96238cd86b84cf418d0daf5d187b03b
       vertices: []
       indices: 
       edges: []
@@ -1118,18 +1118,18 @@ TextureImporter:
       name: boss_1_die_Sheet_48
       rect:
         serializedVersion: 2
-        x: 33
+        x: 0
         y: 0
-        width: 378
-        height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23a287fa08f78a54dbdb1dfcf4fae974
+      spriteID: e8e65c9e29f8bb84ab4d3bee3f1574ce
       vertices: []
       indices: 
       edges: []
@@ -1138,18 +1138,18 @@ TextureImporter:
       name: boss_1_die_Sheet_49
       rect:
         serializedVersion: 2
-        x: 546
+        x: 512
         y: 0
-        width: 378
-        height: 381
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70573070544ee1e40bb72829bbd8596a
+      spriteID: c0418823ed998fb4697ae12a09c4ff3b
       vertices: []
       indices: 
       edges: []
@@ -1158,18 +1158,18 @@ TextureImporter:
       name: boss_1_die_Sheet_50
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 1024
         y: 0
-        width: 378
-        height: 378
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70e44d69dde5a6840a9bf30ef79df318
+      spriteID: ee237a13c513d244daef7b24723cf2c6
       vertices: []
       indices: 
       edges: []
@@ -1178,18 +1178,18 @@ TextureImporter:
       name: boss_1_die_Sheet_51
       rect:
         serializedVersion: 2
-        x: 1569
+        x: 1536
         y: 0
-        width: 378
-        height: 387
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd9e810716ff69c4192e1c1ab55fca06
+      spriteID: f0197340160abd4448eda3d10198b715
       vertices: []
       indices: 
       edges: []
@@ -1198,18 +1198,18 @@ TextureImporter:
       name: boss_1_die_Sheet_52
       rect:
         serializedVersion: 2
-        x: 2082
+        x: 2048
         y: 0
-        width: 378
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bf6368ba0fe47545a15cff61d1c4f74
+      spriteID: 99a945223ddd7034c883d41df9f228ca
       vertices: []
       indices: 
       edges: []
@@ -1218,18 +1218,18 @@ TextureImporter:
       name: boss_1_die_Sheet_53
       rect:
         serializedVersion: 2
-        x: 2586
+        x: 2560
         y: 0
-        width: 384
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74913152e03df9442a32c7d1ed5624fe
+      spriteID: ecfeae086116e4d429bfde4d5b3f5001
       vertices: []
       indices: 
       edges: []
@@ -1238,18 +1238,18 @@ TextureImporter:
       name: boss_1_die_Sheet_54
       rect:
         serializedVersion: 2
-        x: 3093
+        x: 3072
         y: 0
-        width: 390
-        height: 387
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4630f2e62cedd647bf64e01f79c40d9
+      spriteID: 500a6b1ff1f02d540997748d6a9bf7e8
       vertices: []
       indices: 
       edges: []
@@ -1258,18 +1258,18 @@ TextureImporter:
       name: boss_1_die_Sheet_55
       rect:
         serializedVersion: 2
-        x: 3606
+        x: 3584
         y: 0
-        width: 390
-        height: 387
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e37e9a7996a8b83468861d18547e74eb
+      spriteID: ae02d025e49348343a2fb650c0f0203a
       vertices: []
       indices: 
       edges: []
@@ -1278,18 +1278,18 @@ TextureImporter:
       name: boss_1_die_Sheet_56
       rect:
         serializedVersion: 2
-        x: 4119
+        x: 4096
         y: 0
-        width: 387
-        height: 387
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cb921b2833ec084281e769e0dca6d25
+      spriteID: e796cdc70e7222a46ab071554aac2710
       vertices: []
       indices: 
       edges: []
@@ -1298,18 +1298,18 @@ TextureImporter:
       name: boss_1_die_Sheet_57
       rect:
         serializedVersion: 2
-        x: 4629
+        x: 4608
         y: 0
-        width: 390
-        height: 387
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7150d20e1d41309479f6148f6ebdb268
+      spriteID: c3b75b2f515ba8e439be5a56239bb0ac
       vertices: []
       indices: 
       edges: []
@@ -1318,18 +1318,18 @@ TextureImporter:
       name: boss_1_die_Sheet_58
       rect:
         serializedVersion: 2
-        x: 5142
+        x: 5120
         y: 0
-        width: 390
-        height: 387
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9371968f984c104479d61e6a1a0358ee
+      spriteID: ccec1a8a2feafa94ea01ad8fdbe2bba7
       vertices: []
       indices: 
       edges: []
@@ -1338,18 +1338,18 @@ TextureImporter:
       name: boss_1_die_Sheet_59
       rect:
         serializedVersion: 2
-        x: 5655
+        x: 5632
         y: 0
-        width: 387
-        height: 387
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbd248ddb783ccc41bf548edbc3df1d3
+      spriteID: 6b96dc64d7a1cf8499f7bce342500e4a
       vertices: []
       indices: 
       edges: []
