@@ -21,6 +21,8 @@ public class BossMonster : Monster
     private bool Phase2;
     private bool Phase3;
 
+    private int PhaseAnimCount = 0;
+
     public bool isDead;
 
     public Image BossHP_UI;
@@ -75,18 +77,21 @@ public class BossMonster : Monster
             if (currentHP < 600.0f && currentHP > 399.0f)
             {
                 Phase1 = true;
+                animator.SetInteger("PHASE", 1);
                 animalname = AnimalName.FOX;
             }
             else if (currentHP < 400.0f && currentHP > 199.0f)
             {
                 Phase1 = false;
                 Phase2 = true;
+                animator.SetInteger("PHASE", 2);
                 animalname = AnimalName.FROG;
             }
             else if (currentHP < 200.0f && currentHP > 0.0f)
             {
                 Phase2 = false;
                 Phase3 = true;
+                animator.SetInteger("PHASE", 3);
                 animalname = AnimalName.RACCOON;
             }
 
@@ -132,9 +137,7 @@ public class BossMonster : Monster
         {
             if (PatternCount == 1)
             {
-                AnimState = 1;
-                Instantiate(Arm, ArmPos.position, ArmPos.rotation);
-                Debug.Log("isPatternA");
+                StartCoroutine("BossPattern1");
             }
             isPatternA = false;
         }
@@ -142,8 +145,8 @@ public class BossMonster : Monster
         {
             if (PatternCount == 1)
             {
-                AnimState = 2;
-                 Debug.Log("isPatternB");
+                StartCoroutine("BossPattern2");
+                
             }
             isPatternB = false;
         }
@@ -151,96 +154,121 @@ public class BossMonster : Monster
         {
             if (PatternCount == 1)
             {
-                AnimState = 3;
-                if (Phase0)
-                {
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                }
-                else if (Phase1)
-                {
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-
-                }
-                else if (Phase2)
-                {
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-
-                }
-                else if (Phase3)
-                {
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                    Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
-                }
-                
-                Debug.Log("isPatternC");
+                StartCoroutine("BossPattern3");
             }
             isPatternC = false;
         }
 
     }
+    IEnumerator BossPattern1()
+    {
+        AnimState = 1;
+        Debug.Log("isPatternA");
+        yield return new WaitForSeconds(1.0f);
+        Instantiate(Arm, ArmPos.position, ArmPos.rotation);
+        AnimState = 0;
+        StopCoroutine("BossPattern1");
+    }
+    IEnumerator BossPattern2()
+    {
+        AnimState = 2;
+        Debug.Log("isPatternB");
+        yield return new WaitForSeconds(1.0f);
+        AnimState = 0;
+        StopCoroutine("BossPattern2");
+    }
+    IEnumerator BossPattern3()
+    {
+        AnimState = 3;
+        if (Phase0)
+        {
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+        }
+        else if (Phase1)
+        {
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+
+        }
+        else if (Phase2)
+        {
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+
+        }
+        else if (Phase3)
+        {
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(RaccoonPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FoxPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+            Instantiate(FrogPreFab, (new Vector3(summonPos.position.x + Random.Range(-13.0f, 13.0f), summonPos.position.y)), summonPos.rotation);
+        }
+
+        Debug.Log("isPatternC");
+        yield return new WaitForSeconds(1.0f);
+        AnimState = 0;
+        StopCoroutine("BossPattern3");
+    }
+
     void ApplyDamage(float damage)
     {
         currentHP -= damage;
