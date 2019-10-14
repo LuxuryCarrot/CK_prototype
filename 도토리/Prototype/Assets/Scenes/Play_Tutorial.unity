@@ -2958,6 +2958,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8246546113926906051, guid: 166108bffb4ca804582087803f2b4516,
         type: 3}
+      propertyPath: paritcleElementalAttackObjs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246546113926906051, guid: 166108bffb4ca804582087803f2b4516,
+        type: 3}
       propertyPath: particlePropertyObjs.Array.data[1]
       value: 
       objectReference: {fileID: 652364869261050756, guid: e8a08e1f75fe6b047ba70b7ec23a386d,
@@ -2967,6 +2972,42 @@ PrefabInstance:
       propertyPath: particlePropertyObjs.Array.data[2]
       value: 
       objectReference: {fileID: 4799612331122966609, guid: e944e1931dd56e242a7e80800f40bf03,
+        type: 3}
+    - target: {fileID: 8246546113926906051, guid: 166108bffb4ca804582087803f2b4516,
+        type: 3}
+      propertyPath: paritcleElementalAttackObjs.Array.data[0]
+      value: 
+      objectReference: {fileID: 6751685570249595780, guid: a8851d31837e3da4ea30e625e402e96b,
+        type: 3}
+    - target: {fileID: 8246546113926906051, guid: 166108bffb4ca804582087803f2b4516,
+        type: 3}
+      propertyPath: paritcleElementalAttackObjs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1738211917271684151, guid: 0a13138d2accd914b898ac44297f93b6,
+        type: 3}
+    - target: {fileID: 8246546113926906051, guid: 166108bffb4ca804582087803f2b4516,
+        type: 3}
+      propertyPath: paritcleElementalAttackObjs.Array.data[2]
+      value: 
+      objectReference: {fileID: 9073467556657249758, guid: f9bc1e3c81efd454596455b0d7c61269,
+        type: 3}
+    - target: {fileID: 8246546113926906051, guid: 166108bffb4ca804582087803f2b4516,
+        type: 3}
+      propertyPath: paritcleElementalAttackObjs.Array.data[3]
+      value: 
+      objectReference: {fileID: 5421583793920182523, guid: 58e3953e9f583a0459143d4728618cd3,
+        type: 3}
+    - target: {fileID: 8246546113926906051, guid: 166108bffb4ca804582087803f2b4516,
+        type: 3}
+      propertyPath: paritcleElementalAttackObjs.Array.data[4]
+      value: 
+      objectReference: {fileID: 302762997686535477, guid: ad3d38b73638b744e8da31ebde23c9a7,
+        type: 3}
+    - target: {fileID: 8246546113926906051, guid: 166108bffb4ca804582087803f2b4516,
+        type: 3}
+      propertyPath: paritcleElementalAttackObjs.Array.data[5]
+      value: 
+      objectReference: {fileID: 8985472202546705069, guid: 7c7ee58870c749145b1eb4d302f68dcd,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 166108bffb4ca804582087803f2b4516, type: 3}

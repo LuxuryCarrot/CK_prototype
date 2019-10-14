@@ -20,12 +20,12 @@ public class WaterItem : MonoBehaviour
                 if (player.GetComponent<PlayerController>().stat.curWeaponProperty != ElementalProperty.Water)
                 {
                     GameManager.Instance.isItemEatting = true;
+                player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Water;
 
                     EffectManager.Instance.AttackEffectChange(player.GetComponent<PlayerController>().stat.curWeaponProperty);
 
                     player.GetComponent<PlayerController>().anim.SetInteger("curProperty", (int)ElementalProperty.Water);
                 }
-                player.GetComponent<PlayerController>().stat.curWeaponProperty = ElementalProperty.Water;
                 EffectManager.Instance.SetElementalEffect((int)ElementalProperty.Water - 1);
                 Destroy(gameObject);
             }
