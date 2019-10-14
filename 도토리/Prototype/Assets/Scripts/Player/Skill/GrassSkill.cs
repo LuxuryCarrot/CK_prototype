@@ -17,7 +17,7 @@ public class GrassSkill : IPassiveSkill
         return calc(weaponDamage,elementalDamage);
     }
 
-    public float GetDamage(float x = 0)
+    public float GetDamage(float x)
     {
         return finalGrassDemn;
     }

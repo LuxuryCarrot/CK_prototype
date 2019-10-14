@@ -14,11 +14,12 @@ public class EffectManager : MonoBehaviour
     public List<GameObject> particleStateObjs;
     public List<GameObject> particlePropertyObjs;
     public GameObject particlePlayerShotObj;
+    public List<GameObject> paritcleElementalAttackObjs;
 
     public List<ParticleSystem> stateEffects = null;
     public List<ParticleSystem> propertyEffects = null;
     public ParticleSystem playerShotEffect = null;
-
+    public List<ParticleSystem> elementalAttackEffects = null;
 
     public List<Transform> posOfStateEffects;
     public Transform posOfPropertyEffects;
@@ -34,20 +35,38 @@ public class EffectManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        for (int i = 0; i < particleStateObjs.Count; i++)
+        for (int i = 0; i < particleStateObjs.Count; i++)                       //기본적인 행동 이펙트 생성
         {
             stateEffects.Add(Instantiate(particleStateObjs[i].GetComponent<ParticleSystem>(), transform.position, Quaternion.identity));
             stateEffects[i].transform.SetParent(posOfStateEffects[i]);
             stateEffects[i].Stop();
         }
 
-        for (int i = 0; i < particlePropertyObjs.Count; i++)
+        for (int i = 0; i < particlePropertyObjs.Count; i++)                    //속성변신 이펙트 생성
         {
             propertyEffects.Add(Instantiate(particlePropertyObjs[i].GetComponent<ParticleSystem>(), transform.position, Quaternion.identity));
             propertyEffects[i].transform.SetParent(posOfPropertyEffects); //착지했을때의 위치를 그대로 사용한다
             propertyEffects[i].Stop();
         }
 
+        for(int i=0; i< paritcleElementalAttackObjs.Count; i++)                 //속성 공격 이펙트 생성
+        {
+            elementalAttackEffects.Add(Instantiate(paritcleElementalAttackObjs[i].GetComponent<ParticleSystem>(), transform.position, Quaternion.identity));
+
+            if(i<3)
+            {
+                elementalAttackEffects[i].transform.SetParent(posOfStateEffects[2]);        //0,1,2는 3가지 속성공격의 upAttack이므로 upAttackPos사용
+            }
+            else
+            {
+                elementalAttackEffects[i].transform.SetParent(posOfStateEffects[3]);          //3,4,5는 3가지 속성공격의 downAttack이므로 downAttackPos사용
+            }
+
+            elementalAttackEffects[i].Stop();               
+        }
+
+
+        //플레이어 피격 이펙트 생성
         playerShotEffect = Instantiate(particlePlayerShotObj.GetComponent<ParticleSystem>(), transform.position, Quaternion.identity);
         playerShotEffect.transform.SetParent(posOfPlayerShotEffect);
         playerShotEffect.Stop();
@@ -83,6 +102,25 @@ public class EffectManager : MonoBehaviour
         {
             propertyEffects[curProperty].transform.position = posOfPropertyEffects.position;
             propertyEffects[curProperty].Play();
+        }
+    }
+
+    public void AttackEffectChange(ElementalProperty elemental)
+    {
+        switch(elemental)               //공격 이펙트 교체
+        {
+            case ElementalProperty.Fire:
+                stateEffects[2] = elementalAttackEffects[0];
+                stateEffects[3] = elementalAttackEffects[3];
+                break;
+            case ElementalProperty.Water:
+                stateEffects[2] = elementalAttackEffects[1];
+                stateEffects[3] = elementalAttackEffects[4];
+                break;
+            case ElementalProperty.Grass:
+                stateEffects[2] = elementalAttackEffects[2];
+                stateEffects[3] = elementalAttackEffects[5];
+                break;
         }
     }
 

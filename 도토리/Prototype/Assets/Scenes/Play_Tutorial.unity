@@ -510,8 +510,26 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &150907677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6543115124112480884, guid: 166108bffb4ca804582087803f2b4516,
+    type: 3}
+  m_PrefabInstance: {fileID: 6543115123222195531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &150907678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150907677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58b700db182b178429e238bd9d54dade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &300842238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -656,7 +674,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 6543115123222195531}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 150907677}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f4e8d61235602241afce120833adb3c, type: 3}
@@ -895,6 +913,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FireItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 8887056523232573115, guid: 10b0ccda8f858e6439722dbea97e3c82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8887056523232573119, guid: 10b0ccda8f858e6439722dbea97e3c82,
         type: 3}
@@ -1184,6 +1207,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'GrassItem '
       objectReference: {fileID: 0}
+    - target: {fileID: 7589299749149762895, guid: 65e378e56d1f9b84eb980fcc37ae15bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2908474148696843124, guid: 65e378e56d1f9b84eb980fcc37ae15bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1252,6 +1280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Raccoon
+      objectReference: {fileID: 0}
+    - target: {fileID: 9068593824074979374, guid: e4166761eceefcb4993a0fef7b25e51e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2429348468378844933, guid: e4166761eceefcb4993a0fef7b25e51e,
         type: 3}
@@ -1826,7 +1859,7 @@ PrefabInstance:
     - target: {fileID: 8006194236214712563, guid: 5965798181d1de64cb7061881f95032f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8006194236214712564, guid: 5965798181d1de64cb7061881f95032f,
         type: 3}
@@ -1945,7 +1978,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2077927120
 PrefabInstance:
@@ -1958,6 +1991,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Frog
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800075350215400766, guid: 30b102dc3d537f744a854a160cfb8202,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 285028287577484182, guid: 30b102dc3d537f744a854a160cfb8202,
         type: 3}
@@ -2740,11 +2778,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2155645856087703621, guid: 419f62211b344cd4684e0d5c6aff8d83,
-        type: 3}
-      propertyPath: BossHP_UI
-      value: 
-      objectReference: {fileID: 1415639130}
     - target: {fileID: 4111518050172305297, guid: 419f62211b344cd4684e0d5c6aff8d83,
         type: 3}
       propertyPath: m_Size.x
@@ -2765,6 +2798,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2155645856087703621, guid: 419f62211b344cd4684e0d5c6aff8d83,
+        type: 3}
+      propertyPath: BossHP_UI
+      value: 
+      objectReference: {fileID: 1415639130}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 419f62211b344cd4684e0d5c6aff8d83, type: 3}
 --- !u!1001 &6260520371744170861
